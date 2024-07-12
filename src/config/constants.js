@@ -141,12 +141,70 @@ export const termsText = [
   { id: 5, title: "terms_title_5", text: "terms_text_5" },
   { id: 6, title: "terms_title_6", text: "terms_text_6" },
 ];
-export const orders = [
-  { id: 0, title: "Номер заказа", text: "order_number" },
-  { id: 1, title: "Дата", text: "date" },
-  { id: 2, title: "Адрес доставки", text: "delivery_address" },
-  { id: 3, title: "Статус", text: "status" },
-  { id: 4, title: "Действия", text: "action" },
+export const orderCols = [
+  {
+    id: 0,
+    title: "Номер заказа",
+    text: "order_number",
+    width: "20%",
+  },
+  { id: 1, title: "Дата", text: "date", width: "10%" },
+  { id: 2, title: "Адрес доставки", text: "delivery_address", width: "30%" },
+  { id: 3, title: "Статус", text: "status", width: "20%" },
+  { id: 4, title: "Действия", text: "action", width: "30%" },
+];
+
+export const ordersMock = [
+  {
+    id: 0,
+    orderNumber: "234538902",
+    createdAt: "16.01.2024",
+    updatedAt: "16.01.2024",
+    adress:
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+    status: "Успешно доставлено",
+    link: "/",
+  },
+  {
+    id: 1,
+    orderNumber: "234538902",
+    createdAt: "16.01.2024",
+    updatedAt: "16.01.2024",
+    adress:
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+    status: "Успешно доставлено",
+    link: "/",
+  },
+  {
+    id: 2,
+    orderNumber: "234538902",
+    createdAt: "16.01.2024",
+    updatedAt: "16.01.2024",
+    adress:
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+    status: "Успешно доставлено",
+    link: "/",
+  },
+  {
+    id: 3,
+    orderNumber: "234538902",
+    createdAt: "16.01.2024",
+    updatedAt: "16.01.2024",
+    adress:
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+    status: "Успешно доставлено",
+    link: "/",
+  },
+  {
+    id: 4,
+    orderNumber: "234538902",
+    createdAt: "16.01.2024",
+    updatedAt: "16.01.2024",
+    adress:
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+    status: "Успешно доставлено",
+    link: "/",
+  },
 ];
 
 export const flexRow = [

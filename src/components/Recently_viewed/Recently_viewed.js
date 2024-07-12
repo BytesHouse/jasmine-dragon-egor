@@ -2,6 +2,7 @@ import { mock2 } from "@/config/constants";
 import ChooseHeart from "../../ui-kit/icons/ChooseHeart/ChooseHeart";
 import Cart from "../../ui-kit/icons/Cart/Cart";
 import Pagination from "../Pagination/Pagination";
+import Image from "next/image";
 
 const RecentlyViewed = () => {
   return (
@@ -14,7 +15,13 @@ const RecentlyViewed = () => {
       </div>
       {mock2.slice(0, 3).map((item) => (
         <div key={Math.random()} className="choosen col-span-third">
-          <img className="svgchoise" src={item.image} alt="teagreen" />
+          <Image
+            className="svgchoise"
+            src={item.image}
+            alt="teagreen"
+            width={413}
+            height={413}
+          />
           <ChooseHeart />
           <h4>{item.title}</h4>
           <p className="p1">{item.description}</p>

@@ -13,13 +13,8 @@ import AuthButton from "@/ui-kit/AuthButton/AuthButton";
 import InputPassword from "@/ui-kit/InputPassword/InputPassword";
 
 const PasswordReset = () => {
-  // const {t} = useTranslation();
-  //   const navigate = useNavigate();
-  const { push } = useRouter();
   const t = useTranslations("SignInUp");
-  const lang = useLocale();
 
-  //   cont {email, password} = useRegistrationForm();
   const [password, setPassword] = useState("");
 
   const onReset = async (e) => {

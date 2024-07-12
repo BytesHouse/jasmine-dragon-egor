@@ -1,5 +1,3 @@
-import { Header } from "@/components";
-import DirectionForProfile from "./components/DirectionForProfile/DirectionForProfile";
 import UserProfile from "./components/UserProfile/UserProfile";
 import RecentlyOrders from "./components/RecentlyOrders/RecentlyOrders";
 import { orders } from "@/config/constants";
@@ -10,7 +8,7 @@ const Profiles = () => {
       {/* <div className="col-span-full"> */}
       {/* <DirectionForProfile /> */}
       <UserProfile />
-      <RecentlyOrders array={orders} />
+      <RecentlyOrders orders={orders} />
       {/* </div> */}
     </main>
   );

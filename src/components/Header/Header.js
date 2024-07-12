@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 import ImageSection from "../ImageSection/Imagesection";
 import { Footerbuttons } from "../index";
 import Breadcrumbs from "@/ui-kit/Breadcrumbs/Breadcrumbs";
+import Image from "next/image";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,7 +32,12 @@ const Header = () => {
           <div className="flex justify-between w-full flex-grow">
             <Link href="/">
               <div className="flex items-center gap-6">
-                <img src="/assets/Images/Logo.svg" alt="logo" />
+                <Image
+                  src="/assets/Images/Logo.svg"
+                  alt="logo"
+                  width={81}
+                  height={90}
+                />
                 <p className="logo-text flex items-center gap-6 text-2xl text-[var(--blue-light)] leading-relaxed">
                   Jasmine Dragon
                 </p>
