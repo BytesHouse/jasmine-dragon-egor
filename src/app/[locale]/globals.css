@@ -920,8 +920,9 @@ body {
   display: flex;
   flex-direction: row;
   padding: 25px;
+  gap: 50px;
   /* margin-bottom: 25px; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border: 1px rgba(39, 62, 64, 1) solid;
   transition: background-color 0.3s ease;
   align-items: center;
@@ -1194,7 +1195,7 @@ body {
   margin-top: 30px;
   margin-bottom: 25px;
 }
-.p1choise {
+/* .p1choise {
   width: 413px;
   height: 69px;
   font-family: var(--Nunito-sans);
@@ -1217,7 +1218,7 @@ body {
   text-align: start;
   color: var(--blue-light);
   margin-bottom: 30px;
-}
+} */
 /* .sortirovka {
   display: flex;
   flex-direction: column;
@@ -1233,10 +1234,6 @@ body {
   display: flex;
   flex-direction: row;
   gap: 25px;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
 }
 
 .dropdown-button {

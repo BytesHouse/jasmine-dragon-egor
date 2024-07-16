@@ -4,7 +4,7 @@ import Dropdown from "../../ui-kit/Dropdown/Dropdown";
 import Dropdownnumbers from "../../ui-kit/Dropdownnumbers/Dropdownnumbers";
 import Filter from "../../ui-kit/Filter/Filter";
 
-const Sort = () => {
+const Sort = ({ itemsShow, setItemsShow }) => {
   return (
     <div className="flex justify-between gap-[100px]">
       <Filter />
@@ -16,7 +16,7 @@ const Sort = () => {
       </div>
       <div className="flex items-center gap-[20px]">
         <p className="psortmenu">Показывать по</p>
-        <Dropdownnumbers array={mock4} />
+        <Dropdownnumbers itemsShow={itemsShow} setItemsShow={setItemsShow} />
       </div>
     </div>
   );

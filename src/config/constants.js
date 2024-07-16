@@ -109,12 +109,6 @@ export const mock3 = [
   },
   { id: 3, title: "Новинки", icon: <Plus />, value: "new_products" },
 ];
-export const mock4 = [
-  { id: 0, title: "12" },
-  { id: 1, title: "24" },
-  { id: 2, title: "48" },
-];
-
 // export const mock5 = [
 //   { id: 1, title: "Ру", value: `Ру` },
 //   { id: 2, title: "Ro", value: `Ro` },
@@ -141,24 +135,23 @@ export const termsText = [
   { id: 5, title: "terms_title_5", text: "terms_text_5" },
   { id: 6, title: "terms_title_6", text: "terms_text_6" },
 ];
-export const orderCols = [
+export const RecentlyOrderCols = [
   {
     id: 0,
     title: "Номер заказа",
     text: "order_number",
-    width: "20%",
   },
-  { id: 1, title: "Дата", text: "date", width: "10%" },
-  { id: 2, title: "Адрес доставки", text: "delivery_address", width: "30%" },
-  { id: 3, title: "Статус", text: "status", width: "20%" },
-  { id: 4, title: "Действия", text: "action", width: "30%" },
+  { id: 1, title: "Дата", text: "date" },
+  { id: 2, title: "Адрес доставки", text: "delivery_address" },
+  { id: 3, title: "Статус", text: "status" },
+  { id: 4, title: "Действия", text: "action" },
 ];
 
-export const ordersMock = [
+export const RecentlyOrdersMock = [
   {
     id: 0,
     orderNumber: "234538902",
-    createdAt: "16.01.2024",
+    // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
@@ -168,7 +161,7 @@ export const ordersMock = [
   {
     id: 1,
     orderNumber: "234538902",
-    createdAt: "16.01.2024",
+    // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
@@ -178,7 +171,7 @@ export const ordersMock = [
   {
     id: 2,
     orderNumber: "234538902",
-    createdAt: "16.01.2024",
+    // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
@@ -188,7 +181,7 @@ export const ordersMock = [
   {
     id: 3,
     orderNumber: "234538902",
-    createdAt: "16.01.2024",
+    // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
@@ -198,7 +191,7 @@ export const ordersMock = [
   {
     id: 4,
     orderNumber: "234538902",
-    createdAt: "16.01.2024",
+    // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",

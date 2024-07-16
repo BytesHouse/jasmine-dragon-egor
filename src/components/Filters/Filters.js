@@ -21,6 +21,8 @@ const Filters = () => {
   };
 
   // Состояние активности
+  const [itemsShow, setItemsShow] = useState(6);
+  console.log(itemsShow);
 
   const toggleActive = () => {
     setIsActive(!isActive);
@@ -29,7 +31,7 @@ const Filters = () => {
     <>
       <div className="container !gap-[25px] !py-[50px]">
         <div className="flex justify-between flex-row gap-12 col-span-full">
-          <Sort />
+          <Sort itemsShow={itemsShow} setItemsShow={setItemsShow} />
           <div className="thelastsort">
             <p className="psortmenu">Вид товара:</p>
             <button
