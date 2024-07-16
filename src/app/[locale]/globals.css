@@ -1013,18 +1013,18 @@ body {
   }
 }
 
-.strelka {
+/* .strelka {
   display: flex;
   align-items: center;
   padding: 15px 50px;
   border: 1px solid var(--blue-light);
   transition: border 0.3s ease, opacity 0.3s ease;
-}
-
+} */
+/* 
 .strelka:hover {
   opacity: 0.5;
   border: 1px var(--blue) solid;
-}
+} */
 
 .fortext:hover {
   color: var(--blue);
@@ -1113,6 +1113,7 @@ body {
   padding: 25px;
   color: var(--blue-light);
   gap: 25px;
+  height: max-content;
   background-color: var(--green-light);
   border: 2px solid var(--blue-light);
 }
@@ -1153,7 +1154,7 @@ body {
   color: var(--blue-light);
   margin-left: 15px;
 }
-.price2 {
+/* .price2 {
   width: 116px;
   height: 32px;
   font-family: var(--Nunito-sans);
@@ -1163,7 +1164,7 @@ body {
   line-height: 120%;
   text-align: center;
   color: #b5eaee;
-}
+} */
 .likeandprice {
   display: flex;
   flex-direction: row;

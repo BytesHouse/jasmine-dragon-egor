@@ -1,5 +1,5 @@
 import Filters from "./Filters/Filters";
-import Choise from "./Choise/Choise";
+// import Choise from "./Choise/Choise";
 import Flexrow from "./Flexrow/Flexrow";
 import Pagination from "./Pagination/Pagination";
 import Lables from "./Lables/Lables";
@@ -33,7 +33,7 @@ export {
   Footerblock1,
   Footerbuttons,
   // Footerbuttons2,
-  Choise,
+  // Choise,
   Flexrow,
   Pagination,
   Lables,

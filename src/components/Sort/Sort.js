@@ -4,7 +4,7 @@ import Dropdown from "../../ui-kit/Dropdown/Dropdown";
 import Dropdownnumbers from "../../ui-kit/Dropdownnumbers/Dropdownnumbers";
 import Filter from "../../ui-kit/Filter/Filter";
 
-const Sort = ({ itemsShow, setItemsShow }) => {
+const Sort = ({ itemsPerPage, setItemsPerPage }) => {
   return (
     <div className="flex justify-between gap-[100px]">
       <Filter />
@@ -16,7 +16,10 @@ const Sort = ({ itemsShow, setItemsShow }) => {
       </div>
       <div className="flex items-center gap-[20px]">
         <p className="psortmenu">Показывать по</p>
-        <Dropdownnumbers itemsShow={itemsShow} setItemsShow={setItemsShow} />
+        <Dropdownnumbers
+          itemsPerPage={itemsPerPage}
+          setItemsPerPage={setItemsPerPage}
+        />
       </div>
     </div>
   );

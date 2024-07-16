@@ -14,7 +14,7 @@ const SectionOne = () => {
         alt="Image 1"
         width={462}
         height={462}
-        className="col-start-2 col-end-6 w-full"
+        className="col-start-2 col-end-6 w-auto h-auto"
       />
       <Image
         id="img2"
@@ -22,7 +22,7 @@ const SectionOne = () => {
         alt="Image 2"
         width={450}
         height={300}
-        className="mt-[331px] col-start-8 col-end-12 w-full"
+        className="mt-[331px] col-start-8 col-end-12 w-auto h-auto"
       />
       <div className="col-span-full container !p-0 relative">
         <p id="text1" className="col-start-1 col-end-13">
@@ -35,7 +35,7 @@ const SectionOne = () => {
           alt="table"
           width={219}
           height={219}
-          className="col-start-8 col-end-10 w-full absolute top-[250px]"
+          className="col-start-8 col-end-10 w-auto absolute top-[250px] h-auto"
         />
         <Image
           id="img4"
@@ -43,7 +43,7 @@ const SectionOne = () => {
           alt="2cup"
           width={340}
           height={246}
-          className="col-start-3 col-end-6 mt-[100px] w-full"
+          className="col-start-3 col-end-6 mt-[100px] w-auto h-auto"
         />
       </div>
     </section>

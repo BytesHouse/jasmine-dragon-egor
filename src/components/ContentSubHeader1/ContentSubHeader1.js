@@ -53,7 +53,7 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={804}
               height={585}
-              className="col-span-7 justify-self-end h-auto"
+              className="col-span-7 justify-self-end h-auto w-auto"
             />
           </div>
         </SwiperSlide>
@@ -66,7 +66,7 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3 h-auto"
+              className="col-span-3 h-auto w-auto"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <h5 className="text-[27px]">
@@ -94,7 +94,7 @@ const ContentSubHeader1 = () => {
               alt="bigphoto"
               width={418}
               height={590}
-              className="col-span-4 place-self-end h-auto"
+              className="col-span-4 place-self-end h-auto w-auto"
             />
             {/* </div> */}
           </div>
@@ -128,7 +128,7 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3"
+              className="col-span-3 h-auto w-auto"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <h5 className="text-[27px]">
@@ -156,7 +156,7 @@ const ContentSubHeader1 = () => {
               alt="bigphoto"
               width={418}
               height={590}
-              className="col-span-4 place-self-end h-auto"
+              className="col-span-4 place-self-end h-auto w-auto"
             />
             {/* </div> */}
           </div>
@@ -181,7 +181,7 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={804}
               height={585}
-              className="col-span-7 justify-self-end h-auto"
+              className="col-span-7 justify-self-end h-auto w-auto"
             />
           </div>
         </SwiperSlide>

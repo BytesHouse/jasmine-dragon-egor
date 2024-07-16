@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // import { Arrowdown, Arrowup } from "../icons";
 import Strelka from "../icons/Strelka/Strelka";
 
-const Dropdownnumbers = ({ itemsShow, setItemsShow }) => {
+const Dropdownnumbers = ({ itemsPerPage, setItemsPerPage }) => {
   const itemsShowBy = [6, 9, 12];
 
   const [isShow, setIshow] = useState(false);
@@ -11,7 +11,7 @@ const Dropdownnumbers = ({ itemsShow, setItemsShow }) => {
   const handleChangeIsShow = () => setIshow(!isShow);
 
   const handleChangeChoice = (item) => {
-    setItemsShow(item);
+    setItemsPerPage(item);
     setIshow(false);
   };
 
@@ -31,7 +31,7 @@ const Dropdownnumbers = ({ itemsShow, setItemsShow }) => {
   return (
     <div className="z-10 dropdown flex items-center justify-center bg-[var(--green-light)] p-[15px] border border-[var(--blue-light)] font-[var(--Nunito-sans)] text-[var(--blue-light)] relative">
       <div className="flex gap-[15px]" onClick={handleChangeIsShow}>
-        {itemsShow}
+        {itemsPerPage}
         <Strelka
           className={`transition ${isShow && "rotate-90"}`}
           isMini={true}

@@ -1,6 +1,7 @@
 import React from "react";
 import { mock2 } from "@/config/constants";
-import { HeartIcon2, Wagon } from "@/ui-kit/icons";
+import { HeartIcon2 } from "@/ui-kit/icons";
+import Cart from "@/ui-kit/icons/Cart/Cart";
 
 const Choise2dish = () => {
   return (
@@ -35,7 +36,7 @@ const Choise2dish = () => {
           <HeartIcon2 />
           <div className="likeandprice">
             <button className="buttonchoise2">
-              <Wagon />
+              <Cart />
               <span>В корзину</span>
             </button>
           </div>
