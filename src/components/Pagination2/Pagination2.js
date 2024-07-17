@@ -1,16 +1,13 @@
 import { ArrowRight, ArrowLeft } from "@/ui-kit/icons";
 import ReactPaginate from "react-paginate";
 
-const Pagination2 = ({ pageCount, onPageChange, currentPage }) => {
+const Pagination2 = ({ pageCount, onPageChange, currentPage, ...props }) => {
   const handleNextClick = () => {
-    // Логика для перехода на следующую страницу
-    // const nextPage = currentPage === pageCount ? 1 : currentPage + 1;
     const nextPage = currentPage + 1;
     onPageChange({ selected: nextPage });
   };
 
   const handlePrevClick = () => {
-    // Логика для перехода на следующую страницу
     const prevPage = currentPage - 1;
     onPageChange({ selected: prevPage });
   };
@@ -19,7 +16,7 @@ const Pagination2 = ({ pageCount, onPageChange, currentPage }) => {
   const isFirst = currentPage === 0;
 
   return (
-    <div className="flex justify-center items-center">
+    <div className={`flex justify-center items-center ${props?.className}`}>
       <button
         className={`flex py-[15px] px-[50px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
           isFirst && "border-blue opacity-50"

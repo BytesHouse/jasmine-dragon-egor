@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Pagination, CardsList, Likeitems, ToggleView } from "@/components";
-import { mock } from "@/config/constants";
+import { mock, mock2 } from "@/config/constants";
 import Pagination2 from "@/components/Pagination2/Pagination2";
 
 const SelectedMenu = () => {
@@ -21,29 +21,30 @@ const SelectedMenu = () => {
   const currentPageData = data.slice(offset, offset + itemsPerPage);
 
   return (
-    <>
+    <main className="container !pt-[50px]">
       {/* <div className="section3"> */}
-      <div className="container !pb-0 !pt-[50px]">
-        <h4 className="col-span-half">Избранное</h4>
-        <ToggleView
-          isHorizontal={isHorizontal}
-          toggleView={setIsHorizontal}
-          className="col-span-half"
-        />
-      </div>
+      <h4 className="col-span-half">Избранное</h4>
+      <ToggleView
+        isHorizontal={isHorizontal}
+        toggleView={setIsHorizontal}
+        className="col-span-half"
+      />
       <CardsList
         isHorizontal={isHorizontal}
-        cardsData={currentPageData}
-        className="!pt-[50px]"
+        cardsData={mock2}
+        className="!py-0 col-span-full"
       />
       {/* <Likeitems /> */}
+      <h4 className="col-span-full mt-[100px]">Вам также может понравиться</h4>
+      <CardsList cardsData={currentPageData} className="!py-0 col-span-full" />
       <Pagination2
         pageCount={Math.ceil(data.length / itemsPerPage)}
         onPageChange={handlePageClick}
         currentPage={currentPage}
+        className="col-span-full"
       />
       {/* </div> */}
-    </>
+    </main>
   );
 };
 

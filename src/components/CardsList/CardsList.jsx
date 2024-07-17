@@ -1,6 +1,6 @@
 import { ItemCard, ItemCardHorizontal } from "@/components";
 
-const CardsList = ({ isHorizontal, cardsData, ...props }) => {
+const CardsList = ({ isHorizontal = true, cardsData, ...props }) => {
   return isHorizontal ? (
     <div className={`container ${props?.className}`}>
       {cardsData.map((item, index) => (

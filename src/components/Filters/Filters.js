@@ -56,7 +56,11 @@ const Filters = () => {
           </button>
         </div> */}
       </div>
-      <CardsList isHorizontal={isHorizontal} cardsData={currentPageData} />
+      <CardsList
+        isHorizontal={isHorizontal}
+        cardsData={currentPageData}
+        className="!pt-0"
+      />
       <Pagination2
         pageCount={Math.ceil(data.length / itemsPerPage)}
         onPageChange={handlePageClick}
