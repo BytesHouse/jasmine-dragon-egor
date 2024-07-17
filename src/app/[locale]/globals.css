@@ -1275,34 +1275,20 @@ body {
   cursor: pointer;
 }
 
-.psortmenu {
+/* .psortmenu {
   font-family: var(--Nunito-sans);
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
   color: var(--blue-light);
-}
+} */
 
-.thelastsort {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.thelastsvg {
-  display: flex;
-  background-color: transparent;
-  border: none;
-}
 .hover1 {
   transition: fill 0.3s ease;
 }
 .hover1:hover {
   fill: var(--blue-light);
-}
-#margin20px {
-  margin-left: 20px;
 }
 
 #paddingfirstbutton {

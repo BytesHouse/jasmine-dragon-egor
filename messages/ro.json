@@ -64,6 +64,7 @@
     "signup": "Înregistrare",
     "signin": "Întrare",
     "password_reset": "Resetarea parolei",
-    "profile": "Profil"
+    "profile": "Profil",
+    "favorites": "Favorite"
   }
 }

@@ -11,19 +11,54 @@ import Footerblock1 from "./Footerblock1/Footerblock1";
 import Footerbuttons from "./Footerbuttons/Footerbuttons";
 // import Footerbuttons2 from "./Footerbuttons2/Footerbuttons2";
 import Lines from "./Lines/Lines";
-import Header from "./Header/Header";
 import Choise2dish from "./Choise2dish/Choise2dish";
 import Choisedish from "./Choisedish/Choisedish";
 import Filterdish from "./Filterdish/Filterdish";
 import HeaderForMenu from "./HeaderForMenu/HeaderForMenu";
 import ChoiseForCart from "./ChoiseForCart/ChoiseForCart";
 import Counter from "./Counter/Counter";
-import Checkbox from "./Agreements/Agreements";
+import Agreements from "./Agreements/Agreements";
+import CheckForOrders from "./CheckForOrders/CheckForOrders";
+import ContentSubHeader1 from "./ContentSubHeader1/ContentSubHeader1";
+import Footer from "./Footer/Footer";
+import Footerfinal from "./Footerfinal/Footerfinal";
+import Header from "./Header/Header";
+import ImageSection from "./ImageSection/Imagesection";
+import ItemCard from "./ItemCard/ItemCard";
+import ItemCardHorizontal from "./ItemCardHorizontal/ItemCardHorizontal";
+import Main from "./Main/Main";
+// import Pagination2 from "./Pagination2/Pagination2";
+import RecentlyViewed from "./Recently_viewed/Recently_viewed";
+import SectionAbout from "./SectionAbout/SectionAbout";
+import SectionOne from "./SectionOne/SectionOne";
+import SectionThree from "./SectionThree/SectionThree";
+import SectionTwo from "./SectionTwo/SectionTwo";
+import Sort from "./Sort/Sort";
+import ToggleView from "./ToggleView/ToggleView";
+import CardsList from "./CardsList/CardsList";
+
 export {
+  CardsList,
+  ToggleView,
+  Sort,
+  CheckForOrders,
+  Footerfinal,
+  Footer,
+  Main,
+  // Pagination2,
+  RecentlyViewed,
+  ImageSection,
+  ItemCardHorizontal,
+  ItemCard,
+  SectionAbout,
+  SectionOne,
+  SectionThree,
+  SectionTwo,
+  ContentSubHeader1,
   Filters,
   Filterdish,
   Counter,
-  Checkbox,
+  Agreements,
   Choisedish,
   Choise2dish,
   HeaderForMenu,

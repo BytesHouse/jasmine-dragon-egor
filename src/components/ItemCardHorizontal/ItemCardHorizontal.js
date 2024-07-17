@@ -15,7 +15,7 @@ const ItemCardHorizontal = (item) => {
           height={250}
           className="h-auto w-full"
         />
-        <ChooseHeart2 className="absolute right-[15px] top-[15px]" />
+        <ChooseHeart2 className="absolute right-[15px] top-[15px] hover:fill-blue-light" />
       </div>
       <div className="flex flex-col gap-[25px] max-w-[463px]">
         <div>

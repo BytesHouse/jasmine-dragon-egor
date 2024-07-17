@@ -12,9 +12,9 @@ const ItemCard = (item) => {
           alt="teagreen"
           width={413}
           height={413}
-          className="h-auto w-auto"
+          className="h-auto"
         />
-        <ChooseHeart className="absolute top-[15px] right-[15px]" />
+        <ChooseHeart className="absolute top-[15px] right-[15px] hover:fill-blue-light" />
       </div>
       <h4>{title}</h4>
       <p className="p1">{description}</p>

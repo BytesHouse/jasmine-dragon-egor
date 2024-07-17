@@ -1,5 +1,5 @@
-import ReactPaginate from "react-paginate";
 import { ArrowRight, ArrowLeft } from "@/ui-kit/icons";
+import ReactPaginate from "react-paginate";
 
 const Pagination2 = ({ pageCount, onPageChange, currentPage }) => {
   const handleNextClick = () => {

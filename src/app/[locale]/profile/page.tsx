@@ -1,6 +1,6 @@
 import UserProfile from "./components/UserProfile/UserProfile";
 import RecentlyOrders from "./components/RecentlyOrders/RecentlyOrders";
-import { orders } from "@/config/constants";
+// import { orders } from "@/config/constants";
 
 const Profiles = () => {
   return (
@@ -8,7 +8,7 @@ const Profiles = () => {
       {/* <div className="col-span-full"> */}
       {/* <DirectionForProfile /> */}
       <UserProfile />
-      <RecentlyOrders orders={orders} />
+      <RecentlyOrders />
       {/* </div> */}
     </main>
   );

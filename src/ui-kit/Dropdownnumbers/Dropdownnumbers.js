@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 // import { Arrowdown, Arrowup } from "../icons";
 import Strelka from "../icons/Strelka/Strelka";

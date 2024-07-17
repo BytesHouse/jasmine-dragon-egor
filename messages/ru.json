@@ -64,6 +64,7 @@
     "signup": "Регистрация",
     "signin": "Вход",
     "password_reset": "Сброс пароля",
-    "profile": "Профиль"
+    "profile": "Профиль",
+    "favorites": "Избранное"
   }
 }

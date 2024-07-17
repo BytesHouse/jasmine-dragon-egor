@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 import RadioButton from "../RadioButton/RadioButton";
 import { filterConfig } from "../../config/filter.config";
