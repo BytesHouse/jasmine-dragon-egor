@@ -9,7 +9,7 @@ const CardsList = ({ isHorizontal, cardsData, ...props }) => {
     </div>
   ) : (
     // <Choise itemsPerPage={itemsPerPage} />
-    <div className="container !gap-[25px]">
+    <div className={`container !gap-[25px] ${props?.className}`}>
       {cardsData.map((item, index) => (
         <ItemCardHorizontal key={index} {...item} />
       ))}

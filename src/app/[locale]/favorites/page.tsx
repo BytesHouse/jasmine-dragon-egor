@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Pagination, CardsList, Likeitems } from "@/components";
+import { Pagination, CardsList, Likeitems, ToggleView } from "@/components";
 import { mock } from "@/config/constants";
 import Pagination2 from "@/components/Pagination2/Pagination2";
 
@@ -25,6 +25,11 @@ const SelectedMenu = () => {
       {/* <div className="section3"> */}
       <div className="container !pb-0 !pt-[50px]">
         <h4 className="col-span-half">Избранное</h4>
+        <ToggleView
+          isHorizontal={isHorizontal}
+          toggleView={setIsHorizontal}
+          className="col-span-half"
+        />
       </div>
       <CardsList
         isHorizontal={isHorizontal}
