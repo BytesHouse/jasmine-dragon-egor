@@ -7,14 +7,14 @@ import { usePathname } from "next/navigation";
 const RecentlyOrders = () => {
   const path = usePathname();
   return (
-    <div className="flex col-span-full flex-col gap-[25px] font-[var(--Nunito-sans)] text-[var(--blue-light)]">
+    <div className="flex col-span-full flex-col gap-[25px] text-blue-light">
       <h4 className="simple font-bold">Предыдущие заказы</h4>
-      <table className="w-full border-t border-l border-blue-light border-collapse bg-[var(--green-light)] ">
+      <table className="w-full border-t border-l border-blue-light border-collapse bg-green-light">
         <thead className="table-header-group">
           <tr className="grid grid-cols-[1fr_0.5fr_1.5fr_1fr_1fr] ">
             {RecentlyOrderCols.map((item, index) => (
               <th
-                className={` p-[25px] text-left text-h5 font-semibold border-r border-b border-blue-light`}
+                className={`p-[25px] text-left text-h5 font-semibold border-r border-b border-blue-light`}
                 key={index}
               >
                 {item.title}

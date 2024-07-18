@@ -284,6 +284,45 @@ export const RecentlyOrdersMock = [
   },
 ];
 
+export const orderCols = [
+  { title: "Имя товара", toTranslate: "productName" },
+  { title: "Код товара", toTranslate: "productCode" },
+  { title: "Цена", toTranslate: "price" },
+  { title: "Количество", toTranslate: "quantity" },
+  { title: "Общая стоимость", toTranslate: "totalPrice" },
+];
+
+export const orderMock = [
+  {
+    productName: "Чай расыпной Пуэр экстракт малины с женьшенем",
+    productCode: "10327",
+    price: "200.00 Lei",
+    quantity: 5,
+    totalPrice: "1000.00 Lei",
+  },
+  {
+    productName: "Чай расыпной Пуэр экстракт малины с женьшенем",
+    productCode: "10327",
+    price: "200.00 Lei",
+    quantity: 5,
+    totalPrice: "1000.00 Lei",
+  },
+  {
+    productName: "Чай расыпной Пуэр экстракт малины с женьшенем",
+    productCode: "10327",
+    price: "200.00 Lei",
+    quantity: 5,
+    totalPrice: "1000.00 Lei",
+  },
+  {
+    productName: "Чай расыпной Пуэр экстракт малины с женьшенем",
+    productCode: "10327",
+    price: "200.00 Lei",
+    quantity: 5,
+    totalPrice: "1000.00 Lei",
+  },
+];
+
 export const flexRow = [
   { h5: "Чаи", p1: "15 товаров" },
   { h5: "Смузи", p1: "15 товаров" },

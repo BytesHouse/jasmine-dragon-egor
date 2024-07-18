@@ -45,7 +45,7 @@ const UserProfile = () => {
             <ProfileDeco />
             <input
               className=" w-full bg-[var(--green-bg)] focus:outline-none"
-              type="number"
+              type="tel"
             ></input>
             <Edit />
           </div>
