@@ -1,23 +1,51 @@
-import React from "react";
-import Agreements from "../Agreements/Agreements";
+"use client";
+import { useState } from "react";
+
+import { mock } from "@/config/constants";
+import { Agreements, OrderListItem } from "@/components";
 import Image from "next/image";
-import EnterPromocode from "../../ui-kit/icons/EnterPromocode/EnterPromocode";
+import { Strelka, EnterPromocode } from "@/ui-kit/icons";
 // import checkboxdone from "../../../public/assets/Images/Checkdone.svg";
 
-const CheckForOrders = () => {
+const CheckForOrders = ({ isWithOrders = false }) => {
+  const [isShowOrders, setIsShowOrders] = useState(false);
+
   return (
-    <div className="col-span-5 w-full justify-self-end flex flex-col h-max p-[25px] max-w-[555px] bg-[var(--green-light)] gap-[25px] relative">
-      <h4 className="font-semibold simple">Ваши товары</h4>
+    <div
+      className={`${
+        isWithOrders ? "col-span-half" : "col-span-5 max-w-[555px]"
+      } w-full justify-self-end flex flex-col h-max p-[25px]  bg-[var(--green-light)] gap-[25px] relative`}
+    >
+      <div className="flex">
+        <h4 className="font-semibold simple">Ваши товары</h4>
+        {isWithOrders && (
+          <button
+            className={`${
+              isShowOrders ? "-rotate-180" : "rotate-0"
+            } transition`}
+            onClick={() => setIsShowOrders(!isShowOrders)}
+          >
+            <Strelka />
+          </button>
+        )}
+      </div>
+      {isShowOrders && (
+        <div className="max-h-[470px] overflow-y-scroll flex flex-col gap-[25px] pr-[25px]">
+          {mock.map((item, index) => (
+            <OrderListItem item={item} key={index} isSmall={true} />
+          ))}
+        </div>
+      )}
       <p className="font-semibold">В корзине 10 товаров</p>
       <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">Сумма Покупок</h5>
         <p className="p1 font-semibold">2,194.45 Lei</p>
       </div>
-      <div className="flex flex-row justify-between items-center">
+      {/* <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">Скидка</h5>
         <p className="p1 font-semibold">0.25 Lei</p>
-      </div>
-      <label className="text-h5 text-blue-light font-semibold">
+      </div> */}
+      {/* <label className="text-h5 text-blue-light font-semibold">
         Ввести промо код
       </label>
       <div className="border border-blue-light bg-[var(--green-light)] p-[25px] pr-[40px] flex justify-between gap-[25px]">
@@ -27,7 +55,7 @@ const CheckForOrders = () => {
           placeholder="Введите промо код"
         />
         <EnterPromocode />
-      </div>
+      </div> */}
       <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">Доставка</h5>
         <p className="p1 font-semibold">Бесплатно</p>
@@ -44,7 +72,7 @@ const CheckForOrders = () => {
           width={36}
           height={36}
         />
-        Продолжить оформление
+        Подтвердить
       </button>
     </div>
   );

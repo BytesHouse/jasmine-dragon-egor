@@ -31,7 +31,7 @@ const UserProfile = () => {
           <div className="max-w-[695px] flex gap-[15px] items-center p-[15px] border border-blue-light">
             <ProfileDeco />
             <input
-              className=" w-full bg-[var(--green-bg)] focus:outline-none"
+              className="w-full bg-[var(--green-bg)] focus:outline-none"
               type="text"
             ></input>
             <Edit />

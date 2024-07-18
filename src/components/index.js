@@ -16,7 +16,6 @@ import Choisedish from "./Choisedish/Choisedish";
 import Filterdish from "./Filterdish/Filterdish";
 import HeaderForMenu from "./HeaderForMenu/HeaderForMenu";
 import ChoiseForCart from "./ChoiseForCart/ChoiseForCart";
-import Counter from "./Counter/Counter";
 import Agreements from "./Agreements/Agreements";
 import CheckForOrders from "./CheckForOrders/CheckForOrders";
 import ContentSubHeader1 from "./ContentSubHeader1/ContentSubHeader1";
@@ -36,9 +35,11 @@ import SectionTwo from "./SectionTwo/SectionTwo";
 import Sort from "./Sort/Sort";
 import ToggleView from "./ToggleView/ToggleView";
 import CardsList from "./CardsList/CardsList";
+import OrderListItem from "./OrderListItem/OrderListItem";
 
 export {
   CardsList,
+  OrderListItem,
   ToggleView,
   Sort,
   CheckForOrders,
@@ -57,7 +58,6 @@ export {
   ContentSubHeader1,
   Filters,
   Filterdish,
-  Counter,
   Agreements,
   Choisedish,
   Choise2dish,

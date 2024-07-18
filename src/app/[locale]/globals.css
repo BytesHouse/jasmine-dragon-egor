@@ -819,30 +819,6 @@ html {
   color: var(--blue);
 }
 
-#img3 {
-  /* position: absolute; */
-  /* width: 219px; */
-  /* height: 219px; */
-  /* left: 858px; */
-  /* top: 867px; */
-  /* border: none; */
-  /* outline: none; */
-}
-
-#img4 {
-  /* position: absolute; */
-  /* width: 340px; */
-  /* height: 246px; */
-  /* left: 248px; */
-  /* top: 1107px; */
-  /* background: linear-gradient(
-      0deg,
-      rgba(39, 62, 64, 0.1),
-      rgba(39, 62, 64, 0.1)
-    ),
-    #d9d9d9; */
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(var(--cols), 1fr);

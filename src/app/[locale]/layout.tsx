@@ -31,7 +31,7 @@ export default async function LocaleLayout({
   const teas: TeaProduct[] = await prisma.product.findMany();
   return (
     <html lang={locale}>
-      <body>
+      <body className="overflow-x-hidden">
         <ProductProvider products={teas}>
           <NextIntlClientProvider messages={messages}>
             <Header />
