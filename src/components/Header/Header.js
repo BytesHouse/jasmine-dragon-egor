@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 // import logo from "../../../public/assets/Images/Logo.svg";
 import {
   BagIcon,
@@ -16,15 +16,18 @@ import ImageSection from "../ImageSection/Imagesection";
 import { Footerbuttons } from "../index";
 import Breadcrumbs from "@/ui-kit/Breadcrumbs/Breadcrumbs";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   //   const { t } = useTranslation("Header");
   //   const { pathname } = useLocation();
   const pathname = usePathname();
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [pathname]);
+  const lang = useLocale();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <header className="w-full border-b border-blue-light">
       <div className="container !py-0">
@@ -44,7 +47,9 @@ const Header = () => {
               </div>
             </Link>
             <div className="relative flex items-center gap-6 pr-3">
-              <HeartIcon />
+              <Link href={locale + "/favorites"}>
+                <HeartIcon />
+              </Link>
               <button className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md">
                 Профиль <ProfileIcon />
               </button>

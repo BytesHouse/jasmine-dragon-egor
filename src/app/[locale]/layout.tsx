@@ -8,6 +8,7 @@ import Footer from "@/components/Footer/Footer";
 import { ProductProvider } from "@/components/Providers/ContextProvider";
 import { prisma } from "../../../db";
 import { TeaProduct } from "@/types/tea-product.type";
+import { ProductCartProvider } from "@/components/Providers/ProductCartProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -38,9 +39,11 @@ export default async function LocaleLayout({
       >
         <ProductProvider products={teas}>
           <NextIntlClientProvider messages={messages}>
-            <Header />
-            {children}
-            <Footer />
+            <ProductCartProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ProductCartProvider>
           </NextIntlClientProvider>
         </ProductProvider>
       </body>
