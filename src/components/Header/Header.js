@@ -47,7 +47,7 @@ const Header = () => {
               </div>
             </Link>
             <div className="relative flex items-center gap-6 pr-3">
-              <Link href={locale + "/favorites"}>
+              <Link href={lang + "/favorites"}>
                 <HeartIcon />
               </Link>
               <button className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md">
