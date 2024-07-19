@@ -16,7 +16,6 @@ import ImageSection from "../ImageSection/Imagesection";
 import { Footerbuttons } from "../index";
 import Breadcrumbs from "@/ui-kit/Breadcrumbs/Breadcrumbs";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 
 const Header = () => {
