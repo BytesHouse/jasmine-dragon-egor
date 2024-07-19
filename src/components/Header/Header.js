@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header className="w-full border-b border-blue-light">
       <div className="container !py-0">
-        <div className="flex justify-between items-center py-4 grid-column">
+        <div className="flex justify-between items-center py-4 col-span-full">
           <div className="flex justify-between w-full flex-grow">
             <Link href="/">
               <div className="flex items-center gap-6">

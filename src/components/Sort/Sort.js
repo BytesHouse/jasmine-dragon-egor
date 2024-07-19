@@ -6,7 +6,7 @@ import Filter from "../../ui-kit/Filter/Filter";
 
 const Sort = ({ itemsPerPage, setItemsPerPage }) => {
   return (
-    <div className="flex justify-between gap-[100px]">
+    <div className="flex justify-between _1600:gap-[20px] flex-grow">
       <Filter />
       <div className="flex flex-row gap-[20px]">
         <span className="flex items-center justify-center font-[var(--Nunito-sans)] text-[18px] leading-[130%] text-[var(--blue-light)]">

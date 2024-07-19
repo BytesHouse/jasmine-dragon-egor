@@ -8,9 +8,9 @@ const Store = () => {
     // <div className="store">
     <div className="container">
       <h4 className="col-span-full">Магазин</h4>
-      <div className="choosen1 col-span-half">
+      <div className="col-span-half flex flex-col gap-8 p-[50px] border border-blue-light transition hover:bg-green-light hover">
         <Image
-          className="svgbigsale"
+          className="w-full aspect-square"
           src="/assets/Images/teagreen.png"
           alt="teagreen"
           width={607}
@@ -22,13 +22,13 @@ const Store = () => {
           Наша дружелюбная команда с удовольствием поможет вам выбрать именно
           тот чай, который подходит вам.
         </p>
-        <button className="saleassorti w-full">
-          <h5>Смотреть ассортимент</h5>
+        <button className="p-[25px] border-2 text-h5 font-Playfair-Display italic font-medium text-blue-light text-center w-full">
+          Смотреть ассортимент
         </button>
       </div>
-      <div className="choosen1 col-span-half">
+      <div className="col-span-half flex flex-col gap-8 p-[50px] border border-blue-light transition hover:bg-green-light hover">
         <Image
-          className="svgbigsale"
+          className="w-full aspect-square"
           src="/assets/Images/greentea.png"
           alt="greentea"
           width={607}
@@ -39,8 +39,8 @@ const Store = () => {
           Наша дружелюбная команда с удовольствием поможет вам выбрать именно
           тот чай, который подходит вам.
         </p>
-        <button className="saleassorti w-full">
-          <h5>Смотреть ассортимент</h5>
+        <button className="p-[25px] border-2 text-h5 font-Playfair-Display italic font-medium text-blue-light text-center w-full">
+          Смотреть ассортимент
         </button>
       </div>
     </div>

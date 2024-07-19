@@ -324,11 +324,31 @@ export const orderMock = [
 ];
 
 export const flexRow = [
-  { h5: "Чаи", p1: "15 товаров" },
-  { h5: "Смузи", p1: "15 товаров" },
-  { h5: "Сэндвичи", p1: "15 товаров" },
-  { h5: "Десерты", p1: "15 товаров" },
-  { h5: "Торты", p1: "15 товаров" },
+  {
+    h5: "Чаи",
+    p1: "15 товаров",
+    bgPath: "bg-[url('/assets/Images/FlexRow/0.png')]",
+  },
+  {
+    h5: "Смузи",
+    p1: "15 товаров",
+    bgPath: "bg-[url('/assets/Images/FlexRow/1.png')]",
+  },
+  {
+    h5: "Сэндвичи",
+    p1: "15 товаров",
+    bgPath: "bg-[url('/assets/Images/FlexRow/2.png')]",
+  },
+  {
+    h5: "Десерты",
+    p1: "15 товаров",
+    bgPath: "bg-[url('/assets/Images/FlexRow/3.png')]",
+  },
+  {
+    h5: "Торты",
+    p1: "15 товаров",
+    bgPath: "bg-[url('/assets/Images/FlexRow/4.png')]",
+  },
 ];
 
 export const labels = [

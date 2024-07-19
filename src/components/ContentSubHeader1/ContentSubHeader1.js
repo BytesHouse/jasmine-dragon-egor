@@ -26,10 +26,10 @@ const ContentSubHeader1 = () => {
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
         pagination={pagination}
-        autoplay={{
-          delay: 10000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 10000,
+        //   disableOnInteraction: false,
+        // }}
         spaceBetween={25}
         centeredSlides={true}
         className="container"

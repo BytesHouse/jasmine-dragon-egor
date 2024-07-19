@@ -33,8 +33,8 @@ const Filters = () => {
 
   return (
     <>
-      <div className="container !gap-[25px] !py-[50px]" id="cardsListTop">
-        <div className="flex justify-between flex-row gap-12 col-span-full">
+      <div className="container !py-[50px]" id="cardsListTop">
+        <div className="flex justify-between flex-row gap-[100px] col-span-full">
           <Sort itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} />
           <ToggleView
             isHorizontal={isHorizontal}
@@ -67,7 +67,7 @@ const Filters = () => {
       <CardsList
         isHorizontal={isHorizontal}
         cardsData={currentPageData}
-        className="!pt-0"
+        className="!pt-0 !pb-[50px]"
       />
       <Pagination2
         pageCount={Math.ceil(productsList?.length / itemsPerPage)}

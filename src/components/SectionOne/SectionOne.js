@@ -13,7 +13,7 @@ const SectionOne = () => {
         alt="Image 1"
         width={462}
         height={462}
-        className="col-start-2 col-end-6 h-auto _1600:col-start-1"
+        className="col-start-2 col-end-6 h-auto _1600:col-start-1 "
       />
       <Image
         src="/assets/Images/cheaitar.png"

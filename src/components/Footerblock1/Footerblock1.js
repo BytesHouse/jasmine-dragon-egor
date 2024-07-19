@@ -5,7 +5,7 @@ import SocialButtons from "@/ui-kit/SocialButtons/SocialButtons";
 
 const Footerblock1 = () => {
   return (
-    <div className="flex flex-col gap-[25px] col-span-5">
+    <div className="flex flex-col gap-[25px] col-span-5 _1600:col-span-half">
       <div className="footerbegginning">
         <Image
           src="/assets/Images/Logo.svg"
