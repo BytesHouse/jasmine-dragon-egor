@@ -20,26 +20,26 @@ const SectionOne = () => {
         alt="Image 2"
         width={450}
         height={300}
-        className="mt-[331px] col-start-8 col-end-12 h-auto _1600:-col-end-1 place-self-end"
+        className="mt-[331px] col-start-8 col-end-12 h-auto _1600:-col-end-1 place-self-end _1240:mt-[221px]"
       />
       <div className="col-span-full container !p-0 relative">
-        <p id="text1" className="col-start-1 col-end-13">
+        <p id="text1" className="col-span-full">
           Наслаждайтесь чаем с пользой: вкус, качество, уют и особенная
           атмосфера
         </p>
-        <Image
-          src="/assets/Images/table.png"
-          alt="table"
-          width={219}
-          height={219}
-          className="col-start-8 col-end-10 place-self-center absolute top-[250px] h-auto _1600:col-[9_/_12]"
-        />
         <Image
           src="/assets/Images/2cuptea.png"
           alt="2cup"
           width={340}
           height={246}
-          className="col-start-3 col-end-6 mt-[100px] h-auto _1600:mt-[25px]"
+          className="col-start-3 place-self-end col-end-6 mt-[100px] h-auto _1600:mt-[25px] _1600:col-end-7 _1240:col-[1_/_6] _1240:place-self-auto"
+        />
+        <Image
+          src="/assets/Images/table.png"
+          alt="table"
+          width={219}
+          height={219}
+          className="col-start-8 col-end-10 place-self-center absolute top-[250px] h-auto _1600:col-[9_/_12] _1240:static  _1240:top-0"
         />
       </div>
     </section>

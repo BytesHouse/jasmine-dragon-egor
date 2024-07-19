@@ -11,7 +11,7 @@ const Contacts = () => {
         alt="tea"
         width={560}
         height={654}
-        className="col-span-5 _1600:col-span-half"
+        className="col-span-5 _1600:col-span-half _1240:object-cover _1240:h-full"
       />
       <div className="flex flex-col gap-[25px] col-span-7 _1600:col-span-half">
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">

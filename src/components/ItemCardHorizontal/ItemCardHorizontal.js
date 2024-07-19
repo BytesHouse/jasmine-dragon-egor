@@ -6,7 +6,7 @@ const ItemCardHorizontal = (item) => {
   const { name, description, price } = item;
 
   return (
-    <div className="choosen2 col-span-full">
+    <div className="col-span-full flex p-[25px] gap-[50px] border border-green-bg items-center transition hover:border-blue hover:bg-green-light">
       <div className="relative max-w-[250px] w-full">
         <Image
           src={image}
@@ -28,9 +28,13 @@ const ItemCardHorizontal = (item) => {
           </span>
           <span className="discount ml-[15px]">{price} Lei</span>
         </div>
+        <button className="hidden _1240:flex max-w-max items-center gap-[25px] border-2 border-blue-light text-h5 text-blue-light bg-green-light font-semibold p-[25px_100px] _1600:p-[25px_50px]">
+          <Cart />
+          <span>В корзину</span>
+        </button>
       </div>
-      <div className="flex-grow flex justify-end">
-        <button className="buttonchoise2">
+      <div className="_1240:hidden flex-grow flex justify-end">
+        <button className="flex items-center gap-[25px] border-2 border-blue-light text-h5 text-blue-light bg-green-light font-semibold p-[25px_100px] _1600:p-[25px_50px]">
           <Cart />
           <span>В корзину</span>
         </button>

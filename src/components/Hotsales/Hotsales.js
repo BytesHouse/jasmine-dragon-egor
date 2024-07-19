@@ -34,7 +34,7 @@ const Hotsales = () => {
 
   return (
     <>
-      <div className="mt-[200px] container">
+      <div className="mt-[200px] container !pb-[50px]">
         <h4 className="col-span-full">Хиты продаж</h4>
         <div className="options col-span-full">
           <button className="buttonhotsale">Меню</button>

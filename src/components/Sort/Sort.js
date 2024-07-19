@@ -6,16 +6,14 @@ import Filter from "../../ui-kit/Filter/Filter";
 
 const Sort = ({ itemsPerPage, setItemsPerPage }) => {
   return (
-    <div className="flex justify-between _1600:gap-[20px] flex-grow">
+    <div className="flex justify-between flex-grow _1600:gap-[20px] _1240:gap-[25px]">
       <Filter />
-      <div className="flex flex-row gap-[20px]">
-        <span className="flex items-center justify-center font-[var(--Nunito-sans)] text-[18px] leading-[130%] text-[var(--blue-light)]">
-          Сортировка по
-        </span>
+      <div className="flex items-center gap-[20px] ">
+        <p className="p1 _1240:p2">Сортировка по</p>
         <Dropdown array={mock3} />
       </div>
       <div className="flex items-center gap-[20px]">
-        <p className="psortmenu">Показывать по</p>
+        <p className="p1 _1240:p2">Показывать по</p>
         <Dropdownnumbers
           itemsPerPage={itemsPerPage}
           setItemsPerPage={setItemsPerPage}

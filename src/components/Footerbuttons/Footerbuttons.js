@@ -17,7 +17,7 @@ const Footerbuttons = ({ isVertical = false }) => {
     <ol
       className={
         !isVertical
-          ? `grid grid-cols-half gap-[var(--gutter)] justify-between col-start-7 col-end-13 footer-ol`
+          ? `grid grid-cols-half gap-[var(--gutter)] justify-between col-start-7 col-end-13 footer-ol _1600:col-span-half _1240:!col-span-full`
           : `flex flex-col gap-[var(--gutter)] footer-ol py-[25px]`
       }
     >

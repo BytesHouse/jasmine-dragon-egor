@@ -6,7 +6,10 @@ const image = "/assets/Images/tea-mock.png";
 const ItemCard = (item) => {
   const { name, description, price } = item;
   return (
-    <div key={Math.random()} className="choosen col-span-third">
+    <div
+      key={Math.random()}
+      className="col-span-third _1240:col-span-half flex flex-col p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue"
+    >
       <div className="relative">
         <Image
           src={image}

@@ -23,6 +23,7 @@ const Feedbacks = () => {
         slidesPerView={"auto"}
         spaceBetween={25}
         // centeredSlides={true}
+        // initialSlide={2}
         modules={[Navigation]}
         onBeforeInit={(swiper) => {
           // swiperRef.current = swiper;
@@ -39,7 +40,7 @@ const Feedbacks = () => {
       >
         <SwiperSlide className="feedback">
           <Image
-            className="avatar"
+            className=""
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
@@ -55,7 +56,7 @@ const Feedbacks = () => {
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className="avatar"
+            className=""
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
@@ -70,7 +71,7 @@ const Feedbacks = () => {
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className="avatar"
+            className=""
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}

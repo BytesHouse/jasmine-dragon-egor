@@ -16,7 +16,7 @@ const Flexrow = () => {
                 id={`tea${index + 1}`}
                 href="index.html"
               >
-                <div className="group flex flex-col border-blue-light border p-[25px] bg-[var(--green-bg-25)] hover:bg-blue-light transition">
+                <div className="group flex flex-col items-center border-blue-light border p-[25px] bg-[var(--green-bg-25)] hover:bg-blue-light transition">
                   <h5 className="text-center group-hover:text-green-light mb-[15px]">
                     {item.h5}
                   </h5>

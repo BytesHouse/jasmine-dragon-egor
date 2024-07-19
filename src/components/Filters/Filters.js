@@ -34,7 +34,7 @@ const Filters = () => {
   return (
     <>
       <div className="container !py-[50px]" id="cardsListTop">
-        <div className="flex justify-between flex-row gap-[100px] col-span-full">
+        <div className="flex justify-between flex-row gap-[100px] col-span-full _1240:gap-[25px]">
           <Sort itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} />
           <ToggleView
             isHorizontal={isHorizontal}

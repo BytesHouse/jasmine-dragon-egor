@@ -8,7 +8,7 @@ const Store = () => {
     // <div className="store">
     <div className="container">
       <h4 className="col-span-full">Магазин</h4>
-      <div className="col-span-half flex flex-col gap-8 p-[50px] border border-blue-light transition hover:bg-green-light hover">
+      <div className="col-span-half flex flex-col gap-8 p-[50px] border border-blue-light transition hover:bg-green-light _1240:p-[25px]">
         <Image
           className="w-full aspect-square"
           src="/assets/Images/teagreen.png"
@@ -26,7 +26,7 @@ const Store = () => {
           Смотреть ассортимент
         </button>
       </div>
-      <div className="col-span-half flex flex-col gap-8 p-[50px] border border-blue-light transition hover:bg-green-light hover">
+      <div className="col-span-half flex flex-col gap-8 p-[50px] border border-blue-light transition hover:bg-green-light _1240:p-[25px]">
         <Image
           className="w-full aspect-square"
           src="/assets/Images/greentea.png"

@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import logo from "../../../public/assets/Images/Logo.svg";
 import {
   BagIcon,
@@ -24,9 +24,9 @@ const Header = () => {
   //   const { pathname } = useLocation();
   const pathname = usePathname();
   const lang = useLocale();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
   return (
     <header className="w-full border-b border-blue-light">
       <div className="container !py-0">

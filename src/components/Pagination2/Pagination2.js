@@ -16,7 +16,9 @@ const Pagination2 = ({ pageCount, onPageChange, currentPage, ...props }) => {
   const isFirst = currentPage === 0;
 
   return (
-    <div className={`flex justify-center items-center ${props?.className}`}>
+    <div
+      className={`flex mb-[100px] justify-center items-center ${props?.className}`}
+    >
       <button
         className={`flex py-[15px] px-[50px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
           isFirst && "border-blue opacity-50"

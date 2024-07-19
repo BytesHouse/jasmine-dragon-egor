@@ -27,7 +27,7 @@ const Dropdown = ({ array }) => {
   }, []);
 
   return (
-    <div className="z-10 dropdown flex items-center justify-center bg-[var(--green-light)] w-[300px] border border-[var(--blue-light)] [&>div] font-[var(--Nunito-sans)] text-[var(--blue-light)] relative [&_li]:border [&_li]:border-[var(--blue-light)] [&_li]:p-4 [&_ul]:absolute">
+    <div className="z-10 dropdown flex items-center justify-center bg-[var(--green-light)] w-[300px] border border-[var(--blue-light)] [&>div] font-[var(--Nunito-sans)] text-[var(--blue-light)] relative [&_li]:border [&_li]:border-[var(--blue-light)] [&_li]:p-4 [&_ul]:absolute _1600:w-[260px]">
       {typeof array[0] === "string" ? (
         <div>
           <div onClick={handleChangeIsShow}>{choice}</div>
@@ -42,19 +42,19 @@ const Dropdown = ({ array }) => {
           )}
         </div>
       ) : (
-        <div>
+        <>
           <div
-            className="flex items-center justify-center gap-[15px] py-[15px] "
+            className="flex items-center justify-center gap-[15px] py-4 w-full relative"
             onClick={handleChangeIsShow}
           >
             {choice.title}
             {choice.icon}
           </div>
           {isShow && (
-            <ul className=" ml-[-1px]">
+            <ul className="w-full top-[100%]">
               {array.map((item) => (
                 <li
-                  className="flex gap-[15px] items-center justify-center hover:bg-[var(--blue)] w-[300px] border border-[var(--blue-light)] bg-[var(--green-light)]"
+                  className="flex gap-[15px] items-center justify-center hover:bg-[var(--blue)] w-full border border-[var(--blue-light)] bg-[var(--green-light)]"
                   onClick={() => handleChangeChoice(item)}
                   key={item.id}
                 >
@@ -64,7 +64,7 @@ const Dropdown = ({ array }) => {
               ))}
             </ul>
           )}
-        </div>
+        </>
       )}
     </div>
   );
