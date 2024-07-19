@@ -97,6 +97,13 @@
   );
 }
 
+@media screen and (max-width: 1600px) {
+  :root {
+    --max-w: 1200px;
+    --gutter: 20px;
+  }
+}
+
 /* Scrollbar styles */
 /* width */
 ::-webkit-scrollbar {
@@ -798,13 +805,6 @@ html {
     #d9d9d9; */
 }
 
-.section1 {
-  grid-column: 1/-1;
-  /* min-height: 1553px; */
-  position: relative;
-  padding-block: 100px !important;
-}
-
 #text1 {
   /* position: absolute; */
   /* width: 1447px; */
@@ -1048,7 +1048,7 @@ body {
 .fotka {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  /* width: 250px; */
   height: 250px;
   text-decoration: none;
   align-items: center;
@@ -1065,21 +1065,21 @@ body {
   border: 1px solid var(--blue-light);
 }
 
-#tea2 {
-  background-image: url("/assets/Images/Смузи.png");
+/* #tea2 {
+  background-image: url("/assets/Images/FlexRow/1.png");
 }
 
 #tea3 {
-  background-image: url("/assets/Images/Сэндвичи.png");
+  background-image: url("/assets/Images/FlexRow/2.png");
 }
 
 #tea4 {
-  background-image: url("/assets/Images/Десерты.png");
+  background-image: url("/assets/Images/FlexRow/3.png");
 }
 
 #tea5 {
-  background-image: url("/assets/Images/Торты.png");
-}
+  background-image: url("/assets/Images/FlexRow/4.png");
+} */
 
 .buttonchoise {
   display: flex;

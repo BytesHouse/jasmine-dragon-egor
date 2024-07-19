@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Cart from "../../ui-kit/icons/Cart/Cart";
 import ChooseHeart from "../../ui-kit/icons/ChooseHeart/ChooseHeart";
+const image = "/assets/Images/tea-mock.png";
 
 const ItemCard = (item) => {
-  const { image, title, description, price } = item;
+  const { name, description, price } = item;
   return (
     <div key={Math.random()} className="choosen col-span-third">
       <div className="relative">
@@ -16,15 +17,15 @@ const ItemCard = (item) => {
         />
         <ChooseHeart className="absolute top-[15px] right-[15px] hover:fill-blue-light" />
       </div>
-      <h4>{title}</h4>
-      <p className="p1">{description}</p>
-      <div className="flex items-center w-full gap-[15px]">
-        <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold">
-          {price}
-        </span>
-        <span className="discount">{price}</span>
-      </div>
-      <div className="flex-grow w-full flex items-end">
+      <h4>{name}</h4>
+      {description && <p className="p1">{description}</p>}
+      <div className="flex-grow w-full flex flex-col justify-end gap-[15px]">
+        <div className="flex items-center w-full gap-[15px]">
+          <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold">
+            {price} Lei
+          </span>
+          <span className="discount">{price} Lei</span>
+        </div>
         <button className="buttonchoise w-full">
           <Cart />
           <span className="text-h5 font-Nunito-Sans simple font-semibold">

@@ -13,7 +13,7 @@ export const ProductProvider = ({
   products: TeaProduct[];
 }) => {
   const [productsList, setProducts] = useState<TeaProduct[]>(products);
-
+  // console.log(productsList);
   return (
     <ProductContext.Provider value={{ productsList, setProducts }}>
       {children}

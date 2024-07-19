@@ -23,7 +23,7 @@ const Footerblock1 = () => {
         </p>
         <div className="knopki">
           <input
-            className="inputfooter"
+            className="inputfooter focus:outline-none"
             placeholder="Введите ваш e-mail"
             type="text"
             id="email"

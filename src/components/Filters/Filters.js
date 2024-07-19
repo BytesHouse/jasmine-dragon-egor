@@ -4,28 +4,36 @@ import { useState } from "react";
 import { Sort, ToggleView, CardsList } from "@/components";
 import { mock } from "@/config/constants";
 import Pagination2 from "../Pagination2/Pagination2";
+import { useProduct } from "../Providers/ContextProvider";
 
 const Filters = () => {
   const [isHorizontal, setIsHorizontal] = useState(true); // Состояние для отслеживания текущего вида товаров
   // ==================================================
   const initialItemsPerPage = 6;
-  const data = mock;
+  const { productsList } = useProduct();
+  // const data = mock;
 
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(initialItemsPerPage);
 
   const handlePageClick = (data) => {
-    let selected = data.selected;
+    let { selected } = data;
     setCurrentPage(selected);
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: document.getElementById("cardsListTop").offsetTop,
+        behavior: "smooth",
+      });
+    }
   };
   // Вычисляем текущие элементы для отображения
   const offset = currentPage * itemsPerPage;
-  const currentPageData = data.slice(offset, offset + itemsPerPage);
+  const currentPageData = productsList?.slice(offset, offset + itemsPerPage);
   // ==================================================
 
   return (
     <>
-      <div className="container !gap-[25px] !py-[50px]">
+      <div className="container !gap-[25px] !py-[50px]" id="cardsListTop">
         <div className="flex justify-between flex-row gap-12 col-span-full">
           <Sort itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} />
           <ToggleView
@@ -62,7 +70,7 @@ const Filters = () => {
         className="!pt-0"
       />
       <Pagination2
-        pageCount={Math.ceil(data.length / itemsPerPage)}
+        pageCount={Math.ceil(productsList?.length / itemsPerPage)}
         onPageChange={handlePageClick}
         currentPage={currentPage}
       />
