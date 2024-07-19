@@ -16,12 +16,16 @@ import ImageSection from "../ImageSection/Imagesection";
 import { Footerbuttons } from "../index";
 import Breadcrumbs from "@/ui-kit/Breadcrumbs/Breadcrumbs";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
+
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   //   const { t } = useTranslation("Header");
   //   const { pathname } = useLocation();
   const pathname = usePathname();
+  // TO-DO crete function get locale from local storage
+  const locale = 'ru'
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -44,7 +48,7 @@ const Header = () => {
               </div>
             </Link>
             <div className="relative flex items-center gap-6 pr-3">
-              <HeartIcon />
+              <Link href={locale + '/favorites'}><HeartIcon /></Link>
               <button className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md">
                 Профиль <ProfileIcon />
               </button>
