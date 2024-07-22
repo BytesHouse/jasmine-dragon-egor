@@ -6,14 +6,14 @@ const Footerfinal = () => {
   const lang = useLocale();
   console.log();
   return (
-    <div className="col-span-full flex justify-between items-center">
-      <p className="p1 _1024:p2">
+    <div className="col-span-full flex justify-between items-center _768:flex-col _768:items-start _768:gap-[15px]">
+      <p className="p1 _1024:p2 ">
         All rights are reserved by{" "}
         <Link href="https://sterrasoft.com" target="_blank" rel="noreferrer">
           S-Terra-Soft
         </Link>
       </p>
-      <div className="flex gap-[50px]">
+      <div className="flex gap-[50px] _768:gap-[10px] justify-between">
         <Link
           className="hover:underline text-blue-light text-p1 _1024:text-p2"
           href={`/${lang}/privacy`}

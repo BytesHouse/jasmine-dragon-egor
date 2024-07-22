@@ -7,6 +7,7 @@ import Pagination2 from "../Pagination2/Pagination2";
 import { useProduct } from "../Providers/ContextProvider";
 
 const Filters = () => {
+  const width = window.innerWidth;
   const [isHorizontal, setIsHorizontal] = useState(true); // Состояние для отслеживания текущего вида товаров
   // ==================================================
   const initialItemsPerPage = 6;
@@ -34,11 +35,12 @@ const Filters = () => {
   return (
     <>
       <div className="container !py-[50px]" id="cardsListTop">
-        <div className="flex justify-between _1024:flex-col gap-[100px] col-span-full _1240:gap-[25px]">
+        <div className="flex justify-between gap-x-[100px] col-span-full _1240:gap-y-[15px] _1240:gap-x-[15px] _1240:flex-wrap">
           <Sort itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} />
           <ToggleView
             isHorizontal={isHorizontal}
             toggleView={setIsHorizontal}
+            className=""
           />
         </div>
         {/* <div className="row2sortmenu col-span-full">
@@ -73,6 +75,7 @@ const Filters = () => {
         pageCount={Math.ceil(productsList?.length / itemsPerPage)}
         onPageChange={handlePageClick}
         currentPage={currentPage}
+        marginPages={0}
       />
     </>
   );

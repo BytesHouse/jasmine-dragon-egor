@@ -67,9 +67,28 @@
     @apply p-[50px] flex flex-col gap-[25px] h-max border border-green-bg transition hover:bg-green-light hover:border-blue _1240:p-[25px];
   }
   .feedback {
-    @apply !flex items-center p-[25px] !w-[586px] gap-[25px] border-green-bg border-[3px] transition hover:bg-green-light hover:border-blue;
+    @apply !flex items-center p-[25px] !w-[586px] gap-[25px] border-green-bg border-[3px] transition hover:bg-green-light hover:border-blue _768:!w-[311px] _768:p-[15px] _768:gap-[15px];
+  }
+  .buttonToCart1 {
+    @apply w-full flex justify-center items-center p-[25px] text-blue-light gap-[25px] h-max bg-green-light border-2 border-blue-light _768:gap-[10px] _768:p-[10px];
+  }
+  .buttonhotsale {
+    @apply flex items-center p-[15px_50px] font-Nunito-Sans font-semibold text-p1 border border-blue-light text-blue-light _768:p-[10px];
   }
 }
+
+/* .buttonchoise {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  color: var(--blue-light);
+  gap: 25px;
+  height: max-content;
+  background-color: var(--green-light);
+  border: 2px solid var(--blue-light);
+} */
 
 /* .feedback {
   display: flex !important;
@@ -160,8 +179,8 @@ footer {
   .line {
     height: 10px !important;
   }
-  .container {
-    gap: 25px !important;
+  .container:not(#store, #cardsList, #hotSales) {
+    column-gap: 25px !important;
   }
   main > .container {
     padding: 50px 0;
@@ -444,26 +463,6 @@ html {
   line-height: 130%;
 }
 
-.options {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
-
-.buttonhotsale {
-  display: flex;
-  align-items: center;
-  padding: 15px 50px;
-  font-family: var(--Nunito-sans);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 130%;
-  color: var(--blue-light);
-  /* background-color: var(--green-bg-25); */
-  border: 1px solid var(--blue-light);
-}
-
 #h1 {
   font-family: var(--Playfair-Display);
   font-style: italic;
@@ -735,29 +734,22 @@ body {
   opacity: 0.4;
 }
 
-.viewport {
-  width: 100dvw;
-  position: relative;
-  overflow: hidden;
-}
-
-.lables {
+/* .lables {
   display: flex;
   flex-direction: row;
   margin: 100px 0px;
-  /*padding: 100px;*/
   gap: 50px;
   animation: lables 10s linear infinite;
 }
 
 @keyframes lables {
   0% {
-    transform: translateX(110dvw);
+    transform: translateX(120dvw);
   }
   100% {
-    transform: translateX(-160dvw);
+    transform: translateX(-100%);
   }
-}
+} */
 
 /* .strelka {
   display: flex;
@@ -775,18 +767,14 @@ body {
 .fortext:hover {
   color: var(--blue);
 }
-.linksfeedbacks {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  justify-content: center;
-  /* margin-top: 50px; */
-}
-
 .linkfeedbacks {
   display: flex;
   flex-direction: row;
-  padding: 15px 50px;
+  align-items: center;
+  justify-content: center;
+  max-width: 205px;
+  flex-grow: 1;
+  padding: 15px;
   border: 1px var(--blue-light) solid;
   gap: 15px;
   background-color: rgba(39, 62, 64, 1);
@@ -799,30 +787,6 @@ body {
   border: 1px var(--blue) solid;
 }
 
-.textfeedback {
-  font-family: var(--Nunito-sans);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 130%;
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  align-items: center;
-}
-
-.buttonchoise {
-  display: flex;
-  /* flex-direction: row; */
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  color: var(--blue-light);
-  gap: 25px;
-  height: max-content;
-  background-color: var(--green-light);
-  border: 2px solid var(--blue-light);
-}
 .buttonchoise2 {
   display: flex;
   flex-direction: row;

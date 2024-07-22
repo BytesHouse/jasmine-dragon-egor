@@ -21,7 +21,7 @@ const Footerblock1 = () => {
           Подпишитесь и получайте последние актуальные новости и акции от вашей
           любимой чайной Jasmine Dragon
         </p>
-        <div className="flex gap-[15px]">
+        <div className="flex gap-[15px] _768:flex-col">
           <input
             className="text-p1 border border-blue-light bg-green-bg p-[15px] w-full focus:outline-none placeholder:text-blue-light font-semibold"
             placeholder="Введите ваш e-mail"

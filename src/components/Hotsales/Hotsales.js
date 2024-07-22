@@ -34,9 +34,9 @@ const Hotsales = () => {
 
   return (
     <>
-      <div className="mt-[200px] container !pb-[50px]">
+      <div className="mt-[200px] container !pb-[50px] _768:!pb-[25px]">
         <h4 className="col-span-full">Хиты продаж</h4>
-        <div className="options col-span-full">
+        <div className="flex gap-[25px] col-span-full _768:gap-[15px]">
           <button className="buttonhotsale">Меню</button>
           <button className="buttonhotsale">Чаи</button>
           <button className="buttonhotsale">Посуда</button>
@@ -51,6 +51,7 @@ const Hotsales = () => {
         pageCount={Math.ceil(data?.length / itemsPerPage)}
         onPageChange={handlePageClick}
         currentPage={currentPage}
+        marginPages={0}
       />
     </>
   );

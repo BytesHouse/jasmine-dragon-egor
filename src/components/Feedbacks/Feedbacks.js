@@ -39,15 +39,15 @@ const Feedbacks = () => {
       >
         <SwiperSlide className="feedback">
           <Image
-            className=""
+            className="h-[150px] _768:h-[100px]"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
             height={150}
           />
           <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white">Анатолий Кирияк</h4>
-            <p className="p1 text-white">
+            <h4 className="text-white _768:text-p1">Анатолий Кирияк</h4>
+            <p className="p1 text-white _768:p3">
               Отличная чайная со своей клёвой атмосферой, чайчиками и конечно же
               баристой, который разбирается во всех нюасмах
             </p>
@@ -55,30 +55,30 @@ const Feedbacks = () => {
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className=""
+            className="h-[150px] _768:h-[100px]"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
             height={150}
           />
           <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white">Агнесса Погасян</h4>
-            <p className="p1 text-white">
+            <h4 className="text-white _768:text-p1">Агнесса Погасян</h4>
+            <p className="p1 text-white _768:p3">
               Замечательный выбор чайной для отдыха и чилла
             </p>
           </div>
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className=""
+            className="h-[150px] _768:h-[100px]"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
             height={150}
           />
           <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white">Анатолий Кирияк</h4>
-            <p className="p1 text-white">
+            <h4 className="text-white _768:text-p1">Анатолий Кирияк</h4>
+            <p className="p1 text-white _768:p3">
               Отличная чайная со своей клёвой атмосферой, чайчиками и конечно же
               баристой, который разбирается во всех нюасмах
             </p>
@@ -86,41 +86,25 @@ const Feedbacks = () => {
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className="avatar"
+            className="h-[150px] _768:h-[100px]"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
             height={150}
           />
           <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white">Анатолий Кирияк</h4>
-            <p className="p1 text-white">
-              Отличная чайная со своей клёвой атмосферой, чайчиками и конечно же
-              баристой, который разбирается во всех нюасмах
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="feedback">
-          <Image
-            className="avatar"
-            src="/assets/Images/avatar.png"
-            alt="avatar"
-            width={150}
-            height={150}
-          />
-          <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white">Агнесса Погасян</h4>
-            <p className="p1 text-white">
+            <h4 className="text-white _768:text-p1">Агнесса Погасян</h4>
+            <p className="p1 text-white _768:p3">
               Замечательный выбор чайной для отдыха и чилла
             </p>
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="linksfeedbacks col-span-full">
+      <div className="flex gap-[50px] justify-center col-span-full _768:gap-[15px]">
         <button
           ref={prevRef}
           // onClick={() => swiperRef.current?.slidePrev()}
-          className="linkfeedbacks textfeedback"
+          className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
           <ArrowLeft />
           Старые
@@ -128,7 +112,7 @@ const Feedbacks = () => {
         <button
           ref={nextRef}
           // onClick={() => swiperRef.current?.slideNext()}
-          className="linkfeedbacks textfeedback"
+          className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
           Новые
           <ArrowRight />

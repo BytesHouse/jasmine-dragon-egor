@@ -6,8 +6,8 @@ const ItemCardHorizontal = (item) => {
   const { name, description, price } = item;
 
   return (
-    <div className="col-span-full flex p-[25px] gap-[50px] border border-green-bg items-center transition hover:border-blue hover:bg-green-light">
-      <div className="relative max-w-[250px] w-full">
+    <div className="col-span-full flex p-[25px] gap-[50px] border border-green-bg items-center transition hover:border-blue hover:bg-green-light _1024:gap-[25px]">
+      <div className="relative max-w-[250px] w-full _1240:max-w-[294px]">
         <Image
           src={image}
           alt="teagreen"
@@ -15,7 +15,7 @@ const ItemCardHorizontal = (item) => {
           height={250}
           className="h-auto w-full"
         />
-        <ChooseHeart2 className="absolute right-[0px] top-[20px] hover:fill-blue-light" />
+        <ChooseHeart2 className="absolute right-[0px] top-[2px] hover:fill-blue-light" />
       </div>
       <div className="flex flex-col gap-[25px] max-w-[463px]">
         <div>
@@ -28,7 +28,7 @@ const ItemCardHorizontal = (item) => {
           </span>
           <span className="discount ml-[15px]">{price} Lei</span>
         </div>
-        <button className="hidden _1240:flex max-w-max items-center gap-[25px] border-2 border-blue-light bg-green-light p-[25px_100px] _1600:p-[25px_50px] ">
+        <button className="hidden _1240:flex _1240:max-w-max items-center justify-center gap-[25px] border-2 border-blue-light bg-green-light p-[25px_100px] _1600:p-[25px_50px] _1024:w-full _1024:max-w-none">
           <Cart />
           <span className="text-h5 font-Nunito-Sans font-semibold text-blue-light">
             В корзину

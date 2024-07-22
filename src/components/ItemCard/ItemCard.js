@@ -1,14 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Cart from "../../ui-kit/icons/Cart/Cart";
 import ChooseHeart from "../../ui-kit/icons/ChooseHeart/ChooseHeart";
+import { ChooseHeartMini } from "@/ui-kit/icons";
+import useScreenWidth from "@/hooks/useScreenWidth";
 const image = "/assets/Images/tea-mock.png";
 
 const ItemCard = ({ item, onClick }) => {
+  const width = useScreenWidth();
   const { name, description, price, id } = item;
   return (
     <div
       key={Math.random()}
-      className="col-span-third _1240:col-span-half flex flex-col p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue"
+      className="col-span-third _1240:col-span-half flex flex-col p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4"
     >
       <div className="relative">
         <Image
@@ -18,20 +23,23 @@ const ItemCard = ({ item, onClick }) => {
           height={413}
           className="h-auto"
         />
-        <ChooseHeart className="absolute top-[15px] right-[15px] hover:fill-blue-light" />
+        <ChooseHeart
+          isMini={width < 768}
+          className="absolute top-[15px] right-[15px] hover:fill-blue-light _768:top-[5px] _768:right-[5px]"
+        />
       </div>
-      <h4>{name}</h4>
-      {description && <p className="p1">{description}</p>}
+      <h4 className="_768:!text-p1">{name}</h4>
+      {description && <p className="p1 _768:p3">{description}</p>}
       <div className="flex-grow w-full flex flex-col justify-end gap-[15px]">
         <div className="flex items-center w-full gap-[15px]">
-          <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold">
+          <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-p2">
             {price} Lei
           </span>
-          <span className="discount">{price} Lei</span>
+          <span className="discount _768:text-[10px]">{price} Lei</span>
         </div>
-        <button onClick={() => onClick(item)} className="buttonchoise w-full">
-          <Cart />
-          <span className="text-h5 font-Nunito-Sans simple font-semibold">
+        <button onClick={() => onClick(item)} className="buttonToCart1">
+          <Cart isMini={width < 768} />
+          <span className="text-h5 font-Nunito-Sans simple font-semibold _768:text-p3">
             В корзину
           </span>
         </button>

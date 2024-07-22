@@ -30,7 +30,7 @@ const Header = () => {
   // }, [pathname]);
   return (
     <>
-      <header className="w-full border-b border-blue-light">
+      <header className={`w-full border-b border-blue-light`}>
         <div className="container !py-0">
           <div className="flex justify-between items-center py-4 col-span-full">
             <div className="flex justify-between w-full flex-grow">
@@ -91,7 +91,7 @@ const Header = () => {
         //     {/* <Footerbuttons2 /> */}
         //   </div>
         // </div>
-        <div className="!absolute top-[123px] left-[0px] h-[calc(100dvh-123px)] w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden _768:justify-center _768:top-[78px] _768:h-[calc(100dvh-78px)]">
+        <div className="top-[123px] left-[0px] min-h-[calc(100dvh-123px)] w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden _768:justify-center _768:top-[78px] _768:min-h-[calc(100dvh-78px)]">
           <ImageSection className="_768:hidden flex-[3]" />
           <div className="flex-[2] flex justify-center">
             <Footerbuttons isVertical={true} />
