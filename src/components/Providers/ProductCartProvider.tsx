@@ -9,34 +9,22 @@ export const ProductCartProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  let cart: any[] = [];
+  const [productsList, setProducts] = useState<any[]>([]);
   useEffect(() => {
-    if (localStorage.getItem("jd-cart")) {
-      cart = JSON.parse(localStorage.getItem("jd-cart")!);
-    } else {
-      localStorage.setItem("jd-cart", "[]");
+    const storedCart = localStorage.getItem("jd-cart");
+    if (storedCart?.length) {
+      setProducts(JSON.parse(storedCart));
     }
   }, []);
-
-  const [productsList, setProducts] = useState<any[]>(cart);
+  useEffect(() => {
+    localStorage.setItem("jd-cart", JSON.stringify(productsList));
+  }, [productsList]);
   // CRUD
-  const addToCard = (product: any) => {
-    const existingProduct = productsList.find(
-      (item: any) => item.id === product.id
-    );
-    if (existingProduct) {
-      // Если товар уже в корзине, увеличиваем его количество
-      setProducts(
-        productsList.map((item: any) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      // Если товара нет в корзине, добавляем его с количеством 1
-      setProducts([...productsList, { ...product, quantity: 1 }]);
-    }
+  const addToCart = (product: any) => {
+    setProducts([...productsList, product]);
+  };
+  const removeFromCart = (productId: any) => {
+    setProducts(productsList.filter((item: any) => item.id !== productId));
   };
   // Increase
   // Decrease
@@ -47,7 +35,7 @@ export const ProductCartProvider = ({
 
   return (
     <ProductCartContext.Provider
-      value={{ productsList, setProducts, addToCard }}
+      value={{ productsList, addToCart, removeFromCart }}
     >
       {children}
     </ProductCartContext.Provider>

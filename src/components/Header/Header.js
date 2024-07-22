@@ -49,10 +49,10 @@ const Header = () => {
               <Link href={lang + "/favorites"}>
                 <HeartIcon />
               </Link>
-              <button className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md">
+              <Link href={lang + "/profile"} className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md">
                 Профиль <ProfileIcon />
-              </button>
-              <BagIcon />
+              </Link>
+              <Link href={lang + "/shopping_cart"}><BagIcon /></Link>
               <div className="absolute w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 left-80">
                 <p className="numberofitems">0</p>
               </div>
