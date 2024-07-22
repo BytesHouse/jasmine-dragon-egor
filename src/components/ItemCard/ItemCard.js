@@ -3,8 +3,8 @@ import Cart from "../../ui-kit/icons/Cart/Cart";
 import ChooseHeart from "../../ui-kit/icons/ChooseHeart/ChooseHeart";
 const image = "/assets/Images/tea-mock.png";
 
-const ItemCard = (item) => {
-  const { name, description, price } = item;
+const ItemCard = ({ item, onClick }) => {
+  const { name, description, price, id } = item;
   return (
     <div
       key={Math.random()}
@@ -29,7 +29,7 @@ const ItemCard = (item) => {
           </span>
           <span className="discount">{price} Lei</span>
         </div>
-        <button className="buttonchoise w-full">
+        <button onClick={() => onClick(item)} className="buttonchoise w-full">
           <Cart />
           <span className="text-h5 font-Nunito-Sans simple font-semibold">
             В корзину
