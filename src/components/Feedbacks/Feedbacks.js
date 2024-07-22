@@ -2,7 +2,7 @@
 // import avatar from "../../../public/assets/Images/avatar.png";
 import Image from "next/image";
 import { useRef } from "react";
-import { ArrowLeft, ArrowRight } from "../../ui-kit/icons";
+import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
