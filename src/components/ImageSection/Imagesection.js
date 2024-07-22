@@ -6,39 +6,39 @@ import Image from "next/image";
 const ImageSection = ({ ...props }) => {
   return (
     <div
-      className={`h-[800px] max-w-[1048px] flex justify-center items-center relative ${props.className}`}
+      className={`h-[500px] max-w-[1048px] flex justify-center items-center _1240:items-start relative ${props.className}`}
     >
       <Image
         className=""
         // w-[500px] h-[632px]
         src="/assets/Images/Rectangle 21.png"
         alt="bigphoto"
-        width={473}
-        height={632}
+        height={423}
+        width={316}
       />
       <Image
-        className="absolute top-[178px] left-[133px]"
+        className="absolute left-[20px] top-[73px]"
         // w-[293px] h-[274px]
         src="/assets/Images/table.png"
         alt="table"
-        width={293}
-        height={274}
+        height={183}
+        width={196}
       />
       <Image
-        className="absolute top-[452px] right-[88px]"
+        className="absolute top-[257px] right-0"
         //  w-[307px] h-[287px]
         src="/assets/Images/Rectangle 23.png"
         alt="rect2"
-        width={307}
-        height={287}
+        height={192}
+        width={205}
       />
       <Image
-        className="absolute bottom-0 left-[96px]"
+        className="absolute bottom-0 left-0"
         //  w-[235px] h-[220px]
         src="/assets/Images/Rectangle 22.png"
         alt="rect2"
-        width={235}
-        height={220}
+        height={147}
+        width={157}
       />
     </div>
   );

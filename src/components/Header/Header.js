@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import {
   BagIcon,
   BurgerIcon,
+  Closebutton,
   HeartIcon,
   ProfileIcon,
 } from "../../ui-kit/icons";
@@ -28,65 +29,80 @@ const Header = () => {
   //   window.scrollTo(0, 0);
   // }, [pathname]);
   return (
-    <header className="w-full border-b border-blue-light">
-      <div className="container !py-0">
-        <div className="flex justify-between items-center py-4 col-span-full">
-          <div className="flex justify-between w-full flex-grow">
-            <Link href="/">
-              <div className="flex items-center gap-6">
-                <Image
-                  src="/assets/Images/Logo.svg"
-                  alt="logo"
-                  width={81}
-                  height={90}
-                />
-                <p className="logo-text flex items-center gap-6 text-2xl text-[var(--blue-light)] leading-relaxed">
-                  Jasmine Dragon
-                </p>
-              </div>
-            </Link>
-            <div className="relative flex items-center gap-6 pr-3">
-              <Link href={lang + "/favorites"}>
-                <HeartIcon />
+    <>
+      <header className="w-full border-b border-blue-light">
+        <div className="container !py-0">
+          <div className="flex justify-between items-center py-4 col-span-full">
+            <div className="flex justify-between w-full flex-grow">
+              <Link href="/">
+                <div className="flex items-center gap-6">
+                  <Image
+                    src="/assets/Images/Logo.svg"
+                    alt="logo"
+                    width={81}
+                    height={90}
+                    className=" _1024:h-[75px]"
+                  />
+                  <h3 className="logo-text flex items-center gap-6 text-[var(--blue-light)] leading-relaxed _1024:text-h4">
+                    Jasmine Dragon
+                  </h3>
+                </div>
               </Link>
-              <button className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md">
-                Профиль <ProfileIcon />
-              </button>
-              <BagIcon />
-              <div className="absolute w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 left-80">
-                <p className="numberofitems">0</p>
+              <div className="relative flex items-center gap-6 pr-3">
+                <Link href={lang + "/favorites"}>
+                  <HeartIcon />
+                </Link>
+                <button className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md _1024:hidden">
+                  Профиль <ProfileIcon />
+                </button>
+                <div className="relative">
+                  <BagIcon />
+                  <div className="absolute w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 right-0">
+                    <p className="numberofitems">0</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            onClick={() => setShowMenu(!showMenu)}
-            className="items-center justify-center font-[var(--Nunito-sans)] text-xs leading-[130%] text-[var(--blue)] h-6 hidden _1024:flex"
-          >
-            <BurgerIcon />
-            <span className="font-[var(--Nunito-sans)] text-[var(--blue-light)] ">
-              {/* {t("hello")} */}
-              Меню
-            </span>
+            <button
+              onClick={() => setShowMenu(!showMenu)}
+              className="items-center justify-center hidden _1024:flex gap-[5px]"
+            >
+              {showMenu ? <Closebutton /> : <BurgerIcon />}
+              <p className="p1">
+                {/* {t("hello")} */}
+                Меню
+              </p>
+            </button>
           </div>
         </div>
-        {showMenu && (
-          <div className="flex gap-[50px]">
-            <ImageSection />
-            <div className="flex flex-col pt-[30px] gap-[25px]">
-              <Footerbuttons />
-              {/* <Footerbuttons2 /> */}
-            </div>
-          </div>
+        {(pathname !== "/ro") & (pathname !== "/ru") ? (
+          <Breadcrumbs
+            breadcrumbs={pathname.split("/").slice(1, pathname.length)}
+          />
+        ) : (
+          ""
         )}
-      </div>
-      {(pathname !== "/ro") & (pathname !== "/ru") ? (
-        <Breadcrumbs
-          breadcrumbs={pathname.split("/").slice(1, pathname.length)}
-        />
-      ) : (
-        ""
+      </header>
+      {showMenu && (
+        // <div className="flex gap-[50px]">
+        //   <ImageSection />
+        //   <div className="flex flex-col pt-[30px] gap-[25px]">
+        //     <Footerbuttons />
+        //     {/* <Footerbuttons2 /> */}
+        //   </div>
+        // </div>
+        <div className="!absolute top-[123px] left-[0px] h-[calc(100dvh-123px)] w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden">
+          <ImageSection className="col-span-7 flex-[3]" />
+          <div className="col-span-5 flex-[2]">
+            <Footerbuttons isVertical={true} />
+            {/* <Footerbuttons2 /> */}
+          </div>
+          {/* <div className="col-span-full">
+        <Footerfinal />
+      </div> */}
+        </div>
       )}
-    </header>
+    </>
   );
 };
 

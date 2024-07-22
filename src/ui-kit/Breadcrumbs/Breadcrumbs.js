@@ -7,7 +7,7 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
   let path = "";
   return (
     <nav
-      className={`py-[15px] border-t border-[var(--blue-light)] ${props.className}`}
+      className={`py-[15px] border-t border-[var(--blue-light)] -ml-[20px] w-screen ${props.className}`}
     >
       <div className="container !py-0 !flex items-center">
         {breadcrumbs.length > 1 &&

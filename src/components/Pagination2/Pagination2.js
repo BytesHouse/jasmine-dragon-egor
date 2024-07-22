@@ -17,10 +17,12 @@ const Pagination2 = ({ pageCount, onPageChange, currentPage, ...props }) => {
 
   return (
     <div
-      className={`flex mb-[100px] justify-center items-center ${props?.className}`}
+      className={`flex mb-[100px] justify-center items-center ${
+        props.className && props.className
+      }`}
     >
       <button
-        className={`flex py-[15px] px-[50px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
+        className={`flex py-[15px] px-[50px] _1024:px-[30px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
           isFirst && "border-blue opacity-50"
         }`}
         onClick={handlePrevClick}
@@ -33,12 +35,12 @@ const Pagination2 = ({ pageCount, onPageChange, currentPage, ...props }) => {
         // nextLabel={"Вперед"}
         previousLabel={null}
         nextLabel={null}
-        breakLabel={". . ."}
+        breakLabel={"..."}
         pageCount={pageCount}
         marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={3}
         onPageChange={onPageChange}
-        containerClassName={"pagination flex gap-[50px]"}
+        containerClassName={"pagination flex gap-[50px]  _1024:gap-[30px]"}
         pageClassName={
           "page-item text-[18px] font-medium text-blue transition hover:text-blue-light"
         }
@@ -54,7 +56,7 @@ const Pagination2 = ({ pageCount, onPageChange, currentPage, ...props }) => {
       />
 
       <button
-        className={`flex py-[15px] px-[50px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
+        className={`flex py-[15px] px-[50px] _1024:px-[30px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
           isLast && "border-blue opacity-50"
         }`}
         onClick={handleNextClick}

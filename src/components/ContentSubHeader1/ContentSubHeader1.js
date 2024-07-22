@@ -37,10 +37,10 @@ const ContentSubHeader1 = () => {
         <SwiperSlide>
           <div className="container h-full items-center !py-[50px]">
             {/* <div className="navigation grid-column"> */}
-            <div className="col-span-5 gap-[10px] flex flex-col">
-              <h5 className="text-[27px]">Ура, у нас новое поступление!</h5>
+            <div className="col-span-5 gap-[10px] flex flex-col _1024:col-span-half">
+              <h5 className="_1024:text-p1">Ура, у нас новое поступление!</h5>
               <h3 className="font-medium">Tia-guan-in</h3>
-              <p className="p1">
+              <p className="p1 _1024:p2">
                 Добро пожаловать в нашу уютную чайную лавку, где каждая чашечка
                 - это история вкуса и аромата. Мы предлагаем широкий выбор
                 классических сортов и уникальных ароматизированных смесей, чтобы
@@ -55,20 +55,20 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={804}
               height={585}
-              className="col-span-7 justify-self-end h-auto"
+              className="col-span-7 justify-self-end _1024:col-span-half _1024:aspect-square object-cover"
             />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="container items-center !py-[50px]">
+          <div className="container items-center !py-[50px] _1024:flex _1024:gap-[25px]">
             {/* <div className="navigation grid-column"> */}
             <Image
               src="/assets/Images/coffee-table.png"
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3 pr-8 _1240:pr-0"
+              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px]"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <p className="text-[26px] font-Playfair-Display italic _1240:text-[18px]">
@@ -77,7 +77,7 @@ const ContentSubHeader1 = () => {
               <h3 className="font-medium _1240:text-h4">
                 Где чай расскажет вам историю вкуса
               </h3>
-              <p className="p1">
+              <p className="p1 _1024:p2">
                 Добро пожаловать в нашу уютную чайную лавку, где каждая чашечка
                 - это история вкуса и аромата. Мы предлагаем широкий выбор
                 классических сортов и уникальных ароматизированных смесей, чтобы
@@ -101,7 +101,7 @@ const ContentSubHeader1 = () => {
               alt="bigphoto"
               width={418}
               height={590}
-              className="col-span-4 place-self-end pl-11 _1240:pl-0"
+              className="col-span-4 place-self-end pl-11 _1240:pl-0 _1024:w-[157px] _1024:place-self-center"
             />
             {/* </div> */}
           </div>
@@ -131,16 +131,41 @@ const ContentSubHeader1 = () => {
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="container h-full items-center !py-[50px]">
+            {/* <div className="navigation grid-column"> */}
+            <div className="col-span-5 gap-[10px] flex flex-col _1024:col-span-half">
+              <h5 className="_1024:text-p1">Ура, у нас новое поступление!</h5>
+              <h3 className="font-medium">Tia-guan-in</h3>
+              <p className="p1 _1024:p2">
+                Добро пожаловать в нашу уютную чайную лавку, где каждая чашечка
+                - это история вкуса и аромата. Мы предлагаем широкий выбор
+                классических сортов и уникальных ароматизированных смесей, чтобы
+                угодить вашему вкусу и удовлетворить любые чайные желания.
+              </p>
+              <button className="text-white font-Playfair-Display italic flex-1 p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium mt-[15px] _1240:p-[15px]">
+                Все новинки
+              </button>
+            </div>
+            <Image
+              src="/assets/Images/cupof2tea.png"
+              alt="coffee-table"
+              width={804}
+              height={585}
+              className="col-span-7 justify-self-end _1024:col-span-half _1024:aspect-square object-cover"
+            />
+          </div>
+        </SwiperSlide>
 
         <SwiperSlide>
-          <div className="container items-center !py-[50px]">
+          <div className="container items-center !py-[50px] _1024:flex _1024:gap-[25px]">
             {/* <div className="navigation grid-column"> */}
             <Image
               src="/assets/Images/coffee-table.png"
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3 pr-8"
+              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px]"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <p className="text-[26px] font-Playfair-Display italic _1240:text-[18px]">
@@ -149,7 +174,7 @@ const ContentSubHeader1 = () => {
               <h3 className="font-medium _1240:text-h4">
                 Где чай расскажет вам историю вкуса
               </h3>
-              <p className="p1">
+              <p className="p1 _1024:p2">
                 Добро пожаловать в нашу уютную чайную лавку, где каждая чашечка
                 - это история вкуса и аромата. Мы предлагаем широкий выбор
                 классических сортов и уникальных ароматизированных смесей, чтобы
@@ -173,35 +198,9 @@ const ContentSubHeader1 = () => {
               alt="bigphoto"
               width={418}
               height={590}
-              className="col-span-4 place-self-end pl-11"
+              className="col-span-4 place-self-end pl-11 _1240:pl-0 _1024:w-[157px] _1024:place-self-center"
             />
             {/* </div> */}
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="container items-center !py-[50px]">
-            {/* <div className="navigation grid-column"> */}
-            <div className="col-span-5 gap-[10px] flex flex-col">
-              <h5 className="text-[27px]">Ура, у нас новое поступление!</h5>
-              <h3 className="font-medium">Tia-guan-in</h3>
-              <p className="p1">
-                Добро пожаловать в нашу уютную чайную лавку, где каждая чашечка
-                - это история вкуса и аромата. Мы предлагаем широкий выбор
-                классических сортов и уникальных ароматизированных смесей, чтобы
-                угодить вашему вкусу и удовлетворить любые чайные желания.
-              </p>
-              <button className="text-white font-Playfair-Display italic flex-1 p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium mt-[15px] _1240:p-[15px]">
-                Все новинки
-              </button>
-            </div>
-            <Image
-              src="/assets/Images/cupof2tea.png"
-              alt="coffee-table"
-              width={804}
-              height={585}
-              className="col-span-7 justify-self-end h-auto "
-            />
           </div>
         </SwiperSlide>
 

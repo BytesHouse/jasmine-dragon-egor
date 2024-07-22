@@ -28,15 +28,19 @@ const ItemCardHorizontal = (item) => {
           </span>
           <span className="discount ml-[15px]">{price} Lei</span>
         </div>
-        <button className="hidden _1240:flex max-w-max items-center gap-[25px] border-2 border-blue-light text-h5 text-blue-light bg-green-light font-semibold p-[25px_100px] _1600:p-[25px_50px]">
+        <button className="hidden _1240:flex max-w-max items-center gap-[25px] border-2 border-blue-light bg-green-light p-[25px_100px] _1600:p-[25px_50px] ">
           <Cart />
-          <span>В корзину</span>
+          <span className="text-h5 font-Nunito-Sans font-semibold text-blue-light">
+            В корзину
+          </span>
         </button>
       </div>
       <div className="_1240:hidden flex-grow flex justify-end">
-        <button className="flex items-center gap-[25px] border-2 border-blue-light text-h5 text-blue-light bg-green-light font-semibold p-[25px_100px] _1600:p-[25px_50px]">
+        <button className="flex items-center gap-[25px] border-2 border-blue-light bg-green-light p-[25px_100px] _1600:p-[25px_50px] ">
           <Cart />
-          <span>В корзину</span>
+          <span className="text-h5 font-Nunito-Sans font-semibold text-blue-light">
+            В корзину
+          </span>
         </button>
       </div>
     </div>

@@ -13,17 +13,17 @@ const SectionOne = () => {
         alt="Image 1"
         width={462}
         height={462}
-        className="col-start-2 col-end-6 h-auto _1600:col-start-1 "
+        className="col-start-2 col-end-6 h-auto _1600:col-start-1 _1024:col-span-half"
       />
       <Image
         src="/assets/Images/cheaitar.png"
         alt="Image 2"
         width={450}
         height={300}
-        className="mt-[331px] col-start-8 col-end-12 h-auto _1600:-col-end-1 place-self-end _1240:mt-[221px]"
+        className="mt-[331px] col-start-8 col-end-12 h-auto _1600:-col-end-1 place-self-end _1240:mt-[221px] _1024:col-span-half _1024:w-[295px]"
       />
       <div className="col-span-full container !p-0 relative">
-        <p id="text1" className="col-span-full">
+        <p className="col-span-full text-[91px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3">
           Наслаждайтесь чаем с пользой: вкус, качество, уют и особенная
           атмосфера
         </p>
@@ -32,14 +32,14 @@ const SectionOne = () => {
           alt="2cup"
           width={340}
           height={246}
-          className="col-start-3 place-self-end col-end-6 mt-[100px] h-auto _1600:mt-[25px] _1600:col-end-7 _1240:col-[1_/_6] _1240:place-self-auto"
+          className="col-start-3 place-self-end col-end-6 mt-[100px] h-auto _1600:mt-[25px] _1600:col-end-7 _1240:col-[1_/_6] _1240:place-self-auto _1024:col-span-half"
         />
         <Image
           src="/assets/Images/table.png"
           alt="table"
           width={219}
           height={219}
-          className="col-start-8 col-end-10 place-self-center absolute top-[250px] h-auto _1600:col-[9_/_12] _1240:static  _1240:top-0"
+          className="col-start-8 col-end-10 place-self-center absolute top-[250px] h-auto _1600:col-[9_/_12] _1240:static  _1240:top-0 _1024:col-span-half _1024:place-self-end"
         />
       </div>
     </section>

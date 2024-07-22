@@ -11,9 +11,9 @@ const Contacts = () => {
         alt="tea"
         width={560}
         height={654}
-        className="col-span-5 _1600:col-span-half _1240:object-cover _1240:h-full"
+        className="col-span-5 w-full _1600:col-span-half _1240:object-cover _1240:h-full _1024:col-span-full _1024:h-[396px]"
       />
-      <div className="flex flex-col gap-[25px] col-span-7 _1600:col-span-half">
+      <div className="flex flex-col gap-[25px] col-span-7 _1600:col-span-half _1024:col-span-full">
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">
           <h3>Адрес</h3>
           <h5 className="simple font-bold">

@@ -97,6 +97,9 @@
   .grid-cols-half {
     grid-template-columns: repeat(var(--half), 1fr);
   }
+  .grid-cols-container {
+    grid-template-columns: repeat(var(--cols), 1fr);
+  }
 }
 
 /* Project Colors */
@@ -136,6 +139,14 @@ footer {
 @media screen and (max-width: 1240px) {
   :root {
     --max-w: 960px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --max-w: 704px;
+    --cols: 6;
+    --gutter: 25px;
   }
 }
 
@@ -241,10 +252,6 @@ html {
   line-height: 120%;
   text-align: start;
   color: var(--blue-light);
-}
-
-.linkfooter:hover {
-  text-decoration: underline !important;
 }
 
 .aboutus1 {
@@ -617,48 +624,6 @@ html {
   justify-content: center;
   height: 25px;
   align-items: center;
-}
-
-#img1 {
-  /* position: absolute; */
-  /* width: 30%; */
-  /* height: 462px; */
-  /* left: 125px; */
-  /* top: 0; */
-  /* background: linear-gradient(
-      0deg,
-      rgba(39, 62, 64, 0.1),
-      rgba(39, 62, 64, 0.1)
-    ),
-    #d9d9d9; */
-}
-
-#img2 {
-  /* position: absolute; */
-  /* width: 30%; */
-  /* height: 299px; */
-  /* right: 125px; */
-  /* top: 331px; */
-  /* background: linear-gradient(
-      0deg,
-      rgba(39, 62, 64, 0.1),
-      rgba(39, 62, 64, 0.1)
-    ),
-    #d9d9d9; */
-}
-
-#text1 {
-  /* position: absolute; */
-  /* width: 1447px; */
-  /* height: 327px; */
-
-  /* top: 630px; */
-  font-family: var(--Playfair-Display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 91px;
-  line-height: 120%;
-  color: var(--blue);
 }
 
 .container {

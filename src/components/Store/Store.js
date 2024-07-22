@@ -22,7 +22,7 @@ const Store = () => {
           Наша дружелюбная команда с удовольствием поможет вам выбрать именно
           тот чай, который подходит вам.
         </p>
-        <button className="p-[25px] border-2 text-h5 font-Playfair-Display italic font-medium text-blue-light text-center w-full">
+        <button className="p-[25px] border-2 text-h5 font-Playfair-Display italic font-medium text-blue-light text-center w-full _1024:text-p1">
           Смотреть ассортимент
         </button>
       </div>
@@ -39,7 +39,7 @@ const Store = () => {
           Наша дружелюбная команда с удовольствием поможет вам выбрать именно
           тот чай, который подходит вам.
         </p>
-        <button className="p-[25px] border-2 text-h5 font-Playfair-Display italic font-medium text-blue-light text-center w-full">
+        <button className="p-[25px] border-2 text-h5 font-Playfair-Display italic font-medium text-blue-light text-center w-full _1024:text-p1">
           Смотреть ассортимент
         </button>
       </div>

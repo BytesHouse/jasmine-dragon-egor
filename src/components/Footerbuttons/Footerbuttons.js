@@ -17,11 +17,11 @@ const Footerbuttons = ({ isVertical = false }) => {
     <ol
       className={
         !isVertical
-          ? `grid grid-cols-half gap-[var(--gutter)] justify-between col-start-7 col-end-13 footer-ol _1600:col-span-half _1240:!col-span-full`
+          ? `grid grid-cols-half gap-[var(--gutter)] justify-between col-start-7 col-end-13 footer-ol _1600:col-span-half _1240:!col-span-full _1240:grid-cols-container`
           : `flex flex-col gap-[var(--gutter)] footer-ol py-[25px]`
       }
     >
-      <div className="flex flex-col gap-[25px] col-span-3">
+      <div className="flex flex-col gap-[25px] col-span-3 _1240:col-span-half">
         <li>
           <Link href={`/${lang}`} className="footerbutton">
             О нас
@@ -66,14 +66,14 @@ const Footerbuttons = ({ isVertical = false }) => {
           </Link>
         </li>
       </div>
-      <div className="flex flex-col gap-[25px] col-span-3">
+      <div className="flex flex-col gap-[25px] col-span-3 _1240:col-span-half">
         <li>
           <Link href={`/${lang}`} className="footerbutton">
             Профиль
           </Link>
         </li>
         <li>
-          <Link href={`/${lang}`} className="footerbutton">
+          <Link href={`/${lang}/favorites`} className="footerbutton">
             Избранное
           </Link>
         </li>

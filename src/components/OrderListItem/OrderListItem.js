@@ -25,7 +25,7 @@ const OrderListItem = ({ isSmall = false, item }) => {
           width={isSmall ? 187 : 250}
         />
         {!isSmall && (
-          <ChooseHeart2 className="absolute top-[15px] right-[15px]" />
+          <ChooseHeart2 className="absolute top-[15px] right-[15px] hover:fill-blue-light" />
         )}
       </div>
       <div className="flex flex-col gap-[25px]">
