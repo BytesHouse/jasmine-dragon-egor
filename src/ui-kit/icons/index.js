@@ -4,7 +4,7 @@ import BagIcon from "./BagIcon/BagIcon";
 import BurgerIcon from "./BurgerIcon/BurgerIcon";
 import HeartIcon2 from "./HeartIcon2/HeartIcon2";
 import Good from "./Good/Good";
-import ArrowRight from "@/ui-kit/icons/ArrowRight/ArrowRight";
+import ArrowRight from "./ArrowRight/ArrowRight";
 import ArrowLeft from "./ArrowLeft/ArrowLeft";
 import Closebutton from "./Closebutton/Closebutton";
 import Strelka from "./Strelka/Strelka";
