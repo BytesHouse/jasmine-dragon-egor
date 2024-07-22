@@ -56,7 +56,7 @@ export const OrderHistoryById = () => {
   );
 };
 
-const TableOrderHistory = ({ data }) => {
+const TableOrderHistory = ({ data }: { data: any }) => {
   const { productName, productCode, price, quantity, totalPrice } = data;
   return (
     <table className="_1024:hidden w-full text-[var(--blue-light)] border-t border-l border-blue-light border-collapse  col-span-full">
@@ -73,7 +73,7 @@ const TableOrderHistory = ({ data }) => {
         </tr>
       </thead>
       <tbody>
-        {data.map((order, index) => (
+        {data.map((order: any, index: any) => (
           <tr key={index} className="grid grid-cols-[2fr_1fr_1fr_1fr_2fr]">
             {Object.keys(order).map((item) => {
               // console.log(order[item]);
@@ -108,7 +108,7 @@ const TableOrderHistory = ({ data }) => {
   );
 };
 
-const BlockOrderHistory = ({ ...data }) => {
+const BlockOrderHistory = ({ ...data }: any) => {
   const { productName, productCode, price, quantity, totalPrice } = data;
   return <div className="hidden _1024:flex">div</div>;
 };

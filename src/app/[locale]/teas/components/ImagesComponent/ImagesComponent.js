@@ -13,13 +13,13 @@ const ImagesComponent = () => {
   return (
     <div className="w-full flex gap-[25px] flex-col">
       <div className="grid grid-cols-2 grid-rows-[565px] gap-[25px]">
-        <Image className="h-full" src={image1} alt="img-1" />
-        <Image className="h-full" src={image2} alt="img-2" />
+        <img className="h-full" src={image1} alt="img-1" />
+        <img className="h-full" src={image2} alt="img-2" />
       </div>
       <div className="relative grid grid-cols-3 grid-rows-[256px] gap-[25px] ">
-        <Image className="h-full w-full" src={image3} alt="img-3" />
-        <Image className="h-full w-full" src={image4} alt="img-4" />
-        <Image className="h-full w-full" src={image5} alt="img-5" />
+        <img className="h-full w-full" src={image3} alt="img-3" />
+        <img className="h-full w-full" src={image4} alt="img-4" />
+        <img className="h-full w-full" src={image5} alt="img-5" />
       </div>
     </div>
   );

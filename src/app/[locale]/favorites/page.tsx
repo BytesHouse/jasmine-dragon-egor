@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Pagination, CardsList, Likeitems, ToggleView } from "@/components";
+import { Pagination, CardsList, ToggleView } from "@/components";
 import { mock, mock2 } from "@/config/constants";
 import Pagination2 from "@/components/Pagination2/Pagination2";
 
@@ -11,7 +11,7 @@ const SelectedMenu = () => {
 
   const [currentPage, setCurrentPage] = useState(0);
 
-  const handlePageClick = (data) => {
+  const handlePageClick = (data: any) => {
     let selected = data.selected;
     setCurrentPage(selected);
   };

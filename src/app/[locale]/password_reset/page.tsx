@@ -17,7 +17,7 @@ const PasswordReset = () => {
 
   const [password, setPassword] = useState("");
 
-  const onReset = async (e) => {
+  const onReset = async (e: any) => {
     e.preventDefault();
     alert("надо доделать логику");
     //какаяя-то логика

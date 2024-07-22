@@ -29,7 +29,7 @@ const Registration = () => {
   const [email, setEmail] = useState("");
   const [acceptPrivacy, setAcceptPrivacy] = useState(true);
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: any) => {
     console.log(password);
     e.preventDefault();
     if (!acceptPrivacy) return;
@@ -67,7 +67,6 @@ const Registration = () => {
           <input
             className="inp-place text-blue-light h-[55px] border border-blue-light outline-none px-[25px] bg-green-bg focus:bg-green-light"
             type="email"
-            label="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
