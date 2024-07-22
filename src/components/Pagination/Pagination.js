@@ -1,6 +1,5 @@
 import Link from "next/link";
-import ArrowLeft from "../../ui-kit/icons/ArrowLeft/ArrowLeft";
-import ArrowRight from "../../ui-kit/icons/ArrowRight/ArrowRight";
+import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
 
 const Pagination = () => {
   return (
