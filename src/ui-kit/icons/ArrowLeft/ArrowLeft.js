@@ -1,4 +1,4 @@
-function ArrowLeft(props) {
+const ArrowLeft = (props) => {
   return (
     <svg
       width={25}
