@@ -22,7 +22,7 @@ import Plus from "./MinusPlus/Plus";
 import ProfileDeco from "./ProfileDeco/ProfileDeco";
 import { Facebook, Instagram, Telegram, Vk, X } from "./Socials";
 import TeaLeaves from "./TeaLeaves/TeaLeaves";
-import ArrowRight from "./Arrowright/ArrowRight";
+import ArrowRight from "./ArrowRight/ArrowRight";
 import ArrowLeft from "./ArrowLeft/ArrowLeft";
 
 export {
