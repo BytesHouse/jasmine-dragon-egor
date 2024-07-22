@@ -20,10 +20,10 @@ const SectionOne = () => {
         alt="Image 2"
         width={450}
         height={300}
-        className="mt-[331px] col-start-8 col-end-12 h-auto _1600:-col-end-1 place-self-end _1240:mt-[221px] _1024:col-span-half _1024:w-[295px]"
+        className="mt-[331px] col-start-8 col-end-12 h-auto _1600:-col-end-1 place-self-end _1240:mt-[221px] _1024:col-span-half _1024:w-[295px] _768:mt-[100px]"
       />
       <div className="col-span-full container !p-0 relative">
-        <p className="col-span-full text-[91px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3">
+        <p className="col-span-full text-[91px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3 _768:text-h4">
           Наслаждайтесь чаем с пользой: вкус, качество, уют и особенная
           атмосфера
         </p>

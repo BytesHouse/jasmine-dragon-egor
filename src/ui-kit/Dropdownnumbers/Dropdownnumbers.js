@@ -32,7 +32,10 @@ const Dropdownnumbers = ({ itemsPerPage, setItemsPerPage }) => {
 
   return (
     <div className="z-10 dropdown flex items-center justify-center bg-[var(--green-light)] p-[15px] border border-[var(--blue-light)] font-[var(--Nunito-sans)] text-[var(--blue-light)] relative">
-      <div className="flex gap-[15px]" onClick={handleChangeIsShow}>
+      <div
+        className="flex gap-[15px] _768:text-p2"
+        onClick={handleChangeIsShow}
+      >
         {itemsPerPage}
         <Strelka
           className={`transition ${isShow && "rotate-90"}`}
@@ -43,7 +46,7 @@ const Dropdownnumbers = ({ itemsPerPage, setItemsPerPage }) => {
         <ul className="absolute top-[100%] -left-px w-[102%]">
           {itemsShowBy.map((item, index) => (
             <li
-              className="hover:bg-[var(--blue)] border border-[var(--blue-light)] bg-[var(--green-light)] p-[15px]"
+              className="hover:bg-[var(--blue)] border border-[var(--blue-light)] bg-[var(--green-light)] p-[15px] _768:text-p2"
               onClick={() => handleChangeChoice(item)}
               key={index}
             >

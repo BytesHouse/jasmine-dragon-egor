@@ -35,20 +35,20 @@ const Header = () => {
           <div className="flex justify-between items-center py-4 col-span-full">
             <div className="flex justify-between w-full flex-grow">
               <Link href="/">
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-6 _768:gap-[12px]">
                   <Image
                     src="/assets/Images/Logo.svg"
                     alt="logo"
                     width={81}
                     height={90}
-                    className=" _1024:h-[75px]"
+                    className="w-auto _1024:h-[75px] _768:h-[45px]"
                   />
-                  <h3 className="logo-text flex items-center gap-6 text-[var(--blue-light)] leading-relaxed _1024:text-h4">
+                  <h3 className="logo-text flex items-center gap-6 text-[var(--blue-light)] leading-relaxed _1024:text-h4 _768:text-p1">
                     Jasmine Dragon
                   </h3>
                 </div>
               </Link>
-              <div className="relative flex items-center gap-6 pr-3">
+              <div className="relative flex items-center gap-6 pr-3 _768:hidden">
                 <Link href={lang + "/favorites"}>
                   <HeartIcon />
                 </Link>
@@ -68,7 +68,7 @@ const Header = () => {
               className="items-center justify-center hidden _1024:flex gap-[5px]"
             >
               {showMenu ? <Closebutton /> : <BurgerIcon />}
-              <p className="p1">
+              <p className="p1 _768:p2">
                 {/* {t("hello")} */}
                 Меню
               </p>
@@ -91,9 +91,9 @@ const Header = () => {
         //     {/* <Footerbuttons2 /> */}
         //   </div>
         // </div>
-        <div className="!absolute top-[123px] left-[0px] h-[calc(100dvh-123px)] w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden">
-          <ImageSection className="col-span-7 flex-[3]" />
-          <div className="col-span-5 flex-[2]">
+        <div className="!absolute top-[123px] left-[0px] h-[calc(100dvh-123px)] w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden _768:justify-center _768:top-[78px] _768:h-[calc(100dvh-78px)]">
+          <ImageSection className="_768:hidden flex-[3]" />
+          <div className="flex-[2] flex justify-center">
             <Footerbuttons isVertical={true} />
             {/* <Footerbuttons2 /> */}
           </div>

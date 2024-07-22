@@ -4,7 +4,7 @@ const Flexrow = () => {
   return (
     <div className="container !pb-0">
       <h4 className="col-span-full">Меню</h4>
-      <div className="col-span-full flex justify-between gap-[25px]">
+      <div className="col-span-full flex justify-between gap-[25px] ">
         {flexRow.map((item, index) => {
           return (
             <div

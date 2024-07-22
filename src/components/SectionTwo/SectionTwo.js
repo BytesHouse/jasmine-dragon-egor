@@ -10,7 +10,7 @@ const SectionTwo = () => {
       {/* <div className="grid grid-cols-1 mt-16 w-full grid-column"> */}
       {/* <div className="grid grid-cols-1 w-full grid-column"> */}
       {/* <div className="flex items-center mt-100 flex-col flex-wrap h-[2015px]"> */}
-      <div className="col-span-half flex flex-col gap-[250px]">
+      <div className="col-span-half flex flex-col gap-[250px] _768:col-span-full _768:gap-[25px]">
         <div className="about-card">
           <Image
             src="/assets/Images/tea.png"
@@ -45,7 +45,7 @@ const SectionTwo = () => {
           </p>
         </div>
       </div>
-      <div className="about-card col-span-half justify-self-end mt-[566px]">
+      <div className="about-card col-span-half justify-self-end mt-[566px] _768:col-span-full _768:mt-0">
         <Image
           src="/assets/Images/community.png"
           alt="people"

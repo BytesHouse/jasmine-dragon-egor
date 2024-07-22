@@ -37,9 +37,9 @@ const ContentSubHeader1 = () => {
         <SwiperSlide>
           <div className="container h-full items-center !py-[50px]">
             {/* <div className="navigation grid-column"> */}
-            <div className="col-span-5 gap-[10px] flex flex-col _1024:col-span-half">
+            <div className="col-span-5 gap-[10px] flex flex-col _1024:col-span-half _768:col-span-full">
               <h5 className="_1024:text-p1">Ура, у нас новое поступление!</h5>
-              <h3 className="font-medium">Tia-guan-in</h3>
+              <h3 className="font-medium _768:text-h4">Tia-guan-in</h3>
               <p className="p1 _1024:p2">
                 Добро пожаловать в нашу уютную чайную лавку, где каждая чашечка
                 - это история вкуса и аромата. Мы предлагаем широкий выбор
@@ -55,20 +55,20 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={804}
               height={585}
-              className="col-span-7 justify-self-end _1024:col-span-half _1024:aspect-square object-cover"
+              className="col-span-7 justify-self-end _1024:col-span-half _1024:aspect-square object-cover _768:col-span-full _768:aspect-auto"
             />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="container items-center !py-[50px] _1024:flex _1024:gap-[25px]">
+          <div className="container items-center !py-[50px] _1024:flex _1024:gap-[25px] _768:flex-col">
             {/* <div className="navigation grid-column"> */}
             <Image
               src="/assets/Images/coffee-table.png"
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px]"
+              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px] _768:order-2 _768:h-[134px] object-cover _768:w-full"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <p className="text-[26px] font-Playfair-Display italic _1240:text-[18px]">
@@ -101,7 +101,7 @@ const ContentSubHeader1 = () => {
               alt="bigphoto"
               width={418}
               height={590}
-              className="col-span-4 place-self-end pl-11 _1240:pl-0 _1024:w-[157px] _1024:place-self-center"
+              className="col-span-4 place-self-end pl-11 _1240:pl-0 _1024:w-[157px] _1024:place-self-center _768:hidden"
             />
             {/* </div> */}
           </div>
@@ -131,12 +131,13 @@ const ContentSubHeader1 = () => {
             </div>
           </div>
         </SwiperSlide>
+
         <SwiperSlide>
           <div className="container h-full items-center !py-[50px]">
             {/* <div className="navigation grid-column"> */}
-            <div className="col-span-5 gap-[10px] flex flex-col _1024:col-span-half">
+            <div className="col-span-5 gap-[10px] flex flex-col _1024:col-span-half _768:col-span-full">
               <h5 className="_1024:text-p1">Ура, у нас новое поступление!</h5>
-              <h3 className="font-medium">Tia-guan-in</h3>
+              <h3 className="font-medium _768:text-h4">Tia-guan-in</h3>
               <p className="p1 _1024:p2">
                 Добро пожаловать в нашу уютную чайную лавку, где каждая чашечка
                 - это история вкуса и аромата. Мы предлагаем широкий выбор
@@ -152,20 +153,20 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={804}
               height={585}
-              className="col-span-7 justify-self-end _1024:col-span-half _1024:aspect-square object-cover"
+              className="col-span-7 justify-self-end _1024:col-span-half _1024:aspect-square object-cover _768:col-span-full _768:aspect-auto"
             />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="container items-center !py-[50px] _1024:flex _1024:gap-[25px]">
+          <div className="container items-center !py-[50px] _1024:flex _1024:gap-[25px] _768:flex-col">
             {/* <div className="navigation grid-column"> */}
             <Image
               src="/assets/Images/coffee-table.png"
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px]"
+              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px] _768:order-2 _768:h-[134px] object-cover _768:w-full"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <p className="text-[26px] font-Playfair-Display italic _1240:text-[18px]">
@@ -198,13 +199,13 @@ const ContentSubHeader1 = () => {
               alt="bigphoto"
               width={418}
               height={590}
-              className="col-span-4 place-self-end pl-11 _1240:pl-0 _1024:w-[157px] _1024:place-self-center"
+              className="col-span-4 place-self-end pl-11 _1240:pl-0 _1024:w-[157px] _1024:place-self-center _768:hidden"
             />
             {/* </div> */}
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className="_768:!hidden">
           <div
             className="container bg-center items-center bg-[url('/assets/Images/cupof2tea.png')] bg-cover !py-0 
           !mt-[50px] h-full"

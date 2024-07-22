@@ -150,6 +150,24 @@ footer {
   }
 }
 
+@media screen and (max-width: 768px) {
+  :root {
+    --max-w: 343px;
+  }
+  .swiper-pagination {
+    gap: 8px !important;
+  }
+  .line {
+    height: 10px !important;
+  }
+  .container {
+    gap: 25px !important;
+  }
+  main > .container {
+    padding: 50px 0;
+  }
+}
+
 /* Scrollbar styles */
 /* width */
 ::-webkit-scrollbar {
@@ -532,6 +550,7 @@ html {
   justify-content: center;
   gap: 15px;
 }
+
 .lineforsec3 {
   margin-top: 25px;
 }

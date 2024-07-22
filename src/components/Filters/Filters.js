@@ -73,7 +73,6 @@ const Filters = () => {
         pageCount={Math.ceil(productsList?.length / itemsPerPage)}
         onPageChange={handlePageClick}
         currentPage={currentPage}
-        className=""
       />
     </>
   );
