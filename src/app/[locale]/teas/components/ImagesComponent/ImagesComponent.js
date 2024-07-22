@@ -1,8 +1,8 @@
-import image1 from "../../../../../../public/assets/Images/teagreen.png";
-import image2 from "../../../../../../public/assets/Images/cheainic.png";
-import image3 from "../../../../../../public/assets/Images/cheaitar.png";
-import image4 from "../../../../../../public/assets/Images/cupof2tea.png";
-import image5 from "../../../../../../public/assets/Images/teabig.png";
+const image1 = "/assets/Images/teagreen.png";
+const image2 = "/assets/Images/cheainic.png";
+const image3 = "/assets/Images/cheaitar.png";
+const image4 = "/assets/Images/cupof2tea.png";
+const image5 = "/assets/Images/teabig.png";
 // const image1 = "/assets/Images/teagreen.png";
 // const image2 = "/assets/Images/cheainic.png";
 // const image3 = "/assets/Images/cheaitar.png";
