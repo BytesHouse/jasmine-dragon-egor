@@ -22,10 +22,11 @@ import Plus from "./MinusPlus/Plus";
 import ProfileDeco from "./ProfileDeco/ProfileDeco";
 import { Facebook, Instagram, Telegram, Vk, X } from "./Socials";
 import TeaLeaves from "./TeaLeaves/TeaLeaves";
-import ArrowRight from "./ArrowRight/ArrowRight.js";
 import ArrowLeft from "./ArrowLeft/ArrowLeft";
+import ArrowRight from "./ArrowRight/ArrowRight";
 
 export {
+  ArrowRight,
   Cup,
   EyeIcon,
   Edit,
@@ -48,7 +49,6 @@ export {
   Cancelation,
   HeartIcon,
   Closebutton,
-  ArrowRight,
   ArrowLeft,
   ProfileIcon,
   BagIcon,
