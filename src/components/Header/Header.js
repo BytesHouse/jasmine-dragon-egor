@@ -25,6 +25,7 @@ const Header = () => {
   //   const { pathname } = useLocation();
   const pathname = usePathname();
   const lang = useLocale();
+  console.log(lang);
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, [pathname]);
@@ -49,14 +50,19 @@ const Header = () => {
                 </div>
               </Link>
               <div className="relative flex items-center gap-6 pr-3 _768:hidden">
-                <Link href={lang + "/favorites"}>
+                <Link href={`/${lang}/favorites`}>
                   <HeartIcon />
                 </Link>
-                <Link href={lang + "/profile"} className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md _1024:hidden">
+                <Link
+                  href={`/${lang}/profile`}
+                  className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md _1024:hidden"
+                >
                   Профиль <ProfileIcon />
                 </Link>
                 <div className="relative">
-                  <Link href={lang + "/shopping_cart"}><BagIcon /></Link>
+                  <Link href={`/${lang}/shopping_cart`}>
+                    <BagIcon />
+                  </Link>
                   <div className="absolute w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 right-0">
                     <p className="numberofitems">0</p>
                   </div>

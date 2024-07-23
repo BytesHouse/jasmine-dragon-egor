@@ -20,7 +20,7 @@ const Feedbacks = () => {
     <div className="container">
       <h5 className="col-span-full">Отзывы</h5>
       <Swiper
-        slidesPerView={"auto"}
+        slidesPerView={width < 768 ? 1 : "auto"}
         spaceBetween={25}
         // centeredSlides={true}
         // initialSlide={2}
