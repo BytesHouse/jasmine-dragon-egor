@@ -1,4 +1,4 @@
-function X(props) {
+function Twitter(props) {
   return (
     <svg width={36} height={37} fill="none" {...props}>
       <path
@@ -9,4 +9,4 @@ function X(props) {
   );
 }
 
-export default X;
+export default Twitter;

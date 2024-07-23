@@ -1,4 +1,4 @@
-import { Facebook, X, Instagram, Telegram, Vk } from "../icons/Socials";
+import { Facebook, Twitter, Instagram, Telegram, Vk } from "../icons/Socials";
 
 const SocialButtons = ({ children }) => {
   return (
@@ -9,7 +9,7 @@ const SocialButtons = ({ children }) => {
           <Facebook />
         </a>
         <a href="https://x.com">
-          <X />
+          <Twitter />
         </a>
         <a href="https://instagram.com">
           <Instagram />

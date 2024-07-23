@@ -20,7 +20,7 @@ import LineMenu from "./LineMenu/LineMenu";
 import Minus from "./MinusPlus/Minus";
 import Plus from "./MinusPlus/Plus";
 import ProfileDeco from "./ProfileDeco/ProfileDeco";
-import { Facebook, Instagram, Telegram, Vk, X } from "./Socials";
+import { Facebook, Instagram, Telegram, Vk, Twitter } from "./Socials";
 import TeaLeaves from "./TeaLeaves/TeaLeaves";
 import ArrowLeft from "./ArrowLeft/ArrowLeft";
 import ArrowRight from "./ArrowRight/ArrowRight";
@@ -39,7 +39,7 @@ export {
   Instagram,
   Telegram,
   Vk,
-  X,
+  Twitter,
   TeaLeaves,
   Cart,
   ChocoMenu,
