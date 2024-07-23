@@ -27,7 +27,7 @@ const Dropdown = ({ array }) => {
   }, []);
 
   return (
-    <div className="z-10 dropdown flex items-center justify-center bg-[var(--green-light)] w-[300px] border border-[var(--blue-light)] [&>div] font-[var(--Nunito-sans)] text-[var(--blue-light)] relative [&_li]:border [&_li]:border-[var(--blue-light)] [&_li]:p-4 [&_ul]:absolute _1600:w-[260px] _768:w-[169px]">
+    <div className="z-10 dropdown flex items-center justify-center bg-[var(--green-light)] w-[300px] border border-[var(--blue-light)] font-[var(--Nunito-sans)] text-[var(--blue-light)] relative [&_li]:border [&_li]:border-[var(--blue-light)]  [&_ul]:absolute _1600:max-w-[260px] _768:max-w-[169px] _768:w-auto">
       {typeof array[0] === "string" ? (
         <div>
           <div onClick={handleChangeIsShow}>{choice}</div>

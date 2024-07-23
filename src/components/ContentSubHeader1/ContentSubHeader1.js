@@ -32,7 +32,7 @@ const ContentSubHeader1 = () => {
         // }}
         spaceBetween={25}
         centeredSlides={true}
-        className="container !pt-0"
+        className="container !pt-0 !mb-[50px]"
       >
         <SwiperSlide>
           <div className="container h-full items-center !py-[50px]">
@@ -68,7 +68,7 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px] _768:order-2 _768:h-[134px] object-cover _768:w-full"
+              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px] _768:order-2 _768:aspect-video object-cover _768:w-full"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <p className="text-[26px] font-Playfair-Display italic _1240:text-[18px]">
@@ -166,7 +166,7 @@ const ContentSubHeader1 = () => {
               alt="coffee-table"
               width={295}
               height={295}
-              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px] _768:order-2 _768:h-[134px] object-cover _768:w-full"
+              className="col-span-3 pr-8 _1240:pr-0 _1024:w-[124px] _768:order-2 _768:aspect-video object-cover _768:w-full"
             />
             <div className="flex flex-col gap-[10px] col-span-5">
               <p className="text-[26px] font-Playfair-Display italic _1240:text-[18px]">

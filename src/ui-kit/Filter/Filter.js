@@ -58,7 +58,7 @@ const Filter = () => {
   return (
     <div className="relative z-30" ref={filterRef}>
       <div
-        className="p-4 border border-[var(--blue-light)] bg-[var(--green-light)]"
+        className="p-4 _1024:p-3 border border-[var(--blue-light)] bg-[var(--green-light)]"
         onClick={() => setIsShow(!show)}
       >
         <svg

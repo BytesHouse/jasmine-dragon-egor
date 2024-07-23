@@ -187,7 +187,7 @@ footer {
     padding: 50px 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 491px) {
   :root {
     --max-w: 343px;
   }
@@ -539,15 +539,15 @@ html {
   display: flex;
   max-width: 227px;
   flex: 1;
-  height: 15px;
+  height: 15px !important;
   background: var(--blue-light);
   opacity: 0.2;
-  border-radius: 100px;
+  border-radius: 100px !important;
   transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 .line:hover,
 .swiper-pagination-bullet-active {
-  background-color: var(--blue-light);
+  background-color: var(--blue-light) !important;
   opacity: 1;
 }
 .swiper-pagination {
