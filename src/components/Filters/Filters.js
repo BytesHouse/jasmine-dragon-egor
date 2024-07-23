@@ -38,7 +38,6 @@ const Filters = () => {
           <ToggleView
             isHorizontal={isHorizontal}
             toggleView={setIsHorizontal}
-            className=""
           />
         </div>
         {/* <div className="row2sortmenu col-span-full">

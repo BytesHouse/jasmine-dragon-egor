@@ -9,7 +9,7 @@ const Flexrow = () => {
           return (
             <div
               key={index}
-              className="border border-green-bg transition hover:border-blue-light aspect-square min-w-[170px]"
+              className="border border-green-bg transition hover:border-blue-light aspect-square w-full min-w-[170px]"
             >
               <a
                 className={`${item.bgPath} bg-no-repeat bg-cover flex justify-center items-center h-full`}

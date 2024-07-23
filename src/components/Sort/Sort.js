@@ -13,7 +13,7 @@ const Sort = ({ itemsPerPage, setItemsPerPage }) => {
         <p className="p1 _1240:p2 _768:p3">Сортировка по</p>
         <Dropdown array={mock3} />
       </div>
-      <div className="flex items-center gap-[20px] _1024:order-last _768:gap-[10px] _1024:order-none">
+      <div className="flex items-center gap-[20px] _1024:order-last _768:gap-[10px]">
         <p className="p1 _1240:p2 _768:p3">Показывать по</p>
         <Dropdownnumbers
           itemsPerPage={itemsPerPage}

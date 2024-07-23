@@ -7,7 +7,7 @@ import { ChooseHeartMini } from "@/ui-kit/icons";
 import useScreenWidth from "@/hooks/useScreenWidth";
 import { useLocale } from "next-intl";
 const image = "/assets/Images/tea-mock.png";
-import Link from 'next/link'
+import Link from "next/link";
 
 const ItemCard = ({ item, onClick }) => {
   const width = useScreenWidth();
@@ -15,14 +15,17 @@ const ItemCard = ({ item, onClick }) => {
   const { name, description, price, id } = item;
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
-    onClick(item)
-  }
+    onClick(item);
+  };
   return (
     <div
       key={Math.random()}
-      className="col-span-third _1240:col-span-half flex flex-col p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px]"
+      className="col-span-third _1240:col-span-half p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px] _768:border-blue"
     >
-      <Link href={lang + `/teas/${id}`}>
+      <Link
+        href={`/${lang}/teas/${id}`}
+        className="flex flex-col justify-between h-full"
+      >
         <div className="relative">
           <Image
             src={image}

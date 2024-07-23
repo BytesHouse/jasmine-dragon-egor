@@ -47,11 +47,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        lables: "lables 10s linear infinite",
+        lables: "lables 10s linear infinite alternate",
       },
       keyframes: {
         lables: {
-          "0%": { transform: "translateX(110dvw)" },
+          "0%": { transform: "translateX(120dvw)" },
           "100%": { transform: "translateX(-110%)" },
         },
       },

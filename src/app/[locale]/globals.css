@@ -171,7 +171,8 @@ footer {
 
 @media screen and (max-width: 768px) {
   :root {
-    --max-w: 343px;
+    --max-w: 480px;
+    /* --max-w: 343px; */
   }
   .swiper-pagination {
     gap: 8px !important;
@@ -184,6 +185,11 @@ footer {
   }
   main > .container {
     padding: 50px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    --max-w: 343px;
   }
 }
 
