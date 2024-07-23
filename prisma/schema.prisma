@@ -23,26 +23,38 @@ model User {
 }
 
 model Product {
-  id          Int         @id @default(autoincrement())
-  name        String
-  description String
-  price       String
-  discount    String
-  stock       Int
-  categoryId  Int
-  category    Category    @relation(fields: [categoryId], references: [id])
-  reviews     Review[]
-  orderItems  OrderItem[]
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  id            Int          @id @default(autoincrement())
+  name          String
+  description   String
+  price         String
+  discount      Float?       @default(0.0)
+  stock         Int
+  categoryId    Int
+  category      Category     @relation(fields: [categoryId], references: [id])
+  subCategoryId Int?
+  subCategory   SubCategory? @relation(fields: [subCategoryId], references: [id])
+  reviews       Review[]
+  orderItems    OrderItem[]
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
 }
 
 model Category {
-  id        Int       @id @default(autoincrement())
-  name      String    @unique
-  products  Product[]
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  id            Int       @id @default(autoincrement())
+  name          String    @unique
+  products      Product[]
+  subCategoryId Int?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model SubCategory {
+  id         Int       @id @default(autoincrement())
+  name       String    @unique
+  categoryId Int?
+  products   Product[]
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
 }
 
 model Order {
