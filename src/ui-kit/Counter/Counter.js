@@ -6,14 +6,14 @@ import Plus from "../icons/MinusPlus/Plus";
 // import PlusIcon from "../../../public/assets/Images/Plus.svg";
 
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const increment = () => {
     setCount((prevCount) => prevCount + 1);
   };
 
   const decrement = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount((prevCount) => prevCount - 1);
     }
   };

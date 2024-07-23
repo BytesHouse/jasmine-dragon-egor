@@ -1,57 +1,31 @@
-// "use client";
+"use client";
 
 // import { doc, getDoc } from "firebase/firestore";
 // import { db } from "@/config/firebase";
 // import { Header } from "@/components";
 // import Footer from "@/components/Footer/Footer";
-// import BrewBlock from "../components/BrewBlock/BrewBlock";
-// import DescriptionBlock from "../components/DescriptionBlock/DescriptionBlock";
+import BrewBlock from "../components/BrewBlock/BrewBlock";
+import DescriptionBlock from "../components/DescriptionBlock/DescriptionBlock";
 // import Breadcrumbs from "@/ui-kit/Breadcrumbs/Breadcrumbs";
-// import { useEffect, useState } from "react";
-// import InstructionBlock from "../components/InstructionBlock/InstructionBlock";
-// import LastReview from "../components/LastReview/LastReview";
+import { useEffect, useState } from "react";
+import InstructionBlock from "../components/InstructionBlock/InstructionBlock";
+import LastReview from "../components/LastReview/LastReview";
+import { useProduct } from "@/components/Providers/ContextProvider";
 
 const TeaDetails = ({ params }: { params: { id: string } }) => {
   const { id } = params;
-  return <h1>Details about tea {id}</h1>;
-  //   // const navigate = useNavigate();
-  //   const [loading, setLoading] = useState(false);
-  //   const [product, setProduct] = useState();
-
-  //   useEffect(() => {
-  //     const getOneProduct = async (id: string) => {
-  //       setLoading(false);
-  //       const productDoc = doc(db, "teas", id);
-  //       const snapshot = await getDoc(productDoc);
-  //       if (snapshot.exists()) {
-  //         const tea = snapshot.data();
-  //         setProduct(tea);
-  //         setLoading(true);
-  //       } else {
-  //         console.log("нет такого документа");
-  //         // navigate('/404');
-  //       }
-  //     };
-  //     getOneProduct(id);
-  //   }, []);
-
-  //   return loading ? (
-  //     <div className="container">
-  //       <div className="col-span-12">
-  //         <Header />
-  //         <Breadcrumbs product={product} />
-  //       </div>
-  //       <main className="flex flex-col gap-[25px] col-span-12 text-[var(--blue-light)] teas-seo">
-  //         <DescriptionBlock product={product} />
-  //         <BrewBlock product={product} />
-  //         <InstructionBlock />
-  //         <LastReview />
-  //       </main>
-  //       <Footer />
-  //     </div>
-  //   ) : (
-  //     <></>
-  //   );
+  const { findProductById } = useProduct();
+  const [product, setProduct] = useState(findProductById(Number(id)));
+  console.log(product);
+  return (
+    <div className="container">
+      <main className="flex flex-col gap-[25px] col-span-12 text-[var(--blue-light)] teas-seo">
+        <DescriptionBlock product={product} />
+        <BrewBlock product={product} />
+        <LastReview />
+      </main>
+    </div>
+  );
 };
 
 export default TeaDetails;

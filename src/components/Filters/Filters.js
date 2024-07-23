@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Sort, ToggleView, CardsList } from "@/components";
-import { mock } from "@/config/constants";
 import Pagination2 from "../Pagination2/Pagination2";
 import { useProduct } from "../Providers/ContextProvider";
 

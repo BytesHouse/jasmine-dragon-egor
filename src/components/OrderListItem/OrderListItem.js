@@ -17,7 +17,7 @@ const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
       >
         <Image
           // className="svgchoise2"
-          src={'/assets/images/'}
+          src={'/assets/images/tea-mock.png'}
           alt="teagreen"
           height={isSmall ? 187 : 250}
           width={isSmall ? 187 : 250}

@@ -13,9 +13,13 @@ export const ProductProvider = ({
   products: TeaProduct[];
 }) => {
   const [productsList, setProducts] = useState<TeaProduct[]>(products);
-  // console.log(productsList);
+  const findProductById = (id: number) => {
+    return productsList.find((item) => item.id === id);
+  };
   return (
-    <ProductContext.Provider value={{ productsList, setProducts }}>
+    <ProductContext.Provider
+      value={{ productsList, setProducts, findProductById }}
+    >
       {children}
     </ProductContext.Provider>
   );
