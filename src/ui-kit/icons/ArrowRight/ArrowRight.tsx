@@ -1,4 +1,4 @@
-const ArrowRight = (props) => {
+const ArrowRight = (props: any) => {
   return (
     <svg width={25} height={26} fill="none" {...props}>
       <path
@@ -7,6 +7,6 @@ const ArrowRight = (props) => {
       />
     </svg>
   );
-}
+};
 
 export default ArrowRight;
