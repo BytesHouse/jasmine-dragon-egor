@@ -7,7 +7,6 @@ import Pagination2 from "../Pagination2/Pagination2";
 import { useProduct } from "../Providers/ContextProvider";
 
 const Filters = () => {
-  const width = window.innerWidth;
   const [isHorizontal, setIsHorizontal] = useState(true); // Состояние для отслеживания текущего вида товаров
   // ==================================================
   const initialItemsPerPage = 6;

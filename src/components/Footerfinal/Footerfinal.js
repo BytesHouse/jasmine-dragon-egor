@@ -4,7 +4,6 @@ import { useLocale } from "next-intl";
 
 const Footerfinal = () => {
   const lang = useLocale();
-  console.log();
   return (
     <div className="col-span-full flex justify-between items-center _768:flex-col _768:items-start _768:gap-[15px]">
       <p className="p1 _1024:p2 ">

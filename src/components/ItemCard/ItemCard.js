@@ -13,7 +13,7 @@ const ItemCard = ({ item, onClick }) => {
   return (
     <div
       key={Math.random()}
-      className="col-span-third _1240:col-span-half flex flex-col p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4"
+      className="col-span-third _1240:col-span-half flex flex-col p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px]"
     >
       <div className="relative">
         <Image

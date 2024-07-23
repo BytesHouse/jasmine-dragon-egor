@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import useScreenWidth from "@/hooks/useScreenWidth";
 
 // Import Swiper styles
 // import "swiper/css";
@@ -14,7 +15,7 @@ import { Navigation } from "swiper/modules";
 const Feedbacks = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-
+  const width = useScreenWidth();
   return (
     <div className="container">
       <h5 className="col-span-full">Отзывы</h5>
