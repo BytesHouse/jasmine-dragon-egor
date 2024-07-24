@@ -45,7 +45,7 @@ const Contacts = () => {
           </a>
           <a
             href="tel:069555555"
-            className="text-h5 font-bold text-blue-light font-Nunito-Sans leading-[120%] hover:underline"
+            className="text-h5 font-bold text-blue-light font-Nunito-Sans leading-[120%] hover:underline _768:text-p1"
           >
             069-555-555
           </a>

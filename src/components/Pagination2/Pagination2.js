@@ -23,12 +23,12 @@ const Pagination2 = ({
 
   return (
     <div
-      className={`flex mb-[100px] justify-center items-center ${
+      className={`flex mb-[100px] justify-center items-center _768:mb-[50px] ${
         props.className && props.className
       }`}
     >
       <button
-        className={`flex py-[15px] px-[50px] _1024:px-[30px] _768:p-[20px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
+        className={`flex py-[15px] px-[50px] _1024:px-[30px] _768:p-[20px] border border-blue-light transition hover:border-blue hover:opacity-50 _491:p-[10px] ${
           isFirst && "border-blue opacity-50"
         }`}
         onClick={handlePrevClick}
@@ -46,7 +46,7 @@ const Pagination2 = ({
         marginPagesDisplayed={marginPages}
         pageRangeDisplayed={3}
         onPageChange={onPageChange}
-        containerClassName={"pagination flex gap-[50px]  _1024:gap-[30px]"}
+        containerClassName={"pagination flex gap-[50px] _1024:gap-[30px]"}
         pageClassName={
           "page-item text-[18px] font-medium text-blue transition hover:text-blue-light"
         }
@@ -62,7 +62,7 @@ const Pagination2 = ({
       />
 
       <button
-        className={`flex py-[15px] px-[50px] _1024:px-[30px] _768:p-[20px] border border-blue-light transition hover:border-blue hover:opacity-50 ${
+        className={`flex py-[15px] px-[50px] _1024:px-[30px] _768:p-[20px] border border-blue-light transition hover:border-blue hover:opacity-50 _491:p-[10px] ${
           isLast && "border-blue opacity-50"
         }`}
         onClick={handleNextClick}

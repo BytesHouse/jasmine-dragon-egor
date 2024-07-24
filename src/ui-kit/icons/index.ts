@@ -10,7 +10,6 @@ import Cancelation from "./Cancelation/Cancelation";
 import Cart from "./Cart/Cart";
 import ChocoMenu from "./ChocoMenu/ChocoMenu";
 import ChooseHeart from "./ChooseHeart/ChooseHeart";
-import ChooseHeart2 from "./ChooseHeart/ChooseHeart2";
 import CloseMini from "./CloseMini/CloseMini";
 import Cup from "./Cup/Cup";
 import Edit from "./Edit/Edit";
@@ -44,7 +43,6 @@ export {
   Cart,
   ChocoMenu,
   ChooseHeart,
-  ChooseHeart2,
   CloseMini,
   Cancelation,
   HeartIcon,

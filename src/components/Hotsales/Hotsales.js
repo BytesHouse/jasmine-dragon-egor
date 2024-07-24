@@ -7,9 +7,11 @@ import Pagination from "../Pagination/Pagination";
 import { CardsList } from "@/components";
 import Pagination2 from "../Pagination2/Pagination2";
 import Image from "next/image";
+import useScreenWidth from "@/hooks/useScreenWidth";
 
 const Hotsales = () => {
-  const initialItemsPerPage = 3;
+  const width = useScreenWidth();
+  const initialItemsPerPage = width < 491 ? 2 : 3;
   // const { productsList } = useProduct();
   // console.log(productsList);
   const data = mock;

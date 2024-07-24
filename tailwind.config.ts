@@ -15,6 +15,7 @@ const config: Config = {
       _1600: { max: "1600px" },
       _1024: { max: "1024px" },
       _768: { max: "768px" },
+      _491: { max: "491px" },
       _375: { max: "375px" },
     },
     fontSize: {
