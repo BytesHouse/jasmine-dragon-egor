@@ -26,9 +26,6 @@ const Header = () => {
   const pathname = usePathname();
   const lang = useLocale();
   console.log(lang);
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [pathname]);
   return (
     <>
       <header className={`w-full border-b border-blue-light`}>
@@ -50,17 +47,18 @@ const Header = () => {
                 </div>
               </Link>
               <div className="relative flex items-center gap-6 pr-3 _768:hidden">
-                <Link href={`/${lang}/favorites`}>
+                <Link href={`/${lang}/favorites`} aria-label="Go to favorites">
                   <HeartIcon />
                 </Link>
                 <Link
                   href={`/${lang}/profile`}
                   className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md _1024:hidden"
+                  aria-label=""
                 >
                   Профиль <ProfileIcon />
                 </Link>
                 <div className="relative">
-                  <Link href={`/${lang}/shopping_cart`}>
+                  <Link href={`/${lang}/shopping_cart`} aria-label="Go to cart">
                     <BagIcon />
                   </Link>
                   <div className="absolute w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 right-0">
@@ -97,10 +95,10 @@ const Header = () => {
         //     {/* <Footerbuttons2 /> */}
         //   </div>
         // </div>
-        <div className="top-[123px] left-[0px] min-h-[calc(100dvh-123px)] w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden _768:justify-center _768:top-[78px] _768:min-h-[calc(100dvh-78px)]">
+        <div className="w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden _768:justify-center">
           <ImageSection className="_768:hidden flex-[3]" />
           <div className="flex-[2] flex justify-center">
-            <Footerbuttons isVertical={true} />
+            <Footerbuttons className={"footerVertical"} />
             {/* <Footerbuttons2 /> */}
           </div>
           {/* <div className="col-span-full">

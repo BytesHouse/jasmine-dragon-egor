@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const image1 = "/assets/Images/tea-mock.png";
 const image2 = "/assets/Images/cheainic.png";
 const image3 = "/assets/Images/cheaitar.png";
@@ -11,15 +13,33 @@ const image5 = "/assets/Images/teabig.png";
 
 const ImagesComponent = () => {
   return (
-    <div className="w-full flex gap-[25px] flex-col">
-      <div className="grid grid-cols-1 justify-items-center gap-[25px]">
-        <img className="h-full" src={image1} alt="img-1" />
-        {/* <img className="h-full" src={image1} alt="img-2" /> */}
+    <div className="col-span-7 w-full flex gap-[25px] flex-col">
+      <div className="flex justify-center w-full gap-[25px]">
+        <Image className="" src={image1} alt="img-1" width={563} height={563} />
+        <Image className="" src={image1} alt="img-2" width={563} height={563} />
       </div>
       <div className="relative grid grid-cols-3 grid-rows-[256px] gap-[25px] ">
-        <img className="h-full w-full" src={image3} alt="img-3" />
-        <img className="h-full w-full" src={image4} alt="img-4" />
-        <img className="h-full w-full" src={image5} alt="img-5" />
+        <Image
+          className="w-full aspect-square object-cover"
+          src={image3}
+          alt="img-3"
+          height={256}
+          width={256}
+        />
+        <Image
+          className="w-full aspect-square object-cover"
+          src={image4}
+          alt="img-4"
+          height={256}
+          width={256}
+        />
+        <Image
+          className="w-full aspect-square object-cover"
+          src={image5}
+          alt="img-5"
+          height={256}
+          width={256}
+        />
       </div>
     </div>
   );

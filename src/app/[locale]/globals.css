@@ -51,7 +51,7 @@
   p.p4 {
     @apply text-p4;
   }
-  .footer-ol > div > li::before {
+  .footer-ol > li > ol > li::before {
     @apply text-p1 text-blue-light font-Nunito-Sans not-italic leading-[130%] mt-auto;
   }
   .footerbutton {
@@ -118,6 +118,12 @@
   }
   .grid-cols-container {
     grid-template-columns: repeat(var(--cols), 1fr);
+  }
+  .footerVertical {
+    @apply flex flex-col gap-[var(--gutter)] footer-ol py-[25px] col-span-full;
+  }
+  .footerHorizontal {
+    @apply grid grid-cols-half gap-[var(--gutter)] justify-between col-start-7 col-end-13 footer-ol _1600:col-span-half _1240:!col-span-full _1240:grid-cols-container;
   }
 }
 
@@ -673,10 +679,10 @@ body {
 .footer-ol {
   counter-reset: item 0;
 }
-.footer-ol > div > li {
+.footer-ol > li > ol > li {
   display: flex;
 }
-.footer-ol > div > li:not(#footerShop)::before {
+.footer-ol > li > ol > li:not(#footerShop)::before {
   content: counter(item, decimal-leading-zero) " ";
   counter-increment: item 1;
   margin-right: 15px;

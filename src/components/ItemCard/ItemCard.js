@@ -18,10 +18,7 @@ const ItemCard = ({ item, onClick }) => {
     onClick(item);
   };
   return (
-    <div
-      key={Math.random()}
-      className="col-span-third _1240:col-span-half p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px] _768:border-blue"
-    >
+    <li className="col-span-third _1240:col-span-half p-[25px] gap-8 border border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px] _768:border-blue">
       <Link
         href={`/${lang}/teas/${id}`}
         className="flex flex-col justify-between h-full gap-4"
@@ -44,10 +41,10 @@ const ItemCard = ({ item, onClick }) => {
         <div className="flex-grow w-full flex flex-col justify-end gap-[15px]">
           <div className="flex items-center w-full gap-[15px]">
             <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-[20px] _491:text-p2">
-              {price} Lei
+              {price}
             </span>
             <span className="discount _768:text-p1 _491:text-[10px] _491:font-normal">
-              {price} Lei
+              {price}
             </span>
           </div>
           <button onClick={handleClickAddToCart} className="buttonToCart1">
@@ -58,7 +55,7 @@ const ItemCard = ({ item, onClick }) => {
           </button>
         </div>
       </Link>
-    </div>
+    </li>
   );
 };
 

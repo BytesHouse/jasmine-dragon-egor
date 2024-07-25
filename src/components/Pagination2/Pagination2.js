@@ -33,6 +33,7 @@ const Pagination2 = ({
         }`}
         onClick={handlePrevClick}
         disabled={isFirst}
+        title="Previous"
       >
         <ArrowLeft />
       </button>
@@ -67,6 +68,7 @@ const Pagination2 = ({
         }`}
         onClick={handleNextClick}
         disabled={isLast}
+        title="Next"
       >
         <ArrowRight />
       </button>

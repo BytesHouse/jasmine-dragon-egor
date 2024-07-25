@@ -10,22 +10,22 @@ const CardsList = ({
 }) => {
   const { addToCart } = useProductCart();
   return isHorizontal ? (
-    <div
+    <ul
       className={`container ${props?.className} _768:!gap-x-[15px] _768:!gap-y-[25px]`}
       id={id}
     >
       {cardsData?.map((item, index) => (
         <ItemCard key={index} item={item} onClick={addToCart} />
       ))}
-    </div>
+    </ul>
   ) : (
     // <Choise itemsPerPage={itemsPerPage} />
-    <div className={`container !gap-[25px] ${props?.className}`} id={props?.id}>
+    <ul className={`container !gap-[25px] ${props?.className}`} id={props?.id}>
       {cardsData?.map((item, index) => (
         <ItemCardHorizontal key={index} {...item} />
       ))}
       {/* <Pagination /> */}
-    </div>
+    </ul>
     // <Choise2 />
   );
 };

@@ -8,10 +8,10 @@ const ToggleView = ({ isHorizontal, toggleView, ...props }) => {
       }`}
     >
       <p className="font-semibold p1 mr-5 _768:p3 _768:mr-1">Вид товара:</p>
-      <button onClick={() => toggleView(true)}>
+      <button onClick={() => toggleView(true)} title="Toggle Vertical">
         <ChocoMenu state={isHorizontal} />
       </button>
-      <button onClick={() => toggleView(false)}>
+      <button onClick={() => toggleView(false)} title="Toggle Horizontal">
         <LineMenu state={!isHorizontal} />
       </button>
     </div>

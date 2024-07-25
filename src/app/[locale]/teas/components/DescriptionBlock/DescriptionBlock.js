@@ -2,15 +2,12 @@ import ImagesComponent from "../ImagesComponent/ImagesComponent";
 import FavoriteButton from "@/ui-kit/FavoriteButton/FavoriteButton";
 import Counter from "@/ui-kit/Counter/Counter";
 const DescriptionBlock = ({ product }) => {
-  const { name, subtype, description, strength, brewRes } =
-    product;
+  const { name, subtype, description, strength, brewRes } = product;
   return (
-    <section className="flex gap-[25px]">
+    <section className="container">
       <ImagesComponent />
-      <div className="w-full flex flex-col gap-[25px]">
-        <h1>
-          «{name}»
-        </h1>
+      <div className="col-span-5 w-full flex flex-col gap-[25px]">
+        <h1>«{name}»</h1>
         <FavoriteButton />
         <strong className="">Описание:</strong>
         <p>{description}</p>

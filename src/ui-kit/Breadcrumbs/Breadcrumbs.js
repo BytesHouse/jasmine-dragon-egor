@@ -1,7 +1,10 @@
 import { useTranslations } from "next-intl";
+import { useProduct } from "@/components/Providers/ContextProvider";
 import Link from "next/link";
 
 const Breadcrumbs = ({ breadcrumbs, ...props }) => {
+  const { findProductById } = useProduct();
+  let isTeas = false;
   //   const { name, type, subtype, weight } = product;
   const t = useTranslations("Breadcrumbs");
   let path = "";
@@ -12,6 +15,7 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
       <div className="container !py-0 !flex items-center">
         {breadcrumbs.length > 1 &&
           breadcrumbs.map(function (item, index) {
+            isTeas = item === "teas" || isTeas;
             path += `/${item}`;
             return (
               <>
@@ -24,7 +28,11 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
                       : "text-blue"
                   } hover:text-blue-light transition`}
                 >
-                  {t(item)}
+                  {index == breadcrumbs.length - 1
+                    ? isTeas
+                      ? `${findProductById(Number(index)).name}`
+                      : t(item)
+                    : t(item)}
                 </Link>
                 {index != breadcrumbs.length - 1 && (
                   <svg

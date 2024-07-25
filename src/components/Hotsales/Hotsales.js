@@ -1,17 +1,13 @@
 "use client";
 import { mock } from "@/config/constants";
 import { useState } from "react";
-import ChooseHeart from "../../ui-kit/icons/ChooseHeart/ChooseHeart";
-import Cart from "../../ui-kit/icons/Cart/Cart";
-import Pagination from "../Pagination/Pagination";
 import { CardsList } from "@/components";
 import Pagination2 from "../Pagination2/Pagination2";
-import Image from "next/image";
 import useScreenWidth from "@/hooks/useScreenWidth";
 
 const Hotsales = () => {
   const width = useScreenWidth();
-  const initialItemsPerPage = width < 491 ? 2 : 3;
+  const initialItemsPerPage = width < 1240 ? 2 : 3;
   // const { productsList } = useProduct();
   // console.log(productsList);
   const data = mock;

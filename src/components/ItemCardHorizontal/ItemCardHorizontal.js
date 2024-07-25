@@ -6,7 +6,7 @@ const ItemCardHorizontal = (item) => {
   const { name, description, price } = item;
 
   return (
-    <div className="col-span-full flex p-[25px] gap-[50px] border border-green-bg items-center transition hover:border-blue hover:bg-green-light _1024:gap-[25px] _1024:p-[25px] _768:border-blue _768:p-[10px] _768:gap-4">
+    <li className="col-span-full flex p-[25px] gap-[50px] border border-green-bg items-center transition hover:border-blue hover:bg-green-light _1024:gap-[25px] _1024:p-[25px] _768:border-blue _768:p-[10px] _768:gap-4">
       <div className="relative max-w-[250px] w-full _1240:max-w-[294px] _768:!flex-1">
         <Image
           src={image}
@@ -47,7 +47,7 @@ const ItemCardHorizontal = (item) => {
           </span>
         </button>
       </div>
-    </div>
+    </li>
   );
 };
 
