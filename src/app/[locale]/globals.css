@@ -186,7 +186,7 @@ footer {
   .line {
     height: 10px !important;
   }
-  .container:not(#store, #cardsList, #hotSales) {
+  .container:not(#store, #cardsList, #hotSales, nav > .container) {
     column-gap: 25px !important;
   }
   main > .container {
@@ -1022,15 +1022,6 @@ footer {
 .brew div {
   padding: 25px;
   border: 1px solid var(--blue);
-}
-.brew h3 {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-.brew p {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 23.4px;
 }
 
 /* input slider */

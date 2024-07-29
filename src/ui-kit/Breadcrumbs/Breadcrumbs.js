@@ -10,9 +10,9 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
   let path = "";
   return (
     <nav
-      className={`py-[15px] border-t border-[var(--blue-light)] -ml-[20px] w-screen ${props.className}`}
+      className={`py-[15px] px-[20px] border-t border-[var(--blue-light)] -ml-[20px] w-screen ${props.className}`}
     >
-      <div className="container !py-0 !flex items-center">
+      <div className="container !py-0 !flex items-center _768:!gap-x-[10px]">
         {breadcrumbs.length > 1 &&
           breadcrumbs.map(function (item, index) {
             isTeas = item === "teas" || isTeas;
@@ -24,7 +24,7 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
                   key={index}
                   className={`p1 font-semibold ${
                     index == breadcrumbs.length - 1
-                      ? "text-blue-light"
+                      ? "text-blue-light truncate"
                       : "text-blue"
                   } hover:text-blue-light transition`}
                 >

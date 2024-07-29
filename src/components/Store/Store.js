@@ -6,7 +6,7 @@ import Image from "next/image";
 const Store = () => {
   return (
     // <div className="store">
-    <div className="container !gap-x-3 !gap-y-[25px]" id="store">
+    <div className="container _768:!gap-x-3 !gap-y-[25px]" id="store">
       <h4 className="col-span-full">Магазин</h4>
       <div className="col-span-half flex flex-col gap-8 p-[50px] border border-blue-light transition hover:bg-green-light _1600:gap-[25px] _1240:p-[25px] _768:p-[10px] _768:gap-[15px]">
         <Image

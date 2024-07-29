@@ -18,13 +18,13 @@ const TeaDetails = ({ params }: { params: { id: string } }) => {
   const [product, setProduct] = useState(findProductById(Number(id)));
   console.log(product);
   return (
-    <div className="container">
-      <main className="flex flex-col gap-[25px] col-span-12 text-[var(--blue-light)] teas-seo">
+    <main>
+      <div className="container text-[var(--blue-light)] teas-seo">
         <DescriptionBlock product={product} />
         <BrewBlock product={product} />
         <LastReview />
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
 
