@@ -2,8 +2,15 @@ import ImagesComponent from "../ImagesComponent/ImagesComponent";
 import FavoriteButton from "@/ui-kit/FavoriteButton/FavoriteButton";
 import Counter from "@/ui-kit/Counter/Counter";
 import { Cart } from "@/ui-kit/icons";
+import { useProductCart } from "@/components/Providers/ProductCartProvider";
+
 const DescriptionBlock = ({ product }) => {
   const { name, subtype, description, strength, brewRes } = product;
+  const { addToCart } = useProductCart();
+  const handleClickAddToCart = (e) => {
+    e.stopPropagation();
+    addToCart(product);
+  };
   return (
     <>
       {/* <section className="col-span-full"> */}
@@ -25,7 +32,7 @@ const DescriptionBlock = ({ product }) => {
         </ul>
         <div className="flex gap-[50px]">
           <Counter />
-          <button className="buttonToCart1">
+          <button className="buttonToCart1" onClick={handleClickAddToCart}>
             <Cart />
             <span className="text-h5 font-Nunito-Sans font-semibold _1240:text-[20px] _1024:text-h5 _768:text-[20px] _491:text-p3">
               В корзину

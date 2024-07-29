@@ -3,22 +3,20 @@
 import { flexRow } from "@/config/constants";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
+// import "swiper/css/pagination";
 
 const Flexrow = () => {
   return (
     <>
       <div className="container !pb-[50px] _768:!py-0">
         <h4 className="col-span-full">Меню</h4>
-      </div>
-      <div className="max-w-[var(--max-w)] mx-auto _1024:!block _1024:mx-0 _1024:max-w-none !py-0 _768:!pt-[25px] _1024:-ml-[20px] _1024:w-screen _1024:px-[20px] ">
         <Swiper
           slidesPerView={"auto"}
           spaceBetween={25}
           // centeredSlides={true}
-          initialSlide={2}
+          // initialSlide={1}
           pagination={true}
           // loop={true}
           freeMode={{

@@ -1,46 +1,52 @@
 "use client";
 // import avatar from "../../../public/assets/Images/avatar.png";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import useScreenWidth from "@/hooks/useScreenWidth";
 
 // Import Swiper styles
 // import "swiper/css";
 // import "swiper/css/navigation";
 
 const Feedbacks = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const width = useScreenWidth();
+  const swiperRef = useRef();
   return (
     <div className="container">
       <h5 className="col-span-full">Отзывы</h5>
       <Swiper
-        slidesPerView={width < 768 ? 1 : "auto"}
+        slidesPerView={1}
         spaceBetween={25}
+        // onSwiper={setSwiper}
         // centeredSlides={true}
         // initialSlide={2}
         modules={[Navigation]}
+        // onBeforeInit={(swiper) => {
+        //   // swiperRef.current = swiper;
+        //   swiper.params.navigation.prevEl = prevRef.current;
+        //   swiper.params.navigation.nextEl = nextRef.current;
+        //   swiper.navigation.update();
+        // }}
+        // navigation={{
+        //   prevEl: prevRef.current,
+        //   nextEl: nextRef.current,
+        // }}
         onBeforeInit={(swiper) => {
-          // swiperRef.current = swiper;
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.update();
+          swiperRef.current = swiper;
         }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
+        breakpoints={{
+          768: {
+            slidesPerView: "auto",
+          },
         }}
         // initialSlide={1}
         className="w-full col-span-full !overflow-visible"
       >
         <SwiperSlide className="feedback">
           <Image
-            className="h-[150px] _768:h-[100px]"
+            className="h-[150px] _768:h-[100px] w-auto"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
@@ -56,7 +62,7 @@ const Feedbacks = () => {
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className="h-[150px] _768:h-[100px]"
+            className="h-[150px] _768:h-[100px] w-auto"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
@@ -71,7 +77,7 @@ const Feedbacks = () => {
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className="h-[150px] _768:h-[100px]"
+            className="h-[150px] _768:h-[100px] w-auto"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
@@ -87,7 +93,7 @@ const Feedbacks = () => {
         </SwiperSlide>
         <SwiperSlide className="feedback">
           <Image
-            className="h-[150px] _768:h-[100px]"
+            className="h-[150px] _768:h-[100px] w-auto"
             src="/assets/Images/avatar.png"
             alt="avatar"
             width={150}
@@ -103,16 +109,14 @@ const Feedbacks = () => {
       </Swiper>
       <div className="flex gap-[50px] justify-center col-span-full _768:gap-[15px]">
         <button
-          ref={prevRef}
-          // onClick={() => swiperRef.current?.slidePrev()}
+          onClick={() => swiperRef.current?.slidePrev()}
           className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
           <ArrowLeft />
           Старые
         </button>
         <button
-          ref={nextRef}
-          // onClick={() => swiperRef.current?.slideNext()}
+          onClick={() => swiperRef.current?.slideNext()}
           className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
           Новые

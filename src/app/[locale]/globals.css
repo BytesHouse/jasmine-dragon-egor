@@ -561,6 +561,10 @@ html {
   justify-content: center;
   gap: 15px;
 }
+.swiper-pagination-fraction {
+  top: calc(100% + 25px) !important;
+  gap: 5px;
+}
 
 .lineforsec3 {
   margin-top: 25px;

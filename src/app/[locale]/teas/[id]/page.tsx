@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import InstructionBlock from "../components/InstructionBlock/InstructionBlock";
 import LastReview from "../components/LastReview/LastReview";
 import { useProduct } from "@/components/Providers/ContextProvider";
+import { useProductCart } from "@/components/Providers/ProductCartProvider";
 
 const TeaDetails = ({ params }: { params: { id: string } }) => {
   const { id } = params;
