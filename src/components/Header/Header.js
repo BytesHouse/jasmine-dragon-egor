@@ -97,11 +97,11 @@ const Header = () => {
         // </div>
         <div className="w-screen !px-[20px] z-10 bg-green-bg _1024:flex gap-[50px] justify-between items-center hidden _768:justify-center">
           <ImageSection className="_768:hidden flex-[3]" />
-          <div className="flex-[2] flex justify-center">
-            <Footerbuttons
-              className={"footerVertical"}
-              onClick={() => setShowMenu(false)}
-            />
+          <div
+            className="flex-[2] flex justify-center"
+            onClick={() => setShowMenu(false)}
+          >
+            <Footerbuttons className={"footerVertical"} />
             {/* <Footerbuttons2 /> */}
           </div>
           {/* <div className="col-span-full">
