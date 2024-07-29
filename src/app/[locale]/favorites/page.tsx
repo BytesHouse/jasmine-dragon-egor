@@ -21,29 +21,36 @@ const SelectedMenu = () => {
   const currentPageData = data.slice(offset, offset + itemsPerPage);
 
   return (
-    <main className="container !pt-[50px]">
-      {/* <div className="section3"> */}
-      <h4 className="col-span-half">Избранное</h4>
-      <ToggleView
-        isHorizontal={isHorizontal}
-        toggleView={setIsHorizontal}
-        className="col-span-half"
-      />
-      <CardsList
-        isHorizontal={isHorizontal}
-        cardsData={mock2}
-        className="!py-0 col-span-full"
-      />
-      {/* <Likeitems /> */}
-      <h4 className="col-span-full mt-[100px]">Вам также может понравиться</h4>
-      <CardsList cardsData={currentPageData} className="!py-0 col-span-full" />
-      <Pagination2
-        pageCount={Math.ceil(data.length / itemsPerPage)}
-        onPageChange={handlePageClick}
-        currentPage={currentPage}
-        className="col-span-full"
-      />
-      {/* </div> */}
+    <main>
+      <div className="container !pt-[50px]">
+        {/* <div className="section3"> */}
+        <h4 className="col-span-half _491:text-h5">Избранное</h4>
+        <ToggleView
+          isHorizontal={isHorizontal}
+          toggleView={setIsHorizontal}
+          className="col-span-half"
+        />
+        <CardsList
+          isHorizontal={isHorizontal}
+          cardsData={mock2}
+          className="!py-0 col-span-full"
+        />
+        {/* <Likeitems /> */}
+        <h4 className="col-span-full mt-[100px] _491:text-h5">
+          Вам также может понравиться
+        </h4>
+        <CardsList
+          cardsData={currentPageData}
+          className="!py-0 col-span-full"
+        />
+        <Pagination2
+          pageCount={Math.ceil(data.length / itemsPerPage)}
+          onPageChange={handlePageClick}
+          currentPage={currentPage}
+          className="col-span-full"
+        />
+        {/* </div> */}
+      </div>
     </main>
   );
 };

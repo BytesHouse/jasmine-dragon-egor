@@ -9,19 +9,19 @@ import Strelka from "../../ui-kit/icons/Strelka/Strelka";
 import SwitchLanguage from "../../ui-kit/SwitchLanguge/SwitchLanguge";
 import { useLocale } from "next-intl";
 
-const Footerbuttons = ({ className }) => {
+const Footerbuttons = ({ className, onClick }) => {
   const [isShopShow, setIsShopShow] = useState(false);
   const lang = useLocale();
   return (
     <ol className={className}>
       <li className="col-span-3 _1240:col-span-half">
         <ol className="flex flex-col gap-[25px]">
-          <li>
+          <li onClick={onClick}>
             <Link href={`/${lang}`} className="footerbutton">
               О нас
             </Link>
           </li>
-          <li>
+          <li onClick={onClick}>
             <Link href={`/${lang}/menu`} className="footerbutton">
               Меню
             </Link>
@@ -45,17 +45,17 @@ const Footerbuttons = ({ className }) => {
               id="footerShop"
               className={`flex flex-col gap-[10px] -mt-[10px] transition`}
             >
-              <Link href={`/${lang}`}>
+              <Link href={`/${lang}`} onClick={onClick}>
                 <Cup />
                 Посуда
               </Link>
-              <Link href={`/${lang}`}>
+              <Link href={`/${lang}`} onClick={onClick}>
                 <TeaLeaves />
                 Чай на развес
               </Link>
             </div>
           )}
-          <li>
+          <li onClick={onClick}>
             <Link href={`/${lang}/shopping_cart`} className="footerbutton">
               Корзина
             </Link>
@@ -64,22 +64,22 @@ const Footerbuttons = ({ className }) => {
       </li>
       <li className="col-span-3 _1240:col-span-half">
         <ol className="flex flex-col gap-[25px]">
-          <li>
+          <li onClick={onClick}>
             <Link href={`/${lang}`} className="footerbutton">
               Профиль
             </Link>
           </li>
-          <li>
+          <li onClick={onClick}>
             <Link href={`/${lang}/favorites`} className="footerbutton">
               Избранное
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href={`/${lang}`} className="footerbutton">
               Карьера
             </Link>
-          </li>
-          <li>
+          </li> */}
+          <li onClick={onClick}>
             <Link href={`/${lang}`} className="footerbutton">
               Контакты
             </Link>
