@@ -7,7 +7,6 @@ const Menu = () => {
       <div className="container !pb-0">
         <h4 className="col-span-full">Чайное меню</h4>
       </div>
-      <Filters />
       <Lables />
       <Hotsales />
       {/* <Pagination /> */}
