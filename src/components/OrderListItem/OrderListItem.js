@@ -1,4 +1,4 @@
-import { Cancelation } from "@/ui-kit/icons";
+import { Cancelation, ChooseHeart } from "@/ui-kit/icons";
 import Counter from "@/ui-kit/Counter/Counter";
 import Image from "next/image";
 

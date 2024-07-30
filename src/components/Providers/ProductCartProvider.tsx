@@ -12,12 +12,14 @@ export const ProductCartProvider = ({
   const [productsList, setProducts] = useState<any[]>([]);
   useEffect(() => {
     const storedCart = localStorage.getItem("jd-cart");
-    if (storedCart?.length) {
-      setProducts(JSON.parse(storedCart));
+    if (storedCart?.length! > 0) {
+      setProducts(JSON.parse(storedCart!.toString()));
     }
   }, []);
   useEffect(() => {
-    localStorage.setItem("jd-cart", JSON.stringify(productsList));
+    if (productsList?.length > 0) {
+      localStorage.setItem("jd-cart", JSON.stringify(productsList));
+    }
   }, [productsList]);
   // CRUD
   const addToCart = (product: any) => {
