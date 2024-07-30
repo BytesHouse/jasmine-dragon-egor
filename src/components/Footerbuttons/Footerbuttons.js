@@ -7,10 +7,11 @@ import TeaLeaves from "../../ui-kit/icons/TeaLeaves/TeaLeaves";
 import Image from "next/image";
 import Strelka from "../../ui-kit/icons/Strelka/Strelka";
 import SwitchLanguage from "../../ui-kit/SwitchLanguge/SwitchLanguge";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Footerbuttons = ({ className, onClick }) => {
   const [isShopShow, setIsShopShow] = useState(false);
+  const t = useTranslations("Footer");
   const lang = useLocale();
   return (
     <ol className={className}>
@@ -18,17 +19,17 @@ const Footerbuttons = ({ className, onClick }) => {
         <ol className="flex flex-col gap-[25px]">
           <li onClick={onClick}>
             <Link href={`/${lang}`} className="footerbutton">
-              О нас
+              {t("aboutUs")}
             </Link>
           </li>
           <li onClick={onClick}>
             <Link href={`/${lang}/menu`} className="footerbutton">
-              Меню
+              {t("menu")}
             </Link>
           </li>
           <li>
             <Link href={`/${lang}`} className="footerbutton">
-              Магазин
+              {t("shop")}
             </Link>
             <button
               onClick={() => setIsShopShow(!isShopShow)}
@@ -47,17 +48,17 @@ const Footerbuttons = ({ className, onClick }) => {
             >
               <Link href={`/${lang}`} onClick={onClick}>
                 <Cup />
-                Посуда
+                {t("dishes")}
               </Link>
               <Link href={`/${lang}`} onClick={onClick}>
                 <TeaLeaves />
-                Чай на развес
+                {t("tea")}
               </Link>
             </div>
           )}
           <li onClick={onClick}>
             <Link href={`/${lang}/shopping_cart`} className="footerbutton">
-              Корзина
+              {t("cart")}
             </Link>
           </li>
         </ol>
@@ -65,13 +66,13 @@ const Footerbuttons = ({ className, onClick }) => {
       <li className="col-span-3 _1240:col-span-half">
         <ol className="flex flex-col gap-[25px]">
           <li onClick={onClick}>
-            <Link href={`/${lang}`} className="footerbutton">
-              Профиль
+            <Link href={`/${lang}/profile`} className="footerbutton">
+              {t("profile")}
             </Link>
           </li>
           <li onClick={onClick}>
             <Link href={`/${lang}/favorites`} className="footerbutton">
-              Избранное
+              {t("favorites")}
             </Link>
           </li>
           {/* <li>
@@ -81,11 +82,11 @@ const Footerbuttons = ({ className, onClick }) => {
           </li> */}
           <li onClick={onClick}>
             <Link href={`/${lang}`} className="footerbutton">
-              Контакты
+              {t("contacts")}
             </Link>
           </li>
           <li>
-            <p className="footerbutton">Язык</p>
+            <p className="footerbutton">{t("language")}</p>
             <SwitchLanguage />
           </li>
         </ol>

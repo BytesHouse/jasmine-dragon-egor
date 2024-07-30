@@ -67,5 +67,106 @@
     "profile": "Profil",
     "favorites": "Favorite",
     "order": "Plasarea comenzii"
+  },
+  "Subheader": {
+    "slideDesc": "Bine ați venit în magazinul nostru confortabil de ceai, unde fiecare ceașcă este o poveste de gust și aromă. Oferim o gamă largă de sortimente clasice și amestecuri aromate unice pentru a satisface orice dorință de ceai.",
+    "slide1headingTop": "Ura, avem o nouă livrare!",
+    "slideButtonNew": "Toate noutățile",
+    "slide2headingTop": "Întotdeauna ne bucurăm să vă vedem la Jasmine Dragon",
+    "slide2heading": "Unde ceaiul îți spune povestea gustului",
+    "slideButtonTeas": "Ceaiuri",
+    "slideButtonDishes": "Veselă",
+    "developing": "În dezvoltare..."
+  },
+  "SectionOneText": "Bucurați-vă de ceai cu beneficii: gust, calitate, confort și o atmosferă specială",
+  "SectionAbout": {
+    "aboutHeading": "Despre noi",
+    "aboutText": "”Jasmine Dragon” este o poveste de dragoste pentru ceai, care a început cu mulți ani în urmă, dintr-o pasiune sinceră pentru gusturile și aromele unice.",
+    "card1heading": "Misiunea noastră",
+    "card1text": "Misiunea noastră este de a răspândi cultura ceaiului, oferindu-le tuturor ocazia de a se bucura de arome și gusturi minunate de ceai. Ne străduim să menținem procese de producție ecologice și să creăm relații sustenabile cu furnizorii noștri. Misiunea noastră este de a aduce bucurie și plăcere prin ceai.",
+    "card2heading": "Echipa noastră",
+    "card2text": "Echipa noastră este formată din adevărați cunoscători și iubitori de ceai, gata să împărtășească cunoștințele și experiența lor cu dumneavoastră. Ne străduim ca fiecare client să primească nu doar produse de înaltă calitate, ci și servicii excelente. Echipa noastră este pregătită să vă ajute în alegerea ceaiului și în crearea unei experiențe de neuitat.",
+    "card3heading": "Ceainăria",
+    "card3text": "În ceainăria noastră veți găsi o combinație inspirată de tradiții și modernitate. Oferim o gamă largă de ceaiuri, inclusiv soiuri clasice, exemplare rare și amestecuri aromate exclusive. Fiecare ceașcă de ceai al nostru are un gust și o aromă unică, care vă va purta în lumea tradițiilor și splendorii ceaiului."
+  },
+  "Menu": {
+    "heading": "Meniu",
+    "flexRow1": "Ceaiuri",
+    "flexRow2": "Smoothie-uri",
+    "flexRow3": "Sandvișuri",
+    "flexRow4": "Deserturi",
+    "flexRow5": "Torturi",
+    "count": "15 produse",
+    "buttonMore": "A vedea mai multe",
+    "sortBy": "Sortează după",
+    "showBy": "Afișează după",
+    "productView": "Vizualizare produs:",
+    "buttonToCart": "La coș"
+  },
+  "Filter": {
+    "availability": "Disponibilitate",
+    "available": "În stoc",
+    "unavailable": "Indisponibil",
+    "teaType": "Tip de ceai",
+    "puer": "Pu-erh",
+    "oolong": "Oolong",
+    "greenTea": "Ceai verde",
+    "redTea": "Ceai roșu",
+    "whiteTea": "Ceai alb",
+    "othersTea": "Alte ceaiuri",
+    "manufacturer": "Producător",
+    "price": "Preț",
+    "apply": "Aplică",
+    "reset": "Resetează"
+  },
+  "Sort": {
+    "favorible_price": "Preț favorabil",
+    "less_expensive": "Mai ieftin",
+    "more_expensive": "Mai scump",
+    "new_products": "Produse noi"
+  },
+  "Store": {
+    "heading": "Magazin",
+    "cardDesc": "Echipa noastră prietenoasă vă va ajuta cu plăcere să alegeți ceaiul care vi se potrivește.",
+    "button": "Vezi sortimentul",
+    "buttonShort": "Vezi",
+    "tea": "Ceai la vrac",
+    "dishes": "Veselă"
+  },
+  "HotSales": {
+    "heading": "Lovituri de vânzări"
+  },
+  "Contacts": {
+    "heading": "Contacte",
+    "address": "Adresă",
+    "email": "E-mail",
+    "phoneNumbers": "Numere de telefon"
+  },
+  "Feedbacks": {
+    "heading": "Recenzii",
+    "next": "Noi",
+    "prev": "Vechi"
+  },
+  "Footer": {
+    "firstText": "Rămâneți conectați",
+    "secondText": "Abonați-vă și primiți ultimele știri și oferte de la ceainăria voastră preferată Jasmine Dragon",
+    "emailPlaceholder": "Introduceți emailul dvs.",
+    "subscribe": "Abonați-vă",
+    "aboutUs": "Despre noi",
+    "menu": "Meniu",
+    "shop": "Magazin",
+    "dishes": "Veselă",
+    "tea": "Ceai vrac",
+    "cart": "Coș",
+    "profile": "Profil",
+    "favorites": "Favorite",
+    "contacts": "Contacte",
+    "language": "Limbă",
+    "privacy": "Politica de confidențialitate",
+    "terms": "Termeni și condiții"
+  },
+  "Header": {
+    "profile": "Profil",
+    "menu": "Meniu"
   }
 }

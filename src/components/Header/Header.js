@@ -17,15 +17,18 @@ import ImageSection from "../ImageSection/Imagesection";
 import { Footerbuttons } from "../index";
 import Breadcrumbs from "@/ui-kit/Breadcrumbs/Breadcrumbs";
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { useProductCart } from "../Providers/ProductCartProvider";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const { productsList } = useProductCart();
   //   const { t } = useTranslation("Header");
   //   const { pathname } = useLocation();
   const pathname = usePathname();
   const lang = useLocale();
-  console.log(lang);
+  const t = useTranslations("Header");
+  // console.log(lang);
   return (
     <>
       <header className={`w-full border-b border-blue-light`}>
@@ -55,14 +58,14 @@ const Header = () => {
                   className="flex items-center gap-4 rounded-[30px] pl-6 bg-transparent font-semibold text-lg leading-[130%] text-[var(--blue-light)] border border-[var(--blue-light)] shadow-md _1024:hidden"
                   aria-label=""
                 >
-                  Профиль <ProfileIcon />
+                  {t("profile")} <ProfileIcon />
                 </Link>
                 <div className="relative">
                   <Link href={`/${lang}/shopping_cart`} aria-label="Go to cart">
                     <BagIcon />
                   </Link>
                   <div className="absolute w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 right-0">
-                    <p className="numberofitems">0</p>
+                    <p className="numberofitems">{productsList.length}</p>
                   </div>
                 </div>
               </div>
@@ -74,7 +77,7 @@ const Header = () => {
               {showMenu ? <Closebutton /> : <BurgerIcon />}
               <p className="p1 _768:p2">
                 {/* {t("hello")} */}
-                Меню
+                {t("menu")}
               </p>
             </button>
           </div>

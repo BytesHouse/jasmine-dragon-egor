@@ -19,7 +19,7 @@ function Counter() {
   };
 
   return (
-    <div className="counter flex flex-row items-center gap-[5px]  ">
+    <div className="counter flex flex-row items-center gap-[5px] _768:order-last">
       <button className="minus-button flex cursor-pointer" onClick={decrement}>
         <Minus />
       </button>

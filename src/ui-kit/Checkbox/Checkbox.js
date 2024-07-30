@@ -26,7 +26,7 @@ const Checkbox = ({ isCurr, setIsCurr, children }) => {
           </svg>
         )}
       </div>
-      <p className="p2">{children}</p>
+      <p className="p2 _491:p3">{children}</p>
     </div>
   );
 };

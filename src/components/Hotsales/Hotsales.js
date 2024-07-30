@@ -4,8 +4,10 @@ import { useState } from "react";
 import { CardsList } from "@/components";
 import Pagination2 from "../Pagination2/Pagination2";
 import useScreenWidth from "@/hooks/useScreenWidth";
+import { useTranslations } from "next-intl";
 
 const Hotsales = () => {
+  const t = useTranslations("HotSales");
   const width = useScreenWidth();
   const initialItemsPerPage = width < 1240 ? 2 : 3;
   // const { productsList } = useProduct();
@@ -33,12 +35,12 @@ const Hotsales = () => {
   return (
     <>
       <div className="mt-[200px] container !pb-[50px] _768:!pb-[25px]">
-        <h4 className="col-span-full">Хиты продаж</h4>
-        <div className="flex gap-[25px] col-span-full _768:gap-[15px]">
+        <h4 className="col-span-full">{t("heading")}</h4>
+        {/* <div className="flex gap-[25px] col-span-full _768:gap-[15px]">
           <button className="buttonhotsale">Меню</button>
           <button className="buttonhotsale">Чаи</button>
           <button className="buttonhotsale">Посуда</button>
-        </div>
+        </div> */}
       </div>
       <CardsList
         id="hotSales"

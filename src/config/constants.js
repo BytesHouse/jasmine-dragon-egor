@@ -184,11 +184,16 @@ export const mock2 = [
 
 export const mock3 = [
   { id: 0, title: "Выгодня цена", icon: <Good />, value: "favorible_price" },
-  { id: 1, title: "Дешевле", icon: <Strelka />, value: "less_expensive" },
+  {
+    id: 1,
+    title: "Дешевле",
+    icon: <Strelka isMini className="rotate-90" />,
+    value: "less_expensive",
+  },
   {
     id: 2,
     title: "Дороже",
-    icon: <Strelka className="rotate-180" />,
+    icon: <Strelka isMini className="-rotate-90" />,
     value: "more_expensive",
   },
   { id: 3, title: "Новинки", icon: <Plus />, value: "new_products" },
@@ -325,28 +330,28 @@ export const orderMock = [
 
 export const flexRow = [
   {
-    h5: "Чаи",
-    p1: "15 товаров",
+    h5: "flexRow1",
+    p1: "count",
     bgPath: "bg-[url('/assets/Images/FlexRow/0.png')]",
   },
   {
-    h5: "Смузи",
-    p1: "15 товаров",
+    h5: "flexRow2",
+    p1: "count",
     bgPath: "bg-[url('/assets/Images/FlexRow/1.png')]",
   },
   {
-    h5: "Сэндвичи",
-    p1: "15 товаров",
+    h5: "flexRow3",
+    p1: "count",
     bgPath: "bg-[url('/assets/Images/FlexRow/2.png')]",
   },
   {
-    h5: "Десерты",
-    p1: "15 товаров",
+    h5: "flexRow4",
+    p1: "count",
     bgPath: "bg-[url('/assets/Images/FlexRow/3.png')]",
   },
   {
-    h5: "Торты",
-    p1: "15 товаров",
+    h5: "flexRow5",
+    p1: "count",
     bgPath: "bg-[url('/assets/Images/FlexRow/4.png')]",
   },
 ];

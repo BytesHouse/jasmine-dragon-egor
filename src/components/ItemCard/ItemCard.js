@@ -5,11 +5,12 @@ import Cart from "../../ui-kit/icons/Cart/Cart";
 import ChooseHeart from "../../ui-kit/icons/ChooseHeart/ChooseHeart";
 import { ChooseHeartMini } from "@/ui-kit/icons";
 // import useScreenWidth from "@/hooks/useScreenWidth";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 const image = "/assets/Images/tea-mock.png";
 import Link from "next/link";
 
 const ItemCard = ({ item, onClick }) => {
+  const t = useTranslations("Menu");
   // const width = useScreenWidth();
   const lang = useLocale();
   const { name, description, price, id } = item;
@@ -49,9 +50,7 @@ const ItemCard = ({ item, onClick }) => {
           </div>
           <button onClick={handleClickAddToCart} className="buttonToCart1">
             <Cart />
-            <span className="text-h5 font-Nunito-Sans font-semibold _768:text-[20px] _491:text-p3">
-              В корзину
-            </span>
+            {t("buttonToCart")}
           </button>
         </div>
       </Link>

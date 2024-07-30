@@ -13,54 +13,87 @@
 // TODO
 //  1. Нужно будет всем обьектам раздать поле id
 export const filterConfig = {
-    stock:  [
-            {
-                key: 1, value: "В наличии", t: "onStock"
-            },
-            {
-                key: 2, value: "Нет в наличии", t: "outStock",
-            }
-            ],
-    type:   [
-            {
-                key: 1, value: 'Пуэр', t: '', checked: false,
-            },
-            {
-                key: 2, value: 'Улун', t: '', checked: false,
-            },
-            {
-                key: 3, value: 'Красный чай', t: '', checked: false,
-            },
-            {
-                key: 4, value: 'Зеленый чай', t: '', checked: false,
-            },
-            {
-                key: 5, value: 'Белый чай', t: '', checked: false,
-            },
-            {
-                key: 6, value: 'Остальные чаи', t: '', checked: false,
-            }
-            ],
-    manufacturer:
-            [
-            {
-                key: 1, value: 'Производитель 1', t: '',
-            },
-            {
-                key: 2, value: 'Производитель 2', t: '',
-            },
-            {
-                key: 3, value: 'Производитель 3', t: '',
-            },
-            {
-                key: 4, value: 'Производитель 4', t: '',
-            },
-            {
-                key: 5, value: 'Производитель 5', t: '',
-            },
-            {
-                key: 6, value: 'Производитель 6', t: '',
-            }
-    ],
-    price: [500, 10_000_000]
+  stock: [
+    {
+      key: 1,
+      value: "В наличии",
+      t: "available",
+    },
+    {
+      key: 2,
+      value: "Нет в наличии",
+      t: "unavailable",
+    },
+  ],
+  type: [
+    {
+      key: 1,
+      value: "Пуэр",
+      t: "puer",
+      checked: false,
+    },
+    {
+      key: 2,
+      value: "Улун",
+      t: "oolong",
+      checked: false,
+    },
+    {
+      key: 3,
+      value: "Красный чай",
+      t: "redTea",
+      checked: false,
+    },
+    {
+      key: 4,
+      value: "Зеленый чай",
+      t: "greenTea",
+      checked: false,
+    },
+    {
+      key: 5,
+      value: "Белый чай",
+      t: "whiteTea",
+      checked: false,
+    },
+    {
+      key: 6,
+      value: "Остальные чаи",
+      t: "othersTea",
+      checked: false,
+    },
+  ],
+  manufacturer: [
+    {
+      key: 1,
+      value: "Производитель",
+      t: "manufacturer",
+    },
+    {
+      key: 2,
+      value: "Производитель",
+      t: "manufacturer",
+    },
+    {
+      key: 3,
+      value: "Производитель",
+      t: "manufacturer",
+    },
+    {
+      key: 4,
+      value: "Производитель",
+      t: "manufacturer",
+    },
+    {
+      key: 5,
+      value: "Производитель",
+      t: "manufacturer",
+    },
+    {
+      key: 6,
+      value: "Производитель",
+      t: "manufacturer",
+    },
+  ],
+  price: [500, 10_000_000],
 };

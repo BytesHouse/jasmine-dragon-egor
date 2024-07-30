@@ -6,33 +6,22 @@ import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { useTranslations } from "next-intl";
 
 // Import Swiper styles
 // import "swiper/css";
 // import "swiper/css/navigation";
 
 const Feedbacks = () => {
+  const t = useTranslations("Feedbacks");
   const swiperRef = useRef();
   return (
     <div className="container">
-      <h5 className="col-span-full">Отзывы</h5>
+      <h5 className="col-span-full">{t("heading")}</h5>
       <Swiper
         slidesPerView={1}
         spaceBetween={25}
-        // onSwiper={setSwiper}
-        // centeredSlides={true}
-        // initialSlide={2}
         modules={[Navigation]}
-        // onBeforeInit={(swiper) => {
-        //   // swiperRef.current = swiper;
-        //   swiper.params.navigation.prevEl = prevRef.current;
-        //   swiper.params.navigation.nextEl = nextRef.current;
-        //   swiper.navigation.update();
-        // }}
-        // navigation={{
-        //   prevEl: prevRef.current,
-        //   nextEl: nextRef.current,
-        // }}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -113,13 +102,13 @@ const Feedbacks = () => {
           className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
           <ArrowLeft />
-          Старые
+          {t("prev")}
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
           className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
-          Новые
+          {t("next")}
           <ArrowRight />
         </button>
       </div>

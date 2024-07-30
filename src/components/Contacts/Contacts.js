@@ -1,10 +1,12 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 // import tea from "../../../public/assets/Images/teabig.png";
 
 const Contacts = () => {
+  const t = useTranslations("Contacts");
   return (
     <div className="container">
-      <h5 className="col-span-full">Контакты</h5>
+      <h5 className="col-span-full">{t("heading")}</h5>
 
       <Image
         src="/assets/Images/teabig.png"
@@ -15,13 +17,13 @@ const Contacts = () => {
       />
       <div className="flex flex-col gap-[25px] col-span-7 _1600:col-span-half _1024:col-span-full">
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">
-          <h3 className="_768:text-h5">Адрес</h3>
+          <h3 className="_768:text-h5">{t("address")}</h3>
           <h5 className="simple font-bold _768:text-p1">
             Bd. Moscovei 12/2, Chisinau, Moldova
           </h5>
         </div>
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">
-          <h3 className="_768:text-h5">E-mail</h3>
+          <h3 className="_768:text-h5">{t("email")}</h3>
           <a
             href="mailto:hello@jasminedragontea.com"
             className="text-h5 font-bold text-blue-light font-Nunito-Sans leading-[120%] hover:underline _768:text-p1"
@@ -36,7 +38,7 @@ const Contacts = () => {
           </a>
         </div>
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">
-          <h3 className="_768:text-h5">Номера телефона</h3>
+          <h3 className="_768:text-h5">{t("phoneNumbers")}</h3>
           <a
             href="tel:022444444"
             className="text-h5 font-bold text-blue-light font-Nunito-Sans leading-[120%] hover:underline _768:text-p1"

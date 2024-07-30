@@ -5,13 +5,15 @@ import { flexRow } from "@/config/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import "swiper/css";
+import { useTranslations } from "next-intl";
 // import "swiper/css/pagination";
 
 const Flexrow = () => {
+  const t = useTranslations("Menu");
   return (
     <>
       <div className="container !pb-[50px] _768:!py-0">
-        <h4 className="col-span-full">Меню</h4>
+        <h4 className="col-span-full">{t("heading")}</h4>
         <Swiper
           slidesPerView={"auto"}
           spaceBetween={25}
@@ -47,9 +49,11 @@ const Flexrow = () => {
                 >
                   <div className="group flex flex-col items-center border-blue-light border p-[25px] _1240:p-[15px] bg-[var(--green-bg-25)] hover:bg-blue-light transition">
                     <h5 className="text-center group-hover:text-green-light mb-[15px]">
-                      {item.h5}
+                      {t(item.h5)}
                     </h5>
-                    <p className="p1 group-hover:text-green-light">{item.p1}</p>
+                    <p className="p1 group-hover:text-green-light">
+                      {t(item.p1)}
+                    </p>
                   </div>
                 </a>
               </SwiperSlide>

@@ -1,4 +1,4 @@
-import Filters from "./Filters/Filters";
+import MenuPreview from "./MenuPreview/MenuPreview";
 // import Choise from "./Choise/Choise";
 import Flexrow from "./Flexrow/Flexrow";
 import Pagination from "./Pagination/Pagination";
@@ -38,6 +38,7 @@ import CardsList from "./CardsList/CardsList";
 import OrderListItem from "./OrderListItem/OrderListItem";
 
 export {
+  MenuPreview,
   CardsList,
   OrderListItem,
   ToggleView,
@@ -56,7 +57,6 @@ export {
   SectionThree,
   SectionTwo,
   ContentSubHeader1,
-  Filters,
   Filterdish,
   Agreements,
   Choisedish,

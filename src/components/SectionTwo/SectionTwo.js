@@ -1,9 +1,11 @@
 // import tea from "../../../public/assets/Images/tea.png";
 // import living from "../../../public/assets/Images/living-room.png";
 // import community from "../../../public/assets/Images/community.png";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const SectionTwo = () => {
+  const t = useTranslations("SectionAbout");
   return (
     <>
       {/* <div className="container"> */}
@@ -18,14 +20,8 @@ const SectionTwo = () => {
             width={545}
             height={545}
           />
-          <h4 className="_491:text-h5">Наша Миссия</h4>
-          <p className="p1 _491:p2">
-            Наша миссия - распространять культуру чаепития, даря каждому
-            возможность наслаждаться великолепными чайными вкусами и ароматами.
-            Мы стремимся поддерживать экологически чистые производственные
-            процессы и создавать устойчивые отношения с нашими поставщиками.
-            Наша миссия - привносить радость и удовольствие через чай.
-          </p>
+          <h4 className="_491:text-h5">{t("card1heading")}</h4>
+          <p className="p1 _491:p2">{t("card1text")}</p>
         </div>
         <div className="about-card">
           <Image
@@ -34,15 +30,8 @@ const SectionTwo = () => {
             width={545}
             height={545}
           />
-          <h4 className="_491:text-h5">Чайная</h4>
-          <p className="p1 _491:p2">
-            В нашей чайной вы найдете вдохновляющее сочетание традиций и
-            современности. Мы предлагаем широкий ассортимент чая, включая
-            классические сорта, редкие экземпляры и эксклюзивные
-            ароматизированные смеси. В каждой чашке нашего чая - неповторимый
-            вкус и аромат, который перенесет вас в мир чайных традиций и
-            великолепия.
-          </p>
+          <h4 className="_491:text-h5">{t("card3heading")}</h4>
+          <p className="p1 _491:p2">{t("card3text")}</p>
         </div>
       </div>
       <div className="about-card col-span-half justify-self-end mt-[566px] _768:col-span-full _768:mt-0">
@@ -52,14 +41,8 @@ const SectionTwo = () => {
           width={545}
           height={545}
         />
-        <h4 className="_491:text-h5">Наша команда</h4>
-        <p className="p1 _491:p2">
-          В нашей команде собраны настоящие ценители и знатоки чая, готовые
-          поделиться своими знаниями и опытом с вами. Мы стремимся к тому, чтобы
-          каждый клиент получил не только высококачественные продукты, но и
-          отличное обслуживание. Наша команда готова помочь вам в выборе чая и
-          создании незабываемого чайного опыта.
-        </p>
+        <h4 className="_491:text-h5">{t("card2heading")}</h4>
+        <p className="p1 _491:p2">{t("card2text")}</p>
       </div>
       {/* </div> */}
       {/* </div> */}

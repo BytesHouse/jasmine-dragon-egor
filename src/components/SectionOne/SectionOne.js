@@ -3,9 +3,11 @@
 // import table from "../../../public/assets/Images/table.png";
 // import cuptea from "../../../public/assets/Images/2cuptea.png";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const SectionOne = () => {
+  const t = useTranslations();
   return (
     <section className="col-span-full container relative">
       <Image
@@ -24,8 +26,7 @@ const SectionOne = () => {
       />
       <div className="col-span-full container !p-0 relative">
         <p className="col-span-full text-[91px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3 _768:text-h4">
-          Наслаждайтесь чаем с пользой: вкус, качество, уют и особенная
-          атмосфера
+          {t("SectionOneText")}
         </p>
         <Image
           src="/assets/Images/2cuptea.png"
@@ -39,7 +40,7 @@ const SectionOne = () => {
           alt="table"
           width={219}
           height={219}
-          className="col-start-8 col-end-10 place-self-center absolute top-[250px] h-auto _1600:col-[9_/_12] _1240:static  _1240:top-0 _1024:col-span-half _1024:place-self-end"
+          className="col-start-8 col-end-10 place-self-center absolute top-[380px] h-auto _1600:col-[9_/_12] _1240:static  _1240:top-0 _1024:col-span-half _1024:place-self-end"
         />
       </div>
     </section>

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Cart, ChooseHeart } from "@/ui-kit/icons";
 const image = "/assets/Images/tea-mock.png";
+import { useLocale, useTranslations } from "next-intl";
 
 const ItemCardHorizontal = (item) => {
   const { name, description, price } = item;
+  const t = useTranslations("Menu");
 
   return (
     <li className="col-span-full flex p-[25px] gap-[50px] border border-green-bg items-center transition hover:border-blue hover:bg-green-light _1024:gap-[25px] _1024:p-[25px] _768:border-blue _768:p-[10px] _768:gap-4">
@@ -35,7 +37,7 @@ const ItemCardHorizontal = (item) => {
         <button className="hidden _1240:flex _1240:max-w-max items-center justify-center gap-[25px] border-2 border-blue-light bg-green-light p-[25px_100px] _1600:p-[25px_50px] _1024:w-full _1024:max-w-none _768:p-[10px] _768:gap-[10px]">
           <Cart />
           <span className="text-h5 font-Nunito-Sans font-semibold text-blue-light _768:text-[20px] _491:text-p3">
-            В корзину
+            {t("buttonToCart")}
           </span>
         </button>
       </div>
@@ -43,7 +45,7 @@ const ItemCardHorizontal = (item) => {
         <button className="flex items-center gap-[25px] border-2 border-blue-light bg-green-light p-[25px_100px] _1600:p-[25px_50px] ">
           <Cart />
           <span className="text-h5 font-Nunito-Sans font-semibold text-blue-light">
-            В корзину
+            {t("buttonToCart")}
           </span>
         </button>
       </div>

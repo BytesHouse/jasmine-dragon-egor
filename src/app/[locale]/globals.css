@@ -64,13 +64,13 @@
     @apply text-white font-Playfair-Display italic leading-[120%] w-full text-h5 font-medium;
   } */
   .about-card {
-    @apply p-[50px] flex flex-col gap-[25px] h-max border border-green-bg transition hover:bg-green-light hover:border-blue _1240:p-[25px];
+    @apply p-[50px] flex flex-col gap-[25px] h-max max-w-[585px] border border-green-bg transition hover:bg-green-light hover:border-blue _1240:p-[25px];
   }
   .feedback {
-    @apply !flex items-center p-[25px] !w-[586px] gap-[25px] border-green-bg border-[3px] transition hover:bg-green-light hover:border-blue _768:!w-[311px] _768:p-[15px] _768:gap-[15px] _768:!w-full;
+    @apply !flex items-center p-[25px] !w-[586px] gap-[25px] border-green-bg border-[3px] transition hover:bg-green-light hover:border-blue _768:p-[15px] _768:gap-[15px] _768:!w-full;
   }
   .buttonToCart1 {
-    @apply w-full flex justify-center items-center p-[25px] text-blue-light gap-[25px] h-max bg-green-light border-2 border-blue-light _768:gap-[10px] _768:p-[10px];
+    @apply w-full flex justify-center items-center p-[25px] text-blue-light gap-[25px] h-max bg-green-light border-2 border-blue-light _768:gap-[10px] _768:p-[10px] text-h5 font-Nunito-Sans font-semibold _768:text-[20px] _491:text-p3 max-w-[418px];
   }
   .buttonhotsale {
     @apply flex items-center p-[15px_50px] font-Nunito-Sans font-semibold text-p1 border border-blue-light text-blue-light _768:p-[10px];

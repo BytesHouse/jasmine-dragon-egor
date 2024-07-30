@@ -1,20 +1,20 @@
 import {
-  Filters,
   // Choise,
   Flexrow,
-  Pagination,
   Lables,
   Store,
   Hotsales,
   Contacts,
   Feedbacks,
 } from "../index";
+import MenuPreview from "../MenuPreview/MenuPreview";
 
 const SectionThree = () => {
   return (
     <>
       <Flexrow />
-      <Filters />
+      {/* <Filters /> */}
+      <MenuPreview />
       <Lables />
       <Store />
       <Hotsales />

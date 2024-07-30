@@ -1,8 +1,9 @@
 // import { Link } from 'react-router-dom';
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Footerfinal = () => {
+  const t = useTranslations("Footer");
   const lang = useLocale();
   return (
     <div className="col-span-full flex justify-between items-center _768:flex-col _768:items-start _768:gap-[15px]">
@@ -17,13 +18,13 @@ const Footerfinal = () => {
           className="hover:underline text-blue-light text-p1 _1024:text-p2"
           href={`/${lang}/privacy`}
         >
-          Политика приватности
+          {t("privacy")}
         </Link>
         <Link
           className="hover:underline text-blue-light text-p1 _1024:text-p2"
           href={`/${lang}/terms`}
         >
-          Условия использования
+          {t("terms")}
         </Link>
       </div>
     </div>

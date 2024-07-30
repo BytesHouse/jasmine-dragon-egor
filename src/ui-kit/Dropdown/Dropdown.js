@@ -1,8 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useState, useEffect } from "react";
 
 const Dropdown = ({ array }) => {
+  const t = useTranslations("Sort");
   const [isShow, setIsShow] = useState(false);
   const [choice, setChoice] = useState(array[0] || "Значение по умолчанию");
 
@@ -47,7 +49,8 @@ const Dropdown = ({ array }) => {
             className="flex items-center justify-center gap-[15px] py-4 w-full relative _768:text-p3 _768:p-[10px]"
             onClick={handleChangeIsShow}
           >
-            {choice.title}
+            {/* {choice.title} */}
+            {t(choice.value)}
             {choice.icon}
           </div>
           {isShow && (
@@ -58,7 +61,8 @@ const Dropdown = ({ array }) => {
                   onClick={() => handleChangeChoice(item)}
                   key={item.id}
                 >
-                  {item.title}
+                  {/* {item.title} */}
+                  {t(item.value)}
                   {item.icon}
                 </li>
               ))}

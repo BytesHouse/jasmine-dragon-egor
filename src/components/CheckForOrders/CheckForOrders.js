@@ -19,20 +19,25 @@ const CheckForOrders = ({
     <div
       className={`${
         isWithOrders ? "col-span-half" : "col-span-5 max-w-[555px]"
-      } w-full justify-self-end flex flex-col h-max p-[25px] bg-[var(--green-light)] gap-[25px] relative _1240:col-span-full _1240:max-w-none`}
+      } w-full justify-self-end flex flex-col h-max p-[25px] bg-[var(--green-light)] gap-[25px] relative _1240:col-span-full _1240:max-w-none _768:p-[15px]`}
     >
-      <div className="flex">
-        <h4 className="font-semibold simple">Ваши товары</h4>
-        {isWithOrders && (
-          <button
-            className={`${
-              isShowOrders ? "-rotate-180" : "rotate-0"
-            } transition`}
-            onClick={() => setIsShowOrders(!isShowOrders)}
-          >
-            <Strelka />
-          </button>
-        )}
+      <div>
+        <div className="flex">
+          <h4 className="font-semibold simple _768:text-h5">Ваши товары</h4>
+          {isWithOrders && (
+            <button
+              className={`${
+                isShowOrders ? "-rotate-180" : "rotate-0"
+              } transition`}
+              onClick={() => setIsShowOrders(!isShowOrders)}
+            >
+              <Strelka />
+            </button>
+          )}
+        </div>
+        <p className="font-semibold mt-[5px]">
+          Товаров в корзине: {products.length}{" "}
+        </p>
       </div>
       {isShowOrders && (
         <div className="max-h-[470px] overflow-y-scroll flex flex-col gap-[25px] pr-[25px]">
@@ -46,7 +51,7 @@ const CheckForOrders = ({
           ))}
         </div>
       )}
-      <p className="font-semibold">Товаров в корзине: {products.length} </p>
+
       <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">Сумма Покупок</h5>
         <p className="p1 font-semibold">
@@ -76,8 +81,8 @@ const CheckForOrders = ({
         <p className="p1 font-semibold">Бесплатно</p>
       </div>
       <div className="flex flex-row justify-between items-center border-t border-b py-[25px] border-blue-light">
-        <h4 className="w-auto font-medium">Итого</h4>
-        <h4 className="font-bold simple w-auto">2,194.45 Lei</h4>
+        <h4 className="w-auto font-medium _768:text-h5">Итого</h4>
+        <h4 className="font-bold simple w-auto _768:text-h5">2,194.45 Lei</h4>
       </div>
       <Agreements />
       <button className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5">

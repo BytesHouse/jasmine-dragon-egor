@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { Sort, ToggleView, CardsList } from "@/components";
-import Pagination2 from "../Pagination2/Pagination2";
-import { useProduct } from "../Providers/ContextProvider";
+import Pagination2 from "@/components/Pagination2/Pagination2";
+import { useProduct } from "@/components/Providers/ContextProvider";
+import { useTranslations } from "next-intl";
 
-const Filters = () => {
+const Menu = () => {
+  const t = useTranslations("Menu");
   const [isHorizontal, setIsHorizontal] = useState(true); // Состояние для отслеживания текущего вида товаров
   // ==================================================
   const initialItemsPerPage = 6;
@@ -33,6 +35,7 @@ const Filters = () => {
   return (
     <>
       <div className="container !py-[50px]" id="cardsListTop">
+        <h4 className="col-span-full">{t("heading")}</h4>
         <div className="flex justify-between gap-x-[100px] col-span-full _1240:gap-y-[15px] _1240:gap-x-[15px] _1240:flex-wrap _768:gap-x-2">
           <Sort itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} />
           <ToggleView
@@ -77,4 +80,4 @@ const Filters = () => {
     </>
   );
 };
-export default Filters;
+export default Menu;

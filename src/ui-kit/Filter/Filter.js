@@ -7,8 +7,10 @@ import Checkbox from "../Checkbox/Checkbox";
 import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import ButtonSecondary from "../ButtonSecondary/ButtonSecondary";
 import { RangeSlider } from "../RangeSlider/RangeSlider";
+import { useTranslations } from "next-intl";
 
 const Filter = () => {
+  const t = useTranslations("Filter");
   const filterRef = useRef();
   const toDo = "flex flex-col gap-[5px]";
   const { stock, type, manufacturer } = filterConfig;
@@ -87,49 +89,53 @@ const Filter = () => {
             onSubmit={handleSubmitFilter}
           >
             <div className={toDo}>
-              <span className="font-semibold text-[18px]">Наличие</span>
+              <span className="font-semibold text-[18px]">
+                {t("availability")}
+              </span>
               <div>
-                {filterConfig.stock.map(({ value, key }) => (
+                {filterConfig.stock.map((item, index) => (
                   <RadioButton
-                    setIsCurr={() => setIsStock(value)}
-                    isCurr={value === isStock}
-                    key={key}
+                    setIsCurr={() => setIsStock(item.value)}
+                    isCurr={item.value === isStock}
+                    key={index}
                   >
-                    {value}
+                    {t(item.t)}
                   </RadioButton>
                 ))}
               </div>
             </div>
             <div className={toDo}>
-              <span className="font-semibold text-[18px]">Тип чая</span>
+              <span className="font-semibold text-[18px]">{t("teaType")}</span>
               <div className="h-[120px] overflow-y-scroll">
-                {typeChecked.map(({ value, key, checked }) => (
+                {typeChecked.map((item, index) => (
                   <Checkbox
-                    setIsCurr={() => handleClickCheckBoxType(key)}
-                    isCurr={checked}
-                    key={key}
+                    setIsCurr={() => handleClickCheckBoxType(index + 1)}
+                    isCurr={item.checked}
+                    key={index}
                   >
-                    {value}
+                    {t(item.t)}
                   </Checkbox>
                 ))}
               </div>
             </div>
             <div className={toDo}>
-              <span className="font-semibold text-[18px]">Производитель</span>
+              <span className="font-semibold text-[18px]">
+                {t("manufacturer")}
+              </span>
               <div className="h-[120px] overflow-y-scroll">
-                {manufc.map(({ value, key, checked }) => (
+                {manufc.map((item, index) => (
                   <Checkbox
-                    setIsCurr={() => handleClickCheckBoxManufc(key)}
-                    isCurr={checked}
-                    key={key}
+                    setIsCurr={() => handleClickCheckBoxManufc(index + 1)}
+                    isCurr={item.checked}
+                    key={index}
                   >
-                    {value}
+                    {t(item.t)} {index + 1}
                   </Checkbox>
                 ))}
               </div>
             </div>
             <div className={toDo}>
-              <span className="font-semibold text-[18px]">Цена</span>
+              <span className="font-semibold text-[18px]">{t("price")}</span>
               <RangeSlider
                 value={price}
                 onChange={setPrice}
@@ -139,9 +145,11 @@ const Filter = () => {
               />
             </div>
             <div className="flex flex-col gap-[15px]">
-              <ButtonPrimary func={handleSubmitFilter}>Применить</ButtonPrimary>
+              <ButtonPrimary func={handleSubmitFilter}>
+                {t("apply")}
+              </ButtonPrimary>
               <ButtonSecondary func={handleResetFilter}>
-                Сбросить
+                {t("reset")}
               </ButtonSecondary>
             </div>
           </div>
