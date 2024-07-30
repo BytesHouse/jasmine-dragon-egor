@@ -9,12 +9,12 @@ import { Strelka, EnterPromocode } from "@/ui-kit/icons";
 
 const CheckForOrders = ({
   isWithOrders = false,
+  isOrder = false,
   products,
   deleteProd,
   totalCount = 0,
 }) => {
   const [isShowOrders, setIsShowOrders] = useState(false);
-  console.log(products);
   return (
     <div
       className={`${
@@ -85,7 +85,7 @@ const CheckForOrders = ({
         <h4 className="font-bold simple w-auto _768:text-h5">2,194.45 Lei</h4>
       </div>
       <Agreements />
-      <button className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5">
+      <button type={isOrder ? "submit" : "button"} className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5">
         <Image
           src="/assets/Images/Checkdone.svg"
           alt="done"
