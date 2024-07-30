@@ -17,12 +17,12 @@ const Menu = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(initialItemsPerPage);
 
-  const handlePageClick = (data) => {
+  const handlePageClick = (data: any) => {
     let { selected } = data;
     setCurrentPage(selected);
     if (typeof window !== "undefined") {
       window.scrollTo({
-        top: document.getElementById("cardsListTop").offsetTop,
+        top: document.getElementById("cardsListTop")!.offsetTop,
         behavior: "smooth",
       });
     }
