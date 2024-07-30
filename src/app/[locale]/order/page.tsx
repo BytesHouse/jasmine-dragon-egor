@@ -1,10 +1,15 @@
+"use client";
+
 import { CheckForOrders } from "@/components";
 import { Edit, ProfileDeco } from "@/ui-kit/icons";
+import { useProductCart } from "@/components/Providers/ProductCartProvider";
 
 const Order = () => {
+  const { productsList, removeFromCart } = useProductCart();
+
   return (
     <main className="container !py-[50px]">
-      <div className="col-span-half flex flex-col gap-[25px]">
+      <div className="col-span-half flex flex-col gap-[25px] _1240:col-span-full">
         <div className="flex flex-col gap-[25px] p-[25px] border border-blue h-max">
           <h4 className="simple font-semibold">Ваши данные</h4>
           <div className="flex gap-[15px]">
@@ -91,7 +96,11 @@ const Order = () => {
           </button>
         </div>
       </div>
-      <CheckForOrders isWithOrders={true} />
+      <CheckForOrders
+        isWithOrders={true}
+        products={productsList}
+        deleteProd={removeFromCart}
+      />
     </main>
   );
 };

@@ -7,14 +7,19 @@ import Image from "next/image";
 import { Strelka, EnterPromocode } from "@/ui-kit/icons";
 // import checkboxdone from "../../../public/assets/Images/Checkdone.svg";
 
-const CheckForOrders = ({ isWithOrders = false }) => {
+const CheckForOrders = ({
+  isWithOrders = false,
+  products,
+  deleteProd,
+  totalCount = 0,
+}) => {
   const [isShowOrders, setIsShowOrders] = useState(false);
-
+  console.log(products);
   return (
     <div
       className={`${
         isWithOrders ? "col-span-half" : "col-span-5 max-w-[555px]"
-      } w-full justify-self-end flex flex-col h-max p-[25px]  bg-[var(--green-light)] gap-[25px] relative`}
+      } w-full justify-self-end flex flex-col h-max p-[25px] bg-[var(--green-light)] gap-[25px] relative _1240:col-span-full _1240:max-w-none`}
     >
       <div className="flex">
         <h4 className="font-semibold simple">Ваши товары</h4>
@@ -31,15 +36,25 @@ const CheckForOrders = ({ isWithOrders = false }) => {
       </div>
       {isShowOrders && (
         <div className="max-h-[470px] overflow-y-scroll flex flex-col gap-[25px] pr-[25px]">
-          {mock.map((item, index) => (
-            <OrderListItem item={item} key={index} isSmall={true} />
+          {products.map((item, index) => (
+            <OrderListItem
+              item={item}
+              key={index}
+              isSmall={true}
+              deleteProd={deleteProd}
+            />
           ))}
         </div>
       )}
-      <p className="font-semibold">В корзине 10 товаров</p>
+      <p className="font-semibold">Товаров в корзине: {products.length} </p>
       <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">Сумма Покупок</h5>
-        <p className="p1 font-semibold">2,194.45 Lei</p>
+        <p className="p1 font-semibold">
+          {totalCount != 0
+            ? totalCount
+            : products.reduce((sum, curr) => sum + Number(curr.price), 0)}{" "}
+          Lei
+        </p>
       </div>
       {/* <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">Скидка</h5>

@@ -7,12 +7,12 @@ import Image from "next/image";
 import OrderListItem from "../OrderListItem/OrderListItem";
 import { useProductCart } from "../Providers/ProductCartProvider";
 
-const ChoiseForCart = () => {
-  const { productsList, removeFromCart } = useProductCart();
+const ChoiseForCart = ({ products }) => {
+  const { removeFromCart } = useProductCart();
   return (
-    <div className="col-span-7 flex flex-col gap-25 relative gap-[25px] max-w-[840px]">
-      {productsList.length ? (
-        productsList.map((item, index) => (
+    <div className="col-span-7 flex flex-col gap-25 relative gap-[25px] max-w-[840px] _1240:col-span-full _1240:max-w-none ">
+      {products.length ? (
+        products.map((item, index) => (
           <OrderListItem deleteProd={removeFromCart} item={item} key={index} />
         ))
       ) : (

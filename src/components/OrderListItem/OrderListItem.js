@@ -9,7 +9,7 @@ const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
       className={`flex  ${
         isSmall
           ? "p-[15px] border-[var(--blue-light)] gap-[25px]"
-          : "p-[25px] border-[var(--green-bg)] hover:border-[var(--blue-light)] transition duration-300 ease-in-out gap-[50px]"
+          : "p-[25px] border-[var(--green-bg)] hover:border-[var(--blue-light)] hover:bg-green-light transition duration-300 ease-in-out gap-[50px] _1240:w-full"
       } border  items-center`}
     >
       <div
@@ -29,15 +29,29 @@ const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
         )}
       </div>
       <div className="flex flex-col gap-[25px]">
-        <h4 className="font-medium">{name}</h4>
-        {!isSmall && <p className="p1">{description}</p>}
+        <h4 className="font-medium text-ellipsis line-clamp-2">{name}</h4>
+        {!isSmall && (
+          <p className="p1">
+            {description
+              ? description
+              : "Наша дружелюбная команда с удовольствием поможет вам выбрать именно тот чай, который подходит вам."}
+          </p>
+        )}
         <Counter />
-        <div className="flex mt-[15px] flex-row gap-[15px] items-center not-italic ">
-          <h5 className="font-semibold simple w-auto">{price}</h5>
-          <span className="discount">{price}</span>
+        <div className="flex justify-between">
+          <div className="flex flex-row gap-[15px] items-center not-italic ">
+            <h5 className="font-semibold simple w-auto">{price}</h5>
+            <span className="discount">{price}</span>
+          </div>
+          <div className="flex-grow hidden justify-end _768:flex">
+            <button onClick={() => deleteProd(id)}>
+              <Cancelation isMini={true} />
+            </button>
+          </div>
         </div>
       </div>
-      <div className="flex-grow flex justify-end">
+
+      <div className="flex-grow flex justify-end _768:hidden">
         <button onClick={() => deleteProd(id)}>
           <Cancelation isMini={true} />
         </button>

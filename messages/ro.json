@@ -65,6 +65,7 @@
     "signin": "Întrare",
     "password_reset": "Resetarea parolei",
     "profile": "Profil",
-    "favorites": "Favorite"
+    "favorites": "Favorite",
+    "order": "Plasarea comenzii"
   }
 }

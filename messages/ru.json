@@ -65,6 +65,7 @@
     "signin": "Вход",
     "password_reset": "Сброс пароля",
     "profile": "Профиль",
-    "favorites": "Избранное"
+    "favorites": "Избранное",
+    "order": "Оформление заказа"
   }
 }
