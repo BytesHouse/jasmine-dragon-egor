@@ -3,9 +3,30 @@
 import { CheckForOrders } from "@/components";
 import { Edit, ProfileDeco } from "@/ui-kit/icons";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
+import { useForm } from "react-hook-form";
+import { sendEmail } from "@/utils/send-email";
+
+export type FormDataEmail = {
+  // cardNumber: string;
+  // expirationDate: string;
+  // cvv: string;
+  fullName: string;
+  country: string;
+  city: string;
+  address: string;
+  // index: string;
+  email: string;
+  // message: string;
+};
 
 const Order = () => {
   const { productsList, removeFromCart } = useProductCart();
+  const { register, handleSubmit } = useForm<FormDataEmail>();
+
+  function onSubmit(data: FormDataEmail) {
+    console.log("work");
+    sendEmail(data);
+  }
 
   return (
     <main>
@@ -39,6 +60,7 @@ const Order = () => {
             <label className="text-p1 font-semibold text-blue-light _491:text-p2">
               Имя Фамилия
               <input
+                {...register("fullName", { required: true })}
                 type="text"
                 className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
               />
@@ -78,6 +100,7 @@ const Order = () => {
             <label className="text-p1 font-semibold text-blue-light _491:text-p2">
               Почтовый код
               <input
+                {...register("address", { required: true })}
                 type="text"
                 className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
               />
