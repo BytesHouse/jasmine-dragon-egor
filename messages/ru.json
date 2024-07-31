@@ -101,7 +101,7 @@
     "sortBy": "Сортировка по",
     "showBy": "Показывать по",
     "productView": "Вид товара:",
-    "buttonAddToCart": "В корзину"
+    "buttonToCart": "В корзину"
   },
   "Filter": {
     "availability": "Наличие",
@@ -154,7 +154,7 @@
     "subscribe": "Подписаться",
     "aboutUs": "О нас",
     "menu": "Меню",
-    "shop:": "Магазин",
+    "shop": "Магазин",
     "dishes": "Посуда",
     "tea": "Чай на развес",
     "cart": "Корзина",
