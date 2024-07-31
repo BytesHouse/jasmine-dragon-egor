@@ -140,7 +140,12 @@
     "heading": "Contacte",
     "address": "Adresă",
     "email": "E-mail",
-    "phoneNumbers": "Numere de telefon"
+    "phoneNumbers": "Numere de telefon",
+    "phoneNumber": "Număr de telefon",
+    "contactUs": "Contactează-ne",
+    "fullName": "Nume Prenume",
+    "yourMessage": "Lăsați mesajul dvs.",
+    "sendButton": "Trimite"
   },
   "Feedbacks": {
     "heading": "Recenzii",

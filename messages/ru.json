@@ -140,7 +140,12 @@
     "heading": "Контакты",
     "address": "Адрес",
     "email": "E-mail",
-    "phoneNumbers": "Номера телефонов"
+    "phoneNumbers": "Номера телефонов",
+    "phoneNumber": "Номер телефона",
+    "contactUs": "Связаться с нами",
+    "fullName": "Имя Фамилия",
+    "yourMessage": "Оставьте своё сообщение",
+    "sendButton": "Отправить"
   },
   "Feedbacks": {
     "heading": "Отзывы",

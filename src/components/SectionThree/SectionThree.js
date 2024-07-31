@@ -4,7 +4,7 @@ import {
   Lables,
   Store,
   Hotsales,
-  Contacts,
+  ContactsBlock,
   Feedbacks,
 } from "../index";
 import MenuPreview from "../MenuPreview/MenuPreview";
@@ -18,7 +18,7 @@ const SectionThree = () => {
       <Lables />
       <Store />
       <Hotsales />
-      <Contacts />
+      <ContactsBlock />
       <Feedbacks />
     </>
   );

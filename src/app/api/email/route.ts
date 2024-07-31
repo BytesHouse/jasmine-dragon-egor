@@ -22,21 +22,21 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  function func(fullName: any, phone: any) {
-    return `<b>Hello world!</b>
-    <br/>
+  function func(props: any) {
+    return `<h2>Новое письмо!</h2>
     <hr/>
-    <img src="https://jasmine-dragon-mu.vercel.app/_next/image?url=%2Fassets%2FImages%2Fcommunity.png&w=1920&q=75"/>
-    <h3 style="color: white; background-color: red">You have order from ${fullName}</h3>
-    <h4>Phone number: <i>${phone}</i></h4>`;
+    <p>${props.message}</p>
+    <hr/>
+    <h3 >From: ${props.fullName}</h3>
+    <h3 style="display: inline">Phone number:</h3> <a href="tel:${props.phone}"> <i>${props.phone}</i> </a>`;
   }
 
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `Message from ${fullName} (${email})`,
-    html: func(fullName, phone),
+    subject: `Message from ${fullName} ${email ? `(${email})` : ""}`,
+    html: func({ fullName, phone, email, message }),
     // text: `<b>${message}</b>`,
   };
 
