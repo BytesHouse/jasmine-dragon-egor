@@ -5,6 +5,7 @@ import { mock } from "@/config/constants";
 import { Agreements, OrderListItem } from "@/components";
 import Image from "next/image";
 import { Strelka, EnterPromocode } from "@/ui-kit/icons";
+import { useTranslations } from "next-intl";
 // import checkboxdone from "../../../public/assets/Images/Checkdone.svg";
 
 const CheckForOrders = ({
@@ -15,6 +16,7 @@ const CheckForOrders = ({
   totalCount = 0,
 }) => {
   const [isShowOrders, setIsShowOrders] = useState(false);
+  const t = useTranslations("CheckForOrders");
   return (
     <div
       className={`${
@@ -23,7 +25,9 @@ const CheckForOrders = ({
     >
       <div>
         <div className="flex">
-          <h4 className="font-semibold simple _768:text-h5">Ваши товары</h4>
+          <h4 className="font-semibold simple _768:text-h5">
+            {t("yourProducts")}
+          </h4>
           {isWithOrders && (
             <button
               className={`${
@@ -36,7 +40,8 @@ const CheckForOrders = ({
           )}
         </div>
         <p className="font-semibold mt-[5px]">
-          Товаров в корзине: {products.length}{" "}
+          {t("productsInCart")}
+          {products.length}
         </p>
       </div>
       {isShowOrders && (
@@ -53,7 +58,7 @@ const CheckForOrders = ({
       )}
 
       <div className="flex flex-row justify-between items-center">
-        <h5 className="simple font-bold w-auto">Сумма Покупок</h5>
+        <h5 className="simple font-bold w-auto">{t("productsPrice")}</h5>
         <p className="p1 font-semibold">
           {totalCount != 0
             ? totalCount
@@ -77,22 +82,25 @@ const CheckForOrders = ({
         <EnterPromocode />
       </div> */}
       <div className="flex flex-row justify-between items-center">
-        <h5 className="simple font-bold w-auto">Доставка</h5>
-        <p className="p1 font-semibold">Бесплатно</p>
+        <h5 className="simple font-bold w-auto">{t("delivery")}</h5>
+        <p className="p1 font-semibold">{t("free")}</p>
       </div>
       <div className="flex flex-row justify-between items-center border-t border-b py-[25px] border-blue-light">
-        <h4 className="w-auto font-medium _768:text-h5">Итого</h4>
+        <h4 className="w-auto font-medium _768:text-h5">{t("totalPrice")}</h4>
         <h4 className="font-bold simple w-auto _768:text-h5">2,194.45 Lei</h4>
       </div>
       <Agreements />
-      <button type={isOrder ? "submit" : "button"} className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5">
+      <button
+        type={isOrder ? "submit" : "button"}
+        className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5"
+      >
         <Image
           src="/assets/Images/Checkdone.svg"
           alt="done"
           width={36}
           height={36}
         />
-        Подтвердить
+        {t("confirmButton")}
       </button>
     </div>
   );

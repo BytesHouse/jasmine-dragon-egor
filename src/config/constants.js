@@ -228,12 +228,12 @@ export const RecentlyOrderCols = [
   {
     id: 0,
     title: "Номер заказа",
-    text: "order_number",
+    text: "orderNumber",
   },
   { id: 1, title: "Дата", text: "date" },
-  { id: 2, title: "Адрес доставки", text: "delivery_address" },
+  { id: 2, title: "Адрес доставки", text: "deliveryAddress" },
   { id: 3, title: "Статус", text: "status" },
-  { id: 4, title: "Действия", text: "action" },
+  { id: 4, title: "Действия", text: "actions" },
 ];
 
 export const RecentlyOrdersMock = [
@@ -244,7 +244,7 @@ export const RecentlyOrdersMock = [
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
-    status: "Успешно доставлено",
+    status: "success",
     link: "/",
   },
   {
@@ -254,7 +254,7 @@ export const RecentlyOrdersMock = [
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
-    status: "Успешно доставлено",
+    status: "success",
     link: "/",
   },
   {
@@ -264,7 +264,7 @@ export const RecentlyOrdersMock = [
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
-    status: "Успешно доставлено",
+    status: "success",
     link: "/",
   },
   {
@@ -274,7 +274,7 @@ export const RecentlyOrdersMock = [
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
-    status: "Успешно доставлено",
+    status: "success",
     link: "/",
   },
   {
@@ -284,7 +284,7 @@ export const RecentlyOrdersMock = [
     updatedAt: "16.01.2024",
     adress:
       "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
-    status: "Успешно доставлено",
+    status: "success",
     link: "/",
   },
 ];

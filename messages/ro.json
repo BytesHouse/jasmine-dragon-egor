@@ -59,7 +59,7 @@
     "terms": "Termeni de utilizare",
     "privacy": "Confidențialitate",
     "ondatra": "Ondatra",
-    "shopping_cart": "Coșul de cumpărături",
+    "shopping_cart": "Coș",
     "teas": "Ceaiuri",
     "signup": "Înregistrare",
     "signin": "Întrare",
@@ -168,10 +168,41 @@
     "contacts": "Contacte",
     "language": "Limbă",
     "privacy": "Politica de confidențialitate",
-    "terms": "Termeni și condiții"
+    "terms": "Termeni și condiții",
+    "developing": "În dezvoltare..."
   },
   "Header": {
     "profile": "Profil",
     "menu": "Meniu"
+  },
+  "Favorites": {
+    "heading": "Favorite",
+    "mightLike": "S-ar putea să vă placă și"
+  },
+  "CheckForOrders": {
+    "yourProducts": "Produsele dvs.",
+    "productsInCart": "Produse în coș: ",
+    "productsPrice": "Suma cumpărăturilor",
+    "delivery": "Livrare",
+    "totalPrice": "Total",
+    "free": "Gratuit",
+    "agreementNews": "Primește știri actuale de la ceainăria noastră",
+    "agreementTerms": "Sunt de acord cu termenii de utilizare a site-ului",
+    "confirmButton": "Confirmă"
+  },
+  "UserProfile": {
+    "heading": "Profil",
+    "address": "Adresă de livrare",
+    "fullName": "Nume Prenume",
+    "phone": "Număr de telefon"
+  },
+  "RecentlyOrders": {
+    "heading": "Comenzi anterioare",
+    "orderNumber": "Număr comandă",
+    "date": "Dată",
+    "status": "Stare",
+    "actions": "Acțiuni",
+    "deliveryAddress": "Adresă livrare",
+    "success": "Livrat cu succes"
   }
 }

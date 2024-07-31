@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Pagination, CardsList, ToggleView } from "@/components";
 import { mock, mock2 } from "@/config/constants";
 import Pagination2 from "@/components/Pagination2/Pagination2";
+import { useTranslations } from "next-intl";
 
 const SelectedMenu = () => {
   const [isHorizontal, setIsHorizontal] = useState(true);
@@ -20,11 +21,13 @@ const SelectedMenu = () => {
   const offset = currentPage * itemsPerPage;
   const currentPageData = data.slice(offset, offset + itemsPerPage);
 
+  const t = useTranslations("Favorites");
+
   return (
     <main>
       <div className="container !pt-[50px]">
         {/* <div className="section3"> */}
-        <h4 className="col-span-half _491:text-h5">Избранное</h4>
+        <h4 className="col-span-half _491:text-h5">{t("heading")}</h4>
         <ToggleView
           isHorizontal={isHorizontal}
           toggleView={setIsHorizontal}
@@ -37,7 +40,7 @@ const SelectedMenu = () => {
         />
         {/* <Likeitems /> */}
         <h4 className="col-span-full mt-[100px] _491:text-h5">
-          Вам также может понравиться
+          {t("mightLike")}
         </h4>
         <CardsList
           cardsData={currentPageData}

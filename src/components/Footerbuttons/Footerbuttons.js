@@ -46,11 +46,11 @@ const Footerbuttons = ({ className, onClick }) => {
               id="footerShop"
               className={`flex flex-col gap-[10px] -mt-[10px] transition`}
             >
-              <Link href={`/${lang}`} onClick={onClick}>
+              <Link href={`/${lang}`} onClick={() => alert(t("developing"))}>
                 <Cup />
                 {t("dishes")}
               </Link>
-              <Link href={`/${lang}`} onClick={onClick}>
+              <Link href={`/${lang}/menu`} onClick={onClick}>
                 <TeaLeaves />
                 {t("tea")}
               </Link>
@@ -81,7 +81,7 @@ const Footerbuttons = ({ className, onClick }) => {
             </Link>
           </li> */}
           <li onClick={onClick}>
-            <Link href={`/${lang}`} className="footerbutton">
+            <Link href={`/${lang}/contacts`} className="footerbutton">
               {t("contacts")}
             </Link>
           </li>

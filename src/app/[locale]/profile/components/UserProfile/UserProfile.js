@@ -5,15 +5,17 @@ const greentea = "/assets/Images/greentea.png";
 import Edit from "@/ui-kit/icons/Edit/Edit";
 import ProfileDeco from "@/ui-kit/icons/ProfileDeco/ProfileDeco";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const UserProfile = () => {
+  const t = useTranslations("UserProfile");
   return (
     <>
       <div className="flex flex-col col-span-half gap-[25px] font-[var(--Nunito-sans)] text-[var(--blue-light)] mt-[50px]">
-        <h4 className="simple font-bold">Профиль</h4>
+        <h4 className="simple font-bold">{t("heading")}</h4>
         <div className="flex flex-col gap-[15px]">
           <label className="text-h5 font-semibold text-blue-light">
-            Адрес доставки
+            {t("address")}
           </label>
           <div className="max-w-[695px] flex gap-[15px] items-center p-[15px] border border-blue-light">
             <ProfileDeco />
@@ -26,7 +28,7 @@ const UserProfile = () => {
         </div>
         <div className="flex flex-col gap-[15px]">
           <label className="text-h5 font-semibold text-blue-light">
-            Имя Фамилия
+            {t("fullName")}
           </label>
           <div className="max-w-[695px] flex gap-[15px] items-center p-[15px] border border-blue-light">
             <ProfileDeco />
@@ -39,7 +41,7 @@ const UserProfile = () => {
         </div>
         <div className="flex flex-col gap-[15px]">
           <label className="text-h5 font-semibold text-blue-light">
-            Номер телефона
+            {t("phone")}
           </label>
           <div className="max-w-[695px] flex gap-[15px] items-center p-[15px] border border-blue-light">
             <ProfileDeco />

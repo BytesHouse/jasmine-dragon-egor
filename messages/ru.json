@@ -168,10 +168,41 @@
     "contacts": "Контакты",
     "language": "Язык",
     "privacy": "Политика приватности",
-    "terms": "Условия использования"
+    "terms": "Условия использования",
+    "developing": "В разработке..."
   },
   "Header": {
     "profile": "Профиль",
     "menu": "Меню"
+  },
+  "Favorites": {
+    "heading": "Избранное",
+    "mightLike": "Вам также может понравиться"
+  },
+  "CheckForOrders": {
+    "yourProducts": "Ваши товары",
+    "productsInCart": "Товаров в корзине: ",
+    "productsPrice": "Сумма покупок",
+    "delivery": "Доставка",
+    "totalPrice": "Итого",
+    "free": "Бесплатно",
+    "agreementNews": "Получать актуальные новости нашей чайной",
+    "agreementTerms": "Я согласен с условиями использования сайта",
+    "confirmButton": "Подтвердить"
+  },
+  "UserProfile": {
+    "heading": "Профиль",
+    "address": "Адрес доставки",
+    "fullName": "Имя Фамилия",
+    "phone": "Номер телефона"
+  },
+  "RecentlyOrders": {
+    "heading": "Предыдущие заказы",
+    "orderNumber": "Номер заказа",
+    "date": "Дата",
+    "status": "Статус",
+    "actions": "Действия",
+    "deliveryAddress": "Адрес доставки",
+    "success": "Успешно доставлено"
   }
 }

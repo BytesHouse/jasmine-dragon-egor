@@ -1,6 +1,7 @@
 "use client";
 
 import Checkbox from "@/ui-kit/Checkbox/Checkbox";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const Agreements = () => {
@@ -12,13 +13,15 @@ const Agreements = () => {
     setCheckedValues(newValues);
   };
 
+  const t = useTranslations("CheckForOrders");
+
   return (
     <div className="flex flex-col gap-[10px]">
       <Checkbox isCurr={checkedValues[0]} setIsCurr={() => handleAgree(0)}>
-        Получать актуальные новости нашей чайной
+        {t("agreementNews")}
       </Checkbox>
       <Checkbox isCurr={checkedValues[1]} setIsCurr={() => handleAgree(1)}>
-        Я согласен с условиями использования сайта
+        {t("agreementTerms")}
       </Checkbox>
     </div>
   );
