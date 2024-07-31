@@ -11,11 +11,15 @@ const NotFound = () => {
 
   redirect;
   return (
-    <body>
-      <h1>404</h1>
-      <h2>Page not found :{"("}</h2>
-      <p>Redirect in 3 seconds</p>
-    </body>
+    <html>
+      <body>
+        <div className="container">
+          <h3>404</h3>
+          <h4>Page not found :{"("}</h4>
+          <p className="p1">Redirect in 3 seconds</p>
+        </div>
+      </body>
+    </html>
   );
 };
 

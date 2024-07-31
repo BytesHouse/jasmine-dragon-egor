@@ -35,7 +35,7 @@ const Header = () => {
         <div className="container !py-0">
           <div className="flex justify-between items-center py-4 col-span-full">
             <div className="flex justify-between w-full flex-grow">
-              <Link href="/">
+              <Link href={`/${lang}/`}>
                 <div className="flex items-center gap-6 _768:gap-[12px]">
                   <Image
                     src="/assets/Images/Logo.svg"

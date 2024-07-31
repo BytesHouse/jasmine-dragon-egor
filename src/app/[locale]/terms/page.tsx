@@ -5,13 +5,11 @@ import Footer from "@/components/Footer/Footer";
 
 const Terms = () => {
   return (
-    <>
-      <Header />
+    <main>
       <div className="container">
         <PrivacyBlock data={termsText} />
       </div>
-      <Footer />
-    </>
+    </main>
   );
 };
 

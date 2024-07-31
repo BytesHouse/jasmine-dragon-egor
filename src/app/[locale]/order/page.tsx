@@ -16,7 +16,8 @@ export type FormDataEmail = {
   address: string;
   // index: string;
   email: string;
-  // message: string;
+  message: string;
+  phone: string;
 };
 
 const Order = () => {
@@ -77,6 +78,7 @@ const Order = () => {
                 className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
               />
             </label>
+
             <div className="flex gap-[15px]">
               <label className="text-p1 font-semibold text-blue-light flex-grow _491:text-p2">
                 Страна / Регион
@@ -116,6 +118,14 @@ const Order = () => {
                 className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
               />
             </label> */}
+            <label className="text-p1 font-semibold text-blue-light _491:text-p2">
+              Номер телефона
+              <input
+                {...register("phone", { required: true })}
+                className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
+                type="tel"
+              />
+            </label>
           </div>
           {/* послдение адреса */}
           <div className="flex items-start border border-blue h-max p-[15px] gap-[15px]">

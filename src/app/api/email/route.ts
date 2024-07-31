@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
-  const { email, name, message } = await request.json();
+  const { email, fullName, message, phone } = await request.json();
 
   const transport = nodemailer.createTransport({
     service: "gmail",
@@ -22,12 +22,22 @@ export async function POST(request: NextRequest) {
     },
   });
 
+  function func(fullName: any, phone: any) {
+    return `<b>Hello world!</b>
+    <br/>
+    <hr/>
+    <img src="https://jasmine-dragon-mu.vercel.app/_next/image?url=%2Fassets%2FImages%2Fcommunity.png&w=1920&q=75"/>
+    <h3 style="color: white; background-color: red">You have order from ${fullName}</h3>
+    <h4>Phone number: <i>${phone}</i></h4>`;
+  }
+
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `Message from ${name} (${email})`,
-    text: message,
+    subject: `Message from ${fullName} (${email})`,
+    html: func(fullName, phone),
+    // text: `<b>${message}</b>`,
   };
 
   const sendMailPromise = () =>
