@@ -49,7 +49,7 @@ export default async function LocaleLayout({
   const teas: TeaProduct[] = await prisma.product.findMany();
   // console.log(teas);
   return (
-    <html lang={locale}>
+    <html lang={locale} className="overflow-x-hidden">
       <body
         className={`${nunitoSans.variable} ${playfairDisplay.variable} overflow-x-hidden scroll-smooth bg-green-bg `}
         suppressHydrationWarning
