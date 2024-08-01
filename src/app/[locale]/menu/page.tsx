@@ -33,7 +33,7 @@ const Menu = () => {
   // ==================================================
 
   return (
-    <>
+    <main>
       <div className="container !py-[50px]" id="cardsListTop">
         <h4 className="col-span-full">{t("heading")}</h4>
         <div className="flex justify-between gap-x-[100px] col-span-full _1240:gap-y-[15px] _1240:gap-x-[15px] _1240:flex-wrap _768:gap-x-2">
@@ -55,7 +55,7 @@ const Menu = () => {
         currentPage={currentPage}
         marginPages={0}
       />
-    </>
+    </main>
   );
 };
 export default Menu;
