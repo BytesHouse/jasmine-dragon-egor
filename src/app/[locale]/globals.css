@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"); */
+/* @import "../../fonts/Nunito-Sans/NunitoSans.css"; */
+/* @import "../../fonts/Playfair-Display/PlayfairDisplay.css"; */
 
 @tailwind base;
 @tailwind components;
@@ -136,8 +139,8 @@
   --blue-light: #b5eaee;
   --black: #2c261f;
   --white: #ffffff;
-  --Nunito-sans: "Nunito Sans", serif;
-  --Playfair-Display: "Playfair Display", serif;
+  /* --Nunito-sans: "Nunito Sans", serif;
+  --Playfair-Display: "Playfair Display", serif; */
   --gutter: 25px;
   --cols: 12;
   --half: calc(var(--cols) / 2);
@@ -249,11 +252,6 @@ html {
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid var(--blue-light);
-}
-.logo-text {
-  font-family: "Playfair Display", cursive;
-  font-style: italic;
-  font-size: 3.063rem;
 }
 
 /* .maindivcontacts {
