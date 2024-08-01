@@ -2,10 +2,6 @@
 
 import { useState } from "react";
 const reg = "/assets/Images/registration.png";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/config/firebase";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
