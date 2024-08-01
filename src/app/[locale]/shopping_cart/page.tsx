@@ -13,7 +13,7 @@ const ShoppingCart = () => {
     <main>
       <div className="container !py-[50px]">
         <h4 className="font-medium col-span-full">Корзина</h4>
-        <ChoiseForCart products={productsList} />
+        <ChoiseForCart products={productsList} deleteProd={removeFromCart} />
         <CheckForOrders products={productsList} deleteProd={removeFromCart} />
       </div>
     </main>

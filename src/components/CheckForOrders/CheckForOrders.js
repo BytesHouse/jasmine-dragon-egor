@@ -5,7 +5,9 @@ import { mock } from "@/config/constants";
 import { Agreements, OrderListItem } from "@/components";
 import Image from "next/image";
 import { Strelka, EnterPromocode } from "@/ui-kit/icons";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { redirect } from "next/navigation";
+import Link from "next/link";
 // import checkboxdone from "../../../public/assets/Images/Checkdone.svg";
 
 const CheckForOrders = ({
@@ -16,7 +18,9 @@ const CheckForOrders = ({
   totalCount = 0,
 }) => {
   const [isShowOrders, setIsShowOrders] = useState(false);
+  const lang = useLocale();
   const t = useTranslations("CheckForOrders");
+
   return (
     <div
       className={`${
@@ -30,6 +34,7 @@ const CheckForOrders = ({
           </h4>
           {isWithOrders && (
             <button
+              type="button"
               className={`${
                 isShowOrders ? "-rotate-180" : "rotate-0"
               } transition`}

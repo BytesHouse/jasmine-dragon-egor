@@ -5,6 +5,7 @@ import { Edit, ProfileDeco } from "@/ui-kit/icons";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
+import { useLocale } from "next-intl";
 
 export type FormDataEmail = {
   // cardNumber: string;
@@ -18,13 +19,19 @@ export type FormDataEmail = {
   email: string;
   message: string;
   phone: string;
+  orderItems: any;
+  lang: string;
 };
 
 const Order = () => {
   const { productsList, removeFromCart } = useProductCart();
   const { register, handleSubmit } = useForm<FormDataEmail>();
+  const lang = useLocale();
 
   function onSubmit(data: FormDataEmail) {
+    // console.log(data.orderItems);
+    // console.log(JSON.parse(data.orderItems));
+    data.orderItems = JSON.parse(data.orderItems);
     sendEmail(data);
   }
 
@@ -143,7 +150,18 @@ const Order = () => {
             </button>
           </div>
         </div>
+        <input
+          {...register("orderItems", { required: true })}
+          className="hidden "
+          value={JSON.stringify(productsList)}
+        />
+        <input
+          {...register("lang", { required: true })}
+          className="hidden "
+          value={lang}
+        />
         <CheckForOrders
+          // {...register("orderItems", { required: true })}
           isOrder
           isWithOrders={true}
           products={productsList}

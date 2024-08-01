@@ -3,7 +3,8 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
-  const { email, fullName, message, phone } = await request.json();
+  const { email, fullName, message, phone, orderItems, lang } =
+    await request.json();
 
   const transport = nodemailer.createTransport({
     service: "gmail",
@@ -28,7 +29,25 @@ export async function POST(request: NextRequest) {
     <p>${props.message}</p>
     <hr/>
     <h3 >From: ${props.fullName}</h3>
-    <h3 style="display: inline">Phone number:</h3> <a href="tel:${props.phone}"> <i>${props.phone}</i> </a>`;
+    <h3 style="display: inline">Phone number:</h3> <a href="tel:${
+      props.phone
+    }"> <i>${props.phone}</i> </a>
+    <h3>${props.orderItems.length > 0 && "Бабосики подъехали"}</h3>
+    <ol style="">
+    ${props.orderItems
+      .map(
+        (orderItem: any) => `
+    <li style="margin-left: 0px;"> 
+      <a style="display: inline" href=\"https://jasmine-dragon-mu.vercel.app/${lang}/teas/${orderItem.id}\">
+        ${orderItem.name}
+      </a>
+      <p style="display: inline; margin-left: 10px">|| <i style="display: inline; margin-left: 10px">count</i></p>
+    </li>
+        `
+      )
+      .join("")}
+    </ol>
+    `;
   }
 
   const mailOptions: Mail.Options = {
@@ -36,7 +55,7 @@ export async function POST(request: NextRequest) {
     to: process.env.MY_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${fullName} ${email ? `(${email})` : ""}`,
-    html: func({ fullName, phone, email, message }),
+    html: func({ fullName, phone, email, message, orderItems, lang }),
     // text: `<b>${message}</b>`,
   };
 

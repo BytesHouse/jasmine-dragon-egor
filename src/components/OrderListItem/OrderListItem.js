@@ -49,11 +49,17 @@ const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
             <span className="discount _768:text-p1 _491:text-p3">{price}</span>
           </div>
         </div>
-        <ButtonCartDelete className="hidden _768:flex" />
+        <ButtonCartDelete
+          onClick={() => deleteProd(id)}
+          className="hidden _768:flex"
+        />
       </div>
 
       <div className="flex-grow flex justify-end _768:hidden">
-        <button onClick={() => deleteProd(id)}>
+        <button
+          // type="button"
+          onClick={() => deleteProd(id)}
+        >
           <Cancelation isMini={true} />
         </button>
       </div>

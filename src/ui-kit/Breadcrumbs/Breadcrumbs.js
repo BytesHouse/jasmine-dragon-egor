@@ -18,10 +18,9 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
             isTeas = item === "teas" || isTeas;
             path += `/${item}`;
             return (
-              <>
+              <div className="flex gap-[25px] _768:gap-[10px]" key={index}>
                 <Link
                   href={path}
-                  key={index}
                   className={`p1 font-semibold ${
                     index == breadcrumbs.length - 1
                       ? "text-blue-light truncate"
@@ -36,7 +35,7 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
                 </Link>
                 {index != breadcrumbs.length - 1 && (
                   <svg
-                    className="ml-[5px] text-blue-light transition"
+                    className=" text-blue-light transition"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -51,7 +50,7 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
                     />
                   </svg>
                 )}
-              </>
+              </div>
             );
           })}
       </div>

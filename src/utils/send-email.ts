@@ -2,6 +2,7 @@ import { FormDataEmail } from "@/app/[locale]/order/page";
 
 export function sendEmail(data: FormDataEmail) {
   const apiEndpoint = "/api/email";
+  // console.log(data);
 
   fetch(apiEndpoint, {
     method: "POST",

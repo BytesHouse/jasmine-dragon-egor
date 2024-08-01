@@ -285,7 +285,7 @@ footer {
 }
 
 .teas-seo h1 {
-  font-family: var(--font-playfair-display), sans-serif;
+  font-family: var(--font-playfair-display), serif;
   font-weight: 500;
   font-style: italic;
   font-size: 40.5px;
