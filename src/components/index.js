@@ -10,10 +10,6 @@ import Feedbacks from "./Feedbacks/Feedbacks";
 import Footerblock1 from "./Footerblock1/Footerblock1";
 import Footerbuttons from "./Footerbuttons/Footerbuttons";
 // import Footerbuttons2 from "./Footerbuttons2/Footerbuttons2";
-import Lines from "./Lines/Lines";
-import Choise2dish from "./Choise2dish/Choise2dish";
-import Choisedish from "./Choisedish/Choisedish";
-import Filterdish from "./Filterdish/Filterdish";
 import HeaderForMenu from "./HeaderForMenu/HeaderForMenu";
 import ChoiseForCart from "./ChoiseForCart/ChoiseForCart";
 import Agreements from "./Agreements/Agreements";
@@ -57,13 +53,9 @@ export {
   SectionThree,
   SectionTwo,
   ContentSubHeader1,
-  Filterdish,
   Agreements,
-  Choisedish,
-  Choise2dish,
   HeaderForMenu,
   ChoiseForCart,
-  Lines,
   Header,
   Footerblock1,
   Footerbuttons,

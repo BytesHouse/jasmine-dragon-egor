@@ -43,28 +43,6 @@ const Menu = () => {
             toggleView={setIsHorizontal}
           />
         </div>
-        {/* <div className="row2sortmenu col-span-full">
-          <button className="buttonsec3">
-            Черные чаи
-            <CloseMini />
-          </button>
-          <button className="buttonsec3">
-            Оолонг
-            <CloseMini />
-          </button>
-          <button className="buttonsec3">
-            Черные чаи
-            <CloseMini />
-          </button>
-          <button className="buttonsec3">
-            Красные чаи
-            <CloseMini />
-          </button>
-          <button className="buttonsec3">
-            Зеленые чаи
-            <CloseMini />
-          </button>
-        </div> */}
       </div>
       <CardsList
         isHorizontal={isHorizontal}

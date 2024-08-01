@@ -1,10 +1,5 @@
-// import image1 from '../../../../assets/icons/Frame.svg'
-// import image2 from '../../../../assets/icons/Frame-1.svg'
-// import image3 from '../../../../assets/icons/Frame-2.svg'
-
 import Image from "next/image";
 
-// import image4 from '../../../../assets/icons/Frame-3.svg'
 const image1 = "/assets/icons/Frame.svg";
 const image2 = "/assets/icons/Frame-1.svg";
 const image3 = "/assets/icons/Frame-2.svg";

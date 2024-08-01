@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Pagination, CardsList, ToggleView } from "@/components";
+import { CardsList, ToggleView } from "@/components";
 import { mock, mock2 } from "@/config/constants";
 import Pagination2 from "@/components/Pagination2/Pagination2";
 import { useTranslations } from "next-intl";

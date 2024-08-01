@@ -64,8 +64,8 @@ const Header = () => {
                   <Link href={`/${lang}/shopping_cart`} aria-label="Go to cart">
                     <BagIcon />
                   </Link>
-                  <div className="absolute w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 right-0">
-                    <p className="numberofitems">{productsList.length}</p>
+                  <div className="absolute flex justify-center items-center w-6 h-6 bg-[var(--blue-light)] rounded-full top-0 right-0 ">
+                    <p className="text-blue text-p3">{productsList.length}</p>
                   </div>
                 </div>
               </div>

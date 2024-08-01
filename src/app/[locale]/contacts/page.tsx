@@ -1,7 +1,6 @@
 "use client";
 
-import { CheckForOrders, ContactsBlock } from "@/components";
-import { Edit, ProfileDeco } from "@/ui-kit/icons";
+import { ContactsBlock } from "@/components";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
 import { useTranslations } from "next-intl";

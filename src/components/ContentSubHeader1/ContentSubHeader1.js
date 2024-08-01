@@ -14,7 +14,7 @@ const ContentSubHeader1 = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return `<div class="line ${className}" id="line${index}"></div>`;
+      return `<div class="line ${className}"></div>`;
     },
   };
 

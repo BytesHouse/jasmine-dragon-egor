@@ -51,7 +51,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${nunitoSans.variable} ${playfairDisplay.variable} overflow-x-hidden scroll-smooth`}
+        className={`${nunitoSans.variable} ${playfairDisplay.variable} overflow-x-hidden scroll-smooth bg-green-bg `}
         suppressHydrationWarning
         // className="overflow-x-hidden scroll-smooth"
       >

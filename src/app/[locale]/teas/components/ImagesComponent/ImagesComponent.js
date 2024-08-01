@@ -14,11 +14,6 @@ const image2 = "/assets/Images/cheainic.png";
 const image3 = "/assets/Images/cheaitar.png";
 const image4 = "/assets/Images/cupof2tea.png";
 const image5 = "/assets/Images/teabig.png";
-// const image1 = "/assets/Images/teagreen.png";
-// const image2 = "/assets/Images/cheainic.png";
-// const image3 = "/assets/Images/cheaitar.png";
-// const image4 = "/assets/Images/cupof2tea.png";
-// const image5 = "/assets/Images/teabig.png";
 
 const ImagesComponent = () => {
   const swiperRef = useRef();
