@@ -1,6 +1,4 @@
 import { useParams } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../config/firebase";
 import {
   Header,
   Footer,
@@ -38,7 +36,6 @@ const Teas = () => {
     <div className="container">
       <div className="col-span-12">
         <Header />
-        <Breadcrumbs product={product} />
       </div>
       <main className="flex flex-col gap-[25px] col-span-12 text-[var(--blue-light)] teas-seo">
         <DescriptionBlock product={product} />
