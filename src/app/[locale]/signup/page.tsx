@@ -1,14 +1,8 @@
 "use client";
 
 import { useState } from "react";
-// import {useTranslation} from "react-i18next";
 const reg = "/assets/Images/registration.png";
-// import reg from "../../../../../public/assets/Images/registration.png";
-// import { Link, useNavigate } from "react-router-dom";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/config/firebase";
 import Checkbox from "@/ui-kit/Checkbox/Checkbox";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
@@ -20,7 +14,6 @@ import InputPassword from "@/ui-kit/InputPassword/InputPassword";
 const Registration = () => {
   // const {t} = useTranslation();
   //   const navigate = useNavigate();
-  const { push } = useRouter();
   const t = useTranslations("SignInUp");
   const lang = useLocale();
 
@@ -30,24 +23,7 @@ const Registration = () => {
   const [acceptPrivacy, setAcceptPrivacy] = useState(true);
 
   const onSubmit = async (e: any) => {
-    console.log(password);
-    e.preventDefault();
-    if (!acceptPrivacy) return;
-    await createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(user);
-        // navigate("/login");
-        push("/login");
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // ..
-      });
+    //  TODO:
   };
 
   return (

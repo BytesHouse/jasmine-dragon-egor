@@ -1,13 +1,7 @@
 "use client";
 
-// import {useNavigate} from "react-router-dom";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { auth } from "@/config/firebase";
-// import reg from "../../../../public/assets/Images/registration.png";
 const reg = "/assets/Images/registration.png";
-// import {useTranslation} from "react-i18next";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
@@ -16,29 +10,13 @@ import SocialButtons from "@/ui-kit/SocialButtons/SocialButtons";
 import InputPassword from "@/ui-kit/InputPassword/InputPassword";
 
 const LoginPage = () => {
-  // const {t} = useTranslation();
   const t = useTranslations("SignInUp");
   const lang = useLocale();
-  // const navigate = useNavigate();
-  const { push } = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const onLogin = (e: any) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // navigate("/profile")
-        push(`/${lang}/profile`);
-        console.log(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-      });
+    // TODO:
   };
   return (
     <main className="container">
