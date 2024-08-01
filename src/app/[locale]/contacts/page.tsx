@@ -28,11 +28,7 @@ const Contacts = () => {
   }
 
   const quotesDetector = (e: any) => {
-    const text = e.target.value;
-    if (text.endsWith("'") || text.endsWith("`") || text.endsWith('"')) {
-      alert("Quotes are not allowed");
-      e.target.value = text.slice(0, -1);
-    }
+    e.target.value = e.target.value.replace(/['"`«»]/g, "");
   };
 
   return (
