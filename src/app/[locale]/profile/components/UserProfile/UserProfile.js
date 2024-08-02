@@ -11,7 +11,7 @@ const UserProfile = () => {
   const t = useTranslations("UserProfile");
   return (
     <>
-      <div className="flex flex-col col-span-half gap-[25px] font-[var(--Nunito-sans)] text-[var(--blue-light)] mt-[50px]">
+      <div className="flex flex-col col-span-half gap-[25px] font-Nunito-Sans text-[var(--blue-light)] mt-[50px]">
         <h4 className="simple font-bold">{t("heading")}</h4>
         <div className="flex flex-col gap-[15px]">
           <label className="text-h5 font-semibold text-blue-light">

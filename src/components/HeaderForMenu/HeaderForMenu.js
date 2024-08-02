@@ -34,7 +34,7 @@ const HeaderForMenu = () => {
         </Link>
         <div
           onClick={toggleComponent}
-          className="flex flex-row mt-[10px] items-center gap-[15px] justify-center font-[var(--Nunito-sans)] text-xs leading-[130%] text-[var(--blue-light)] h-6"
+          className="flex flex-row mt-[10px] items-center gap-[15px] justify-center font-Nunito-Sans text-xs leading-[130%] text-[var(--blue-light)] h-6"
         >
           <button
             onClick={toggleComponent}

@@ -5,20 +5,7 @@ import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
 import { useTranslations } from "next-intl";
 
-export type FormDataEmail = {
-  // cardNumber: string;
-  // expirationDate: string;
-  // cvv: string;
-  fullName: string;
-  country: string;
-  city: string;
-  address: string;
-  // index: string;
-  email: string;
-  message: string;
-  phone: string;
-  // orderItems: any;
-};
+import { FormDataEmail } from "@/types/formDataEmail.type";
 
 const Contacts = () => {
   const { register, handleSubmit } = useForm<FormDataEmail>();

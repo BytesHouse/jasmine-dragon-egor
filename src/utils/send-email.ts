@@ -1,4 +1,4 @@
-import { FormDataEmail } from "@/app/[locale]/order/page";
+import { FormDataEmail } from "@/types/formDataEmail.type";
 
 export function sendEmail(data: FormDataEmail) {
   const apiEndpoint = "/api/email";
