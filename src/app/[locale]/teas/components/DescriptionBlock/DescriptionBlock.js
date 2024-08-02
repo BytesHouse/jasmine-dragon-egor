@@ -8,7 +8,7 @@ const DescriptionBlock = ({ product }) => {
   const { name, subtype, description, strength, brewRes } = product;
   const { addToCart } = useProductCart();
   const handleClickAddToCart = (e) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     addToCart(product);
   };
   return (

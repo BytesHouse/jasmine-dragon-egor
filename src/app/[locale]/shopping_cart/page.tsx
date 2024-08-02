@@ -4,11 +4,11 @@ import { ChoiseForCart, Header } from "@/components";
 import CheckForOrders from "@/components/CheckForOrders/CheckForOrders";
 import Footer from "@/components/Footer/Footer";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
+import { useEffect, useState } from "react";
 
 const ShoppingCart = () => {
-  const { productsList, removeFromCart } = useProductCart();
+  const { productsList, removeFromCart, addToCart } = useProductCart();
 
-  // console.log(totalCount);
   return (
     <main>
       <div className="container !py-[50px]">

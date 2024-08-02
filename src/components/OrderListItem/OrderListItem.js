@@ -5,6 +5,10 @@ import ButtonCartDelete from "@/ui-kit/ButtonCartDelete/ButtonCartDelete";
 
 const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
   const { name, price, description, id } = item;
+  const handleDeleteProd = (e) => {
+    // e.stopPropagation();
+    deleteProd(id);
+  };
   return (
     <div
       className={`flex  ${
@@ -50,7 +54,7 @@ const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
           </div>
         </div>
         <ButtonCartDelete
-          onClick={() => deleteProd(id)}
+          onClick={handleDeleteProd}
           className="hidden _768:flex"
         />
       </div>
@@ -58,7 +62,7 @@ const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
       <div className="flex-grow flex justify-end _768:hidden">
         <button
           // type="button"
-          onClick={() => deleteProd(id)}
+          onClick={handleDeleteProd}
         >
           <Cancelation isMini={true} />
         </button>
