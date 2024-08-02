@@ -5,7 +5,7 @@ import { Edit, ProfileDeco } from "@/ui-kit/icons";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export type FormDataEmail = {
   // cardNumber: string;
@@ -27,6 +27,7 @@ const Order = () => {
   const { productsList, removeFromCart } = useProductCart();
   const { register, handleSubmit } = useForm<FormDataEmail>();
   const lang = useLocale();
+  const t = useTranslations("OrderPage");
 
   function onSubmit(data: FormDataEmail) {
     // console.log(data.orderItems);
@@ -75,10 +76,10 @@ const Order = () => {
           </div> */}
           <div className="flex flex-col gap-[25px] p-[25px] border border-blue h-max _768:p-[15px]">
             <h4 className="simple font-semibold _768:text-h5">
-              Адрес доставки
+              {t("orderAdress")}
             </h4>
             <label className="text-p1 font-semibold text-blue-light _491:text-p2">
-              Имя Фамилия
+              {t("fullName")}
               <input
                 {...register("fullName", { required: true })}
                 type="text"
@@ -88,7 +89,7 @@ const Order = () => {
 
             <div className="flex gap-[15px]">
               <label className="text-p1 font-semibold text-blue-light flex-grow _491:text-p2">
-                Страна / Регион
+                {t("country")}
                 <input
                   {...register("country")}
                   type="text"
@@ -99,7 +100,7 @@ const Order = () => {
                 />
               </label>
               <label className="text-p1 font-semibold text-blue-light flex-grow _491:text-p2">
-                Город
+                {t("city")}
                 <input
                   {...register("city")}
                   type="text"
@@ -111,7 +112,7 @@ const Order = () => {
               </label>
             </div>
             <label className="text-p1 font-semibold text-blue-light _491:text-p2">
-              Адрес
+              {t("city")}
               <input
                 {...register("address", { required: true })}
                 type="text"
@@ -126,7 +127,7 @@ const Order = () => {
               />
             </label> */}
             <label className="text-p1 font-semibold text-blue-light _491:text-p2">
-              Номер телефона
+              {t("phoneNumber")}
               <input
                 {...register("phone", { required: true })}
                 className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"

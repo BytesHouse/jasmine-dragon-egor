@@ -270,7 +270,7 @@ footer {
 }
 
 .discount {
-  font-family: var(--Nunito-sans);
+  font-family: var(--font-nunito-sans);
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;

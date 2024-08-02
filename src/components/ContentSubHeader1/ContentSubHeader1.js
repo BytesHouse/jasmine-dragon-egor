@@ -61,7 +61,7 @@ const ContentSubHeader1 = () => {
                   {t("slideButtonTeas")}
                 </Link>
                 <button
-                  onClick={() => alert("В разработке!")}
+                  onClick={() => alert(t("developing"))}
                   className="text-white font-Playfair-Display italic flex-1 p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium _1240:p-[15px]"
                 >
                   {t("slideButtonDishes")}
@@ -113,7 +113,7 @@ const ContentSubHeader1 = () => {
                 <h3 className="font-medium">Tia-guan-in</h3>
                 <p className="p1 ">{t("slideDesc")}</p>
                 <button className="text-white font-Playfair-Display italic p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium mt-[15px] _1240:p-[15px]">
-                  Все новинки
+                  {t("slideButtonNew")}
                 </button>
               </div>
             </div>
@@ -167,7 +167,7 @@ const ContentSubHeader1 = () => {
                   {t("slideButtonTeas")}
                 </Link>
                 <button
-                  onClick={() => alert("В разработке!")}
+                  onClick={() => alert(t("developing"))}
                   className="text-white font-Playfair-Display italic flex-1 p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium _1240:p-[15px]"
                 >
                   {t("slideButtonDishes")}
@@ -198,7 +198,7 @@ const ContentSubHeader1 = () => {
                 <h3 className="font-medium">Tia-guan-in</h3>
                 <p className="p1 ">{t("slideDesc")}</p>
                 <button className="text-white font-Playfair-Display italic p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium mt-[15px] _1240:p-[15px]">
-                  Все новинки
+                  {t("slideButtonNew")}
                 </button>
               </div>
             </div>

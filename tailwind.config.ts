@@ -30,8 +30,6 @@ const config: Config = {
       p4: "8px", //"0.444rem",
     },
     fontFamily: {
-      // "Nunito-Sans": ["Nunito Sans", "serif"],
-      // "Playfair-Display": ["Playfair Display", "serif"],
       "Nunito-Sans": ["var(--font-nunito-sans)"],
       "Playfair-Display": ["var(--font-playfair-display)"],
     },

@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
+
 const LastReview = () => {
+  const t = useTranslations("LastReview");
   return (
     <section className="col-span-full flex flex-col gap-[50px]">
-      <h2 className="!font-medium">Инструкция по приготовлению</h2>
+      <h2 className="!font-medium">{t("heading")}</h2>
       <iframe
         className="aspect-video"
         width="100%"
