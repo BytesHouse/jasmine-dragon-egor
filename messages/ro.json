@@ -188,7 +188,8 @@
     "free": "Gratuit",
     "agreementNews": "Primește știri actuale de la ceainăria noastră",
     "agreementTerms": "Sunt de acord cu termenii de utilizare a site-ului",
-    "confirmButton": "Confirmă"
+    "confirmButton": "Confirmă",
+    "continueButton": "Continuă decorarea"
   },
   "UserProfile": {
     "heading": "Profil",

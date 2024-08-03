@@ -293,8 +293,8 @@ export const orderCols = [
   { title: "Имя товара", toTranslate: "productName" },
   { title: "Код товара", toTranslate: "productCode" },
   { title: "Цена", toTranslate: "price" },
-  { title: "Количество", toTranslate: "quantity" },
-  { title: "Общая стоимость", toTranslate: "totalPrice" },
+  { title: "Кол-во", toTranslate: "quantity" },
+  { title: "Cтоимость", toTranslate: "totalPrice" },
 ];
 
 export const orderMock = [

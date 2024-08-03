@@ -5,6 +5,7 @@ import Link from "next/link";
 const Breadcrumbs = ({ breadcrumbs, ...props }) => {
   const { findProductById } = useProduct();
   let isTeas = false;
+  let isOrder = false;
   //   const { name, type, subtype, weight } = product;
   const t = useTranslations("Breadcrumbs");
   let path = "";
@@ -16,6 +17,7 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
         {breadcrumbs.length > 1 &&
           breadcrumbs.map(function (item, index) {
             isTeas = item === "teas" || isTeas;
+            isOrder = item === "profile" || isOrder;
             path += `/${item}`;
             return (
               <div className="flex gap-[25px] _768:gap-[10px]" key={index}>
@@ -30,6 +32,8 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
                   {index == breadcrumbs.length - 1
                     ? isTeas
                       ? `${findProductById(Number(index)).name}`
+                      : isOrder
+                      ? `Заказ №${item}`
                       : t(item)
                     : t(item)}
                 </Link>

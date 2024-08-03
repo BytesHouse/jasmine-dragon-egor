@@ -95,18 +95,33 @@ const CheckForOrders = ({
         <h4 className="font-bold simple w-auto _768:text-h5">2,194.45 Lei</h4>
       </div>
       <Agreements />
-      <button
-        type={isOrder ? "submit" : "button"}
-        className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5"
-      >
-        <Image
-          src="/assets/Images/Checkdone.svg"
-          alt="done"
-          width={36}
-          height={36}
-        />
-        {t("confirmButton")}
-      </button>
+      {isOrder ? (
+        <button
+          type="submit"
+          className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5"
+        >
+          <Image
+            src="/assets/Images/Checkdone.svg"
+            alt="done"
+            width={36}
+            height={36}
+          />
+          {t("confirmButton")}
+        </button>
+      ) : (
+        <Link
+          href={`/${lang}/order`}
+          className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5"
+        >
+          <Image
+            src="/assets/Images/Checkdone.svg"
+            alt="done"
+            width={36}
+            height={36}
+          />
+          {t("continueButton")}
+        </Link>
+      )}
     </div>
   );
 };
