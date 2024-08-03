@@ -226,19 +226,17 @@ export const termsText = [
 ];
 export const RecentlyOrderCols = [
   {
-    id: 0,
     title: "Номер заказа",
     text: "orderNumber",
   },
-  { id: 1, title: "Дата", text: "date" },
-  { id: 2, title: "Адрес доставки", text: "deliveryAddress" },
-  { id: 3, title: "Статус", text: "status" },
-  { id: 4, title: "Действия", text: "actions" },
+  { title: "Дата", text: "date" },
+  { title: "Адрес доставки", text: "deliveryAddress" },
+  { title: "Статус", text: "status" },
+  { title: "Действия", text: "actions" },
 ];
 
 export const RecentlyOrdersMock = [
   {
-    id: 0,
     orderNumber: "234538902",
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
@@ -248,7 +246,6 @@ export const RecentlyOrdersMock = [
     link: "/",
   },
   {
-    id: 1,
     orderNumber: "234538902",
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
@@ -258,7 +255,6 @@ export const RecentlyOrdersMock = [
     link: "/",
   },
   {
-    id: 2,
     orderNumber: "234538902",
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
@@ -268,7 +264,6 @@ export const RecentlyOrdersMock = [
     link: "/",
   },
   {
-    id: 3,
     orderNumber: "234538902",
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
@@ -278,7 +273,6 @@ export const RecentlyOrdersMock = [
     link: "/",
   },
   {
-    id: 4,
     orderNumber: "234538902",
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",

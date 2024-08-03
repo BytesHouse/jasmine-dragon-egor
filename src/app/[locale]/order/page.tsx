@@ -6,6 +6,8 @@ import { useProductCart } from "@/components/Providers/ProductCartProvider";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
 import { useLocale, useTranslations } from "next-intl";
+import { getCurrentDateTime } from "@/utils/getCurrentDateTime";
+import { getOrderNumber } from "@/utils/getOrderNumber";
 
 import { FormDataEmail } from "@/types/formDataEmail.type";
 import { Status } from "@/enums/status.enum";
@@ -21,6 +23,7 @@ const Order = () => {
     // console.log(JSON.parse(data.orderItems));
     data.orderItems = JSON.parse(data.orderItems);
     data.date = getCurrentDateTime();
+    data.orderNumber = getOrderNumber(data.fullName);
     data.status = Status.PendingAcception; // 'penging acception' | 'penging' | 'in progress' | 'completed' | 'cancel customer' | 'cancel jasmine'
     sendEmail(data);
   }
