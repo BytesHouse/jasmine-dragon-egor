@@ -1,64 +1,59 @@
 "use client";
 
-import { RecentlyOrderCols, RecentlyOrdersMock } from "@/config/constants";
+import { RecentlyOrderCols } from "@/config/constants";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const RecentlyOrders = () => {
+const RecentlyOrders = ({ data }) => {
   const path = usePathname();
   const t = useTranslations("RecentlyOrders");
   return (
-    <div className="flex col-span-full flex-col gap-[25px] text-blue-light">
-      <h4 className="simple font-bold">{t("heading")}</h4>
-      <table className="w-full border-t border-l border-blue-light border-collapse bg-green-light">
-        <thead className="table-header-group">
-          <tr className="grid grid-cols-[1fr_0.5fr_1.5fr_1fr_1fr]">
-            {RecentlyOrderCols.map((item, index) => (
-              <th
-                className={`p-[25px] text-left text-h5 font-semibold border-r border-b border-blue-light`}
-                key={index}
-              >
-                {t(item.text)}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {RecentlyOrdersMock.map((order, index) => (
-            <tr
-              key={index}
-              className="grid grid-cols-[1fr_0.5fr_1.5fr_1fr_1fr]"
-            >
-              {Object.keys(order).map((item) => {
-                // console.log(order[item]);
-                return (
-                  item != "id" && (
-                    // <div
-                    //   key={order["id"]}
-                    //   className="p-[25px] border-l max-w-[345px]"
-                    // >
-
-                    <td
-                      key={`order-${index}${order.id}`}
-                      className="p-[20px] flex items-center border-r border-b border-blue-light"
-                    >
-                      {item === "link" ? (
-                        <Link href={`${path}/${order.orderNumber}`}>test</Link>
-                      ) : item === "status" ? (
-                        t(order[item])
+    <div className="hidden _1024:flex flex-col gap-[25px] col-span-full">
+      {data.map((order) => (
+        <div className="flex w-full flex-col border border-blue-light justify-between">
+          {Object.keys(order).map((item, index) => {
+            // console.log(order[item]);
+            return (
+              item != "id" && (
+                <div
+                  key={Math.random()}
+                  className="flex justify-center items-center border-b border-b-blue-light last:border-none"
+                >
+                  {item === "link" ? (
+                    <div className="p-[15px] w-full flex">
+                      <Link
+                        className="bg-blue text-blue-light p-[15px] flex-grow text-center"
+                        href={`${path}/${order.orderNumber}`}
+                      >
+                        Показать заказ
+                      </Link>
+                    </div>
+                  ) : (
+                    <>
+                      <strong
+                        key={Math.random()}
+                        className="font-semibold flex-1 text-blue-light text-h5 _768:text-p1 p-[15px]"
+                      >
+                        {RecentlyOrderCols[index - 1].title}
+                      </strong>
+                      {item === "status" ? (
+                        <p className="flex-1 p1 _768:p2 p-[15px]">
+                          {t(order[item])}
+                        </p>
                       ) : (
-                        order[item]
+                        <p className="flex-1 p1 _768:p2 p-[15px]">
+                          {order[item]}
+                        </p>
                       )}
-                    </td>
-                    // </div>
-                  )
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                    </>
+                  )}
+                </div>
+              )
+            );
+          })}
+        </div>
+      ))}
     </div>
   );
 };

@@ -26,7 +26,9 @@ export async function POST(request: NextRequest) {
   function func(props: any) {
     return `<h2>Новое письмо!</h2>
     <hr/>
-    <p>${props.message}</p>
+    <p>${props.message ? props.message : ""}</p>
+    <p>Страна/Регион: Молдова</p>
+    <p>Город: Кишинёв</p>
     <hr/>
     <h3 >From: ${props.fullName}</h3>
     <h3 style="display: inline">Phone number:</h3> <a href="tel:${

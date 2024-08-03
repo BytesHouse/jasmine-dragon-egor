@@ -8,6 +8,7 @@ import { sendEmail } from "@/utils/send-email";
 import { useLocale, useTranslations } from "next-intl";
 
 import { FormDataEmail } from "@/types/formDataEmail.type";
+import { Status } from "@/enums/status.enum";
 
 const Order = () => {
   const { productsList, removeFromCart } = useProductCart();
@@ -19,6 +20,8 @@ const Order = () => {
     // console.log(data.orderItems);
     // console.log(JSON.parse(data.orderItems));
     data.orderItems = JSON.parse(data.orderItems);
+    data.date = getCurrentDateTime();
+    data.status = Status.PendingAcception; // 'penging acception' | 'penging' | 'in progress' | 'completed' | 'cancel customer' | 'cancel jasmine'
     sendEmail(data);
   }
 
@@ -98,7 +101,7 @@ const Order = () => {
               </label>
             </div>
             <label className="text-p1 font-semibold text-blue-light _491:text-p2">
-              {t("city")}
+              {t("address")}
               <input
                 {...register("address", { required: true })}
                 type="text"

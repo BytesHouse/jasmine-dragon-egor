@@ -1,3 +1,5 @@
+import { Status } from "@/enums/status.enum";
+
 export type FormDataEmail = {
   // cardNumber: string;
   // expirationDate: string;
@@ -12,4 +14,7 @@ export type FormDataEmail = {
   phone: string;
   orderItems: any;
   lang: string;
+  date: string;
+  status: Status;
+  orderNumber: string;
 };

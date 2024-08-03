@@ -243,7 +243,7 @@ export const RecentlyOrdersMock = [
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
-      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
     status: "success",
     link: "/",
   },
@@ -253,7 +253,7 @@ export const RecentlyOrdersMock = [
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
-      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
     status: "success",
     link: "/",
   },
@@ -263,7 +263,7 @@ export const RecentlyOrdersMock = [
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
-      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
     status: "success",
     link: "/",
   },
@@ -273,7 +273,7 @@ export const RecentlyOrdersMock = [
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
-      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
     status: "success",
     link: "/",
   },
@@ -283,7 +283,7 @@ export const RecentlyOrdersMock = [
     // createdAt: "16.01.2024",
     updatedAt: "16.01.2024",
     adress:
-      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
+      "Strada Grivitei 286, Braila, Braila, 810040, România, +40771050788.",
     status: "success",
     link: "/",
   },

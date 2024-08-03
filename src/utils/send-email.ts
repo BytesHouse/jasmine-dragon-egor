@@ -1,9 +1,11 @@
 import { FormDataEmail } from "@/types/formDataEmail.type";
+import { getHistory } from "./getHistory";
 
 export function sendEmail(data: FormDataEmail) {
   const apiEndpoint = "/api/email";
   // console.log(data);
-
+  // data.city = "Kishinev";
+  // data.country = "Moldova";
   fetch(apiEndpoint, {
     method: "POST",
     body: JSON.stringify(data),
@@ -15,4 +17,7 @@ export function sendEmail(data: FormDataEmail) {
     .catch((err) => {
       alert(err);
     });
+  const history = getHistory();
+  history.push(data);
+  localStorage.setItem("history", JSON.stringify(history));
 }

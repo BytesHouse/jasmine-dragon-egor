@@ -32,7 +32,7 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
                   {index == breadcrumbs.length - 1
                     ? isTeas
                       ? `${findProductById(Number(index)).name}`
-                      : isOrder
+                      : isOrder & (item != "profile")
                       ? `Заказ №${item}`
                       : t(item)
                     : t(item)}

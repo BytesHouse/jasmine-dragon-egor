@@ -41,7 +41,7 @@ export const OrderHistoryById = () => {
               </div>
             </div>
             <div className="flex-1 flex flex-col">
-              <h5 className="simple font-bold mb-[15px]">Адрес доставки</h5>
+              <h5 className="simple font-bold mb-[15px]">Номер телефона</h5>
               <div className="flex-grow items-center p-[15px] border border-blue-light w-full flex gap-[15px]">
                 <ProfileDeco />
                 <p className="p1 _1024:p2">+37369555534</p>
