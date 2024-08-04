@@ -1,19 +1,19 @@
 import PrivacyBlock from "../privacy/components/PrivacyBlock/PrivacyBlock";
-import { termsText } from "@/config/constants";
+import { FAQ_text } from "@/config/constants";
 
-const Terms = () => {
+const FAQ = () => {
   return (
     <main>
       <div className="container">
         <PrivacyBlock
-          page="Terms"
-          data={termsText}
-          h4="terms_text_0"
-          p="terms_text_1"
+          page="FAQ"
+          data={FAQ_text}
+          h4="faq_text_0"
+          p="faq_text_1"
         />
       </div>
     </main>
   );
 };
 
-export default Terms;
+export default FAQ;

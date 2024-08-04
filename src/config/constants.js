@@ -224,6 +224,30 @@ export const termsText = [
   { id: 5, title: "terms_title_5", text: "terms_text_5" },
   { id: 6, title: "terms_title_6", text: "terms_text_6" },
 ];
+
+export const FAQ_text = [
+  { title: "faq_question_1", text: "faq_answer_1" },
+  { title: "faq_question_2", text: "faq_answer_2" },
+  { title: "faq_question_3", text: "faq_answer_3" },
+  { title: "faq_question_4", text: "faq_answer_4" },
+  { title: "faq_question_5", text: "faq_answer_5" },
+  { title: "faq_question_6", text: "faq_answer_6" },
+  { title: "faq_question_7", text: "faq_answer_7" },
+  { title: "faq_question_8", text: "faq_answer_8" },
+  { title: "faq_question_9", text: "faq_answer_9" },
+  { title: "faq_question_10", text: "faq_answer_10" },
+  { title: "faq_question_11", text: "faq_answer_11" },
+  { title: "faq_question_12", text: "faq_answer_12" },
+  { title: "faq_question_13", text: "faq_answer_13" },
+  { title: "faq_question_14", text: "faq_answer_14" },
+  { title: "faq_question_15", text: "faq_answer_15" },
+  { title: "faq_question_16", text: "faq_answer_16" },
+  { title: "faq_question_17", text: "faq_answer_17" },
+  { title: "faq_question_18", text: "faq_answer_18" },
+  { title: "faq_question_19", text: "faq_answer_19" },
+  { title: "faq_question_20", text: "faq_answer_20" },
+];
+
 export const RecentlyOrderCols = [
   {
     title: "Номер заказа",
