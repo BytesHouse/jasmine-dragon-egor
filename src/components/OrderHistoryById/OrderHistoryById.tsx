@@ -79,7 +79,7 @@ const TableOrderHistory = ({ data }: { data: any }) => {
       </thead>
       <tbody>
         {data.map((orderItem: any, index: any) => (
-          <OrderItemTable orderItem={orderItem} />
+          <OrderItemTable key={Math.random()} orderItem={orderItem} />
         ))}
         <tr className="grid grid-cols-[2fr_1fr_1fr_1fr_2fr]">
           <td className="col-span-4 p-[20px] flex items-center border-r border-b border-blue-light">
@@ -144,7 +144,11 @@ const BlockOrderHistory = ({ data }: { data: any }) => {
   return (
     <div className="hidden _1024:flex flex-col gap-[25px] col-span-full">
       {data.map((orderItem: any, index: any) => (
-        <OrderItemBlock orderItem={orderItem} index={index} />
+        <OrderItemBlock
+          key={Math.random()}
+          orderItem={orderItem}
+          index={index}
+        />
       ))}
       <div className="flex w-full flex-col border border-blue-light justify-between">
         <div className="flex items-center border-b border-b-blue-light last:border-none">

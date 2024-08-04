@@ -11,7 +11,12 @@ const RecentlyOrders = ({ data }) => {
   return (
     <div className="hidden _1024:flex flex-col gap-[25px] col-span-full">
       {data.map((order) => (
-        <OrderItem order={order} translate={t} path={path} />
+        <OrderItem
+          key={Math.random()}
+          order={order}
+          translate={t}
+          path={path}
+        />
       ))}
     </div>
   );

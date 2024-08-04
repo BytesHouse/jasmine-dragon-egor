@@ -26,7 +26,12 @@ const RecentlyOrders = ({ data }) => {
         </thead>
         <tbody>
           {data.map((order) => (
-            <OrderItemTable order={order} translate={t} path={path} />
+            <OrderItemTable
+              key={Math.random()}
+              order={order}
+              translate={t}
+              path={path}
+            />
           ))}
         </tbody>
       </table>
