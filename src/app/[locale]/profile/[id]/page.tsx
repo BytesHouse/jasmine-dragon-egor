@@ -1,11 +1,18 @@
-import { OrderHistoryById } from "@/components/OrderHistoryById/OrderHistoryById";
+"use client";
 
-export default function page() {
+import { OrderHistoryById } from "@/components/OrderHistoryById/OrderHistoryById";
+import { getHistory } from "@/utils/getHistory";
+
+export default function page({ params }: { params: { id: string } }) {
+  const history = getHistory();
+  // console.log(history);
+  const neededOrder = history.find(
+    (order: any) => order.orderNumber === params.id
+  );
+  console.log(neededOrder);
   return (
     <main>
-      <div className="container !py-[50px] !gap-[25px]">
-        <OrderHistoryById />
-      </div>
+      <OrderHistoryById order={neededOrder} />
     </main>
   );
 }

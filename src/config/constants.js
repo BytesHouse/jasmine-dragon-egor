@@ -285,7 +285,7 @@ export const RecentlyOrdersMock = [
 
 export const orderCols = [
   { title: "Имя товара", toTranslate: "productName" },
-  { title: "Код товара", toTranslate: "productCode" },
+  { title: "ID товара", toTranslate: "productCode" },
   { title: "Цена", toTranslate: "price" },
   { title: "Кол-во", toTranslate: "quantity" },
   { title: "Cтоимость", toTranslate: "totalPrice" },
