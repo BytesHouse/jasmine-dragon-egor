@@ -9,7 +9,8 @@ const RecentlyOrders = ({ data }) => {
   const path = usePathname();
   const t = useTranslations("RecentlyOrders");
   return (
-    <div className="hidden _1024:flex flex-col gap-[25px] col-span-full">
+    <div className="hidden _1024:flex flex-col gap-[25px] col-span-full mt-[50px]">
+      <h4 className="simple font-bold _768:text-h5">{t("heading")}</h4>
       {data.map((order) => (
         <OrderItem
           key={Math.random()}
@@ -46,7 +47,7 @@ const OrderItem = ({ order, translate, path }) => {
             className="bg-blue text-blue-light p-[15px] flex-grow text-center"
             href={`${path}/${order.orderNumber}`}
           >
-            Показать заказ
+            {t("showOrder")}
           </Link>
         </div>
       </OrderWrapper>
@@ -56,7 +57,7 @@ const OrderItem = ({ order, translate, path }) => {
 
 const OrderWrapper = ({ text, children }) => (
   <div className="flex justify-center items-center border-b border-b-blue-light last:border-none">
-    <StrongText text={text} />
+    {text ? <StrongText text={text} /> : ""}
     {children}
   </div>
 );

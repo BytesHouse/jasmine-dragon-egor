@@ -205,7 +205,8 @@
     "status": "Stare",
     "actions": "Acțiuni",
     "deliveryAddress": "Adresă livrare",
-    "success": "Livrat cu succes"
+    "success": "Livrat cu succes",
+    "showOrder": "Arată comanda"
   },
   "Cart": {
     "heading": "Coș",
@@ -287,5 +288,20 @@
     "faq_answer_19": "Folosim metode de producție și ambalare ecologice și susținem programe de refacere a plantațiilor de ceai.",
     "faq_question_20": "De ce aveți atât de puține recenzii?",
     "faq_answer_20": "Abia ne-am început activitatea și sperăm ca în curând clienții noștri să înceapă să își împărtășească impresiile. Suntem întotdeauna bucuroși să primim feedback și să lucrăm la îmbunătățirea produselor și serviciilor noastre."
+  },
+  "OrderHistoryById": {
+    "heading": "Comanda ",
+    "orderDate": "Data comenzii:",
+    "productName": "Numele produsului",
+    "productCode": "ID produs",
+    "price": "Preț",
+    "quantity": "Cant.",
+    "totalPrice": "Preț total",
+    "delivery": "Livrare",
+    "orderTotal": "Total:",
+    "address": "Adresa de livrare:",
+    "fullName": "Nume Prenume",
+    "phoneNumber": "Număr de telefon",
+    "free": "Gratuit"
   }
 }

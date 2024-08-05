@@ -11,15 +11,17 @@ const Profiles = () => {
   const history = getHistory();
   console.log(history);
   return (
-    <main className="container">
-      {/* <div className="col-span-full"> */}
-      {/* <DirectionForProfile /> */}
-      <UserProfile />
-      {/* will hide after 1024px */}
-      <RecentlyOrdersTable data={history} />
-      {/* will show after 1024px */}
-      <RecentlyOrders data={history} />
-      {/* </div> */}
+    <main>
+      <div className="container">
+        {/* <div className="col-span-full"> */}
+        {/* <DirectionForProfile /> */}
+        <UserProfile />
+        {/* will hide after 1024px */}
+        <RecentlyOrdersTable data={history} />
+        {/* will show after 1024px */}
+        <RecentlyOrders data={history} />
+        {/* </div> */}
+      </div>
     </main>
   );
 };

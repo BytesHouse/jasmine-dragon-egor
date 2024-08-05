@@ -9,7 +9,7 @@ const RecentlyOrders = ({ data }) => {
   const path = usePathname();
   const t = useTranslations("RecentlyOrders");
   return (
-    <div className="flex col-span-full flex-col gap-[25px] text-blue-light _1024:hidden">
+    <div className="flex col-span-full flex-col gap-[25px] text-blue-light _1024:hidden mt-[50px]">
       <h4 className="simple font-bold">{t("heading")}</h4>
       <table className="w-full border-t border-l border-blue-light border-collapse bg-green-light">
         <thead className="table-header-group">
@@ -76,7 +76,12 @@ const OrderItemTable = ({ order, translate, path }) => {
         key={Math.random()}
         className="p-[20px] flex items-center border-r border-b border-blue-light"
       >
-        <Link href={`${path}/${order.orderNumber}`}>test</Link>
+        <Link
+          href={`${path}/${order.orderNumber}`}
+          className="border border-blue text-blue-light p-[15px] flex-grow text-center"
+        >
+          {t("showOrder")}
+        </Link>
       </td>
     </tr>
   );
