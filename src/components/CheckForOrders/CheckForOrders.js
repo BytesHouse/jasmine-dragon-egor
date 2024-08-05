@@ -15,7 +15,9 @@ const CheckForOrders = ({
   isOrder = false,
   products,
   deleteProd,
-  totalCount = 0,
+  productsPrice = 0,
+  deliveryPrice = 0,
+  totalPrice = 0,
 }) => {
   const [isShowOrders, setIsShowOrders] = useState(false);
   const lang = useLocale();
@@ -64,12 +66,7 @@ const CheckForOrders = ({
 
       <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">{t("productsPrice")}</h5>
-        <p className="p1 font-semibold">
-          {totalCount != 0
-            ? totalCount
-            : products.reduce((sum, curr) => sum + Number(curr.price), 0)}{" "}
-          Lei
-        </p>
+        <p className="p1 font-semibold">{productsPrice} Lei</p>
       </div>
       {/* <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">Скидка</h5>
@@ -88,17 +85,21 @@ const CheckForOrders = ({
       </div> */}
       <div className="flex flex-row justify-between items-center">
         <h5 className="simple font-bold w-auto">{t("delivery")}</h5>
-        <p className="p1 font-semibold">{t("free")}</p>
+        <p className="p1 font-semibold">
+          {deliveryPrice == 0 ? t("free") : deliveryPrice}
+        </p>
       </div>
       <div className="flex flex-row justify-between items-center border-t border-b py-[25px] border-blue-light">
         <h4 className="w-auto font-medium _768:text-h5">{t("totalPrice")}</h4>
-        <h4 className="font-bold simple w-auto _768:text-h5">2,194.45 Lei</h4>
+        <h4 className="font-bold simple w-auto _768:text-h5">
+          {totalPrice} Lei
+        </h4>
       </div>
       <Agreements />
       {isOrder ? (
         <button
           type="submit"
-          className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5"
+          className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5 _491:p-[15px] _491:gap-[15px] _491:text-[24px]"
         >
           <Image
             src="/assets/Images/Checkdone.svg"
@@ -111,7 +112,7 @@ const CheckForOrders = ({
       ) : (
         <Link
           href={`/${lang}/order`}
-          className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5"
+          className="flex flex-row justify-center bg-[var(--blue)] gap-[25px] items-center font-bold text-center p-[25px] text-blue-light text-h5 _491:p-[15px] _491:gap-[15px] _491:text-[24px]"
         >
           <Image
             src="/assets/Images/Checkdone.svg"

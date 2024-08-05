@@ -61,6 +61,11 @@ const Footerbuttons = ({ className, onClick }) => {
               {t("cart")}
             </Link>
           </li>
+          <li onClick={onClick}>
+            <Link href={`/${lang}/faq`} className="footerbutton">
+              {t("faq")}
+            </Link>
+          </li>
         </ol>
       </li>
       <li className="col-span-3 _1240:col-span-half">

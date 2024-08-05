@@ -13,7 +13,13 @@ import { FormDataEmail } from "@/types/formDataEmail.type";
 import { Status } from "@/enums/status.enum";
 
 const Order = () => {
-  const { productsList, removeFromCart } = useProductCart();
+  const {
+    productsList,
+    removeFromCart,
+    productsPrice,
+    deliveryPrice,
+    totalPrice,
+  } = useProductCart();
   const { register, handleSubmit } = useForm<FormDataEmail>();
   const lang = useLocale();
   const t = useTranslations("OrderPage");
@@ -86,8 +92,8 @@ const Order = () => {
                   {...register("country")}
                   type="text"
                   className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
-                  placeholder="Молдова"
-                  value="Молдова"
+                  placeholder={t("Moldova")}
+                  value={t("Moldova")}
                   disabled
                 />
               </label>
@@ -97,8 +103,8 @@ const Order = () => {
                   {...register("city")}
                   type="text"
                   className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
-                  placeholder="Кишинёв"
-                  value="Кишинёв"
+                  placeholder={t("Chisinau")}
+                  value={t("Chisinau")}
                   disabled
                 />
               </label>
@@ -159,6 +165,9 @@ const Order = () => {
           isWithOrders={true}
           products={productsList}
           deleteProd={removeFromCart}
+          productsPrice={productsPrice}
+          deliveryPrice={deliveryPrice}
+          totalPrice={totalPrice}
         />
       </form>
     </main>

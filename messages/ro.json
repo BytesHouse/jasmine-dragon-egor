@@ -170,7 +170,8 @@
     "language": "Limbă",
     "privacy": "Politica de confidențialitate",
     "terms": "Termeni și condiții",
-    "developing": "În dezvoltare..."
+    "developing": "În dezvoltare...",
+    "faq": "Întrebări"
   },
   "Header": {
     "profile": "Profil",
@@ -243,7 +244,9 @@
     "fullName": "Nume Prenume",
     "phoneNumber": "Număr de telefon",
     "country": "Țară/Regiune",
-    "city": "Oraș"
+    "city": "Oraș",
+    "Moldova": "Moldova",
+    "Chisinau": "Chișinău"
   },
   "FAQ": {
     "faq_text_0": "Întrebări frecvente",

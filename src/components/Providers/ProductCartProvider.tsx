@@ -28,6 +28,13 @@ export const ProductCartProvider = ({
   const removeFromCart = (productId: any) => {
     setProducts(productsList.filter((item: any) => item.id !== productId));
   };
+  let productsPrice = productsList.reduce(
+    (acc: number, curr: any) => acc + Number(curr.price),
+    0
+  );
+  let deliveryPrice = 0; //temp value
+  let totalPrice = productsPrice + deliveryPrice;
+
   // Increase
   // Decrease
   // Remove from card
@@ -37,7 +44,14 @@ export const ProductCartProvider = ({
 
   return (
     <ProductCartContext.Provider
-      value={{ productsList, addToCart, removeFromCart }}
+      value={{
+        productsList,
+        addToCart,
+        removeFromCart,
+        productsPrice,
+        deliveryPrice,
+        totalPrice,
+      }}
     >
       {children}
     </ProductCartContext.Provider>
