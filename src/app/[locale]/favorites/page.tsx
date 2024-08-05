@@ -6,7 +6,15 @@ import { mock, mock2 } from "@/config/constants";
 import Pagination2 from "@/components/Pagination2/Pagination2";
 import { useTranslations } from "next-intl";
 
-const SelectedMenu = () => {
+import {
+  getFavoritesList,
+  addToFavorites,
+  removeFromFavorites,
+} from "@/utils/favoritesTools";
+
+import { useProduct } from "@/components/Providers/ContextProvider";
+
+const FavoritesPage = () => {
   const [isHorizontal, setIsHorizontal] = useState(true);
   const data = mock;
 
@@ -20,6 +28,13 @@ const SelectedMenu = () => {
   const itemsPerPage = 3;
   const offset = currentPage * itemsPerPage;
   const currentPageData = data.slice(offset, offset + itemsPerPage);
+
+  const { findProductById } = useProduct();
+  const [favorites, setFavorites] = useState(
+    getFavoritesList().map((item) => findProductById(item))
+  );
+
+  console.log(favorites);
 
   const t = useTranslations("Favorites");
 
@@ -35,7 +50,7 @@ const SelectedMenu = () => {
         />
         <CardsList
           isHorizontal={isHorizontal}
-          cardsData={mock2}
+          cardsData={favorites}
           className="!py-0 col-span-full"
         />
         {/* <Likeitems /> */}
@@ -58,4 +73,4 @@ const SelectedMenu = () => {
   );
 };
 
-export default SelectedMenu;
+export default FavoritesPage;

@@ -1,6 +1,6 @@
 function ChooseHeart({ ...props }) {
   return (
-    <>
+    <button onClick={props.onClick}>
       <svg
         width={36}
         height={37}
@@ -28,7 +28,7 @@ function ChooseHeart({ ...props }) {
           stroke="#B5EAEE"
         />
       </svg>
-    </>
+    </button>
   );
 }
 

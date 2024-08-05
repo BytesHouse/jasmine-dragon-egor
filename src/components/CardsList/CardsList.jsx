@@ -1,6 +1,7 @@
 "use client";
 import { ItemCard, ItemCardHorizontal } from "@/components";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
+import { getFavoritesList } from "@/utils/favoritesTools";
 
 const CardsList = ({
   isHorizontal = true,
@@ -15,14 +16,24 @@ const CardsList = ({
       id={id}
     >
       {cardsData?.map((item, index) => (
-        <ItemCard key={index} item={item} onClick={addToCart} />
+        <ItemCard
+          key={index}
+          item={item}
+          isFavorite={getFavoritesList().includes(item.id)}
+          onClick={addToCart}
+        />
       ))}
     </ul>
   ) : (
     // <Choise itemsPerPage={itemsPerPage} />
     <ul className={`container !gap-[25px] ${props?.className}`} id={props?.id}>
       {cardsData?.map((item, index) => (
-        <ItemCardHorizontal key={index} {...item} />
+        <ItemCardHorizontal
+          key={index}
+          isFavorite={getFavoritesList().includes(item.id)}
+          item={item}
+          onClick={addToCart}
+        />
       ))}
       {/* <Pagination /> */}
     </ul>
