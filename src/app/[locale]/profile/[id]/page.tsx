@@ -5,9 +5,10 @@ import { getHistory } from "@/utils/getHistory";
 
 export default function page({ params }: { params: { id: string } }) {
   const history = getHistory();
-  // console.log(history);
+  console.log(history);
+  const orderId = decodeURIComponent(params.id);
   const neededOrder = history.find(
-    (order: any) => order.orderNumber === params.id
+    (order: any) => order.orderNumber === orderId
   );
   console.log(neededOrder);
   return (

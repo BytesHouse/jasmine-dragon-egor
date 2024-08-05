@@ -7,4 +7,5 @@ export type TeaProduct = {
   categoryId: number;
   createdAt: Date;
   updatedAt: Date;
+  quantity: number;
 };

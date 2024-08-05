@@ -14,14 +14,22 @@ const ShoppingCart = () => {
     productsPrice,
     deliveryPrice,
     totalPrice,
+    increment,
+    decrement,
   } = useProductCart();
   const t = useTranslations("Cart");
 
+  console.log(productsList);
   return (
     <main>
       <div className="container !py-[50px]">
         <h4 className="font-medium col-span-full">{t("heading")}</h4>
-        <ChoiseForCart products={productsList} deleteProd={removeFromCart} />
+        <ChoiseForCart
+          products={productsList}
+          deleteProd={removeFromCart}
+          increment={increment}
+          decrement={decrement}
+        />
         <CheckForOrders
           products={productsList}
           deleteProd={removeFromCart}

@@ -3,8 +3,14 @@ import Counter from "@/ui-kit/Counter/Counter";
 import Image from "next/image";
 import ButtonCartDelete from "@/ui-kit/ButtonCartDelete/ButtonCartDelete";
 
-const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
-  const { name, price, description, id } = item;
+const OrderListItem = ({
+  isSmall = false,
+  item,
+  deleteProd,
+  increment,
+  decrement,
+}) => {
+  const { name, price, description, id, quantity } = item;
   const handleDeleteProd = (e) => {
     // e.stopPropagation();
     deleteProd(id);
@@ -45,7 +51,11 @@ const OrderListItem = ({ isSmall = false, item, deleteProd }) => {
           </p>
         )}
         <div className="flex flex-col gap-[25px] _768:gap-[15px]">
-          <Counter />
+          <Counter
+            initialValue={quantity}
+            increment={() => increment(id)}
+            decrement={() => decrement(id)}
+          />
           <div className="flex flex-row gap-[15px] items-center not-italic">
             <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-h5 _491:text-p1">
               {price}

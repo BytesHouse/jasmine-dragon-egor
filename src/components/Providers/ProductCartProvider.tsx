@@ -22,23 +22,60 @@ export const ProductCartProvider = ({
     }
   }, [productsList]);
   // CRUD
+
   const addToCart = (product: any) => {
-    setProducts([...productsList, product]);
+    const newList = productsList.map((item) =>
+      item.id === Number(product.id)
+        ? { ...item, quantity: item.quantity + 1 }
+        : item
+    );
+
+    const productExists = newList.some(
+      (item) => item.id === Number(product.id)
+    );
+
+    if (!productExists) {
+      newList.push({ ...product, quantity: 1 });
+    }
+
+    setProducts(newList);
   };
+
   const removeFromCart = (productId: any) => {
-    setProducts(productsList.filter((item: any) => item.id !== productId));
+    productsList.length != 1
+      ? setProducts(productsList.filter((item: any) => item.id !== productId))
+      : setProducts([]);
   };
+
+  const increment = (productId: number) => {
+    const newList = productsList.map((item) =>
+      item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setProducts(newList);
+  };
+  const decrement = (productId: number) => {
+    const newList = productsList
+      .map((item) =>
+        item.id === productId && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+      .filter((item) => item.quantity > 0); // Remove item if quantity drops to 0
+
+    setProducts(newList);
+  };
+
   let productsPrice = productsList.reduce(
-    (acc: number, curr: any) => acc + Number(curr.price),
+    (acc: number, curr: any) => acc + Number(curr.price * curr.quantity),
     0
   );
   let deliveryPrice = 0; //temp value
   let totalPrice = productsPrice + deliveryPrice;
 
+  // TODO:
   // Increase
   // Decrease
   // Remove from card
-  // Total Count
   // Discount
   // Delivery
 
@@ -51,6 +88,8 @@ export const ProductCartProvider = ({
         productsPrice,
         deliveryPrice,
         totalPrice,
+        increment,
+        decrement,
       }}
     >
       {children}
