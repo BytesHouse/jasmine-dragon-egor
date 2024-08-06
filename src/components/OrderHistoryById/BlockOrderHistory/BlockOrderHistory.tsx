@@ -3,9 +3,13 @@ import OrderItemBlock from "./OrderItemBlock/OrderItemBlock";
 export const BlockOrderHistory = ({
   data,
   translate,
+  deliveryPrice,
+  totalPrice,
 }: {
   data: any;
   translate: any;
+  deliveryPrice: number;
+  totalPrice: number;
 }) => {
   // const { productName, productCode, price, quantity, totalPrice } = data;
   const t = translate;
@@ -28,7 +32,7 @@ export const BlockOrderHistory = ({
         </div>
         <div className="flex justify-center p-[15px] items-center border-b border-b-blue-light last:border-none bg-green-light">
           <strong className="font-semibold text-center text-blue-light text-h5 _768:text-p1">
-            {t("orderTotal")} 3,200.00 Lei
+            {t("orderTotal")} {totalPrice}
           </strong>
         </div>
       </div>

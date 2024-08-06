@@ -19,7 +19,7 @@ const ShoppingCart = () => {
   } = useProductCart();
   const t = useTranslations("Cart");
 
-  console.log(productsList);
+  // console.log(productsList);
   return (
     <main>
       <div className="container !py-[50px]">

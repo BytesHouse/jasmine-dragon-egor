@@ -11,8 +11,8 @@ const RecentlyOrders = ({ data }) => {
   return (
     <div className="flex col-span-full flex-col gap-[25px] text-blue-light _1024:hidden mt-[50px]">
       <h4 className="simple font-bold">{t("heading")}</h4>
-      <table className="w-full border-t border-l border-blue-light border-collapse bg-green-light">
-        <thead className="table-header-group">
+      <table className="w-full border-t border-l border-blue-light border-collapse ">
+        <thead className="table-header-group bg-green-light">
           <tr className="grid grid-cols-[1fr_0.75fr_1.5fr_1fr_1fr]">
             {RecentlyOrderCols.map((item) => (
               <th
@@ -78,7 +78,7 @@ const OrderItemTable = ({ order, translate, path }) => {
       >
         <Link
           href={`${path}/${order.orderNumber}`}
-          className="border border-blue text-blue-light p-[15px] flex-grow text-center"
+          className="border border-blue text-blue-light p-[15px] flex-grow text-center bg-green-light"
         >
           {t("showOrder")}
         </Link>

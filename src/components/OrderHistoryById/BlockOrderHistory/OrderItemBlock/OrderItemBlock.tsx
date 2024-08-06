@@ -7,7 +7,7 @@ const OrderItemBlock = ({
   orderItem: any;
   translate: any;
 }) => {
-  const { id, name, price } = orderItem;
+  const { id, name, price, quantity } = orderItem;
   const t = translate;
   // console.log(translate);
   return (
@@ -34,13 +34,13 @@ const OrderItemBlock = ({
         <strong className="font-semibold flex-1 text-blue-light text-h5 _768:text-p1 p-[15px]">
           {t(orderCols[3].toTranslate)}
         </strong>
-        <p className="flex-1 p1 _768:p2 p-[15px]">Пока что 1</p>
+        <p className="flex-1 p1 _768:p2 p-[15px]">{quantity}</p>
       </div>
       <div className="flex items-center border-b border-b-blue-light last:border-none">
         <strong className="font-semibold flex-1 text-blue-light text-h5 _768:text-p1 p-[15px]">
           {t(orderCols[4].toTranslate)}
         </strong>
-        <p className="flex-1 p1 _768:p2 p-[15px]">Пока что {price}</p>
+        <p className="flex-1 p1 _768:p2 p-[15px]">{price * quantity}</p>
       </div>
     </div>
   );

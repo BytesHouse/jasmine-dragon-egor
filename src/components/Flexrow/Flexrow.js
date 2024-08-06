@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import "swiper/css";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 // import "swiper/css/pagination";
 
 const Flexrow = () => {
@@ -42,10 +43,11 @@ const Flexrow = () => {
                 key={index}
                 className=" border border-green-bg transition hover:border-blue-light aspect-square w-full min-w-[170px] _768:!max-w-[200px]"
               >
-                <a
-                  className={`${item.bgPath} bg-no-repeat bg-cover flex justify-center items-center h-full`}
+                <div
+                  className={`${item.bgPath} bg-no-repeat bg-cover flex justify-center items-center h-full cursor-pointer`}
                   id={`tea${index + 1}`}
-                  href="index.html"
+                  onClick={() => alert("Coming soon...")}
+                  // href="/"
                 >
                   <div className="group flex flex-col items-center border-blue-light border p-[25px] _1240:p-[15px] bg-[var(--green-bg-25)] hover:bg-blue-light transition">
                     <h5 className="text-center group-hover:text-green-light mb-[15px]">
@@ -55,7 +57,7 @@ const Flexrow = () => {
                       {t(item.p1)}
                     </p>
                   </div>
-                </a>
+                </div>
               </SwiperSlide>
             );
           })}

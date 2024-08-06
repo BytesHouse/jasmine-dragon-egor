@@ -17,12 +17,13 @@ const Agreements = () => {
 
   return (
     <div className="flex flex-col gap-[10px]">
-      <Checkbox isCurr={checkedValues[0]} setIsCurr={() => handleAgree(0)}>
+      {/* <Checkbox isCurr={checkedValues[0]} setIsCurr={() => handleAgree(0)}>
         {t("agreementNews")}
-      </Checkbox>
-      <Checkbox isCurr={checkedValues[1]} setIsCurr={() => handleAgree(1)}>
+      </Checkbox> */}
+      {/* <Checkbox isCurr={checkedValues[1]} setIsCurr={() => handleAgree(1)}>
         {t("agreementTerms")}
-      </Checkbox>
+      </Checkbox>       */}
+      <Checkbox isCurr={true}>{t("agreementTerms")}</Checkbox>
     </div>
   );
 };

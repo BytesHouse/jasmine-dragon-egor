@@ -34,7 +34,7 @@ const FavoritesPage = () => {
     getFavoritesList().map((item) => findProductById(item))
   );
 
-  console.log(favorites);
+  // console.log(favorites);
 
   const t = useTranslations("Favorites");
 

@@ -7,8 +7,10 @@ import ProfileDeco from "@/ui-kit/icons/ProfileDeco/ProfileDeco";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const UserProfile = () => {
+const UserProfile = ({ history }) => {
   const t = useTranslations("UserProfile");
+  const lastOrder = history[history.length - 1];
+  // console.log(lastOrder);
   return (
     <>
       <div className="flex flex-col col-span-half gap-[25px] font-Nunito-Sans text-[var(--blue-light)] _1024:col-span-full">
@@ -18,16 +20,18 @@ const UserProfile = () => {
             {t("address")}
           </label>
           <div className="max-w-[695px] flex gap-[15px] items-center p-[15px] border border-blue-light _491:p-[10px]">
-            <div>
+            {/* <div>
               <ProfileDeco />
-            </div>
+            </div> */}
             <input
               className=" w-full bg-[var(--green-bg)] focus:outline-none"
               type="text"
+              value={lastOrder.address}
+              disabled
             ></input>
-            <div>
+            {/* <div>
               <Edit />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex flex-col gap-[15px]">
@@ -35,16 +39,18 @@ const UserProfile = () => {
             {t("fullName")}
           </label>
           <div className="max-w-[695px] flex gap-[15px] items-center p-[15px] border border-blue-light _491:p-[10px]">
-            <div>
+            {/* <div>
               <ProfileDeco />
-            </div>
+            </div> */}
             <input
               className=" w-full bg-[var(--green-bg)] focus:outline-none"
               type="text"
+              value={lastOrder.fullName}
+              disabled
             ></input>
-            <div>
+            {/* <div>
               <Edit />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex flex-col gap-[15px]">
@@ -52,16 +58,18 @@ const UserProfile = () => {
             {t("phone")}
           </label>
           <div className="max-w-[695px] flex gap-[15px] items-center p-[15px] border border-blue-light _491:p-[10px]">
-            <div>
+            {/* <div>
               <ProfileDeco />
-            </div>
+            </div> */}
             <input
               className=" w-full bg-[var(--green-bg)] focus:outline-none"
               type="tel"
+              value={lastOrder.phone}
+              disabled
             ></input>
-            <div>
+            {/* <div>
               <Edit />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

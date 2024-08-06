@@ -54,13 +54,11 @@ export const ProductCartProvider = ({
     setProducts(newList);
   };
   const decrement = (productId: number) => {
-    const newList = productsList
-      .map((item) =>
-        item.id === productId && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-      .filter((item) => item.quantity > 0); // Remove item if quantity drops to 0
+    const newList = productsList.map((item) =>
+      item.id === productId && item.quantity > 1
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    );
 
     setProducts(newList);
   };

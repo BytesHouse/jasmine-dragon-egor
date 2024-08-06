@@ -27,6 +27,8 @@ const Order = () => {
   function onSubmit(data: FormDataEmail) {
     // console.log(data.orderItems);
     // console.log(JSON.parse(data.orderItems));
+    data.deliveryPrice = Number(deliveryPrice);
+    data.totalPrice = Number(totalPrice);
     data.orderItems = JSON.parse(data.orderItems);
     data.date = getCurrentDateTime();
     data.orderNumber = getOrderNumber(data.fullName);
@@ -134,7 +136,7 @@ const Order = () => {
             </label>
           </div>
           {/* послдение адреса */}
-          <div className="flex items-start border border-blue h-max p-[15px] gap-[15px]">
+          {/* <div className="flex items-start border border-blue h-max p-[15px] gap-[15px]">
             <ProfileDeco />
             <div className="flex-grow">
               <p className="p1 font-semibold mb-[10px]">Cookie killer</p>
@@ -147,7 +149,7 @@ const Order = () => {
             <button>
               <Edit />
             </button>
-          </div>
+          </div> */}
         </div>
         <input
           {...register("orderItems", { required: true })}
@@ -158,6 +160,16 @@ const Order = () => {
           {...register("lang", { required: true })}
           className="hidden "
           value={lang}
+        />
+        <input
+          {...register("deliveryPrice", { required: true })}
+          className="hidden"
+          value={deliveryPrice}
+        />
+        <input
+          {...register("totalPrice", { required: true })}
+          className="hidden"
+          value={totalPrice}
         />
         <CheckForOrders
           // {...register("orderItems", { required: true })}

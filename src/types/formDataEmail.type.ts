@@ -17,4 +17,6 @@ export type FormDataEmail = {
   date: string;
   status: Status;
   orderNumber: string;
+  deliveryPrice: number;
+  totalPrice: number;
 };

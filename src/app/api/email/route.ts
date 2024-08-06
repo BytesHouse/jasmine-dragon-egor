@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
-  const { email, fullName, message, phone, orderItems, lang } =
+  const { email, fullName, message, phone, orderItems, lang, address } =
     await request.json();
 
   const transport = nodemailer.createTransport({
@@ -30,7 +30,9 @@ export async function POST(request: NextRequest) {
     <p>Страна/Регион: Молдова</p>
     <p>Город: Кишинёв</p>
     <hr/>
-    <h3 >From: ${props.fullName}</h3>
+        <h3>Заказчик: <i>${props.fullName}</i></h3>
+        <h3>Адрес доставки: <i>${props.address}</i></h3>
+    <hr/>
     <h3 style="display: inline">Phone number:</h3> <a href="tel:${
       props.phone
     }"> <i>${props.phone}</i> </a>
@@ -43,7 +45,7 @@ export async function POST(request: NextRequest) {
       <a style="display: inline" href=\"https://jasmine-dragon-mu.vercel.app/${lang}/teas/${orderItem.id}\">
         ${orderItem.name}
       </a>
-      <p style="display: inline; margin-left: 10px">|| <i style="display: inline; margin-left: 10px">count</i></p>
+      <p style="display: inline; margin-left: 10px">|| <i style="display: inline; margin-left: 10px">${orderItem.quantity}</i></p>
     </li>
         `
       )
@@ -57,7 +59,7 @@ export async function POST(request: NextRequest) {
     to: process.env.MY_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${fullName} ${email ? `(${email})` : ""}`,
-    html: func({ fullName, phone, email, message, orderItems, lang }),
+    html: func({ fullName, phone, email, message, orderItems, lang, address }),
     // text: `<b>${message}</b>`,
   };
 

@@ -17,6 +17,8 @@ export const OrderHistoryById = ({ order }: { order: any }) => {
     date,
     orderNumber,
     status,
+    deliveryPrice,
+    totalPrice,
   } = order;
   const [isClient, setIsClient] = useState(false);
   const t = useTranslations("OrderHistoryById");
@@ -36,8 +38,18 @@ export const OrderHistoryById = ({ order }: { order: any }) => {
             {t("orderDate")} {date}
           </p>
         </div>
-        <TableOrderHistory translate={t} data={orderItems} />
-        <BlockOrderHistory translate={t} data={orderItems} />
+        <TableOrderHistory
+          translate={t}
+          data={orderItems}
+          deliveryPrice={deliveryPrice}
+          totalPrice={totalPrice}
+        />
+        <BlockOrderHistory
+          translate={t}
+          data={orderItems}
+          deliveryPrice={deliveryPrice}
+          totalPrice={totalPrice}
+        />
         <div className="col-span-full flex gap-[25px] border border-blue-light p-[25px] _1024:border-none _1024:flex-col _1024:p-0">
           <div className="flex-1 flex flex-col">
             <h5 className="simple font-bold mb-[15px]">{t("address")}</h5>

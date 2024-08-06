@@ -4,9 +4,13 @@ import OrderItemTable from "./OrderItemTable/OrderItemTable";
 const TableOrderHistory = ({
   data,
   translate,
+  deliveryPrice,
+  totalPrice,
 }: {
   data: any;
   translate: any;
+  deliveryPrice: number;
+  totalPrice: number;
 }) => {
   // const { productName, productCode, price, quantity, totalPrice } = data;
   // console.log(data);
@@ -34,7 +38,7 @@ const TableOrderHistory = ({
             {t("delivery")}
           </td>
           <td className="p-[20px] flex items-center border-r border-b border-blue-light">
-            200.00 Lei
+            {deliveryPrice == 0 ? t("free") : deliveryPrice}
           </td>
         </tr>
       </tbody>
@@ -42,7 +46,7 @@ const TableOrderHistory = ({
         <tr className="w-full grid grid-cols-[2fr_1fr_1fr_1fr_2fr]">
           <td className="col-span-4"></td>
           <td className="text-h5 font-semibold p-[20px]">
-            {t("orderTotal")} 3.200 Lei
+            {t("orderTotal")} {totalPrice}
           </td>
         </tr>
       </tfoot>
