@@ -361,27 +361,27 @@ export const flexRow = [
   {
     h5: "flexRow1",
     p1: "count",
-    bgPath: "bg-[url('/assets/Images/FlexRow/0.png')]",
+    bgPath: "bg-[url('/assets/Images/FlexRow/0.webp')]",
   },
   {
     h5: "flexRow2",
     p1: "count",
-    bgPath: "bg-[url('/assets/Images/FlexRow/1.png')]",
+    bgPath: "bg-[url('/assets/Images/FlexRow/1.webp')]",
   },
   {
     h5: "flexRow3",
     p1: "count",
-    bgPath: "bg-[url('/assets/Images/FlexRow/2.png')]",
+    bgPath: "bg-[url('/assets/Images/FlexRow/2.webp')]",
   },
   {
     h5: "flexRow4",
     p1: "count",
-    bgPath: "bg-[url('/assets/Images/FlexRow/3.png')]",
+    bgPath: "bg-[url('/assets/Images/FlexRow/3.webp')]",
   },
   {
     h5: "flexRow5",
     p1: "count",
-    bgPath: "bg-[url('/assets/Images/FlexRow/4.png')]",
+    bgPath: "bg-[url('/assets/Images/FlexRow/4.webp')]",
   },
 ];
 

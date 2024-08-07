@@ -54,7 +54,9 @@ const ItemCard = ({ item, onClick, isFavorite }) => {
             className="h-auto"
           />
         </div>
-        <h4 className="_768:text-h5 _491:text-p1">{name}</h4>
+        <h4 className="_768:text-h5 _491:text-p1 text-ellipsis line-clamp-3">
+          {name}
+        </h4>
         {description && <p className="p1 _768:p2 _491:p3">{description}</p>}
       </Link>
       <div className="flex-grow w-full flex flex-col h-max justify-end gap-[15px]">

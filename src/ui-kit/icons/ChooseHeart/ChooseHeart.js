@@ -1,6 +1,6 @@
 function ChooseHeart({ ...props }) {
   return (
-    <button onClick={props.onClick}>
+    <button onClick={props.onClick} aria-label="add to favorites">
       <svg
         width={36}
         height={37}

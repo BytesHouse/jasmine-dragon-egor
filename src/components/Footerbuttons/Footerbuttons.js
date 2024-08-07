@@ -17,11 +17,11 @@ const Footerbuttons = ({ className, onClick }) => {
     <ol className={className}>
       <li className="col-span-3 _1240:col-span-half">
         <ol className="flex flex-col gap-[25px]">
-          <li onClick={onClick}>
+          {/* <li onClick={onClick}>
             <Link href={`/${lang}`} className="footerbutton">
               {t("aboutUs")}
             </Link>
-          </li>
+          </li> */}
           <li onClick={onClick}>
             <Link href={`/${lang}/menu`} className="footerbutton">
               {t("menu")}
