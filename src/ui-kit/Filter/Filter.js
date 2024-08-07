@@ -9,7 +9,7 @@ import ButtonSecondary from "../ButtonSecondary/ButtonSecondary";
 import { RangeSlider } from "../RangeSlider/RangeSlider";
 import { useTranslations } from "next-intl";
 
-const Filter = () => {
+const Filter = ({ setFilterFunc }) => {
   const t = useTranslations("Filter");
   const filterRef = useRef();
   const toDo = "flex flex-col gap-[5px]";
@@ -18,7 +18,7 @@ const Filter = () => {
   const [isStock, setIsStock] = useState(stock[0].value);
   const [typeChecked, setTypeChecked] = useState(type);
   const [manufc, setManufc] = useState(manufacturer);
-  const [price, setPrice] = useState({ min: 0, max: 100 });
+  const [price, setPrice] = useState({ min: 0, max: 3000 });
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -32,28 +32,31 @@ const Filter = () => {
     };
   }, []);
 
-  const handleClickCheckBoxType = (key) => {
-    const updatedItems = typeChecked.map((item) =>
-      item.key === key ? { ...item, checked: !item.checked } : item
-    );
-    setTypeChecked(updatedItems);
-  };
+  // const handleClickCheckBoxType = (key) => {
+  //   const updatedItems = typeChecked.map((item) =>
+  //     item.key === key ? { ...item, checked: !item.checked } : item
+  //   );
+  //   setTypeChecked(updatedItems);
+  // };
 
-  const handleClickCheckBoxManufc = (key) => {
-    const updatedItems = manufc.map((item) =>
-      item.key === key ? { ...item, checked: !item.checked } : item
-    );
-    setManufc(updatedItems);
-  };
+  // const handleClickCheckBoxManufc = (key) => {
+  //   const updatedItems = manufc.map((item) =>
+  //     item.key === key ? { ...item, checked: !item.checked } : item
+  //   );
+  //   setManufc(updatedItems);
+  // };
 
   const handleSubmitFilter = () => {
     // Add the logic for applying the filter
+    const filterFunc = (item) =>
+      Number(item.price) >= price.min && Number(item.price) <= price.max;
+    setFilterFunc(() => filterFunc);
   };
 
   const handleResetFilter = () => {
-    setIsStock(stock[0].value);
-    setTypeChecked(type.map((item) => ({ ...item, checked: false })));
-    setManufc(manufacturer.map((item) => ({ ...item, checked: false })));
+    // setIsStock(stock[0].value);
+    // setTypeChecked(type.map((item) => ({ ...item, checked: false })));
+    // setManufc(manufacturer.map((item) => ({ ...item, checked: false })));
     setPrice({ min: 0, max: 100 });
   };
 
@@ -143,7 +146,7 @@ const Filter = () => {
                 value={price}
                 onChange={setPrice}
                 min={10}
-                max={10000}
+                max={3000}
                 step={10}
               />
             </div>

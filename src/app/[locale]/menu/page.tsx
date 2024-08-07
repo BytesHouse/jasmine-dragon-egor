@@ -30,12 +30,14 @@ const Menu = () => {
   // Вычисляем текущие элементы для отображения
   const defSort = (a: any, b: any) => b.updatedAt - a.updatedAt;
   const [sortFunc, setSortFunc] = useState(() => defSort);
+  const defFilter = (item: any) => true;
+  const [filterFunc, setFilterFunc] = useState(() => defFilter);
 
   const offset = currentPage * itemsPerPage;
   const currentPageData = productsList
+    .filter(filterFunc)
     .sort(sortFunc)
     .slice(offset, offset + itemsPerPage);
-  // console.log(currentPageData);
   // ==================================================
 
   return (
@@ -47,6 +49,7 @@ const Menu = () => {
             itemsPerPage={itemsPerPage}
             setItemsPerPage={setItemsPerPage}
             setSortFunc={setSortFunc}
+            setFilterFunc={setFilterFunc}
           />
           <ToggleView
             isHorizontal={isHorizontal}

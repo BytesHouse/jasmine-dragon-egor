@@ -5,12 +5,17 @@ import Dropdownnumbers from "../../ui-kit/Dropdownnumbers/Dropdownnumbers";
 import Filter from "../../ui-kit/Filter/Filter";
 import { useTranslations } from "next-intl";
 
-const Sort = ({ itemsPerPage, setItemsPerPage, setSortFunc }) => {
+const Sort = ({
+  itemsPerPage,
+  setItemsPerPage,
+  setSortFunc,
+  setFilterFunc,
+}) => {
   const t = useTranslations("Menu");
   return (
     <>
       {/* <div className="flex justify-between flex-grow _1600:gap-[20px] _1240:gap-[25px] _768:flex-wrap _768:gap-[10px]"> */}
-      <Filter />
+      <Filter setFilterFunc={setFilterFunc} />
       <div className="flex items-center gap-[20px] _768:gap-[10px] z-20">
         <p className="p1 _1240:p2 _768:p3">{t("sortBy")}</p>
         <Dropdown array={mock3} setSortFunc={setSortFunc} />

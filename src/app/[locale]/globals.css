@@ -309,3 +309,126 @@ footer {
   padding: 25px;
   border: 1px solid var(--blue);
 }
+
+/* input slider */
+.wrapper__slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: calc(16px + 1.6rem);
+}
+
+.input-wrapper__slider {
+  width: calc(100% + 16px);
+  margin: 0 calc(16px / -2);
+  position: absolute;
+  height: 16px;
+}
+
+.control-wrapper__slider {
+  width: 100%;
+  position: absolute;
+  height: 16px;
+}
+
+.input__slider {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 100%;
+  opacity: 0;
+  z-index: 3;
+  padding: 0;
+}
+.input__slider::-ms-track {
+  appearance: none;
+  background: transparent;
+  border: transparent;
+}
+.input__slider::-moz-range-track {
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: transparent;
+}
+.input__slider:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: transparent;
+}
+.input__slider::-ms-thumb {
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  border-radius: 0px;
+  border: 0 none;
+  cursor: grab;
+  background-color: var(--green-light);
+}
+.input__slider::-ms-thumb:active {
+  cursor: grabbing;
+}
+.input__slider::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  border-radius: 0px;
+  border: 0 none;
+  cursor: grab;
+  background-color: var(--green-light);
+}
+.input__slider::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+.input__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  border-radius: 0px;
+  border: 0 none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  background-color: var(--green-light);
+}
+.input__slider::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.rail__slider {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  border-radius: 3px;
+  background: var(--blue);
+}
+
+.inner-rail__slider {
+  position: absolute;
+  height: 100%;
+  background: var(--green-light);
+  opacity: 0.8;
+}
+
+.control__slider {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  background: var(--blue-light);
+  top: 50%;
+  margin-left: calc(16px / -2);
+  transform: translate3d(0, -50%, 0);
+  z-index: 2;
+}
