@@ -17,7 +17,7 @@ const CardsList = ({
     >
       {cardsData?.map((item, index) => (
         <ItemCard
-          key={index}
+          key={item.id}
           item={item}
           isFavorite={getFavoritesList().includes(item.id)}
           onClick={addToCart}
@@ -29,7 +29,7 @@ const CardsList = ({
     <ul className={`container !gap-[25px] ${props?.className}`} id={props?.id}>
       {cardsData?.map((item, index) => (
         <ItemCardHorizontal
-          key={index}
+          key={item.id}
           isFavorite={getFavoritesList().includes(item.id)}
           item={item}
           onClick={addToCart}

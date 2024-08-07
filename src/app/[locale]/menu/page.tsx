@@ -28,8 +28,14 @@ const Menu = () => {
     }
   };
   // Вычисляем текущие элементы для отображения
+  const defSort = (a: any, b: any) => 0;
+  const [sortFunc, setSortFunc] = useState(() => defSort);
+
   const offset = currentPage * itemsPerPage;
-  const currentPageData = productsList?.slice(offset, offset + itemsPerPage);
+  const currentPageData = productsList
+    ?.sort(sortFunc)
+    .slice(offset, offset + itemsPerPage);
+  console.log(currentPageData);
   // ==================================================
 
   return (
@@ -37,7 +43,11 @@ const Menu = () => {
       <div className="container !py-[50px]" id="cardsListTop">
         <h4 className="col-span-full">{t("heading")}</h4>
         <div className="flex justify-between gap-x-[100px] col-span-full _1240:gap-y-[15px] _1240:gap-x-[15px] _1240:flex-wrap _768:gap-x-2">
-          <Sort itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} />
+          <Sort
+            itemsPerPage={itemsPerPage}
+            setItemsPerPage={setItemsPerPage}
+            setSortFunc={setSortFunc}
+          />
           <ToggleView
             isHorizontal={isHorizontal}
             toggleView={setIsHorizontal}

@@ -183,20 +183,31 @@ export const mock2 = [
 ];
 
 export const mock3 = [
-  { id: 0, title: "Выгодня цена", icon: <Good />, value: "favorible_price" },
+  // {
+  //   id: 0,
+  //   title: "Выгодня цена",
+  //   icon: <Good />,
+  //   value: "favorible_price",
+  //   sortFunc: (a, b) => 0,
+  // },
   {
-    id: 1,
+    title: "Новинки",
+    icon: <Plus />,
+    value: "new_products",
+    sortFunc: (a, b) => b.updatedAt - a.updatedAt,
+  },
+  {
     title: "Дешевле",
     icon: <Strelka isMini className="rotate-90" />,
     value: "less_expensive",
+    sortFunc: (a, b) => Number(a.price) - Number(b.price),
   },
   {
-    id: 2,
     title: "Дороже",
     icon: <Strelka isMini className="-rotate-90" />,
     value: "more_expensive",
+    sortFunc: (a, b) => Number(b.price) - Number(a.price),
   },
-  { id: 3, title: "Новинки", icon: <Plus />, value: "new_products" },
 ];
 // export const mock5 = [
 //   { id: 1, title: "Ру", value: `Ру` },

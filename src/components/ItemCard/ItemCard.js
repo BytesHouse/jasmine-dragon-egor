@@ -16,7 +16,7 @@ const ItemCard = ({ item, onClick, isFavorite }) => {
   const t = useTranslations("Menu");
   // const width = useScreenWidth();
   const lang = useLocale();
-  const { name, description, price, id } = item;
+  const { name, description, price, id, discount } = item;
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     onClick(item);
@@ -59,13 +59,22 @@ const ItemCard = ({ item, onClick, isFavorite }) => {
       </Link>
       <div className="flex-grow w-full flex flex-col h-max justify-end gap-[15px]">
         <div className="flex items-center w-full gap-[15px]">
-          <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-[20px] _491:text-p2">
-            {price}
-          </span>
-          <span className="discount _768:text-p1 _491:text-[10px] _491:font-normal">
-            {price}
-          </span>
+          {discount == 0 ? (
+            <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-[20px] _491:text-p2">
+              {price}
+            </span>
+          ) : (
+            <>
+              <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-[20px] _491:text-p2">
+                {price - discount}
+              </span>
+              <span className="discount _768:text-p1 _491:text-[10px] _491:font-normal">
+                {price}
+              </span>
+            </>
+          )}
         </div>
+
         <button onClick={handleClickAddToCart} className="buttonToCart1">
           <Cart />
           {t("buttonToCart")}

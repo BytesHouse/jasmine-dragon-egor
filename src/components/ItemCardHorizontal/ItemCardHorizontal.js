@@ -9,7 +9,7 @@ import { addToFavorites, removeFromFavorites } from "@/utils/favoritesTools";
 
 const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
   const [isHeart, setIsHeart] = useState(isFavorite);
-  const { name, description, price } = item;
+  const { name, description, price, discount } = item;
   const t = useTranslations("Menu");
 
   const handleClickAddToCart = (e) => {
@@ -53,12 +53,20 @@ const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
           {description && <p className="p1 _768:p2 _491:p3">{description}</p>}
         </div>
         <div>
-          <span className="text-h5 font-semibold text-blue-light _768:text-[20px] _491:text-p2">
-            {price} Lei
-          </span>
-          <span className="discount ml-[15px] _768:text-p1 _491:text-[10px] _491:font-normal">
-            {price} Lei
-          </span>
+          {discount == 0 ? (
+            <span className="text-h5 font-semibold text-blue-light _768:text-[20px] _491:text-p2">
+              {price}
+            </span>
+          ) : (
+            <>
+              <span className="text-h5 font-semibold text-blue-light _768:text-[20px] _491:text-p2">
+                {price - discount}
+              </span>
+              <span className="discount ml-[15px] _768:text-p1 _491:text-[10px] _491:font-normal">
+                {price}
+              </span>
+            </>
+          )}
         </div>
         <button
           onClick={handleClickAddToCart}

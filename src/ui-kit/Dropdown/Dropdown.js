@@ -3,16 +3,19 @@
 import { useTranslations } from "next-intl";
 import React, { useState, useEffect } from "react";
 
-const Dropdown = ({ array }) => {
+const Dropdown = ({ array, setSortFunc }) => {
   const t = useTranslations("Sort");
   const [isShow, setIsShow] = useState(false);
   const [choice, setChoice] = useState(array[0] || "Значение по умолчанию");
+  setSortFunc(() => array[0].sortFunc);
 
   const handleChangeIsShow = () => setIsShow(!isShow);
 
   const handleChangeChoice = (item) => {
     setChoice(item);
     setIsShow(false);
+    // console.log(item.sortFunc);
+    setSortFunc(() => item.sortFunc);
   };
 
   const handleClickOutside = (event) => {
@@ -54,10 +57,10 @@ const Dropdown = ({ array }) => {
             {choice.icon}
           </div>
           {isShow && (
-            <ul className="w-[calc(100%+2px)] top-[100%]">
+            <ul className="w-[calc(100%+2px)] top-[100%] z-10">
               {array.map((item) => (
                 <li
-                  className="flex gap-[15px] items-center justify-center hover:bg-[var(--blue)] border border-[var(--blue-light)] bg-[var(--green-light)] _768:text-p3 _768:p-[10px] z-10 p-[10px]"
+                  className="flex gap-[15px] items-center justify-center hover:bg-[var(--blue)] border first:border-t border-t-0 border-[var(--blue-light)] bg-[var(--green-light)] _768:text-p3 _768:p-[10px] p-[10px]"
                   onClick={() => handleChangeChoice(item)}
                   key={item.id}
                 >
