@@ -5,14 +5,15 @@ import { CardsList } from "@/components";
 import Pagination2 from "../Pagination2/Pagination2";
 import useScreenWidth from "@/hooks/useScreenWidth";
 import { useTranslations } from "next-intl";
+import { useProduct } from "../Providers/ContextProvider";
 
 const Hotsales = () => {
   const t = useTranslations("HotSales");
   const width = useScreenWidth();
   const initialItemsPerPage = width < 1240 ? 2 : 3;
-  // const { productsList } = useProduct();
+  const { productsList } = useProduct();
   // console.log(productsList);
-  const data = mock;
+  const data = productsList.slice(42, 69);
 
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(initialItemsPerPage);

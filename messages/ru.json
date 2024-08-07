@@ -179,7 +179,9 @@
   },
   "Favorites": {
     "heading": "Избранное",
-    "mightLike": "Вам также может понравиться"
+    "mightLike": "Вам может понравиться",
+    "emptyFavorites": "Вы ещё ничего не добавили в избранное",
+    "menuButton": "Меню"
   },
   "CheckForOrders": {
     "yourProducts": "Ваши товары",
@@ -192,6 +194,10 @@
     "agreementTerms": "Я согласен с условиями использования сайта",
     "confirmButton": "Подтвердить",
     "continueButton": "Продолжить оформление"
+  },
+  "ProfilePage": {
+    "profileEmpty": "Вы не сделали ещё ни одного заказа",
+    "menuButton": "Меню"
   },
   "UserProfile": {
     "heading": "Профиль",
@@ -211,7 +217,8 @@
   },
   "Cart": {
     "heading": "Корзина",
-    "emptyCart": "Корзина пуста"
+    "emptyCart": "Вы ещё ничего не добавили в корзину",
+    "menuButton": "Меню"
   },
   "DescriptionBlock": {
     "heading": "Описание: ",

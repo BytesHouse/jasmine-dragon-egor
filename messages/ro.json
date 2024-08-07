@@ -179,7 +179,9 @@
   },
   "Favorites": {
     "heading": "Favorite",
-    "mightLike": "S-ar putea să vă placă și"
+    "mightLike": "S-ar putea să vă placă",
+    "emptyFavorites": "Nu ați adăugat încă nimic la favorite",
+    "menuButton": "Meniu"
   },
   "CheckForOrders": {
     "yourProducts": "Produsele dvs.",
@@ -192,6 +194,10 @@
     "agreementTerms": "Sunt de acord cu termenii de utilizare a site-ului",
     "confirmButton": "Confirmă",
     "continueButton": "Continuă decorarea"
+  },
+  "ProfilePage": {
+    "profileEmpty": "Nu ați plasat încă nicio comandă",
+    "menuButton": "Meniu"
   },
   "UserProfile": {
     "heading": "Profil",
@@ -211,7 +217,8 @@
   },
   "Cart": {
     "heading": "Coș",
-    "emptyCart": "Coșul este gol"
+    "emptyCart": "Nu ați adăugat încă nimic la coș",
+    "menuButton": "Meniu"
   },
 
   "DescriptionBlock": {
