@@ -28,14 +28,14 @@ const Menu = () => {
     }
   };
   // Вычисляем текущие элементы для отображения
-  const defSort = (a: any, b: any) => 0;
+  const defSort = (a: any, b: any) => b.updatedAt - a.updatedAt;
   const [sortFunc, setSortFunc] = useState(() => defSort);
 
   const offset = currentPage * itemsPerPage;
   const currentPageData = productsList
-    ?.sort(sortFunc)
+    .sort(sortFunc)
     .slice(offset, offset + itemsPerPage);
-  console.log(currentPageData);
+  // console.log(currentPageData);
   // ==================================================
 
   return (

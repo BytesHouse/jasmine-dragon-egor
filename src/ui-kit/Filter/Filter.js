@@ -88,7 +88,8 @@ const Filter = () => {
             className="text-[var(--blue-light)] flex flex-col gap-[15px]"
             onSubmit={handleSubmitFilter}
           >
-            <div className={toDo}>
+            {/* ============= наличие ==================== */}
+            {/* <div className={toDo}>
               <span className="font-semibold text-[18px]">
                 {t("availability")}
               </span>
@@ -103,8 +104,9 @@ const Filter = () => {
                   </RadioButton>
                 ))}
               </div>
-            </div>
-            <div className={toDo}>
+            </div> */}
+            {/* ============= тип чая ==================== */}
+            {/* <div className={toDo}>
               <span className="font-semibold text-[18px]">{t("teaType")}</span>
               <div className="h-[120px] overflow-y-scroll">
                 {typeChecked.map((item, index) => (
@@ -117,8 +119,9 @@ const Filter = () => {
                   </Checkbox>
                 ))}
               </div>
-            </div>
-            <div className={toDo}>
+            </div> */}
+            {/* ============= производители ==================== */}
+            {/* <div className={toDo}>
               <span className="font-semibold text-[18px]">
                 {t("manufacturer")}
               </span>
@@ -133,15 +136,15 @@ const Filter = () => {
                   </Checkbox>
                 ))}
               </div>
-            </div>
-            <div className={toDo}>
+            </div> */}
+            <div className="flex flex-col gap-[5px]">
               <span className="font-semibold text-[18px]">{t("price")}</span>
               <RangeSlider
                 value={price}
                 onChange={setPrice}
                 min={0}
-                max={100}
-                step={5}
+                max={10000}
+                step={10}
               />
             </div>
             <div className="flex flex-col gap-[15px]">
