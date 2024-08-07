@@ -142,7 +142,7 @@ const Filter = () => {
               <RangeSlider
                 value={price}
                 onChange={setPrice}
-                min={0}
+                min={10}
                 max={10000}
                 step={10}
               />
