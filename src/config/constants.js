@@ -2,7 +2,7 @@
 const tea = "/assets/Images/teagreen.png";
 // import flower from "../../public/assets/Images/Flower.png";
 const flower = "/assets/Images/Flower.png";
-import { Strelka, Good, Plus } from "../ui-kit/icons";
+import { Strelka, SortNewProds } from "../ui-kit/icons";
 export const mock = [
   {
     image: tea,
@@ -192,7 +192,7 @@ export const mock3 = [
   // },
   {
     title: "Новинки",
-    icon: <Plus />,
+    icon: <SortNewProds />,
     value: "new_products",
     sortFunc: (a, b) => b.updatedAt - a.updatedAt,
   },

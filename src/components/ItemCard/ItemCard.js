@@ -20,6 +20,7 @@ const ItemCard = ({ item, onClick, isFavorite }) => {
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     onClick(item);
+    alert(t("addedToCart"));
   };
 
   const favRemove = () => {

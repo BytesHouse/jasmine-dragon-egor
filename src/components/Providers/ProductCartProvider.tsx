@@ -23,10 +23,10 @@ export const ProductCartProvider = ({
   }, [productsList]);
   // CRUD
 
-  const addToCart = (product: any) => {
+  const addToCart = (product: any, quantity: any) => {
     const newList = productsList.map((item) =>
       item.id === Number(product.id)
-        ? { ...item, quantity: item.quantity + 1 }
+        ? { ...item, quantity: item.quantity + quantity }
         : item
     );
 
@@ -35,7 +35,7 @@ export const ProductCartProvider = ({
     );
 
     if (!productExists) {
-      newList.push({ ...product, quantity: 1 });
+      newList.push({ ...product, quantity: quantity });
     }
 
     setProducts(newList);

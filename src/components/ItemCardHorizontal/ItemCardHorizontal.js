@@ -15,6 +15,7 @@ const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     onClick(item);
+    alert(t("addedToCart"));
   };
 
   const favRemove = () => {

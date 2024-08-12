@@ -23,8 +23,10 @@ import { Facebook, Instagram, Telegram, Vk, Twitter } from "./Socials";
 import TeaLeaves from "./TeaLeaves/TeaLeaves";
 import ArrowLeft from "./ArrowLeft/ArrowLeft";
 import ArrowRight from "./ArrowRight/ArrowRight";
+import SortNewProds from "./SortNewProds/SortNewProds";
 
 export {
+  SortNewProds,
   ArrowRight,
   Cup,
   EyeIcon,

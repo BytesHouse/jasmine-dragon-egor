@@ -1,18 +1,25 @@
+"use client";
+
 import ImagesComponent from "../ImagesComponent/ImagesComponent";
 import FavoriteButton from "@/ui-kit/FavoriteButton/FavoriteButton";
 import Counter from "@/ui-kit/Counter/Counter";
 import { Cart } from "@/ui-kit/icons";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 const DescriptionBlock = ({ product }) => {
   const { name, subtype, description, strength, brewRes } = product;
   const { addToCart } = useProductCart();
+  const [quantity, setQuantity] = useState(1);
   const t = useTranslations("DescriptionBlock");
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
-    addToCart(product);
+    addToCart(product, quantity);
+    setQuantity(1);
+    alert(`${t("addedToCartCount")}${quantity}`);
   };
+
   return (
     <>
       {/* <section className="col-span-full"> */}
@@ -38,7 +45,11 @@ const DescriptionBlock = ({ product }) => {
           </li>
         </ul>
         <div className="flex gap-[50px]">
-          <Counter />
+          <Counter
+            initialValue={quantity}
+            increment={() => setQuantity((prev) => prev + 1)}
+            decrement={() => setQuantity((prev) => prev > 1 && prev - 1)}
+          />
           <button className="buttonToCart1" onClick={handleClickAddToCart}>
             <Cart />
             <span className="text-h5 font-Nunito-Sans font-semibold _1240:text-[20px] _1024:text-h5 _768:text-[20px] _491:text-p3">

@@ -33,7 +33,7 @@ const Dropdownnumbers = ({ itemsPerPage, setItemsPerPage }) => {
   return (
     <div className="z-10 dropdown flex items-center justify-center bg-[var(--green-light)] p-4 _768:p-3 border border-[var(--blue-light)] font-Nunito-Sans text-[var(--blue-light)] relative">
       <div
-        className="flex gap-[15px] _768:text-p2"
+        className="flex gap-[15px] _768:text-p2 items-center"
         onClick={handleChangeIsShow}
       >
         {itemsPerPage}
