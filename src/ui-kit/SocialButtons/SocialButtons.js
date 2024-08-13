@@ -5,12 +5,12 @@ const SocialButtons = ({ children }) => {
     <div className="flex flex-col gap-[15px]">
       {children && <p className="text-[18px] font-[600]">{children}</p>}
       <div className="flex gap-[25px]">
-        <a href="https://facebook.com" aria-label="Link to facebook">
+        {/* <a href="https://facebook.com" aria-label="Link to facebook">
           <Facebook />
-        </a>
-        <a href="https://x.com" aria-label="Link to x.com">
+        </a> */}
+        {/* <a href="https://x.com" aria-label="Link to x.com">
           <Twitter />
-        </a>
+        </a> */}
         <a
           href="https://www.instagram.com/jasmine.dragon_?igsh=MXJzaWd5ZDFvYndqcQ=="
           aria-label="Link to instagram"
@@ -20,9 +20,9 @@ const SocialButtons = ({ children }) => {
         <a href="https://t.me/+hlP0cr1bDF5jYTBi" aria-label="Link to telegram">
           <Telegram />
         </a>
-        <a href="https://vk.com" aria-label="Link to VK">
+        {/* <a href="https://vk.com" aria-label="Link to VK">
           <Vk />
-        </a>
+        </a> */}
       </div>
     </div>
   );
