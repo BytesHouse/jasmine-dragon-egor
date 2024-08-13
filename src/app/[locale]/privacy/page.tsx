@@ -1,5 +1,14 @@
 import PrivacyBlock from "./components/PrivacyBlock/PrivacyBlock";
 import { privacyText } from "@/config/constants";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params }: any) {
+  const t = await getTranslations("Breadcrumbs");
+  return {
+    title: t("privacy"),
+  };
+}
+
 const Privacy = () => {
   return (
     <main>
