@@ -8,6 +8,7 @@ import { useLocale } from "next-intl";
 import Strelka from "../icons/Strelka/Strelka";
 
 const SwitchLanguage = () => {
+  const locales = ["ro", "ru"];
   const lang = useLocale();
   const [isShow, setIsShow] = useState(false);
   const [choice, setChoice] = useState(lang);
