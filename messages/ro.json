@@ -225,6 +225,7 @@
 
   "DescriptionBlock": {
     "addedToCartCount": "Produse adăugate: ",
+    "addedToFavorites": "Adăugat la favorite!",
     "heading": "Descriere: ",
     "description": "{name} este un ceai de înaltă calitate, care vă oferă o plăcere adevărată și confort. Acest ceai are o aromă unică și un gust bogat, care poate satisface chiar și cei mai pretențioși cunoscători. Fiecare ceașcă de {name} vă umple de energie și încălzește sufletul, creând o atmosferă de armonie și liniște. Permiteți-vă să vă bucurați de momentele cu {name} – ceaiul care inspiră.",
     "strength": "Tăria ceaiului: ",

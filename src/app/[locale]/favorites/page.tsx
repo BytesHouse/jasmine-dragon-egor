@@ -77,7 +77,7 @@ const FavoritesPage = () => {
         )}
 
         {/* <Likeitems /> */}
-        <h4 className="col-span-full mt-[100px] _491:text-h5">
+        <h4 className="col-span-full mt-[50px] _491:text-h5">
           {t("mightLike")}
         </h4>
         <CardsList

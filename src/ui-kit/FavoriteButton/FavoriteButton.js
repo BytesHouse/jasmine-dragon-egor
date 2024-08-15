@@ -1,6 +1,9 @@
-const FavoriteButton = ({ children }) => {
+const FavoriteButton = ({ children, onClick }) => {
   return (
-    <button className="flex items-center gap-[10px] border border-[var(--blue-light)] self-start px-[45px] py-[15px]">
+    <button
+      onClick={onClick}
+      className="flex items-center gap-[10px] border border-[var(--blue-light)] self-start px-[45px] py-[15px] transition hover:bg-green-light"
+    >
       <span>
         <svg width={24} height={24} viewBox="0 0 48 43" fill="none">
           <path

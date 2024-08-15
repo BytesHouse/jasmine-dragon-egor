@@ -8,12 +8,15 @@ import { useProductCart } from "@/components/Providers/ProductCartProvider";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast, ToastContainer, Bounce } from "react-toastify";
+import { addToFavorites } from "@/utils/favoritesTools";
+import "react-toastify/dist/ReactToastify.css";
 
 const DescriptionBlock = ({ product }) => {
-  const { name, subtype, description, strength, brewRes } = product;
+  const { name, subtype, description, strength, brewRes, id } = product;
   const { addToCart } = useProductCart();
   const [quantity, setQuantity] = useState(1);
   const t = useTranslations("DescriptionBlock");
+
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     addToCart(product, quantity);
@@ -25,6 +28,11 @@ const DescriptionBlock = ({ product }) => {
         {quantity}
       </p>
     );
+  };
+
+  const handleClickAddToFavorites = () => {
+    addToFavorites(id);
+    toast(<p className="p1">{t("addedToFavorites")}</p>);
   };
 
   return (
@@ -47,7 +55,9 @@ const DescriptionBlock = ({ product }) => {
           transition={Bounce}
         />
         <h1>«{name}»</h1>
-        <FavoriteButton>{t("addToFavorites")}</FavoriteButton>
+        <FavoriteButton onClick={handleClickAddToFavorites}>
+          {t("addToFavorites")}
+        </FavoriteButton>
         <strong className="">{t("heading")}</strong>
         <p>{description ? description : t("description", { name })}</p>
         <strong>{t("characteristics")}</strong>
