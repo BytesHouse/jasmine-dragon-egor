@@ -7,6 +7,7 @@ import { Cart } from "@/ui-kit/icons";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { toast, ToastContainer, Bounce } from "react-toastify";
 
 const DescriptionBlock = ({ product }) => {
   const { name, subtype, description, strength, brewRes } = product;
@@ -17,7 +18,13 @@ const DescriptionBlock = ({ product }) => {
     e.stopPropagation();
     addToCart(product, quantity);
     setQuantity(1);
-    alert(`${t("addedToCartCount")}${quantity}`);
+    // alert(`${t("addedToCartCount")}${quantity}`);
+    toast(
+      <p className="p1">
+        {t("addedToCartCount")}
+        {quantity}
+      </p>
+    );
   };
 
   return (
@@ -25,6 +32,20 @@ const DescriptionBlock = ({ product }) => {
       {/* <section className="col-span-full"> */}
       <ImagesComponent />
       <div className="col-span-5 w-full flex flex-col gap-[25px] _1024:col-span-full">
+        <ToastContainer
+          position="bottom-right"
+          // autoClose={false}
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          // theme="dark"
+          transition={Bounce}
+        />
         <h1>«{name}»</h1>
         <FavoriteButton>{t("addToFavorites")}</FavoriteButton>
         <strong className="">{t("heading")}</strong>

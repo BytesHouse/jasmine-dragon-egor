@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-// import tea from "../../../public/assets/Images/teabig.png";
+// import tea from "../../../public/assets/Images/teabig.webp";
 
 const ContactsBlock = ({ className = "" }) => {
   const t = useTranslations("Contacts");
@@ -12,7 +12,7 @@ const ContactsBlock = ({ className = "" }) => {
         <>
           <h4 className="col-span-full">{t("heading")}</h4>
           <Image
-            src="/assets/Images/teabig.png"
+            src="/assets/Images/teabig.webp"
             alt="tea"
             width={560}
             height={654}

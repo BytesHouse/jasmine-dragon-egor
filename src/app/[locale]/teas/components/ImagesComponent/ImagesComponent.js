@@ -9,11 +9,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
 
-const image1 = "/assets/Images/tea-mock.png";
-const image2 = "/assets/Images/cheainic.png";
-const image3 = "/assets/Images/cheaitar.png";
-const image4 = "/assets/Images/cupof2tea.png";
-const image5 = "/assets/Images/teabig.png";
+const image1 = "/assets/Images/tea-mock.webp";
+const image2 = "/assets/Images/cheainic.webp";
+const image3 = "/assets/Images/cheaitar.webp";
+const image4 = "/assets/Images/cupof2tea.webp";
+const image5 = "/assets/Images/teabig.webp";
 
 const ImagesComponent = () => {
   const swiperRef = useRef();

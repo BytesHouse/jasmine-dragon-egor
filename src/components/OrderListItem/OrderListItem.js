@@ -30,7 +30,7 @@ const OrderListItem = ({
       >
         <Image
           // className="svgchoise2"
-          src={"/assets/images/tea-mock.png"}
+          src={"/assets/Images/tea-mock.webp"}
           alt="teagreen"
           height={isSmall ? 187 : 250}
           width={isSmall ? 187 : 250}

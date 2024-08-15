@@ -6,7 +6,7 @@ import ChooseHeart from "../../ui-kit/icons/ChooseHeart/ChooseHeart";
 import { ChooseHeartMini } from "@/ui-kit/icons";
 // import useScreenWidth from "@/hooks/useScreenWidth";
 import { useLocale, useTranslations } from "next-intl";
-const image = "/assets/Images/tea-mock.png";
+const image = "/assets/Images/tea-mock.webp";
 import Link from "next/link";
 import { useState } from "react";
 import { addToFavorites, removeFromFavorites } from "@/utils/favoritesTools";
@@ -20,7 +20,7 @@ const ItemCard = ({ item, onClick, isFavorite }) => {
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     onClick(item);
-    alert(t("addedToCart"));
+    // alert(t("addedToCart"));
   };
 
   const favRemove = () => {

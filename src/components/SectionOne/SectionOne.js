@@ -1,5 +1,5 @@
-// import cheainic from "../../../public/assets/Images/cheainic.png";
-// import cheaitar from "../../../public/assets/Images/cheaitar.png";
+// import cheainic from "../../../public/assets/Images/cheainic.webp";
+// import cheaitar from "../../../public/assets/Images/cheaitar.webp";
 // import table from "../../../public/assets/Images/table.png";
 // import cuptea from "../../../public/assets/Images/2cuptea.png";
 
@@ -11,14 +11,14 @@ const SectionOne = () => {
   return (
     <section className="col-span-full container relative">
       <Image
-        src="/assets/Images/cheainic.png"
+        src="/assets/Images/cheainic.webp"
         alt="Image 1"
         width={462}
         height={462}
         className="col-start-2 col-end-6 h-auto _1600:col-start-1 _1024:col-span-half"
       />
       <Image
-        src="/assets/Images/cheaitar.png"
+        src="/assets/Images/cheaitar.webp"
         alt="Image 2"
         width={450}
         height={300}

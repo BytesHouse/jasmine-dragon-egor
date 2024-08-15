@@ -113,6 +113,8 @@
   --column: calc(
     (var(--max-w) - var(--gutter) * (var(--cols) - 1)) / var(--cols)
   );
+
+  --toastify-color-progress-light: var(--blue-light) !important;
 }
 
 main,
@@ -196,6 +198,14 @@ footer {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.Toastify__toast {
+  background-color: var(--green-light) !important;
+  color: white !important;
+}
+.Toastify__close-button > svg {
+  fill: white !important;
 }
 
 .line {

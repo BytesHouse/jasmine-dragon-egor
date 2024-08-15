@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Cart, ChooseHeart } from "@/ui-kit/icons";
-const image = "/assets/Images/tea-mock.png";
+const image = "/assets/Images/tea-mock.webp";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { addToFavorites, removeFromFavorites } from "@/utils/favoritesTools";
@@ -15,7 +15,7 @@ const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     onClick(item);
-    alert(t("addedToCart"));
+    // alert(t("addedToCart"));
   };
 
   const favRemove = () => {
