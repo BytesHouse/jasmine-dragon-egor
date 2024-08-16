@@ -220,7 +220,8 @@
   "Cart": {
     "heading": "Корзина",
     "emptyCart": "Вы ещё ничего не добавили в корзину",
-    "menuButton": "Меню"
+    "menuButton": "Меню",
+    "deleteFromCart": "Убрать из корзины"
   },
   "DescriptionBlock": {
     "addedToCartCount": "Добавлено товаров: ",

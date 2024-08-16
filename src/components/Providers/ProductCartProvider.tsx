@@ -23,7 +23,7 @@ export const ProductCartProvider = ({
   }, [productsList]);
   // CRUD
 
-  const addToCart = (product: any, quantity: any) => {
+  const addToCart = (product: any, quantity: any = 1) => {
     const newList = productsList.map((item) =>
       item.id === Number(product.id)
         ? { ...item, quantity: item.quantity + quantity }

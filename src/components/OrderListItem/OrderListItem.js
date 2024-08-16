@@ -2,6 +2,7 @@ import { Cancelation, ChooseHeart } from "@/ui-kit/icons";
 import Counter from "@/ui-kit/Counter/Counter";
 import Image from "next/image";
 import ButtonCartDelete from "@/ui-kit/ButtonCartDelete/ButtonCartDelete";
+import { useTranslations } from "next-intl";
 
 const OrderListItem = ({
   isSmall = false,
@@ -10,11 +11,12 @@ const OrderListItem = ({
   increment,
   decrement,
 }) => {
-  const { name, price, description, id, quantity } = item;
+  const { name, price, description, id, quantity, discount } = item;
   const handleDeleteProd = (e) => {
     // e.stopPropagation();
     deleteProd(id);
   };
+  const t = useTranslations("Cart");
   return (
     <div
       className={`flex  ${
@@ -57,16 +59,28 @@ const OrderListItem = ({
             decrement={() => decrement(id)}
           />
           <div className="flex flex-row gap-[15px] items-center not-italic">
-            <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-h5 _491:text-p1">
-              {price}
-            </span>
-            <span className="discount _768:text-p1 _491:text-p3">{price}</span>
+            {discount == 0 ? (
+              <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-h5 _491:text-p1">
+                {price}
+              </span>
+            ) : (
+              <>
+                <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-h5 _491:text-p1">
+                  {price - discount}
+                </span>
+                <span className="discount _768:text-p1 _491:text-p3">
+                  {price}
+                </span>
+              </>
+            )}
           </div>
         </div>
         <ButtonCartDelete
           onClick={handleDeleteProd}
           className="hidden _768:flex"
-        />
+        >
+          {t("deleteFromCart")}
+        </ButtonCartDelete>
       </div>
 
       <div className="flex-grow flex justify-end _768:hidden">

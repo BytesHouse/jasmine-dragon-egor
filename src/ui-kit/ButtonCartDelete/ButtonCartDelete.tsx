@@ -1,7 +1,11 @@
+import { ReactNode } from "react";
+
 const ButtonCartDelete = ({
+  children,
   className,
   onClick,
 }: {
+  children: ReactNode;
   className: string;
   onClick: () => void;
 }) => {
@@ -36,7 +40,7 @@ const ButtonCartDelete = ({
           strokeLinejoin="round"
         />
       </svg>
-      Убрать из корзины
+      {children}
     </button>
   );
 };

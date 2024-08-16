@@ -220,7 +220,8 @@
   "Cart": {
     "heading": "Coș",
     "emptyCart": "Nu ați adăugat încă nimic la coș",
-    "menuButton": "Meniu"
+    "menuButton": "Meniu",
+    "deleteFromCart": "Scoateți din coș"
   },
 
   "DescriptionBlock": {
