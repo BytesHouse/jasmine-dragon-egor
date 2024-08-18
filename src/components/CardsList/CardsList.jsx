@@ -26,6 +26,7 @@ const CardsList = ({
   const { addToCart } = useProductCart();
   const handleAddToCart = (item) => {
     addToCart(item);
+    // alert("всё рабоатет");
     toast(<AlertItem name={item.name} text={t("addedToCart")} />);
   };
   return (
@@ -54,15 +55,14 @@ const CardsList = ({
       </ul>
       <ToastContainer
         position="bottom-right"
+        closeButton={false}
         // autoClose={false}
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        // pauseOnFocusLoss
-        draggable
-        pauseOnHover
+        autoClose={2500}
+        // hideProgressBar={false}
+        newestOnTop={true}
+        pauseOnFocusLoss={false}
+        // draggable
+        pauseOnHover={false}
         // theme="light"
         transition={Bounce}
       />

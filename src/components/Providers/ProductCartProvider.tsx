@@ -17,9 +17,9 @@ export const ProductCartProvider = ({
     }
   }, []);
   useEffect(() => {
-    if (productsList?.length > 0) {
-      localStorage.setItem("jd-cart", JSON.stringify(productsList));
-    }
+    // if (productsList?.length > 0) {
+    localStorage.setItem("jd-cart", JSON.stringify(productsList));
+    // }
   }, [productsList]);
   // CRUD
 
@@ -42,9 +42,11 @@ export const ProductCartProvider = ({
   };
 
   const removeFromCart = (productId: any) => {
-    productsList.length != 1
-      ? setProducts(productsList.filter((item: any) => item.id !== productId))
-      : setProducts([]);
+    // productsList.length > 0
+    // ?
+    setProducts(productsList.filter((item: any) => item.id !== productId));
+    // : setProducts([]);
+    // console.log(productsList);
   };
 
   const increment = (productId: number) => {

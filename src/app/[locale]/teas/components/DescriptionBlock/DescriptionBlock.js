@@ -42,16 +42,15 @@ const DescriptionBlock = ({ product }) => {
       <div className="col-span-5 w-full flex flex-col gap-[25px] _1024:col-span-full">
         <ToastContainer
           position="bottom-right"
+          closeButton={false}
           // autoClose={false}
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick={false}
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          // theme="dark"
+          autoClose={2500}
+          // hideProgressBar={false}
+          newestOnTop={true}
+          pauseOnFocusLoss={false}
+          // draggable
+          pauseOnHover={false}
+          // theme="light"
           transition={Bounce}
         />
         <h1>«{name}»</h1>
