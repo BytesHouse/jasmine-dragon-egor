@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
-  const { email, fullName, message, phone, orderItems, lang, address } =
+  const { email, fullName, message, phone, orderItems, lang, address, sector } =
     await request.json();
 
   const transport = nodemailer.createTransport({
@@ -31,7 +31,10 @@ export async function POST(request: NextRequest) {
     <p>Город: Кишинёв</p>
     <hr/>
         <h3>Заказчик: <i>${props.fullName}</i></h3>
-        <h3>Адрес доставки: <i>${props.address}</i></h3>
+        <h3>Адрес доставки: 
+          <b>${props.sector}</b> 
+          <i>${props.address}</i>
+        </h3>
     <hr/>
     <h3 style="display: inline">Phone number:</h3> <a href="tel:${
       props.phone
@@ -59,7 +62,16 @@ export async function POST(request: NextRequest) {
     to: process.env.MY_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${fullName} ${email ? `(${email})` : ""}`,
-    html: func({ fullName, phone, email, message, orderItems, lang, address }),
+    html: func({
+      fullName,
+      phone,
+      email,
+      message,
+      orderItems,
+      lang,
+      address,
+      sector,
+    }),
     // text: `<b>${message}</b>`,
   };
 

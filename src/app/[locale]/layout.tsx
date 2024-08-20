@@ -27,7 +27,7 @@ const playfairDisplay = Playfair_Display({
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin", "cyrillic"],
-  style: ["normal", "italic"],
+  // style: ["normal", "italic"],
   variable: "--font-nunito-sans",
   weight: ["400", "500", "600", "700"], // Можно настроить нужные веса
   display: "swap",

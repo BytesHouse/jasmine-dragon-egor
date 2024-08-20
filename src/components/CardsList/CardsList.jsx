@@ -4,7 +4,7 @@ import { useProductCart } from "@/components/Providers/ProductCartProvider";
 import { getFavoritesList } from "@/utils/favoritesTools";
 import { useTranslations } from "next-intl";
 import { ToastContainer, toast, Bounce } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/ReactToastify.css";
 
 const AlertItem = ({ name, text }) => {
   return (

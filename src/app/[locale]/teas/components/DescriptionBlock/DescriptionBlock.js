@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast, ToastContainer, Bounce } from "react-toastify";
 import { addToFavorites } from "@/utils/favoritesTools";
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/ReactToastify.css";
 
 const DescriptionBlock = ({ product }) => {
   const { name, subtype, description, strength, brewRes, id } = product;

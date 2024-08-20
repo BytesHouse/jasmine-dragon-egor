@@ -258,7 +258,8 @@
     "country": "Țară/Regiune",
     "city": "Oraș",
     "Moldova": "Moldova",
-    "Chisinau": "Chișinău"
+    "Chisinau": "Chișinău",
+    "street": "Strada..."
   },
   "FAQ": {
     "faq_text_0": "Întrebări frecvente",

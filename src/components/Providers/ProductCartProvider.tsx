@@ -12,15 +12,19 @@ export const ProductCartProvider = ({
   const [productsList, setProducts] = useState<any[]>([]);
   useEffect(() => {
     const storedCart = localStorage.getItem("jd-cart");
+    // console.log(storedCart);
     if (storedCart?.length! > 0) {
       setProducts(JSON.parse(storedCart!.toString()));
     }
   }, []);
   useEffect(() => {
-    // if (productsList?.length > 0) {
-    localStorage.setItem("jd-cart", JSON.stringify(productsList));
-    // }
+    if (productsList.length > 0) {
+      localStorage.setItem("jd-cart", JSON.stringify(productsList));
+    } else {
+      localStorage.removeItem("jd-cart");
+    }
   }, [productsList]);
+
   // CRUD
 
   const addToCart = (product: any, quantity: any = 1) => {
@@ -42,11 +46,8 @@ export const ProductCartProvider = ({
   };
 
   const removeFromCart = (productId: any) => {
-    // productsList.length > 0
-    // ?
-    setProducts(productsList.filter((item: any) => item.id !== productId));
-    // : setProducts([]);
-    // console.log(productsList);
+    const arr = productsList.filter((item: any) => item.id !== productId);
+    setProducts(arr);
   };
 
   const increment = (productId: number) => {
@@ -66,10 +67,11 @@ export const ProductCartProvider = ({
   };
 
   let productsPrice = productsList.reduce(
-    (acc: number, curr: any) => acc + Number(curr.price * curr.quantity),
+    (acc: number, curr: any) =>
+      acc + Number(curr.price * curr.quantity - curr.discount),
     0
   );
-  let deliveryPrice = 0; //temp value
+  const [deliveryPrice, setDeliveryPrice] = useState(50);
   let totalPrice = productsPrice + deliveryPrice;
 
   // TODO:
@@ -90,6 +92,7 @@ export const ProductCartProvider = ({
         totalPrice,
         increment,
         decrement,
+        setDeliveryPrice,
       }}
     >
       {children}

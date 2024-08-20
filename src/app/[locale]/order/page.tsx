@@ -12,17 +12,34 @@ import { getOrderNumber } from "@/utils/getOrderNumber";
 import { FormDataEmail } from "@/types/formDataEmail.type";
 import { Status } from "@/enums/status.enum";
 
-const Order = () => {
+import { addresses } from "@/config/constants";
+import { useState } from "react";
+import { exit } from "process";
+
+const OrderPage = () => {
   const {
     productsList,
     removeFromCart,
     productsPrice,
     deliveryPrice,
+    setDeliveryPrice,
     totalPrice,
   } = useProductCart();
   const { register, handleSubmit } = useForm<FormDataEmail>();
   const lang = useLocale();
   const t = useTranslations("OrderPage");
+
+  const handleChangeAddress = (e: any) => {
+    const adr = e.target.value;
+    // console.log(adr);
+    for (let i = 0; i < addresses.length; i++) {
+      if (addresses[i].sector === adr) {
+        setDeliveryPrice(addresses[i].value);
+        // console.log(addresses[i].value);
+        break;
+      }
+    }
+  };
 
   function onSubmit(data: FormDataEmail) {
     // console.log(data.orderItems);
@@ -34,6 +51,7 @@ const Order = () => {
     data.orderNumber = getOrderNumber(data.fullName);
     data.status = Status.PendingAcception; // 'penging acception' | 'penging' | 'in progress' | 'completed' | 'cancel customer' | 'cancel jasmine'
     sendEmail(data);
+    // console.log(data);
   }
 
   return (
@@ -113,10 +131,22 @@ const Order = () => {
             </div>
             <label className="text-p1 font-semibold text-blue-light _491:text-p2">
               {t("address")}
+              <select
+                {...register("sector", { required: true })}
+                onChange={handleChangeAddress}
+                className="w-full block mt-[15px] p-[15px] bg-green-light border border-blue-light focus:bg-green-bg"
+              >
+                {addresses.map((address, index) => (
+                  <option key={index} value={address.sector}>
+                    {address.sector} {address.value} Lei
+                  </option>
+                ))}
+              </select>
               <input
                 {...register("address", { required: true })}
                 type="text"
                 className="w-full block mt-[15px] p-[15px] bg-[var(--green-light)] border border-blue-light focus:bg-green-bg focus:outline-none"
+                placeholder={t("street")}
               />
             </label>
             {/* <label className="text-p1 font-semibold text-blue-light _491:text-p2">
@@ -153,12 +183,12 @@ const Order = () => {
         </div>
         <input
           {...register("orderItems", { required: true })}
-          className="hidden "
+          className="hidden"
           value={JSON.stringify(productsList)}
         />
         <input
           {...register("lang", { required: true })}
-          className="hidden "
+          className="hidden"
           value={lang}
         />
         <input
@@ -186,4 +216,4 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default OrderPage;

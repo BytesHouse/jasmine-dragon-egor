@@ -209,6 +209,27 @@ export const mock3 = [
     sortFunc: (a, b) => Number(b.price) - Number(a.price),
   },
 ];
+
+export const addresses = [
+  { sector: "Râșcani", value: 50 },
+  { sector: "Ciocana", value: 55 },
+  { sector: "Centru", value: 45 },
+  { sector: "Buiucani", value: 50 },
+  { sector: "Sculeanca", value: 50 },
+  { sector: "Botanica", value: 50 },
+  { sector: "Telecentru", value: 50 },
+  { sector: "Codru", value: 60 },
+  { sector: "Schinoasa", value: 55 },
+  { sector: "Poșta Veche", value: 50 },
+  { sector: "Aeroport", value: 65 },
+  { sector: "Colonița", value: 75 },
+  { sector: "Dumbrava", value: 60 },
+  { sector: "Cricova", value: 75 },
+  { sector: "Tohatin", value: 75 },
+  { sector: "Durlești", value: 55 },
+  { sector: "Stăuceni", value: 75 },
+  { sector: "Malina Mică", value: 50 },
+];
 // export const mock5 = [
 //   { id: 1, title: "Ру", value: `Ру` },
 //   { id: 2, title: "Ro", value: `Ro` },

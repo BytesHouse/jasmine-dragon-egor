@@ -8,6 +8,7 @@ export type FormDataEmail = {
   country: string;
   city: string;
   address: string;
+  sector: string;
   // index: string;
   email: string;
   message: string;
