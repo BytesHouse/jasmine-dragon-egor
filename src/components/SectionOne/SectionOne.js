@@ -5,6 +5,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import AnimatedText from "../AnimatedText/AnimatedText";
 
 const SectionOne = () => {
   const t = useTranslations();
@@ -25,9 +26,10 @@ const SectionOne = () => {
         className="mt-[331px] col-start-8 col-end-12 h-auto _1600:-col-end-1 place-self-end _1240:mt-[221px] _1024:col-span-half _1024:w-[295px] _768:mt-[100px]"
       />
       <div className="col-span-full container !p-0 relative">
-        <p className="col-span-full text-[91px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3 _768:text-h4">
+        {/* <p className="col-span-full text-[91px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3 _768:text-h4">
           {t("SectionOneText")}
-        </p>
+        </p> */}
+        <AnimatedText>{t("SectionOneText")}</AnimatedText>
         <Image
           src="/assets/Images/2cuptea.png"
           alt="2cup"

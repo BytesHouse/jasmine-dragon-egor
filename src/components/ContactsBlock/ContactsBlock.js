@@ -46,10 +46,10 @@ const ContactsBlock = ({ className = "" }) => {
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">
           <h3 className="_768:text-h5">{t("phoneNumbers")}</h3>
           <a
-            href="tel:022444444"
+            href="tel:060677330"
             className="text-h5 font-bold text-blue-light font-Nunito-Sans leading-[120%] hover:underline _768:text-p1"
           >
-            022-44-44-44
+            0 (60) 677330
           </a>
           <a
             href="tel:069555555"
