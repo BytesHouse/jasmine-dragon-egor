@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { useTranslations } from "next-intl";
 
+import { feedbacks } from "@/config/constants";
+
 // Import Swiper styles
 // import "swiper/css";
 // import "swiper/css/navigation";
@@ -33,68 +35,23 @@ const Feedbacks = () => {
         // initialSlide={1}
         className="w-full col-span-full !overflow-visible"
       >
-        <SwiperSlide className="feedback">
-          <Image
-            className="h-[150px] _768:h-[100px] w-auto"
-            src="/assets/Images/avatar.png"
-            alt="avatar"
-            width={150}
-            height={150}
-          />
-          <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white _768:text-p1">Анатолий Кирияк</h4>
-            <p className="p1 text-white _768:p3">
-              Отличная чайная со своей клёвой атмосферой, чайчиками и конечно же
-              баристой, который разбирается во всех нюасмах
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="feedback">
-          <Image
-            className="h-[150px] _768:h-[100px] w-auto"
-            src="/assets/Images/avatar.png"
-            alt="avatar"
-            width={150}
-            height={150}
-          />
-          <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white _768:text-p1">Агнесса Погасян</h4>
-            <p className="p1 text-white _768:p3">
-              Замечательный выбор чайной для отдыха и чилла
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="feedback">
-          <Image
-            className="h-[150px] _768:h-[100px] w-auto"
-            src="/assets/Images/avatar.png"
-            alt="avatar"
-            width={150}
-            height={150}
-          />
-          <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white _768:text-p1">Анатолий Кирияк</h4>
-            <p className="p1 text-white _768:p3">
-              Отличная чайная со своей клёвой атмосферой, чайчиками и конечно же
-              баристой, который разбирается во всех нюасмах
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="feedback">
-          <Image
-            className="h-[150px] _768:h-[100px] w-auto"
-            src="/assets/Images/avatar.png"
-            alt="avatar"
-            width={150}
-            height={150}
-          />
-          <div className="flex flex-col gap-[25px]">
-            <h4 className="text-white _768:text-p1">Агнесса Погасян</h4>
-            <p className="p1 text-white _768:p3">
-              Замечательный выбор чайной для отдыха и чилла
-            </p>
-          </div>
-        </SwiperSlide>
+        {feedbacks.map((item) => {
+          return (
+            <SwiperSlide className="feedback">
+              <Image
+                className="h-[150px] _768:h-[100px] w-auto"
+                src={item.avatar}
+                alt="avatar"
+                width={150}
+                height={150}
+              />
+              <div className="flex flex-col gap-[25px]">
+                <h4 className="text-white _768:text-p1">{item.fullName}</h4>
+                <p className="p1 text-white _768:p3">{item.text}</p>
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <div className="flex gap-[50px] justify-center col-span-full _768:gap-[15px]">
         <button
