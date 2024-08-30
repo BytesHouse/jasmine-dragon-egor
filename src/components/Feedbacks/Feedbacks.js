@@ -35,9 +35,9 @@ const Feedbacks = () => {
         // initialSlide={1}
         className="w-full col-span-full !overflow-visible"
       >
-        {feedbacks.map((item) => {
+        {feedbacks.map((item, index) => {
           return (
-            <SwiperSlide className="feedback">
+            <SwiperSlide key={index} className="feedback">
               <Image
                 className="h-[150px] _768:h-[100px] w-auto"
                 src={item.avatar}

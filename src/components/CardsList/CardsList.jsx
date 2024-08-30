@@ -38,6 +38,7 @@ const CardsList = ({
         {isHorizontal
           ? cardsData?.map((item, index) => (
               <ItemCard
+                index={index}
                 key={item.id}
                 item={item}
                 isFavorite={getFavoritesList().includes(item.id)}

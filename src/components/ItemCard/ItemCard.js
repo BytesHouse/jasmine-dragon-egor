@@ -11,7 +11,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { addToFavorites, removeFromFavorites } from "@/utils/favoritesTools";
 
-const ItemCard = ({ item, onClick, isFavorite }) => {
+import { motion } from "framer-motion";
+
+const ItemCard = ({ item, onClick, isFavorite, index }) => {
   const [isHeart, setIsHeart] = useState(isFavorite);
   const t = useTranslations("Menu");
   // const width = useScreenWidth();
@@ -34,7 +36,16 @@ const ItemCard = ({ item, onClick, isFavorite }) => {
   };
 
   return (
-    <li className="col-span-third _1240:col-span-half p-[25px] gap-8 border flex flex-col border-green-bg transition hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px] _768:border-blue relative">
+    <motion.li
+      initial={{ y: 300, opacity: 0 }}
+      viewport={{ once: true }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5 + index * 0.05, ease: "easeInOut" },
+      }}
+      className="col-span-third _1240:col-span-half p-[25px] gap-8 border flex flex-col border-green-bg hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px] _768:border-blue relative"
+    >
       <ChooseHeart
         // isMini={width < 768}
         onClick={isHeart ? favRemove : favAdd}
@@ -83,7 +94,7 @@ const ItemCard = ({ item, onClick, isFavorite }) => {
           {t("buttonToCart")}
         </button>
       </div>
-    </li>
+    </motion.li>
   );
 };
 
