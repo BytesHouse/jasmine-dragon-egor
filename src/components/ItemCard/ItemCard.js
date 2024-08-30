@@ -37,21 +37,21 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
 
   return (
     <motion.li
-      initial={{ y: 300, opacity: 0 }}
+      initial={{ y: 200, opacity: 0 }}
       viewport={{ once: true }}
       whileInView={{
         opacity: 1,
         y: 0,
-        transition: { duration: 0.5 + index * 0.05, ease: "easeInOut" },
+        transition: { duration: 0.5 + index * 0.05, ease: "anticipate" },
       }}
-      className="col-span-third _1240:col-span-half p-[25px] gap-8 border flex flex-col border-green-bg hover:bg-green-light hover:border-blue _768:gap-4 _768:p-[10px] _768:border-blue relative"
+      className="col-span-third _1240:col-span-half relative flex flex-col gap-8 border border-green-bg p-[25px] hover:border-blue hover:bg-green-light _768:gap-4 _768:border-blue _768:p-[10px]"
     >
       <ChooseHeart
         // isMini={width < 768}
         onClick={isHeart ? favRemove : favAdd}
         className={`${
           isHeart ? "fill-blue-light" : ""
-        } absolute top-[15px] right-[15px] hover:fill-blue-light _768:top-[15px] _768:right-[5px] z-10 cursor-pointer`}
+        } absolute right-[15px] top-[15px] z-10 cursor-pointer hover:fill-blue-light _768:right-[5px] _768:top-[15px]`}
       />
       <Link
         href={`/${lang}/teas/${id}`}
@@ -66,20 +66,20 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
             className="h-auto"
           />
         </div>
-        <h4 className="_768:text-h5 _491:text-p1 text-ellipsis line-clamp-3">
+        <h4 className="line-clamp-3 text-ellipsis _768:text-h5 _491:text-p1">
           {name}
         </h4>
         {description && <p className="p1 _768:p2 _491:p3">{description}</p>}
       </Link>
-      <div className="flex-grow w-full flex flex-col h-max justify-end gap-[15px]">
-        <div className="flex items-center w-full gap-[15px]">
+      <div className="flex h-max w-full flex-grow flex-col justify-end gap-[15px]">
+        <div className="flex w-full items-center gap-[15px]">
           {discount == 0 ? (
-            <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-[20px] _491:text-p2">
+            <span className="font-Nunito-Sans text-h5 font-semibold text-blue-light _768:text-[20px] _491:text-p2">
               {price}
             </span>
           ) : (
             <>
-              <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-[20px] _491:text-p2">
+              <span className="font-Nunito-Sans text-h5 font-semibold text-blue-light _768:text-[20px] _491:text-p2">
                 {price - discount}
               </span>
               <span className="discount _768:text-p1 _491:text-[10px] _491:font-normal">

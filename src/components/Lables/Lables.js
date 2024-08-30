@@ -4,7 +4,7 @@ import { labels } from "@/config/constants";
 
 const Lables = () => {
   return (
-    <div className="-ml-[20px] mt-[100px] overflow-hidden">
+    <div className="-ml-[20px] mt-[100px]">
       <div className="my-[100px] w-max _768:my-[50px] animate-lables">
         <div className="flex gap-[50px]">
           {labels.map((item, index) => {

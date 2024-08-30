@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AnimatedText = ({ children }: { children: string }) => {
   return (
-    <p className="col-span-full text-[82px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3 _768:text-h4">
+    <p className="col-span-full text-[82px] font-Playfair-Display italic font-semibold text-blue _1240:text-h3 _768:text-h4 _375:text-[34px]">
       {children.split("").map((letter, index) => {
         return (
           <motion.span
