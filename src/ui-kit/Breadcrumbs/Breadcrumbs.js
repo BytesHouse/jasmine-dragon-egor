@@ -23,18 +23,17 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
               <div className="flex gap-[25px] _768:gap-[10px]" key={index}>
                 <Link
                   href={path}
-                  className={`p1 font-semibold ${
-                    index == breadcrumbs.length - 1
+                  className={`p1 font-semibold ${index == breadcrumbs.length - 1
                       ? "text-blue-light truncate"
                       : "text-blue"
-                  } hover:text-blue-light transition`}
+                    } hover:text-blue-light transition`}
                 >
                   {index == breadcrumbs.length - 1
                     ? isTeas
-                      ? `${findProductById(Number(index)).name}`
+                      ? `${findProductById(Number(index))?.name}`
                       : isOrder & (item != "profile")
-                      ? `${t("orderNumber")}${decodeURIComponent(item)}`
-                      : t(item)
+                        ? `${t("orderNumber")}${decodeURIComponent(item)}`
+                        : t(item)
                     : t(item)}
                 </Link>
                 {index != breadcrumbs.length - 1 && (
