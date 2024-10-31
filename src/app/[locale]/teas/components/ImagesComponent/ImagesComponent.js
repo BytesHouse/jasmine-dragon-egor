@@ -15,7 +15,7 @@ const image3 = "/assets/Images/cheaitar.webp";
 const image4 = "/assets/Images/cupof2tea.webp";
 const image5 = "/assets/Images/teabig.webp";
 
-const ImagesComponent = () => {
+const ImagesComponent = ({ product }) => {
   const swiperRef = useRef();
   return (
     <>
@@ -23,14 +23,14 @@ const ImagesComponent = () => {
         <div className="grid grid-cols-2 w-full gap-[25px] _1024:hidden">
           <Image
             className=""
-            src={image1}
+            src={product.imageUrl[0] || image1}
             alt="img-1"
             width={563}
             height={563}
           />
           <Image
             className=""
-            src={image1}
+            src={product.imageUrl[2] || image2}
             alt="img-2"
             width={563}
             height={563}
@@ -39,21 +39,21 @@ const ImagesComponent = () => {
         <div className="grid grid-cols-3 gap-[25px] _1024:hidden">
           <Image
             className="aspect-square object-cover"
-            src={image3}
+            src={product.imageUrl[3] || image3}
             alt="img-3"
             height={256}
             width={256}
           />
           <Image
             className="aspect-square object-cover"
-            src={image4}
+            src={product.imageUrl[4] || image4}
             alt="img-4"
             height={256}
             width={256}
           />
           <Image
             className="aspect-square object-cover"
-            src={image5}
+            src={product.imageUrl[5] || image5}
             alt="img-5"
             height={256}
             width={256}
@@ -82,7 +82,7 @@ const ImagesComponent = () => {
           <SwiperSlide className="!w-max">
             <Image
               className="_1024:w-64"
-              src={image1}
+              src={product.imageUrl[0] || image1}
               alt="img-1"
               width={563}
               height={563}
@@ -92,7 +92,7 @@ const ImagesComponent = () => {
           <SwiperSlide className="!w-max">
             <Image
               className="_1024:w-64"
-              src={image1}
+              src={product.imageUrl[1] || image2}
               alt="img-2"
               width={563}
               height={563}
@@ -102,7 +102,7 @@ const ImagesComponent = () => {
           <SwiperSlide className="!w-max">
             <Image
               className="aspect-square object-cover"
-              src={image3}
+              src={product.imageUrl[2] || image3}
               alt="img-3"
               height={256}
               width={256}
@@ -112,7 +112,7 @@ const ImagesComponent = () => {
           <SwiperSlide className="!w-max">
             <Image
               className="aspect-square object-cover"
-              src={image4}
+              src={product.imageUrl[3] || image4}
               alt="img-4"
               height={256}
               width={256}
@@ -122,7 +122,7 @@ const ImagesComponent = () => {
           <SwiperSlide className="!w-max">
             <Image
               className="aspect-square object-cover"
-              src={image5}
+              src={product.imageUrl[4] || image5}
               alt="img-5"
               height={256}
               width={256}

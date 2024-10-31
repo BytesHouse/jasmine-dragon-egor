@@ -37,22 +37,22 @@ const CardsList = ({
       >
         {isHorizontal
           ? cardsData?.map((item, index) => (
-              <ItemCard
-                index={index}
-                key={item.id}
-                item={item}
-                isFavorite={getFavoritesList().includes(item.id)}
-                onClick={handleAddToCart}
-              />
-            ))
+            <ItemCard
+              index={index}
+              key={item.id}
+              item={item}
+              isFavorite={getFavoritesList().includes(item.id)}
+              onClick={handleAddToCart}
+            />
+          ))
           : cardsData?.map((item, index) => (
-              <ItemCardHorizontal
-                key={item.id}
-                isFavorite={getFavoritesList().includes(item.id)}
-                item={item}
-                onClick={handleAddToCart}
-              />
-            ))}
+            <ItemCardHorizontal
+              key={item.id}
+              isFavorite={getFavoritesList().includes(item.id)}
+              item={item}
+              onClick={handleAddToCart}
+            />
+          ))}
       </ul>
       <ToastContainer
         position="bottom-right"

@@ -39,7 +39,7 @@ const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
       >
         <div className="relative max-w-[250px] w-full _1240:max-w-[294px] _768:!flex-1">
           <Image
-            src={image}
+            src={item.imageUrl.length ? item.imageUrl[0] : image}
             alt="teagreen"
             width={250}
             height={250}
@@ -48,9 +48,8 @@ const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
           <ChooseHeart
             // isMini={width < 768}
             onClick={isHeart ? favRemove : favAdd}
-            className={`${
-              isHeart ? "fill-blue-light" : ""
-            } absolute right-[0px] top-[2px] hover:fill-blue-light z-10 cursor-pointer`}
+            className={`${isHeart ? "fill-blue-light" : ""
+              } absolute right-[0px] top-[2px] hover:fill-blue-light z-10 cursor-pointer`}
           />
         </div>
         <div className="flex flex-col gap-[25px] max-w-[463px] _768:!flex-1 _768:gap-4">

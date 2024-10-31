@@ -38,7 +38,7 @@ const DescriptionBlock = ({ product }) => {
   return (
     <>
       {/* <section className="col-span-full"> */}
-      <ImagesComponent />
+      <ImagesComponent product={product} />
       <div className="col-span-5 w-full flex flex-col gap-[25px] _1024:col-span-full">
         <ToastContainer
           position="bottom-right"
