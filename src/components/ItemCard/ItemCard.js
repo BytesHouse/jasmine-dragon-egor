@@ -34,7 +34,6 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
     addToFavorites(item.id);
     setIsHeart(true);
   };
-
   return (
     <motion.li
       initial={{ y: 200, opacity: 0 }}
@@ -49,9 +48,8 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
       <ChooseHeart
         // isMini={width < 768}
         onClick={isHeart ? favRemove : favAdd}
-        className={`${
-          isHeart ? "fill-blue-light" : ""
-        } absolute right-[15px] top-[15px] z-10 cursor-pointer hover:fill-blue-light _768:right-[5px] _768:top-[15px]`}
+        className={`${isHeart ? "fill-blue-light" : ""
+          } absolute right-[15px] top-[15px] z-10 cursor-pointer hover:fill-blue-light _768:right-[5px] _768:top-[15px]`}
       />
       <Link
         href={`/${lang}/teas/${id}`}
@@ -59,7 +57,7 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
       >
         <div className="relative">
           <Image
-            src={image}
+            src={item.imageUrl.length ? item.imageUrl[0] : image}
             alt="teagreen"
             width={413}
             height={413}
