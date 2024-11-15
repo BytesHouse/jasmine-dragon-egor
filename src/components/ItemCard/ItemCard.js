@@ -18,7 +18,7 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
   const t = useTranslations("Menu");
   // const width = useScreenWidth();
   const lang = useLocale();
-  const { name, description, price, id, discount } = item;
+  const { name, description, price, id, discount, nameRo, descriptionRo } = item;
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     onClick(item);
@@ -65,15 +65,15 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
           />
         </div>
         <h4 className="line-clamp-3 text-ellipsis _768:text-h5 _491:text-p1">
-          {name}
+          {lang === 'ru' ? name : nameRo}
         </h4>
-        {description && <p className="p1 _768:p2 _491:p3">{description}</p>}
+        {description && <p className="p1 _768:p2 _491:p3">{lang === 'ru' ? description : descriptionRo}</p>}
       </Link>
       <div className="flex h-max w-full flex-grow flex-col justify-end gap-[15px]">
         <div className="flex w-full items-center gap-[15px]">
           {discount == 0 ? (
             <span className="font-Nunito-Sans text-h5 font-semibold text-blue-light _768:text-[20px] _491:text-p2">
-              {price}
+              {price} Lei.
             </span>
           ) : (
             <>
@@ -81,7 +81,7 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
                 {price - discount}
               </span>
               <span className="discount _768:text-p1 _491:text-[10px] _491:font-normal">
-                {price}
+                 Lei
               </span>
             </>
           )}

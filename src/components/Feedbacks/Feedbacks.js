@@ -17,6 +17,7 @@ import { feedbacks } from "@/config/constants";
 const Feedbacks = () => {
   const t = useTranslations("Feedbacks");
   const swiperRef = useRef();
+  
   return (
     <div className="container">
       <h5 className="col-span-full">{t("heading")}</h5>

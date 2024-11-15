@@ -19,7 +19,7 @@ export const OrderItemTable = ({ orderItem }: { orderItem: any }) => {
         key={Math.random()}
         className="p-[20px] flex items-center border-r border-b border-blue-light"
       >
-        {price}
+         Lei
       </td>
       <td
         key={Math.random()}

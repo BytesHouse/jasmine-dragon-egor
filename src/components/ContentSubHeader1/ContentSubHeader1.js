@@ -61,12 +61,12 @@ const ContentSubHeader1 = () => {
                 >
                   {t("slideButtonTeas")}
                 </Link>
-                <button
-                  onClick={() => alert(t("developing"))}
-                  className="text-white font-Playfair-Display italic flex-1 p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium _1240:p-[15px]"
+                <Link
+                  href={`/${lang}/menu/pots`}
+                  className="text-white font-Playfair-Display italic flex-1 p-[25px] border border-blue transition hover:bg-blue text-h5 font-medium _1240:p-[15px] text-center"
                 >
                   {t("slideButtonDishes")}
-                </button>
+                </Link>
               </div>
             </div>
             <Image

@@ -5,9 +5,11 @@ import StoreButton from "@/ui-kit/StoreButton/StoreButton";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Store = () => {
   const lang = useLocale();
+  const router = useRouter()
   const t = useTranslations("Store");
   return (
     // <div className="store">
@@ -44,13 +46,13 @@ const Store = () => {
         </h4>
         <p className="p1 _768:p2">{t("cardDesc")}</p>
         <StoreButton
-          onClick={() => alert("В разработке!")}
+          onClick={() => router.push(lang + '/menu/pots')}
           className="_768:hidden"
         >
           {t("button")}
         </StoreButton>
         <StoreButton
-          onClick={() => alert("В разработке!")}
+          onClick={() => router.push(lang + '/menu/pots')}
           className="hidden _768:block"
         >
           {t("buttonShort")}

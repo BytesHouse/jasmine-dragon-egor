@@ -19,16 +19,14 @@ const OrderListItem = ({
   const t = useTranslations("Cart");
   return (
     <div
-      className={`flex  ${
-        isSmall
+      className={`flex  ${isSmall
           ? "p-[15px] border-[var(--blue-light)] gap-[25px]"
           : "p-[25px] border-[var(--green-bg)] hover:border-[var(--blue-light)] hover:bg-green-light transition duration-300 ease-in-out gap-[25px] _1240:w-full _1600:p-[10px] _768:gap-[15px] _768:border-blue"
-      } border  items-center`}
+        } border  items-center`}
     >
       <div
-        className={`relative ${
-          isSmall ? "max-w-[187px]" : "max-w-[250px]"
-        } w-full _768:flex-1`}
+        className={`relative ${isSmall ? "max-w-[187px]" : "max-w-[250px]"
+          } w-full _768:flex-1`}
       >
         <Image
           // className="svgchoise2"
@@ -61,7 +59,7 @@ const OrderListItem = ({
           <div className="flex flex-row gap-[15px] items-center not-italic">
             {discount == 0 ? (
               <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-h5 _491:text-p1">
-                {price}
+                {price} Lei
               </span>
             ) : (
               <>
@@ -69,7 +67,7 @@ const OrderListItem = ({
                   {price - discount}
                 </span>
                 <span className="discount _768:text-p1 _491:text-p3">
-                  {price}
+                  {price} Lei
                 </span>
               </>
             )}

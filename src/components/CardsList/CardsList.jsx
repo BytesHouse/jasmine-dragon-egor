@@ -1,11 +1,10 @@
 "use client";
 import { ItemCard, ItemCardHorizontal } from "@/components";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
-import { getFavoritesList } from "@/utils/favoritesTools";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast, Bounce } from "react-toastify";
-import "react-toastify/ReactToastify.css";
-
+import "react-toastify/dist/ReactToastify.css";
 const AlertItem = ({ name, text }) => {
   return (
     <div>
@@ -24,11 +23,22 @@ const CardsList = ({
   const t = useTranslations("Menu");
 
   const { addToCart } = useProductCart();
+  const [favorites, setFavorites] = useState([])
   const handleAddToCart = (item) => {
     addToCart(item);
     // alert("всё рабоатет");
-    toast(<AlertItem name={item.name} text={t("addedToCart")} />);
+    toast(<AlertItem name={item?.name} text={t("addedToCart")} />);
   };
+
+  useEffect(() => {
+    const getFavoritesList = () => {
+      const data = localStorage.getItem("favorites")
+      setFavorites(JSON.parse(data ?? "[]"))
+    };
+    getFavoritesList()
+  }, [])
+
+
   return (
     <>
       <ul
@@ -41,14 +51,14 @@ const CardsList = ({
               index={index}
               key={item.id}
               item={item}
-              isFavorite={getFavoritesList().includes(item.id)}
+              isFavorite={favorites.includes(item.id)}
               onClick={handleAddToCart}
             />
           ))
           : cardsData?.map((item, index) => (
             <ItemCardHorizontal
               key={item.id}
-              isFavorite={getFavoritesList().includes(item.id)}
+              isFavorite={favorites.includes(item.id)}
               item={item}
               onClick={handleAddToCart}
             />

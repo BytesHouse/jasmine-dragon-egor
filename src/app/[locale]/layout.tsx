@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "./globals.css";
 import { Nunito_Sans, Playfair_Display } from "next/font/google";
-
+import "react-toastify/ReactToastify.min.css";
 import { Metadata } from "next";
 import { Header } from "@/components";
 import Footer from "@/components/Footer/Footer";

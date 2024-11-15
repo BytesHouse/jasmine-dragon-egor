@@ -10,7 +10,6 @@ const TeaDetails = ({ params }: { params: { id: string } }) => {
   const { id } = params;
   const { findProductById } = useProduct();
   const [product, setProduct] = useState(findProductById(Number(id)));
-  console.log(product);
   return (
     <main>
       <div className="container text-[var(--blue-light)] teas-seo">

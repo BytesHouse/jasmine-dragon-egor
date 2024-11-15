@@ -32,19 +32,19 @@ const Filter = ({ setFilterFunc }) => {
     };
   }, []);
 
-  // const handleClickCheckBoxType = (key) => {
-  //   const updatedItems = typeChecked.map((item) =>
-  //     item.key === key ? { ...item, checked: !item.checked } : item
-  //   );
-  //   setTypeChecked(updatedItems);
-  // };
+  const handleClickCheckBoxType = (key) => {
+    const updatedItems = typeChecked.map((item) =>
+      item.key === key ? { ...item, checked: !item.checked } : item
+    );
+    setTypeChecked(updatedItems);
+  };
 
-  // const handleClickCheckBoxManufc = (key) => {
-  //   const updatedItems = manufc.map((item) =>
-  //     item.key === key ? { ...item, checked: !item.checked } : item
-  //   );
-  //   setManufc(updatedItems);
-  // };
+  const handleClickCheckBoxManufc = (key) => {
+    const updatedItems = manufc.map((item) =>
+      item.key === key ? { ...item, checked: !item.checked } : item
+    );
+    setManufc(updatedItems);
+  };
 
   const handleSubmitFilter = () => {
     // Add the logic for applying the filter
@@ -54,9 +54,9 @@ const Filter = ({ setFilterFunc }) => {
   };
 
   const handleResetFilter = () => {
-    // setIsStock(stock[0].value);
-    // setTypeChecked(type.map((item) => ({ ...item, checked: false })));
-    // setManufc(manufacturer.map((item) => ({ ...item, checked: false })));
+    setIsStock(stock[0].value);
+    setTypeChecked(type.map((item) => ({ ...item, checked: false })));
+    setManufc(manufacturer.map((item) => ({ ...item, checked: false })));
     setPrice({ min: 0, max: 100 });
   };
 
@@ -92,7 +92,7 @@ const Filter = ({ setFilterFunc }) => {
             onSubmit={handleSubmitFilter}
           >
             {/* ============= наличие ==================== */}
-            {/* <div className={toDo}>
+            <div className={toDo}>
               <span className="font-semibold text-[18px]">
                 {t("availability")}
               </span>
@@ -107,9 +107,9 @@ const Filter = ({ setFilterFunc }) => {
                   </RadioButton>
                 ))}
               </div>
-            </div> */}
+            </div>
             {/* ============= тип чая ==================== */}
-            {/* <div className={toDo}>
+            <div className={toDo}>
               <span className="font-semibold text-[18px]">{t("teaType")}</span>
               <div className="h-[120px] overflow-y-scroll">
                 {typeChecked.map((item, index) => (
@@ -122,9 +122,9 @@ const Filter = ({ setFilterFunc }) => {
                   </Checkbox>
                 ))}
               </div>
-            </div> */}
+            </div>
             {/* ============= производители ==================== */}
-            {/* <div className={toDo}>
+            <div className={toDo}>
               <span className="font-semibold text-[18px]">
                 {t("manufacturer")}
               </span>
@@ -139,7 +139,7 @@ const Filter = ({ setFilterFunc }) => {
                   </Checkbox>
                 ))}
               </div>
-            </div> */}
+            </div>
             <div className="flex flex-col gap-[5px]">
               <span className="font-semibold text-[18px]">{t("price")}</span>
               <RangeSlider

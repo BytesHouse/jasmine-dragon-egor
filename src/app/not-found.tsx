@@ -1,11 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 const NotFound = () => {
-  const { push } = useRouter();
+  // const { push } = useRouter();
   const redirect = setTimeout(() => {
-    push("/");
+    // push("/");
     clearTimeout(redirect);
   }, 3000);
 

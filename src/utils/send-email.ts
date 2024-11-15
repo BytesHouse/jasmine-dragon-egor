@@ -3,9 +3,6 @@ import { getHistory } from "./getHistory";
 
 export function sendEmail(data: FormDataEmail) {
   const apiEndpoint = "/api/email";
-  // console.log(data);
-  // data.city = "Kishinev";
-  // data.country = "Moldova";
   fetch(apiEndpoint, {
     method: "POST",
     body: JSON.stringify(data),
@@ -13,6 +10,7 @@ export function sendEmail(data: FormDataEmail) {
     .then((res) => res.json())
     .then((response) => {
       alert(response.message);
+      localStorage.setItem("jd-cart", JSON.stringify([]));
     })
     .catch((err) => {
       alert(err);

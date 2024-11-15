@@ -1,10 +1,57 @@
 import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
+import { prisma } from "../../../../db";
+import { create } from "domain";
 
 export async function POST(request: NextRequest) {
-  const { email, fullName, message, phone, orderItems, lang, address, sector } =
-    await request.json();
+  const {
+    email,
+    fullName,
+    message,
+    phone,
+    orderItems,
+    lang = "",
+    address = "",
+    sector = "",
+    deliveryPrice = 0,
+    totalPrice = 0,
+    orderNumber,
+    status,
+  } = await request.json();
+
+  // const orderNumber = "ORD-" + Math.floor(100000 + Math.random() * 900000);
+
+  await prisma.order.create({
+    data: {
+      fullName: fullName,
+      country: "Republica Moldova",
+      city: "Chisinau",
+      status,
+      address,
+      sector,
+      email,
+      message,
+      phone,
+      lang,
+      orderNumber,
+      deliveryPrice: `${deliveryPrice}`,
+      total: +totalPrice - +deliveryPrice,
+      totalPrice: String(totalPrice),
+      updatedAt: new Date(),
+      OrderItem: {
+        create: orderItems.map((item: any) => {
+          return {
+            productId: item.id,
+            name: item.name,
+            quantity: item.quantity,
+            price: item.price,
+            updatedAt: new Date(),
+          };
+        }),
+      },
+    },
+  });
 
   const transport = nodemailer.createTransport({
     service: "gmail",
@@ -39,7 +86,7 @@ export async function POST(request: NextRequest) {
     <h3 style="display: inline">Phone number:</h3> <a href="tel:${
       props.phone
     }"> <i>${props.phone}</i> </a>
-    <h3>${props.orderItems.length > 0 && "Бабосики подъехали"}</h3>
+    <h3>${props.orderItems.length > 0 && `Заказ #${props.orderNumber}`}</h3>
     <ol style="">
     ${props.orderItems
       .map(
@@ -63,6 +110,7 @@ export async function POST(request: NextRequest) {
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${fullName} ${email ? `(${email})` : ""}`,
     html: func({
+      orderNumber,
       fullName,
       phone,
       email,

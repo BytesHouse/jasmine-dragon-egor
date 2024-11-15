@@ -216,7 +216,9 @@ footer {
   background: var(--blue-light);
   opacity: 0.2;
   border-radius: 100px !important;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease;
 }
 .line:hover,
 .swiper-pagination-bullet-active {
@@ -270,7 +272,9 @@ footer {
   border: 1px var(--blue-light) solid;
   gap: 15px;
   background-color: rgba(39, 62, 64, 1);
-  transition: opacity 0.3s ease, border 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    border 0.3s ease;
 }
 
 .linkfeedbacks:hover,

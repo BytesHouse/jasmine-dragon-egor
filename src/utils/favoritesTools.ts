@@ -1,3 +1,4 @@
+
 export const getFavoritesList = (): number[] => {
   return JSON.parse(localStorage.getItem("favorites") ?? "[]");
 };

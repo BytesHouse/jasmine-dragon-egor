@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl";
 import { useProduct } from "@/components/Providers/ContextProvider";
 import Link from "next/link";
+import { useParams } from "react-router-dom";
 
 const Breadcrumbs = ({ breadcrumbs, ...props }) => {
   const { findProductById } = useProduct();
+  const { id } = useParams()
   let isTeas = false;
   let isOrder = false;
   //   const { name, type, subtype, weight } = product;
@@ -24,13 +26,13 @@ const Breadcrumbs = ({ breadcrumbs, ...props }) => {
                 <Link
                   href={path}
                   className={`p1 font-semibold ${index == breadcrumbs.length - 1
-                      ? "text-blue-light truncate"
-                      : "text-blue"
+                    ? "text-blue-light truncate"
+                    : "text-blue"
                     } hover:text-blue-light transition`}
                 >
                   {index == breadcrumbs.length - 1
                     ? isTeas
-                      ? `${findProductById(Number(index))?.name}`
+                      ? `Tea #${item}`
                       : isOrder & (item != "profile")
                         ? `${t("orderNumber")}${decodeURIComponent(item)}`
                         : t(item)

@@ -5,17 +5,18 @@ import FavoriteButton from "@/ui-kit/FavoriteButton/FavoriteButton";
 import Counter from "@/ui-kit/Counter/Counter";
 import { Cart } from "@/ui-kit/icons";
 import { useProductCart } from "@/components/Providers/ProductCartProvider";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast, ToastContainer, Bounce } from "react-toastify";
 import { addToFavorites } from "@/utils/favoritesTools";
-import "react-toastify/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const DescriptionBlock = ({ product }) => {
-  const { name, subtype, description, strength, brewRes, id } = product;
+  const { name, subtype, description, strength, brewRes, id, nameRo, descriptionRo } = product;
   const { addToCart } = useProductCart();
   const [quantity, setQuantity] = useState(1);
   const t = useTranslations("DescriptionBlock");
+  const path = useLocale()
 
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
@@ -53,12 +54,12 @@ const DescriptionBlock = ({ product }) => {
           // theme="light"
           transition={Bounce}
         />
-        <h1>«{name}»</h1>
+        <h1>«{path === 'ru' ? name : nameRo}»</h1>
         <FavoriteButton onClick={handleClickAddToFavorites}>
           {t("addToFavorites")}
         </FavoriteButton>
         <strong className="">{t("heading")}</strong>
-        <p>{description ? description : t("description", { name })}</p>
+        <p>{path === 'ru' ? description : descriptionRo}</p>
         <strong>{t("characteristics")}</strong>
         <ul className="list-disc pl-4">
           <li>
