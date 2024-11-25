@@ -15,11 +15,11 @@ const SectionThree = () => {
       <Flexrow />
       {/* <Filters /> */}
       <MenuPreview />
-      <Lables />
+      {/* <Lables /> */}
       <Store />
       <Hotsales />
-      <ContactsBlock />
-      <Feedbacks />
+      {/* <ContactsBlock />
+      <Feedbacks /> */}
     </>
   );
 };
