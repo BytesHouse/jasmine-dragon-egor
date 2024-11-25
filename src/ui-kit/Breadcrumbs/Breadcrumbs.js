@@ -1,11 +1,9 @@
 import { useTranslations } from "next-intl";
 import { useProduct } from "@/components/Providers/ContextProvider";
 import Link from "next/link";
-import { useParams } from "react-router-dom";
 
 const Breadcrumbs = ({ breadcrumbs, ...props }) => {
   const { findProductById } = useProduct();
-  const { id } = useParams()
   let isTeas = false;
   let isOrder = false;
   //   const { name, type, subtype, weight } = product;
