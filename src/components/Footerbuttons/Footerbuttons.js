@@ -17,11 +17,11 @@ const Footerbuttons = ({ className, onClick }) => {
     <ol className={className}>
       <li className="col-span-3 _1240:col-span-half">
         <ol className="flex flex-col gap-[25px]">
-          {/* <li onClick={onClick}>
-            <Link href={`/${lang}`} className="footerbutton">
+          <li onClick={onClick}>
+            <Link href={`/${lang}/about`} className="footerbutton">
               {t("aboutUs")}
             </Link>
-          </li> */}
+          </li>
           <li onClick={onClick}>
             <Link href={`/${lang}/menu`} className="footerbutton">
               {t("menu")}
@@ -33,9 +33,8 @@ const Footerbuttons = ({ className, onClick }) => {
             </Link>
             <button
               onClick={() => setIsShopShow(!isShopShow)}
-              className={`ml-[15px] self-end transition ${
-                isShopShow && "-rotate-180"
-              }`}
+              className={`ml-[15px] self-end transition ${isShopShow && "-rotate-180"
+                }`}
               title="Arrow button"
             >
               <Strelka />

@@ -1,4 +1,10 @@
 {
+  "About": {
+    "about_text_00": "ro",
+    "about_text_01": "ro",
+    "about_text_02": "ro",
+    "about_text_03": "ro"
+  },
   "Privacy": {
     "privacy_text_0": "Politica de confidențialitate",
     "privacy_text_00": "Colectăm informațiile pe care ni le furnizați atunci când vă înregistrați pe site, plasați o comandă sau completați formulare de feedback. Aceste informații pot include numele, adresa de e-mail, numărul de telefon și adresa de expediere.",
