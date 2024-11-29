@@ -67,7 +67,7 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
         <h4 className="line-clamp-3 text-ellipsis _768:text-h5 _491:text-p1">
           {lang === 'ru' ? nameRu : nameRo}
         </h4>
-        {description && <p className="p1 _768:p2 _491:p3">{lang === 'ru' ? descriptionRu : descriptionRo}</p>}
+        {description && <p className="line-clamp-5 p1 _768:p2 _491:p3">{lang === 'ru' ? descriptionRu : descriptionRo}</p>}
       </Link>
       <div className="flex h-max w-full flex-grow flex-col justify-end gap-[15px]">
         <div className="flex w-full items-center gap-[15px]">
