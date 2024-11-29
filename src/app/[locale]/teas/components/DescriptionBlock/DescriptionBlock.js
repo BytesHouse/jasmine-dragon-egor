@@ -12,7 +12,7 @@ import { addToFavorites } from "@/utils/favoritesTools";
 import "react-toastify/dist/ReactToastify.css";
 
 const DescriptionBlock = ({ product }) => {
-  const { name, subtype, description, strength, brewRes, id, nameRo, descriptionRo } = product;
+  const { nameRu, subtype, descriptionRu, strength, brewRes, id, nameRo, descriptionRo } = product;
   const { addToCart } = useProductCart();
   const [quantity, setQuantity] = useState(1);
   const t = useTranslations("DescriptionBlock");
@@ -54,12 +54,12 @@ const DescriptionBlock = ({ product }) => {
           // theme="light"
           transition={Bounce}
         />
-        <h1>«{path === 'ru' ? name : nameRo}»</h1>
+        <h1>«{path === 'ru' ? nameRu : nameRo}»</h1>
         <FavoriteButton onClick={handleClickAddToFavorites}>
           {t("addToFavorites")}
         </FavoriteButton>
         <strong className="">{t("heading")}</strong>
-        <p>{path === 'ru' ? description : descriptionRo}</p>
+        <p>{path === 'ru' ? descriptionRu : descriptionRo}</p>
         <strong>{t("characteristics")}</strong>
         <ul className="list-disc pl-4">
           <li>
