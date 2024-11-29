@@ -55,13 +55,13 @@ const Feedbacks = () => {
           className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
           <ArrowLeft />
-          {t("prev")}
+          {t("next")}
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
           className="linkfeedbacks text-white text-p1 font-Nunito-Sans font-semibold _768:text-p2"
         >
-          {t("next")}
+          {t("prev")}
           <ArrowRight />
         </button>
       </div>
