@@ -1,18 +1,13 @@
 "use client";
 // import avatar from "../../../public/assets/Images/avatar.png";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
-import { prisma } from "../../../db";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { useTranslations } from "next-intl";
-import { feedbacks } from "@/config/constants";
 import { useProduct } from "../Providers/ContextProvider";
 
-// Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/navigation";
 
 const Feedbacks = () => {
   const t = useTranslations("Feedbacks");
