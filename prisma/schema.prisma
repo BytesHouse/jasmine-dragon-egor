@@ -54,6 +54,9 @@ model Product {
   imageUrl      String[]
   descriptionRo String?
   nameRo        String?
+  descriptionRu String?      @default("")
+  nameRu        String?      @default("")
+  weight        String?      @default("")
   Category      Category     @relation(fields: [categoryId], references: [id])
   SubCategory   SubCategory? @relation(fields: [subCategoryId], references: [id])
   Review        Review[]
@@ -104,12 +107,12 @@ model Critique {
 
 model OrderItem {
   id        Int      @id @default(autoincrement())
-  name      String
   orderId   Int
   productId Int
   quantity  Int
   price     String
   createdAt DateTime @default(now())
   updatedAt DateTime
+  name      String
   Order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
 }

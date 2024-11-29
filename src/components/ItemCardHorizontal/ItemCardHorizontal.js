@@ -11,7 +11,7 @@ import Link from "next/link";
 const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
   const [isHeart, setIsHeart] = useState(isFavorite);
   const lang = useLocale();
-  const { name, description, price, discount, id, nameRo, descriptionRo } = item;
+  const { name, description, price, discount, id, nameRo, nameRu, descriptionRu, descriptionRo } = item;
   const t = useTranslations("Menu");
 
   const handleClickAddToCart = (e) => {
@@ -57,9 +57,9 @@ const ItemCardHorizontal = ({ item, isFavorite, onClick }) => {
             <h4
               className={`${description && "mb-4"} _768:text-h5 _491:text-p1`}
             >
-              {lang === 'ru' ? name : nameRo}
+              {lang === 'ru' ? nameRu : nameRo}
             </h4>
-            {description && <p className="p1 _768:p2 _491:p3">{lang === 'ru' ? description : descriptionRo}</p>}
+            {description && <p className="p1 _768:p2 _491:p3">{lang === 'ru' ? descriptionRu : descriptionRo}</p>}
           </div>
           <div>
             {discount == 0 ? (

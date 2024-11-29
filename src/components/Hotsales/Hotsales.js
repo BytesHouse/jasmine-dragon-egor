@@ -13,7 +13,7 @@ const Hotsales = () => {
   const initialItemsPerPage = width < 1240 ? 2 : 3;
   const { productsList } = useProduct();
   // console.log(productsList);
-  const data = productsList.slice(42, 69);
+  const data = productsList.slice(242, 269);
 
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(initialItemsPerPage);

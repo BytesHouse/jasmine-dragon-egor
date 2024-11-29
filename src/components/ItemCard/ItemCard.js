@@ -18,13 +18,13 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
   const t = useTranslations("Menu");
   // const width = useScreenWidth();
   const lang = useLocale();
-  const { name, description, price, id, discount, nameRo, descriptionRo } = item;
+  const { name, description, price, id, discount, nameRu, nameRo, descriptionRu, descriptionRo } = item;
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
     onClick(item);
     // alert(t("addedToCart"));
   };
-
+  // console.log(name)
   const favRemove = () => {
     removeFromFavorites(item.id);
     setIsHeart(false);
@@ -65,9 +65,9 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
           />
         </div>
         <h4 className="line-clamp-3 text-ellipsis _768:text-h5 _491:text-p1">
-          {lang === 'ru' ? name : nameRo}
+          {lang === 'ru' ? nameRu : nameRo}
         </h4>
-        {description && <p className="p1 _768:p2 _491:p3">{lang === 'ru' ? description : descriptionRo}</p>}
+        {description && <p className="p1 _768:p2 _491:p3">{lang === 'ru' ? descriptionRu : descriptionRo}</p>}
       </Link>
       <div className="flex h-max w-full flex-grow flex-col justify-end gap-[15px]">
         <div className="flex w-full items-center gap-[15px]">
@@ -81,7 +81,7 @@ const ItemCard = ({ item, onClick, isFavorite, index }) => {
                 {price - discount}
               </span>
               <span className="discount _768:text-p1 _491:text-[10px] _491:font-normal">
-                 Lei
+                Lei
               </span>
             </>
           )}
