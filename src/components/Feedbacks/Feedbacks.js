@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "@/ui-kit/icons";
-
+import { prisma } from "../../../db";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { useTranslations } from "next-intl";
-
 import { feedbacks } from "@/config/constants";
+import { useProduct } from "../Providers/ContextProvider";
 
 // Import Swiper styles
 // import "swiper/css";
@@ -17,7 +17,7 @@ import { feedbacks } from "@/config/constants";
 const Feedbacks = () => {
   const t = useTranslations("Feedbacks");
   const swiperRef = useRef();
-  
+  const { reviewsList } = useProduct();
   return (
     <div className="container">
       <h5 className="col-span-full">{t("heading")}</h5>
@@ -36,11 +36,11 @@ const Feedbacks = () => {
         // initialSlide={1}
         className="w-full col-span-full !overflow-visible"
       >
-        {feedbacks.map((item, index) => {
+        {reviewsList.map((item, index) => {
           return (
             <SwiperSlide key={index} className="feedback">
               <Image
-                className="h-[150px] _768:h-[100px] w-auto"
+                className="h-[150px] _768:h-[100px] w-[150px] bg-cover rounded-full"
                 src={item.avatar}
                 alt="avatar"
                 width={150}

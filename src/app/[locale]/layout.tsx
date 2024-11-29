@@ -44,6 +44,7 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
   const teas: TeaProduct[] = await prisma.product.findMany();
+  const reviews: any[] = await prisma.critique.findMany();
   return (
     <html lang={locale} className="overflow-x-hidden">
       <body
@@ -51,7 +52,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning
         // className="overflow-x-hidden scroll-smooth"
       >
-        <ProductProvider products={teas}>
+        <ProductProvider products={teas} reviews={reviews}>
           <NextIntlClientProvider messages={messages}>
             <ProductCartProvider>
               <Header />
