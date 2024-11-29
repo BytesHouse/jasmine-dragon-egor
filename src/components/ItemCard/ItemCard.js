@@ -13,7 +13,7 @@ import { addToFavorites, removeFromFavorites } from "@/utils/favoritesTools";
 
 import { motion } from "framer-motion";
 
-const ItemCard = ({ item, onClick, isFavorite, index }) => {
+const ItemCard = ({ item, onClick, isFavorite = false, index }) => {
   const [isHeart, setIsHeart] = useState(isFavorite);
   const t = useTranslations("Menu");
   // const width = useScreenWidth();
