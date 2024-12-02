@@ -17,7 +17,7 @@ export const ProductProvider = ({
   const [productsList, setProducts] = useState<TeaProduct[]>(products);
   const [reviewsList, setReviews] = useState<any>(reviews);
   const findProductById = (id: number) => {
-    return productsList.find((item) => item?.id === id);
+    return productsList.find((item) => item?.id == id);
   };
   return (
     <ProductContext.Provider
