@@ -18,7 +18,7 @@ const Filter = ({ setFilterFunc }) => {
   const [isStock, setIsStock] = useState(stock[0].value);
   const [typeChecked, setTypeChecked] = useState(type);
   const [manufc, setManufc] = useState(manufacturer);
-  const [price, setPrice] = useState({ min: 0, max: 3000 });
+  const [price, setPrice] = useState({ min: 0, max: 8000 });
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -93,10 +93,10 @@ const Filter = ({ setFilterFunc }) => {
           >
             {/* ============= наличие ==================== */}
             <div className={toDo}>
-              <span className="font-semibold text-[18px]">
+              {/* <span className="font-semibold text-[18px]">
                 {t("availability")}
-              </span>
-              <div>
+              </span> */}
+              {/* <div>
                 {filterConfig.stock.map((item, index) => (
                   <RadioButton
                     setIsCurr={() => setIsStock(item.value)}
@@ -106,12 +106,12 @@ const Filter = ({ setFilterFunc }) => {
                     {t(item.t)}
                   </RadioButton>
                 ))}
-              </div>
+              </div> */}
             </div>
             {/* ============= тип чая ==================== */}
             <div className={toDo}>
               <span className="font-semibold text-[18px]">{t("teaType")}</span>
-              <div className="h-[120px] overflow-y-scroll">
+              <div className="h-[130px]">
                 {typeChecked.map((item, index) => (
                   <Checkbox
                     setIsCurr={() => handleClickCheckBoxType(index + 1)}
@@ -124,7 +124,7 @@ const Filter = ({ setFilterFunc }) => {
               </div>
             </div>
             {/* ============= производители ==================== */}
-            <div className={toDo}>
+            {/* <div className={toDo}>
               <span className="font-semibold text-[18px]">
                 {t("manufacturer")}
               </span>
@@ -139,14 +139,14 @@ const Filter = ({ setFilterFunc }) => {
                   </Checkbox>
                 ))}
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-col gap-[5px]">
               <span className="font-semibold text-[18px]">{t("price")}</span>
               <RangeSlider
                 value={price}
                 onChange={setPrice}
                 min={10}
-                max={3000}
+                max={8000}
                 step={10}
               />
             </div>

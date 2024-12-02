@@ -62,6 +62,12 @@ export const filterConfig = {
       t: "othersTea",
       checked: false,
     },
+    // {
+    //   key: 7,
+    //   value: "Посуда",
+    //   t: "pots",
+    //   checked: false,
+    // },
   ],
   manufacturer: [
     {
