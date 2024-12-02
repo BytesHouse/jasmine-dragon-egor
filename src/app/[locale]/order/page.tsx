@@ -14,7 +14,7 @@ import { Status } from "@/enums/status.enum";
 
 import { addresses } from "@/config/constants";
 import { useState } from "react";
-import { exit } from "process";
+import ThanksMessage from "@/components/ThanksMessage/ThanksMessage";
 
 const OrderPage = () => {
   const {
@@ -31,19 +31,15 @@ const OrderPage = () => {
 
   const handleChangeAddress = (e: any) => {
     const adr = e.target.value;
-    // console.log(adr);
     for (let i = 0; i < addresses.length; i++) {
       if (addresses[i].sector === adr) {
         setDeliveryPrice(addresses[i].value);
-        // console.log(addresses[i].value);
         break;
       }
     }
   };
 
   function onSubmit(data: FormDataEmail) {
-    // console.log(data.orderItems);
-    // console.log(JSON.parse(data.orderItems));
     data.deliveryPrice = Number(deliveryPrice);
     data.totalPrice = Number(totalPrice);
     data.orderItems = JSON.parse(data.orderItems);
@@ -51,7 +47,6 @@ const OrderPage = () => {
     data.orderNumber = getOrderNumber(data.fullName);
     data.status = Status.PendingAcception; // 'penging acception' | 'penging' | 'in progress' | 'completed' | 'cancel customer' | 'cancel jasmine'
     sendEmail(data);
-    // console.log(data);
   }
 
   return (
@@ -212,6 +207,7 @@ const OrderPage = () => {
           totalPrice={totalPrice}
         />
       </form>
+      {/* <ThanksMessage /> */}
     </main>
   );
 };

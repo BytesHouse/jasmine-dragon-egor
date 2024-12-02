@@ -15,7 +15,7 @@ const Main = () => {
       <SectionThree />
       <SectionAbout />
       {/* <SectionTwo /> */}
-      <SectionOne />
+      {/* <SectionOne /> */}
       <ContactsBlock />
       <Feedbacks />
     </main>

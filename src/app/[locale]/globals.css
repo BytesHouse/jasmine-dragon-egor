@@ -255,8 +255,8 @@ footer {
   display: flex;
 }
 .footer-ol > li > ol > li:not(#footerShop)::before {
-  content: counter(item, decimal-leading-zero) " ";
-  counter-increment: item 1;
+  /* content: counter(item, decimal-leading-zero) " ";
+  counter-increment: item 1; */
   margin-right: 15px;
   font-weight: 600;
 }

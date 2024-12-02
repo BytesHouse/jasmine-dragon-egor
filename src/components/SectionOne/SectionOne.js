@@ -8,7 +8,7 @@ const SectionOne = () => {
     <section className="container col-span-full !py-0">
       <div
         className="sticky top-[25vh] z-10 col-span-full max-w-[var(--max-w)]"
-        // style={{ top: `calc(${top} * 50px)` }}
+      // style={{ top: `calc(${top} * 50px)` }}
       >
         <AnimatedText>{t("SectionOneText")}</AnimatedText>
       </div>
