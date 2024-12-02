@@ -45,7 +45,6 @@ const CardsList = ({
   //   getFavoritesList()
   // }, [])
 
-  console.log(favorites)
   return (
     <>
       <ul
@@ -56,16 +55,16 @@ const CardsList = ({
           ? cardsData?.map((item, index) => (
             <ItemCard
               index={index}
-              key={item.id}
+              key={item?.id}
               item={item}
-              isFavorite={favorites?.includes(item.id)}
+              isFavorite={favorites?.includes(item?.id)}
               onClick={handleAddToCart}
             />
           ))
           : cardsData?.map((item, index) => (
             <ItemCardHorizontal
-              key={item.id}
-              isFavorite={favorites?.includes(item.id)}
+              key={item?.id}
+              isFavorite={favorites?.includes(item?.id)}
               item={item}
               onClick={handleAddToCart}
             />
