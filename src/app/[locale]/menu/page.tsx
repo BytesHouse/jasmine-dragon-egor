@@ -39,7 +39,6 @@ const Menu = () => {
     .filter((item: any) => item?.categoryId !== 2)
     .sort(sortFunc)
     .slice(offset, offset + itemsPerPage);
-  console.log(productsList);
   // ==================================================
 
   return (
