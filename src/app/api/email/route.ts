@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
       .map(
         (orderItem: any) => `
     <li style="margin-left: 0px;"> 
-      <a style="display: inline" href=\"https://jasmine-dragon-mu.vercel.app/${lang}/teas/${orderItem.id}\">
+      <a style="display: inline" href=\"https://jasminedragon.md/${lang}/teas/${orderItem.id}\">
         ${orderItem.name}
       </a>
       <p style="display: inline; margin-left: 10px">|| <i style="display: inline; margin-left: 10px">${orderItem.quantity}</i></p>

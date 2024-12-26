@@ -15,7 +15,7 @@ const TeaDetails = ({ params }: { params: { id: string } }) => {
       <div className="container text-[var(--blue-light)] teas-seo">
         <DescriptionBlock product={product} />
         <BrewBlock product={product} />
-        <LastReview />
+        <LastReview productId={product?.subCategoryId} />
       </div>
     </main>
   );
