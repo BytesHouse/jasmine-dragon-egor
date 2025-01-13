@@ -25,7 +25,7 @@ const ContactsBlock = ({ className = "" }) => {
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">
           <h3 className="_768:text-h5">{t("address")}</h3>
           <h5 className="simple font-bold _768:text-p1">
-            Bd. Moscovei 12/2, Chisinau, Moldova
+            {t("soon")}
           </h5>
         </div>
         <div className="flex flex-col gap-[16px] p-[25px] border border-blue flex-grow">

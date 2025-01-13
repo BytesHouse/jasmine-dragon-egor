@@ -11,9 +11,8 @@ const Menu = () => {
   const [isHorizontal, setIsHorizontal] = useState(true); // Состояние для отслеживания текущего вида товаров
   // ==================================================
   const initialItemsPerPage = 6;
-  const { productsList } = useProduct();
+  const { productsList, filter } = useProduct();
   // const data = mock;
-
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(initialItemsPerPage);
 
@@ -35,6 +34,9 @@ const Menu = () => {
 
   const offset = currentPage * itemsPerPage;
   const currentPageData = productsList
+    .filter(
+      (item: any) => filter.length === 0 || filter.includes(item.subCategoryId)
+    )
     .filter(filterFunc)
     .filter((item: any) => item?.categoryId !== 2)
     .sort(sortFunc)

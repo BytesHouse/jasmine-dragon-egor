@@ -8,8 +8,10 @@ import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import ButtonSecondary from "../ButtonSecondary/ButtonSecondary";
 import { RangeSlider } from "../RangeSlider/RangeSlider";
 import { useTranslations } from "next-intl";
+import { useProduct } from "@/components/Providers/ContextProvider";
 
 const Filter = ({ setFilterFunc }) => {
+  const { handleCheckboxChange } = useProduct();
   const t = useTranslations("Filter");
   const filterRef = useRef();
   const toDo = "flex flex-col gap-[5px]";
@@ -114,7 +116,10 @@ const Filter = ({ setFilterFunc }) => {
               <div className="h-[130px]">
                 {typeChecked.map((item, index) => (
                   <Checkbox
-                    setIsCurr={() => handleClickCheckBoxType(index + 1)}
+                    setIsCurr={() => {
+                      handleClickCheckBoxType(index + 1)
+                      handleCheckboxChange(item.category);
+                    }}
                     isCurr={item.checked}
                     key={index}
                   >
