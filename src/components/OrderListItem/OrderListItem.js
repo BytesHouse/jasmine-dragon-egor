@@ -60,7 +60,7 @@ const OrderListItem = ({
           <div className="flex flex-row gap-[15px] items-center not-italic">
             {discount == 0 ? (
               <span className="text-h5 font-Nunito-Sans text-blue-light font-semibold _768:text-h5 _491:text-p1">
-                {price} Lei
+                {(price * quantity).toFixed(2)} Lei
               </span>
             ) : (
               <>
