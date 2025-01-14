@@ -5,11 +5,11 @@ import Minus from "../icons/MinusPlus/Minus";
 import Plus from "../icons/MinusPlus/Plus";
 // import PlusIcon from "../../../public/assets/Images/Plus.svg";
 
-function Counter({ initialValue, increment, decrement }) {
+function Counter({ initialValue, increment, decrement, weight }) {
   // const [count, setCount] = useState(initialValue);
 
   return (
-    <div className="counter flex flex-row items-center gap-[5px] _768:order-last">
+    <div className="counter flex flex-row items-center gap-[5px] _768:order-last w-[330px] _768:w-max">
       <button
         className="minus-button flex cursor-pointer"
         onClick={() => decrement()}
@@ -18,7 +18,7 @@ function Counter({ initialValue, increment, decrement }) {
         <Minus disabled={initialValue == 1} />
       </button>
       <span className="font-semibold text-blue-light p1 px-[10px] text-center">
-        {initialValue}
+        {initialValue} x {weight}
       </span>
       <button className="plus-button flex" onClick={() => increment()}>
         <Plus />

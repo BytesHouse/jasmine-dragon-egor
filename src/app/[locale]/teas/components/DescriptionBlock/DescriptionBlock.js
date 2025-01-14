@@ -12,11 +12,12 @@ import { addToFavorites } from "@/utils/favoritesTools";
 import "react-toastify/dist/ReactToastify.css";
 
 const DescriptionBlock = ({ product }) => {
-  const { nameRu, subtype, descriptionRu, strength, brewRes, id, nameRo, descriptionRo } = product;
+  const { nameRu, subtype, descriptionRu, strength, brewRes, id, nameRo, descriptionRo, weight, price, currency } = product;
   const { addToCart } = useProductCart();
   const [quantity, setQuantity] = useState(1);
   const t = useTranslations("DescriptionBlock");
   const path = useLocale()
+  console.log(product)
 
   const handleClickAddToCart = (e) => {
     e.stopPropagation();
@@ -55,9 +56,14 @@ const DescriptionBlock = ({ product }) => {
           transition={Bounce}
         />
         <h1>«{path === 'ru' ? nameRu : nameRo}»</h1>
-        <FavoriteButton onClick={handleClickAddToFavorites}>
-          {t("addToFavorites")}
-        </FavoriteButton>
+        <div className="flex justify-between items-center">
+          <FavoriteButton onClick={handleClickAddToFavorites}>
+            {t("addToFavorites")}
+          </FavoriteButton>
+          <div>
+            {`${(price * quantity).toFixed(2)} ${currency ? currency : 'MDL'}`}
+          </div>
+        </div>
         <strong className="">{t("heading")}</strong>
         <p>{path === 'ru' ? descriptionRu : descriptionRo}</p>
         <strong>{t("characteristics")}</strong>
@@ -77,13 +83,14 @@ const DescriptionBlock = ({ product }) => {
         </ul>
         <div className="flex gap-[50px]">
           <Counter
+            weight={weight}
             initialValue={quantity}
             increment={() => setQuantity((prev) => prev + 1)}
             decrement={() => setQuantity((prev) => prev > 1 && prev - 1)}
           />
           <button className="buttonToCart1" onClick={handleClickAddToCart}>
             <Cart />
-            <span className="text-h5 font-Nunito-Sans font-semibold _1240:text-[20px] _1024:text-h5 _768:text-[20px] _491:text-p3">
+            <span className="flex items-center gap-[5px] text-h5 font-Nunito-Sans font-semibold _1240:text-[20px] _1024:text-h5 _768:text-[20px] _491:text-p3">
               {t("addToCart")}
             </span>
           </button>
