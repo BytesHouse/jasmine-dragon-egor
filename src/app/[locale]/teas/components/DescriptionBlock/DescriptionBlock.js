@@ -17,7 +17,6 @@ const DescriptionBlock = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const t = useTranslations("DescriptionBlock");
   const path = useLocale()
-  console.log(product)
 
   const handleClickAddToCart = (e) => {
     e.stopPropagation();

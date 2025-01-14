@@ -11,7 +11,7 @@ const OrderListItem = ({
   increment,
   decrement,
 }) => {
-  const { name, price, description, id, quantity, discount } = item;
+  const { name, price, description, id, quantity, discount, weight } = item;
   const handleDeleteProd = (e) => {
     // e.stopPropagation();
     deleteProd(id);
@@ -20,8 +20,8 @@ const OrderListItem = ({
   return (
     <div
       className={`flex  ${isSmall
-          ? "p-[15px] border-[var(--blue-light)] gap-[25px]"
-          : "p-[25px] border-[var(--green-bg)] hover:border-[var(--blue-light)] hover:bg-green-light transition duration-300 ease-in-out gap-[25px] _1240:w-full _1600:p-[10px] _768:gap-[15px] _768:border-blue"
+        ? "p-[15px] border-[var(--blue-light)] gap-[25px]"
+        : "p-[25px] border-[var(--green-bg)] hover:border-[var(--blue-light)] hover:bg-green-light transition duration-300 ease-in-out gap-[25px] _1240:w-full _1600:p-[10px] _768:gap-[15px] _768:border-blue"
         } border  items-center`}
     >
       <div
@@ -52,6 +52,7 @@ const OrderListItem = ({
         )}
         <div className="flex flex-col gap-[25px] _768:gap-[15px]">
           <Counter
+            weight={weight}
             initialValue={quantity}
             increment={() => increment(id)}
             decrement={() => decrement(id)}
