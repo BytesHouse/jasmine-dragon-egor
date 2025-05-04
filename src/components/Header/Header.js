@@ -19,6 +19,7 @@ import Breadcrumbs from "@/ui-kit/Breadcrumbs/Breadcrumbs";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { useProductCart } from "../Providers/ProductCartProvider";
+import SwitchLanguage from "@/ui-kit/SwitchLanguge/SwitchLanguge";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -50,6 +51,9 @@ const Header = () => {
                 </div>
               </Link>
               <div className="relative flex items-center gap-6 pr-3 _768:hidden">
+                <div className="relative self-center z-999">
+                  <SwitchLanguage />
+                </div>
                 <Link href={`/${lang}/favorites`} aria-label="Go to favorites">
                   <HeartIcon />
                 </Link>

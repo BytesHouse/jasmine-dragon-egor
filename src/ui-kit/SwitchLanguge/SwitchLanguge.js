@@ -28,9 +28,8 @@ const SwitchLanguage = () => {
   return (
     <div
       onClick={handleChangeIsShow}
-      className={`${
-        !isShow ? "rounded-b-[16px]" : "rounded-b-[0px]"
-      } ml-[15px] w-[102px] flex rounded-[16px] px-[15px] py-[5px] self-end text-xl items-center border border-[var(--blue-light)] text-[var(--blue-light)] relative hover:cursor-pointer`}
+      className={`${!isShow ? "rounded-b-[16px]" : "rounded-b-[0px]"
+        } ml-[15px] w-[102px] flex rounded-[16px] px-[15px] py-[5px] self-end text-xl items-center border border-[var(--blue-light)] text-[var(--blue-light)] relative hover:cursor-pointer`}
     >
       <div className="flex items-center gap-[15px]">
         <h5 className="simple w-auto capitalize">{choice}</h5>
@@ -45,7 +44,7 @@ const SwitchLanguage = () => {
             (item, index) =>
               choice !== item && (
                 <li
-                  className="hover:bg-blue cursor-pointer last:rounded-b-2xl  border-x border-b capitalize"
+                  className="hover:bg-blue bg-green-bg cursor-pointer last:rounded-b-2xl  border-x border-b capitalize"
                   onClick={() => handleChangeChoice(item)}
                   key={index}
                 >
